@@ -1,5 +1,0 @@
-This session was started on 2022.2.19. 16:0:58
-[16:0:58] Listening to port 3001...
-[16:1:18] Movie (Végjáték; endgame) was added by 192.168.1.2
-[16:1:19] 192.168.1.2 asked for endgame.mp4
-[16:1:19] 192.168.1.2 is watching Végjáték

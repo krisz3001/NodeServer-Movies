@@ -1,8 +1,0 @@
-This session was started on 2022.2.19. 16:3:14
-[16:3:14] Listening to port 3001...
-[16:34:24] 192.168.1.10 asked for endgame.mp4
-[16:34:24] 192.168.1.10 is watching Végjáték
-[18:11:40] 192.168.1.10 asked for endgame.mp4
-[18:11:40] 192.168.1.10 is watching Végjáték
-[18:12:0] 192.168.1.10 asked for endgame.mp4
-[18:12:0] 192.168.1.10 is watching Végjáték

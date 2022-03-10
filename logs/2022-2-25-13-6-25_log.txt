@@ -1,7 +1,0 @@
-This session was started on 2022.2.25. 13:6:25
-[13:6:25] Listening to port 3001...
-[13:6:43] Movie (Idegenben; idegenben) was added by 192.168.1.2
-[13:6:44] 192.168.1.2 asked for idegenben.mp4
-[13:6:44] 192.168.1.2 is watching Idegenben
-[15:11:59] 192.168.1.12 asked for idegenben.mp4
-[15:11:59] 192.168.1.12 is watching Idegenben
