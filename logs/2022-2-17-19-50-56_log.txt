@@ -1,0 +1,5 @@
+This session was started on 2022.2.17. 19:50:56
+[19:50:56] Listening to port 3001...
+[19:51:14] Movie (infinity war; infinity) was added by 192.168.1.2
+[19:51:52] 192.168.1.2 is watching infinity war
+[19:51:52] 192.168.1.2 asked for infinity.mp4

@@ -1,0 +1,8 @@
+This session was started on 2022.2.18. 14:16:8
+[14:16:8] Listening to port 3001...
+[14:16:18] Movie (Iron Man; ironman) was deleted by 192.168.1.2
+[14:16:32] Movie (Végtelen Háború; infinity) was added by 192.168.1.2
+[14:16:34] 192.168.1.2 asked for infinity.mp4
+[14:16:34] 192.168.1.2 is watching Végtelen Háború
+[14:54:21] 192.168.1.10 asked for infinity.mp4
+[14:54:21] 192.168.1.10 is watching Végtelen Háború

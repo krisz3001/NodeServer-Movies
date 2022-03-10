@@ -1,0 +1,23 @@
+<!Doctype html>
+<html lang="hu">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<% if(s === undefined || e === undefined){ %>
+		<title><%= fullname %></title>
+		<% } else{ %>
+		<title><%= fullname + ' S' + s + ' E' + e %></title>
+		<% } %>
+		<link href="assets/styles.css" rel="stylesheet" type="text/css">
+	</head>
+		<body>
+			<div class="media_all">
+				<video width="720" controls><source src="<%= dir %>" type="video/mp4"></video>
+					<% if(s === undefined || e === undefined){ %>
+					<h1 id="media_fullname"><%= fullname %></h1>
+					<% } else{ %>
+					<h1 id="media_fullname"><%= fullname + ' S' + s + ' E' + e %></h1>
+					<% } %>
+			</div>
+		</body>
+</html>

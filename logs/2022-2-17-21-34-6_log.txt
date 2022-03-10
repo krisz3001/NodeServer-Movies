@@ -1,0 +1,5 @@
+This session was started on 2022.2.17. 21:34:6
+[21:34:6] Listening to port 3001...
+[21:34:17] Movie (Iron Man; ironman) was added by Server
+[21:34:18] Server asked for ironman.mp4
+[21:34:18] Server is watching Iron Man

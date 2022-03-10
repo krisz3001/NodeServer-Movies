@@ -1,0 +1,36 @@
+<!Doctype html>
+<html lang="hu">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title><%= fullname %></title>
+    <link href="assets/styles.css" rel="stylesheet" type="text/css">
+	</head>
+		<center><body>
+			<% for(var i in db.series){
+				if(db.series[i].name === name){
+				 %>
+			<h1><%= db.series[i].fullname %></h1>
+			<% }} %>
+			<%
+				for(var i in db.series){
+					if(db.series[i].name === name){
+						var path_s = db.series[i].s;
+						var path_e = db.series[i].e;
+						break;
+					}
+				}
+			 %>
+      <% for(var i = 0; i < path_s; i++){ %>
+        <h2>
+          <%= i+1 %>.évad
+        </h2>
+        <% for(var j = 0; j < path_e; j++){ %>
+          <% var ev = i+1; %>
+          <% var ep = j+1; %>
+          <a href="<%= '!' + name + '_s' + ev + '_e' + ep %>" style="<% if(j!=0){ %>border-top: none;<% } %>"><%= j+1 %>.rész</a>
+          <br>
+          <% } %>
+      <% } %>
+		</body></center>
+</html>
