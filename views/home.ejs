@@ -1,53 +1,41 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="hu">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Netflix Prime+</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-		<link href="assets/styles.css" rel="stylesheet" type="text/css">
-	</head>
-	<script>
-	function show(){
-		document.getElementById('rejtettcucc').style.display = "block";
-	};
-	function hide(){
-		document.getElementById('rejtettcucc').style.display = "none";
-	};
-	function delete_movie(movie){
-		window.location.href = movie;
-	};
-	function delete_series(series){
-		window.location.href = series;
-	};
-	</script>
-		<body>
-			<div id="main">
-				<h1>Új elem hozzáadása</h1>
-      <form style="border: 1px solid black; width: 200px; min-height: 150px;" onsubmit="return add()" name="add_form" method="POST" action="/">
-        <p>Teljes név:</p>
-        <input type="text" id="fullname" name="fullname" style="width: 146px" required>
-        <p>Fájlnév:</p>
-        <input type="text" id="name" name="name" style="width: 146px" required>
-        <p>Típus:</p>
-        Film <input type="radio" id="movies" name="type" value="movies" onclick="return hide()" required>
-				Sorozat <input type="radio" id="series" name="type" value="series" onclick="return show()" required>
-
-        <div style="display: none" id="rejtettcucc">
-          <p>Évadok száma: <input type="number" name="s" style="width: 20px;" min="1" max="99" id="s"><br></p>
-          <p>Epizódok száma: <input type="number" name="e" style="width: 20px;" min="1" max="99" id="e"></p>
+<head>
+  <title>Movies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-dark text-white">
+  <nav class="navbar navbar-expand-sm bg-black navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Netflix Prime +</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <input type="button" value="Expand" class="btn btn-primary" onclick="expand()">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container p-5">
+    <div class="row" id="a">
+      <div class="col-sm-4 col-lg-3 col-6 p-0" id="item">
+        <img src="assets/dd.jpg" class="img-fluid border" id="item-img">
+        <div class="d-none bg-dark p-2 border w-100" id="item-info">
+          <p class="h5" id="item-title">Marvel: Daredevil</p>
+          <input type="button" value="Play" class="btn btn-success w-100">
+          <p class="text-justify m-0" id="item-desc">Matt Murdock gyermekkorában megvakult. Felnőttként nappal ügyvédként küzd az igazságtalanság ellen, éjszaka pedig ő a Fenegyerek a New York-i Pokol Konyhájában.</p>
         </div>
-
-        <input type="submit" id="submit" value="Hozzáadás" style="width: 100px; margin: 5px;">
-      </form>
-			<h1>Filmek</h1><% for(var i in movies){if(movies[i].name !== undefined){ var d = '/-m_' + movies[i].name; %>
-			<div>
-				<span style="vertical-align:middle"><a href="!<%= movies[i].name %>" style="<% if(i!=0){ %>border-top: none; <% } %>"><%= movies[i].fullname %></a></span><img src="/assets/remove.png" style="vertical-align:middle;<% if(i!=0){ %>border-top: none;<% } %>" onclick="return delete_movie('<%= d %>')">
-			</div><% }} %>
-			<h1>Sorozatok</h1><% for(var i in series){if(series[i].name !== undefined){ var d = '/-s_' + series[i].name; %>
-				<div>
-					<span style="vertical-align:middle"><a href="&<%= series[i].name %>" style="<% if(i!=0){ %>border-top: none; <% } %>"><%= series[i].fullname %></a></span><img src="/assets/remove.png" style="vertical-align:middle;<% if(i!=0){ %>border-top: none;<% } %>" onclick="return delete_series('<%= d %>')">
-				</div><% }} %>
-			</div>
-		</body>
+      </div>
+    </div>
+  </div>
+  <script src="assets/script.js"></script>
+</body>
 </html>
