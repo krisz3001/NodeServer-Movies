@@ -21,8 +21,9 @@
 		window.location.href = series;
 	};
 	</script>
-		<center><body>
-      <h1>Új elem hozzáadása</h1>
+		<body>
+			<div id="main">
+				<h1>Új elem hozzáadása</h1>
       <form style="border: 1px solid black; width: 200px; min-height: 150px;" onsubmit="return add()" name="add_form" method="POST" action="/">
         <p>Teljes név:</p>
         <input type="text" id="fullname" name="fullname" style="width: 146px" required>
@@ -47,5 +48,6 @@
 				<div>
 					<span style="vertical-align:middle"><a href="&<%= series[i].name %>" style="<% if(i!=0){ %>border-top: none; <% } %>"><%= series[i].fullname %></a></span><img src="/assets/remove.png" style="vertical-align:middle;<% if(i!=0){ %>border-top: none;<% } %>" onclick="return delete_series('<%= d %>')">
 				</div><% }} %>
-		</body></center>
+			</div>
+		</body>
 </html>

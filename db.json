@@ -1,18 +1,5 @@
 {
 	"series": [],
-	"movies": [
-		{
-			"name": "infinity",
-			"fullname": "Végtelen Háború"
-		},
-		{
-			"name": "endgame",
-			"fullname": "Végjáték"
-		},
-		{
-			"name": "idegenben",
-			"fullname": "Idegenben"
-		}
-	],
+	"movies": [],
 	"_locals": {}
 }

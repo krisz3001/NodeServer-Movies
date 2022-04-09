@@ -1,7 +1,17 @@
 body{
-  background-color: rgb(184,255,254);
+  background-color: rgb(40, 40, 40);
   width: 100%;
-  margin: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main{
+	margin: 0 auto;
+	text-align: center;
+}
+form{
+	margin: 0 auto;
 }
 a:visited{
   color: white;
