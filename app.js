@@ -110,25 +110,67 @@ app.post('/upload', function(req,res){
   saveLog(`${req.body.title} added by ${ip}.`)
 })
 
-//Queries
-app.get('*', function(req, res){
-  let service
-  if(req.url === '/db.json'){
-    service = '/db.json'
-    res.send(readDB())
+//Get allowed users
+let users_path = __dirname + '/users.json'
+function readUsers(){
+  let users = []
+  try {
+    users = JSON.parse(fs.readFileSync('users.json'))
+  } catch (error) {
+    fs.writeFileSync(users_path, JSON.stringify([]))
+    saveLog('users.json file created.')
   }
-  else if(req.url === '/'){
-    service = '/home'
-    res.render('home')
+  return users
+}
+
+//Password
+app.use(bodyParser.json())
+app.post('/pass', function(req, res){
+  let ip = req.ip.substring(7)
+  let pass = req.body.pass
+  if(ip === '') ip = '192.168.1.2'
+  if(pass == 'lófasz'){
+    let newDB = readUsers()
+    if(!newDB.some(x => x === ip)){
+      newDB.push(ip)
+      fs.writeFile('users.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+      saveLog(`${ip} registered.`)
+    }
   }
   else{
-    service = '404'
-    res.render('404')
+    saveLog(`${ip} is trying to get in with "${pass}".`)
   }
-  let ip = req.ip.substr(7);
-  if(ip === '') ip = 'Server'
-  else if(ip === '100.70.64.221') ip = 'Bulazs'
-  saveLog(`${ip} served. ${service}`)
+  res.sendStatus(200)
+})
+
+//Queries
+app.get('*', function(req, res){
+  let users = readUsers()
+  let ip = req.ip.substring(7)
+  if(ip === '') ip = '192.168.1.2'
+  if(users.some(x => x === ip)){
+    let service
+    if(req.url === '/db.json'){
+      service = '/db.json'
+      res.send(readDB())
+    }
+    else if(req.url === '/'){
+      service = '/home'
+      res.render('home')
+    }
+    else{
+      service = `/404 (${req.url})`
+      res.render('404')
+    }
+    let ip = req.ip.substring(7);
+    if(ip === '') ip = 'Server'
+    else if(ip === '100.70.64.221') ip = 'Bulazs'
+    saveLog(`${ip} served. ${service}`)
+  }
+  else{
+    res.render('login')
+    saveLog(`${ip} on login page.`)
+  }
 })
 app.listen(3001);
 saveLog('Listening to port 3001...')
