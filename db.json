@@ -1,17 +1,12 @@
 [
 	{
-		"image":"dd.jpg",
-		"title":"Marvel: Daredevil",
-		"description":"Matt Murdock gyermekkorában megvakult. Felnőttként nappal ügyvédként küzd az igazságtalanság ellen, éjszaka pedig ő a Fenegyerek a New York-i Pokol Konyhájában."
+		"image": "dd.jpg",
+		"title": "Marvel: Daredevil",
+		"description": "Leírás"
 	},
 	{
-		"image":"ironman.jpg",
-		"title":"Iron Man",
-		"description":"Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember."
-	},
-	{
-		"image":"placeholder.jpg",
-		"title":"Title",
-		"description":"Description"
+		"image": "Untitled.png",
+		"title": "Viktor",
+		"description": "Viktor a diktátor"
 	}
 ]

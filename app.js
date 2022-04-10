@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 var bodyParser = require('body-parser');
-const { json } = require('express/lib/response');
+var fileupload = require('express-fileupload')
 
 function time(){
   let date = new Date();
@@ -54,25 +54,23 @@ if(!fs.existsSync(__dirname + '/media')){
 }
 
 app.set('view engine', 'ejs');
+app.use(fileupload())
 app.use('/media', express.static('media'));
 app.use('/assets', express.static('assets'));
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 //adatbázis olvasás
 let br = __dirname + '/br.txt'
-if(fs.existsSync(__dirname + '/db.json')){
-  var raw = fs.readFileSync('db.json');
-  var db = JSON.parse(raw);
-} else{
-  var dbname = __dirname + '/db.json';
-  var init_array = [];
-  var init_json = JSON.stringify(init_array, null, '\t');
-  fs.appendFileSync(dbname, init_json, function(err){
-    if(err) throw err;
-  });
-  saveLog('db.json file created.')
-  var raw = fs.readFileSync('db.json');
-  var db = JSON.parse(raw);
+let dbname = __dirname + '/db.json';
+function readDB(){
+  let db = []
+  try {
+    db = JSON.parse(fs.readFileSync('db.json'))
+  } catch (error) {
+    fs.writeFileSync(dbname, JSON.stringify([]))
+    saveLog('db.json file created.')
+  }
+  return db
 }
 //Battle Royale
 app.post('/br', urlencodedParser, function(req, res) {
@@ -90,14 +88,47 @@ app.post('/br', urlencodedParser, function(req, res) {
   else if(ip === '100.70.64.221') ip = 'Bulazs'
   saveLog(ip + " baited.")
 });
-app.get('/', function(req, res) {
-  res.render('home', db);
+
+//Upload
+app.post('/upload', function(req,res){
+  let img = 'placeholder.jpg'
+  if(req.files){
+    img = req.files.image.name
+    fs.writeFile(__dirname + '/assets/' + img, req.files.image.data, function(err){
+      if(err) throw err
+      saveLog(`${img} downloaded.`)
+    })
+  }
+  let item = {"image": img, "title": req.body.title, "description": req.body.description}
+  let newDB = readDB()
+  newDB.push(item)
+  fs.writeFile('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+  res.sendStatus(200)
   var ip = req.ip.substr(7);
   if(ip === '') ip = 'Server'
   else if(ip === '100.70.64.221') ip = 'Bulazs'
-});
-app.get('/db.json', function(req, res){
-  res.send(db)
+  saveLog(`${req.body.title} added by ${ip}.`)
+})
+
+//Queries
+app.get('*', function(req, res){
+  let service
+  if(req.url === '/db.json'){
+    service = '/db.json'
+    res.send(readDB())
+  }
+  else if(req.url === '/'){
+    service = '/home'
+    res.render('home')
+  }
+  else{
+    service = '404'
+    res.render('404')
+  }
+  let ip = req.ip.substr(7);
+  if(ip === '') ip = 'Server'
+  else if(ip === '100.70.64.221') ip = 'Bulazs'
+  saveLog(`${ip} served. ${service}`)
 })
 app.listen(3001);
 saveLog('Listening to port 3001...')

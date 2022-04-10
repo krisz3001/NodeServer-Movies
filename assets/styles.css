@@ -1,11 +1,11 @@
-.row #item{
+.row .item{
     cursor: pointer;
     transition: 0.5s ease;
 }
-.row #item:hover{
+.row .item:hover{
     transform: scale(1.2);
 }
-.row #item:hover > #item-info{
+.row .item:hover > .item-info{
     display: block!important;
     position: absolute;
     cursor: default;
