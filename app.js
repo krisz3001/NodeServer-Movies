@@ -3,6 +3,7 @@ var app = express();
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var fileupload = require('express-fileupload')
+let ip
 
 function time(){
   let date = new Date();
@@ -55,12 +56,10 @@ if(!fs.existsSync(__dirname + '/media')){
 
 app.set('view engine', 'ejs');
 app.use(fileupload())
-app.use('/media', express.static('media'));
-app.use('/assets', express.static('assets'));
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 //adatbázis olvasás
-let br = __dirname + '/br.txt'
+let br = __dirname + '/br.json'
 let dbname = __dirname + '/db.json';
 function readDB(){
   let db = []
@@ -72,20 +71,25 @@ function readDB(){
   }
   return db
 }
+
+//IP
+function getIP(ip){
+  if(ip==='') return '192.168.1.2'
+  return ip 
+}
+
 //Battle Royale
 app.post('/br', urlencodedParser, function(req, res) {
   let txt
   try {
-    txt = {"count":JSON.parse(fs.readFileSync('br.txt')).count+1}
+    txt = {"count":JSON.parse(fs.readFileSync('br.json')).count+1}
   } catch (error) {
     txt = {"count":1}
     fs.writeFileSync(br, JSON.stringify(txt, null, '\t'))
   }
   fs.writeFileSync(br, JSON.stringify(txt, null, '\t'))
   res.send(txt)
-  var ip = req.ip.substr(7);
-  if(ip === '') ip = 'Server'
-  else if(ip === '100.70.64.221') ip = 'Bulazs'
+  ip = ip(req.ip.substring(7))
   saveLog(ip + " baited.")
 });
 
@@ -104,9 +108,7 @@ app.post('/upload', function(req,res){
   newDB.push(item)
   fs.writeFile('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
   res.sendStatus(200)
-  var ip = req.ip.substr(7);
-  if(ip === '') ip = 'Server'
-  else if(ip === '100.70.64.221') ip = 'Bulazs'
+  ip = getIP(req.ip.substring(7))
   saveLog(`${req.body.title} added by ${ip}.`)
 })
 
@@ -126,10 +128,9 @@ function readUsers(){
 //Password
 app.use(bodyParser.json())
 app.post('/pass', function(req, res){
-  let ip = req.ip.substring(7)
+  ip = getIP(req.ip.substring(7))
   let pass = req.body.pass
-  if(ip === '') ip = '192.168.1.2'
-  if(pass == 'lófasz'){
+  if(pass == 'kecske'){
     let newDB = readUsers()
     if(!newDB.some(x => x === ip)){
       newDB.push(ip)
@@ -143,13 +144,22 @@ app.post('/pass', function(req, res){
   res.sendStatus(200)
 })
 
+//Logout
+app.post('/logout', function(req, res){
+  ip = getIP(req.ip.substring(7))
+  let newDB = readUsers()
+  newDB.splice(newDB.indexOf(ip), 1)
+  fs.writeFile('users.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+  saveLog(`${ip} removed.`)
+  res.sendStatus(200)
+})
+
 //Queries
 app.get('*', function(req, res){
   let users = readUsers()
-  let ip = req.ip.substring(7)
-  if(ip === '') ip = '192.168.1.2'
+  let service
+  ip = getIP(req.ip.substring(7))
   if(users.some(x => x === ip)){
-    let service
     if(req.url === '/db.json'){
       service = '/db.json'
       res.send(readDB())
@@ -158,18 +168,30 @@ app.get('*', function(req, res){
       service = '/home'
       res.render('home')
     }
+    else if(req.url.substring(0, 8) === '/assets/' && fs.existsSync(__dirname + req.url)){
+      res.sendFile(__dirname + req.url)
+      service = req.url
+    }
+    else if(req.url === '/favicon.ico'){
+      service = '/favicon.ico'
+      res.sendFile(__dirname + '/assets/favicon.png')
+    }
     else{
       service = `/404 (${req.url})`
       res.render('404')
     }
-    let ip = req.ip.substring(7);
-    if(ip === '') ip = 'Server'
-    else if(ip === '100.70.64.221') ip = 'Bulazs'
     saveLog(`${ip} served. ${service}`)
   }
   else{
-    res.render('login')
-    saveLog(`${ip} on login page.`)
+    if(req.url === '/favicon.ico'){
+      service = req.url
+      res.sendFile(__dirname + '/assets/login.png')
+    }
+    else{
+      service = req.url
+      res.render('login')
+    }
+    saveLog(`${ip} on login page. ${service}`)
   }
 })
 app.listen(3001);

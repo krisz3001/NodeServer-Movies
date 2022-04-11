@@ -34,9 +34,17 @@ function addShow(){
     formData.append("title", title.value)
     formData.append("description", desc.value)
     fetch('/upload', {method: "POST", body : formData})
-    .then(response => response.text)
-    .then(r => refresh())
+        .then(response => response.text)
+        .then(r => refresh())
     image.value = ''
     title.value = ''
     desc.value = ''
+}
+function logout(){
+    fetch('/logout', {method: 'POST', redirect: 'follow'})
+        .then(res => res.text())
+        .then(r => {
+            location.reload()
+            window.open('/','_self')
+        })
 }
