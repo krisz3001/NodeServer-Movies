@@ -89,7 +89,7 @@ app.post('/br', urlencodedParser, function(req, res) {
   }
   fs.writeFileSync(br, JSON.stringify(txt, null, '\t'))
   res.send(txt)
-  ip = ip(req.ip.substring(7))
+  ip = req.ip.substring(7)
   saveLog(ip + " baited.")
 });
 
@@ -126,7 +126,6 @@ function readUsers(){
 }
 
 //Password
-app.use(bodyParser.json())
 app.post('/pass', function(req, res){
   ip = getIP(req.ip.substring(7))
   let pass = req.body.pass

@@ -5,8 +5,18 @@
 		"description": "Leírás"
 	},
 	{
-		"image": "Untitled.png",
-		"title": "Viktor",
-		"description": "Viktor a diktátor"
+		"image": "placeholder.jpg",
+		"title": "Title",
+		"description": "Description"
+	},
+	{
+		"image": "placeholder.jpg",
+		"title": "Title",
+		"description": "Description"
+	},
+	{
+		"image": "placeholder.jpg",
+		"title": "Title",
+		"description": "Description"
 	}
 ]
