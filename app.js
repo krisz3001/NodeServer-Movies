@@ -66,6 +66,7 @@ function readDB(){
   try {
     db = JSON.parse(fs.readFileSync('db.json'))
   } catch (error) {
+    console.log(error);
     fs.writeFileSync(dbname, JSON.stringify([]))
     saveLog('db.json file created.')
   }
@@ -119,6 +120,7 @@ function readUsers(){
   try {
     users = JSON.parse(fs.readFileSync('users.json'))
   } catch (error) {
+    console.log(error);
     fs.writeFileSync(users_path, JSON.stringify([]))
     saveLog('users.json file created.')
   }
@@ -151,6 +153,17 @@ app.post('/logout', function(req, res){
   fs.writeFile('users.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
   saveLog(`${ip} removed.`)
   res.sendStatus(200)
+})
+
+//Delete Show
+app.post('/delete', function(req, res){
+  ip = getIP(req.ip.substring(7))
+  let newDB = readDB()
+  let title = newDB[req.body.n].title
+  newDB.splice(req.body.n,1)
+  fs.writeFile('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+  res.sendStatus(200)
+  saveLog(`${title} deleted by ${ip}.`)
 })
 
 //Queries
