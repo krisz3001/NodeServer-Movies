@@ -1,4 +1,4 @@
-﻿Version: 2.0
+﻿Version: 3.0
 Default port: 3001
 Release date: 2022.02.13.
 
