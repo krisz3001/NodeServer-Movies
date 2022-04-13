@@ -12,14 +12,14 @@
 <body class="bg-dark text-white" onload="refresh()">
   <nav class="navbar navbar-expand-md bg-black navbar-dark sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Netflix Prime +</a>
+      <a class="navbar-brand" href="/">Netflix Prime +</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav me-auto">
 		  <li class="nav-item m-2">
-			<input type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" value="Add show">
+			<input type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" value="Add show" onclick="refreshList()">
 		  </li>
 		  <li class="nav-item m-2">
             <input type="button" value="Expand" class="btn btn-primary" onclick="expand()">
@@ -29,6 +29,9 @@
 		  </li>
 		  <li class="nav-item m-2">
 			  <a href="/assets/si.jpg" class="btn btn-primary" target="_blank" onclick="br()">Changelog</a>
+		  </li>
+		  <li class="nav-item m-2">
+			<input type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#todoModal" value="To-Do">
 		  </li>
 		  <li class="nav-item d-none m-2" id="br_count"></li>
         </ul>
@@ -40,11 +43,11 @@
     <div class="row" id="items">
 	</div>
   </div>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 	  <div class="modal-content bg-dark">
 		<div class="modal-header">
-		  <h5 class="modal-title" id="exampleModalLabel">Add new show</h5>
+		  <h5 class="modal-title" id="addModalLabel">Add new show</h5>
 		  <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
@@ -67,6 +70,13 @@
 						<input type="text" id="desc" class="form-control" placeholder="Description">
 					</div>
 				</div>
+				<div class="form-group row my-sm-2">
+					<label for="filename" class="col-sm-2 col-form-label">Filename</label>
+					<div class="col-sm-10">
+						<select class="form-select" id="filenameSelect">
+						  </select>
+					</div>
+				</div>
 			</form>
 		</div>
 		<div class="modal-footer">
@@ -76,6 +86,33 @@
 	  </div>
 	</div>
   </div>
+  <div class="modal fade" id="todoModal" tabindex="-1" aria-labelledby="todoModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+	  <div class="modal-content bg-dark">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="todoModalLabel">To-Do List</h5>
+		  <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<ul>
+				<li>Watch2gether!</li>
+				<li>Megerősítés törlésnél</li>
+				<li>Teljesen egyedi ötlet: piros csík a kártya alján ami mutatja hol jársz az adott filmben</li>
+				<li>Profilrendszer (Who's watching?)</li>
+				<li>Sorozatok kezelésének implementálása</li>
+				<li>Felesleges menüpontok törlése</li>
+				<li>Kategóriákra bontás</li>
+				<li>Esetleg szenvedés a képekkel hogy ugyanolyan magasak legyenek de ne nézzenek ki úgy mint varga irén</li>
+				<li>Kód egyszerűsítés</li>
+				<li>Több kokut</li>
+			</ul>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		</div>
+	  </div>
+	</div>
+</div>
   <script src="assets/script.js"></script>
 </body>
 </html>

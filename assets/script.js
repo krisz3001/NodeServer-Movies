@@ -3,12 +3,16 @@ function expand(){
     let formData = new FormData()
     formData.append("title", "Title")
     formData.append("description", "Description")
+    formData.append("filename","test.mp4")
     fetch('/upload', {method: "POST", body : formData})
         .then(response => response.text)
         .then(r => refresh())
 }
 function newItem(img, title, desc, n){
-    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item"><img src="/assets/delete.png" class="d-none delete_img img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px;"><img src="/assets/${img}" class="img-fluid border border-secondary"><div class="item-info d-none bg-dark p-2 border border-secondary w-100 rounded-bottom"><p class="h5">${title}</p><a class="btn btn-success w-100" target="_blank" href="https://www.youtube.com/watch?v=RWSnR2oKR5o">Play</a><p class="text-justify m-0">${desc}</p></div></div>`
+    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item"><img src="/assets/delete.png" class="d-none delete_img img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}');" class=" border border-secondary img_show bg-dark"></div><div class="item-info d-none bg-dark p-2 border border-secondary w-100 rounded-bottom"><p class="h5">${title}</p><a class="btn btn-success w-100" href="/movie/${n}">Play</a><p class="text-justify m-0">${desc}</p></div></div>`
+}
+function newOption(value){
+    return `<option value="${value}">${value}</option`
 }
 function refresh(){
     let items = document.getElementById('items')
@@ -17,16 +21,27 @@ function refresh(){
     .then(response => response.json())
     .then(r => {
         for (let i = 0; i < r.length; i++) {
-         items.innerHTML += newItem(r[i].image,r[i].title,r[i].description, i)
+            items.innerHTML += newItem(r[i].image,r[i].title,r[i].description, i)
         }
 })
+}
+function refreshList(){
+    let filenameSelect = document.getElementById('filenameSelect')
+    fetch('/list')
+    .then(res => res.json())
+    .then(r => {
+        filenameSelect.innerHTML = `<option selected value="0">Choose file</option>`
+        for (let i = 0; i < r.length; i++) {
+            filenameSelect.innerHTML += newOption(r[i])
+        }
+    })
 }
 function br(){
       fetch("/br", {method: 'POST', redirect: 'follow'})
         .then(response => response.json())
         .then(r => {
             let a = document.getElementById('br_count')
-            a.innerHTML = `Count: ${r.count}`
+            a.innerHTML = `Bait count: ${r.count}`
             a.style = 'display: block!important'
         })
 }
@@ -34,17 +49,20 @@ function addShow(){
     let image = document.getElementById('image')
     let title = document.getElementById('title')
     let desc = document.getElementById('desc')
-    if(title.value.length == 0 || desc.value.length == 0) return
+    let fn = document.getElementById('filenameSelect')
+    if(title.value.length == 0 || desc.value.length == 0 || fn.value.length == 0 || fn.value == 0) return
     let formData = new FormData()
     formData.append("image", image.files[0])
     formData.append("title", title.value)
     formData.append("description", desc.value)
+    formData.append("filename", fn.value)
     fetch('/upload', {method: "POST", body : formData})
         .then(response => response.text)
         .then(r => refresh())
     image.value = ''
     title.value = ''
     desc.value = ''
+    fn.value = ''
 }
 function deleteShow(n){
     let formData = new FormData()
@@ -60,4 +78,7 @@ function logout(){
             location.reload()
             window.open('/','_self')
         })
+}
+function playShow(n){
+
 }
