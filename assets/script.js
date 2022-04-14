@@ -9,7 +9,7 @@ function expand(){
         .then(r => refresh())
 }
 function newItem(img, title, desc, n){
-    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item"><img src="/assets/delete.png" class="d-none delete_img img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}');" class=" border border-secondary img_show bg-dark"></div><div class="item-info d-none bg-dark p-2 border border-secondary w-100 rounded-bottom"><p class="h5">${title}</p><a class="btn btn-success w-100" href="/movie/${n}">Play</a><p class="text-justify m-0">${desc}</p></div></div>`
+    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item"><img src="/assets/delete.png" class="d-none delete_img img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark" id="fullbar${n}"><div id="progressbar${n}" style="width: 0; height: 5px; background: red;"></div></div></div><div class="item-info d-none bg-dark p-2 border border-secondary w-100 rounded-bottom"><p class="h5">${title}</p><a class="btn btn-success w-100" href="/movie/${n}">Play</a><p class="text-justify m-0">${desc}</p></div></div>`
 }
 function newOption(value){
     return `<option value="${value}">${value}</option`
@@ -22,6 +22,9 @@ function refresh(){
     .then(r => {
         for (let i = 0; i < r.length; i++) {
             items.innerHTML += newItem(r[i].image,r[i].title,r[i].description, i)
+            let w = (r[i].current/r[i].duration)*100
+            document.getElementById(`progressbar${i}`).style.width = `${w}%`
+            document.getElementById(`fullbar${i}`).style.width = !(w>0) ? '0%' : '100%'
         }
 })
 }
@@ -65,6 +68,7 @@ function addShow(){
     fn.value = ''
 }
 function deleteShow(n){
+    if(!window.confirm("Are you sure?")) return
     let formData = new FormData()
     formData.append("n", n)
     fetch('/delete', {method: "POST", body: formData})
@@ -79,6 +83,21 @@ function logout(){
             window.open('/','_self')
         })
 }
-function playShow(n){
-
+let id
+function getID(n){
+    id = n
+}
+function saveProgress(){
+    let vid = document.getElementById('vid')
+    let formData = new FormData()
+    formData.append("current", vid.currentTime)
+    formData.append("duration", vid.duration)
+    formData.append("id", id)
+    fetch('/progress', {method: "POST", body: formData})
+        .then(res => res.text)
+        .then(r => {})
+}
+function progressBar(){
+    let vid = document.getElementById('vid')
+    document.getElementById('p').style.width = `${(vid.currentTime/vid.duration)*100}%`
 }

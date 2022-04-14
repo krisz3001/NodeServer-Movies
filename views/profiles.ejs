@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <title>Profiles</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+      .row{
+          align-items: center;
+          align-content: center;
+      }
+      .profile-pic{
+          width: 100%;
+          max-width: 150px;
+          aspect-ratio: 1/1;
+          background: transparent center/contain no-repeat;
+      }
+      .profile-pic:hover{
+        border-color: white!important;
+        background-image: url('/assets/kokut.gif')!important;
+        background-size: cover;
+      }
+      h4{
+        transition: color .15s ease-in-out;
+      }
+      .profile-pic:hover + h4{
+          color: white!important;
+      }
+      .profile{
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+      }
+      .p{
+          height: 250px;
+      }
+      a{
+          text-decoration: none;
+          width: 200px!important;
+          padding: 0;
+      }
+  </style>
+</head>
+<body class="bg-dark text-white">
+    <div class="container" style="max-width: 700px;">
+        <div class="row">
+        <h1 class="text-center my-5">Who's watching?</h1>
+        <div class="col-sm-3 col-6 bg-dark p d-flex">
+            <a class="m-auto profile d-flex" href="/">
+                <div class="profile-pic border border-secondary btn" style="background-image: url('/assets/blue.png')"></div>
+                <h4 class="text-secondary">Szia</h4>
+            </a>
+        </div>
+        <div class="col-sm-3 col-6 bg-dark p d-flex">
+            <a class="m-auto profile d-flex" href="/">
+                <div class="profile-pic border border-secondary btn" style="background-image: url('/assets/yellow.png')"></div>
+                <h4 class="text-secondary">Lajos!</h4>
+            </a>
+        </div>
+        <div class="col-sm-3 col-6 bg-dark p d-flex">
+            <a class="m-auto profile d-flex" href="/">
+                <div class="profile-pic border border-secondary btn" style="background-image: url('/assets/red.png')"></div>
+                <h4 class="text-secondary">Kutyáidat</h4>
+            </a>
+        </div>
+        <div class="col-sm-3 col-6 bg-dark p d-flex">
+            <a class="m-auto profile d-flex" href="/">
+                <div class="profile-pic border border-secondary btn" style="background-image: url('/assets/Screenshot_1.png')"></div>
+                <h4 class="text-secondary">sétáltatod?</h4>
+            </a>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

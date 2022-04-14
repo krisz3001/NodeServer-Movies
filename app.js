@@ -32,16 +32,16 @@ function saveLog(log){
     });
   } else{
     if(!fs.existsSync(__dirname + '/' + logName)){
-      fs.appendFile(logName, sessionStart, function(err){
+      fs.appendFileSync(logName, sessionStart, function(err){
         if(err) throw err;
         else{
-          fs.appendFile(logName, '\n' + time() + log, function(err){
+          fs.appendFileSync(logName, '\n' + time() + log, function(err){
             if(err) throw err;
           });
         }
       });
     } else{
-      fs.appendFile(logName, '\n' + time() + log, function(err){
+      fs.appendFileSync(logName, '\n' + time() + log, function(err){
         if(err) throw err;
       });
     }
@@ -80,6 +80,7 @@ function readDB(){
   try {
     db = JSON.parse(fs.readFileSync('db.json'))
   } catch (error) {
+    console.log(error);
     fs.writeFileSync(dbname, JSON.stringify([]))
     saveLog('db.json file created.')
   }
@@ -128,15 +129,15 @@ app.post('/upload', function(req,res){
     let img = 'placeholder.jpg'
     if(req.files){
       img = req.files.image.name
-      fs.writeFile(__dirname + '/assets/' + img, req.files.image.data, function(err){
+      fs.writeFileSync(__dirname + '/assets/' + img, req.files.image.data, function(err){
         if(err) throw err
         saveLog(`${img} downloaded.`)
       })
     }
-    let item = {"image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename}
     let newDB = readDB()
+    let item = {"id":newDB.length ,"image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename, "current": "0", "duration": "0"}
     newDB.push(item)
-    fs.writeFile('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+    fs.writeFileSync('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
     res.sendStatus(200)
     ip = getIP(req.ip.substring(7))
     saveLog(`"${req.body.title}" added by ${ip}.`)
@@ -148,6 +149,17 @@ app.post('/upload', function(req,res){
   }
 })
 
+//Saving progress
+app.post('/progress', function(req, res){
+  if(isRegistered(req)){
+    let newDB = readDB()
+    newDB[req.body.id*1].current = req.body.current
+    newDB[req.body.id*1].duration = req.body.duration
+    fs.writeFileSync('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+  }
+  res.sendStatus(200)
+})
+
 //Password
 app.post('/pass', function(req, res){
   ip = getIP(req.ip.substring(7))
@@ -156,7 +168,7 @@ app.post('/pass', function(req, res){
     let newDB = readUsers()
     if(!newDB.some(x => x === ip)){
       newDB.push(ip)
-      fs.writeFile('users.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+      fs.writeFileSync('users.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
       saveLog(`${ip} registered.`)
     }
   }
@@ -172,7 +184,7 @@ app.post('/logout', function(req, res){
     ip = getIP(req.ip.substring(7))
     let newDB = readUsers()
     newDB.splice(newDB.indexOf(ip), 1)
-    fs.writeFile('users.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+    fs.writeFileSync('users.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
     saveLog(`${ip} removed.`)
     res.sendStatus(200)
   }
@@ -190,7 +202,10 @@ app.post('/delete', function(req, res){
     let newDB = readDB()
     let title = newDB[req.body.n].title
     newDB.splice(req.body.n, 1)
-    fs.writeFile('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+    for (let i = 0; i < newDB.length; i++) {
+      newDB[i].id = i
+    }
+    fs.writeFileSync('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
     res.sendStatus(200)
     saveLog(`"${title}" deleted by ${ip}.`)
   }
@@ -213,6 +228,10 @@ app.get('*', function(req, res){
     else if(req.url === '/'){
       service = '/home'
       res.render('home')
+    }
+    else if(req.url === '/profile'){
+      service = req.url
+      res.render('profiles')
     }
     else if(req.url.substring(0, 8) === '/assets/' && fs.existsSync(__dirname + req.url)){
       res.sendFile(__dirname + req.url)
@@ -269,3 +288,5 @@ app.get('*', function(req, res){
 })
 app.listen(3001);
 saveLog('Listening to port 3001...')
+app.listen(80);
+saveLog('Listening to port 80...')
