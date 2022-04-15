@@ -23,10 +23,13 @@
         background-image: url('/assets/kokut.gif')!important;
         background-size: cover;
       }
-      h4{
-        transition: color .15s ease-in-out;
+      #edit:hover{
+        border-color: white!important;
       }
-      .profile-pic:hover + h4{
+      h4, #edit{
+        transition: .15s ease-in-out;
+      }
+      .profile-pic:hover + h4, #edit:hover{
           color: white!important;
       }
       .profile{
@@ -49,30 +52,32 @@
         <div class="row">
         <h1 class="text-center my-5">Who's watching?</h1>
         <div class="col-sm-3 col-6 bg-dark p d-flex">
-            <a class="m-auto profile d-flex" href="/">
+            <a class="m-auto profile d-flex" onclick="setProfile(0)">
                 <div class="profile-pic border border-secondary btn" style="background-image: url('/assets/blue.png')"></div>
                 <h4 class="text-secondary">Szia</h4>
             </a>
         </div>
         <div class="col-sm-3 col-6 bg-dark p d-flex">
-            <a class="m-auto profile d-flex" href="/">
+            <a class="m-auto profile d-flex" onclick="setProfile(1)">
                 <div class="profile-pic border border-secondary btn" style="background-image: url('/assets/yellow.png')"></div>
                 <h4 class="text-secondary">Lajos!</h4>
             </a>
         </div>
         <div class="col-sm-3 col-6 bg-dark p d-flex">
-            <a class="m-auto profile d-flex" href="/">
+            <a class="m-auto profile d-flex" onclick="setProfile(2)">
                 <div class="profile-pic border border-secondary btn" style="background-image: url('/assets/red.png')"></div>
                 <h4 class="text-secondary">Kutyáidat</h4>
             </a>
         </div>
         <div class="col-sm-3 col-6 bg-dark p d-flex">
-            <a class="m-auto profile d-flex" href="/">
+            <a class="m-auto profile d-flex" onclick="setProfile(3)">
                 <div class="profile-pic border border-secondary btn" style="background-image: url('/assets/Screenshot_1.png')"></div>
                 <h4 class="text-secondary">sétáltatod?</h4>
             </a>
         </div>
+        <a href="" id="edit" class="btn m-auto text-secondary border border-secondary">Edit profiles (WIP)</a>
     </div>
   </div>
+  <script src="/assets/script.js"></script>
 </body>
 </html>

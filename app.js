@@ -2,7 +2,8 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 var bodyParser = require('body-parser');
-var fileupload = require('express-fileupload')
+var fileupload = require('express-fileupload');
+const { use } = require('express/lib/application');
 let ip
 
 function time(){
@@ -74,15 +75,25 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 //Reading db.json
 let br = __dirname + '/br.json'
-let dbname = __dirname + '/db.json';
 function readDB(){
   let db = []
   try {
     db = JSON.parse(fs.readFileSync('db.json'))
   } catch (error) {
-    console.log(error);
-    fs.writeFileSync(dbname, JSON.stringify([]))
+    fs.writeFileSync(__dirname + '/db.json', JSON.stringify(db))
     saveLog('db.json file created.')
+  }
+  return db
+}
+
+//Reading profiles.json
+function readProfiles(){
+  let db = {"0":[],"1":[],"2":[],"3":[]}
+  try {
+    db = JSON.parse(fs.readFileSync('profiles.json'))
+  } catch (error) {
+    fs.writeFileSync(__dirname + 'profiles.json', JSON.stringify(db))
+    saveLog('profiles.json file created.')
   }
   return db
 }
@@ -97,7 +108,17 @@ function getIP(ip){
 function isRegistered(req){
   let users = readUsers()
   ip = getIP(req.ip.substring(7))
-  if(users.some(x => x === ip)) return true
+  if(users.some(x => x.ip === ip)) return true
+  else return false
+}
+
+//Has assigned profile
+function profileAssigned(req){
+  let users = readUsers()
+  if(users.some(x => x.ip === ip)){
+    ip = getIP(req.ip.substring(7))
+    if(users[users.indexOf(users.find(x => x.ip === ip))].profile != -1) return true
+  }
   else return false
 }
 
@@ -123,6 +144,12 @@ app.post('/br', urlencodedParser, function(req, res) {
   }
 });
 
+//Get assigned profile
+function getProfile(req){
+  let users = readUsers()
+  return users[users.indexOf(users.find(x => x.ip === getIP(req.ip.substring(7))))].profile
+}
+
 //Upload
 app.post('/upload', function(req,res){
   if(isRegistered(req)){
@@ -135,9 +162,14 @@ app.post('/upload', function(req,res){
       })
     }
     let newDB = readDB()
-    let item = {"id":newDB.length ,"image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename, "current": "0", "duration": "0"}
+    let profiles = readProfiles()
+    let item = {"id":newDB.length ,"image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename}
+    for (let i = 0; i < Object.keys(profiles).length; i++) {
+      profiles[i].push({"id":newDB.length ,"image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename, "current": "0", "duration": "0"})
+    }
     newDB.push(item)
     fs.writeFileSync('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+    fs.writeFileSync('profiles.json', JSON.stringify(profiles, null, '\t'), 'utf8', function(){})
     res.sendStatus(200)
     ip = getIP(req.ip.substring(7))
     saveLog(`"${req.body.title}" added by ${ip}.`)
@@ -152,12 +184,18 @@ app.post('/upload', function(req,res){
 //Saving progress
 app.post('/progress', function(req, res){
   if(isRegistered(req)){
-    let newDB = readDB()
-    newDB[req.body.id*1].current = req.body.current
-    newDB[req.body.id*1].duration = req.body.duration
-    fs.writeFileSync('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+    let profiles = readProfiles()
+    let n = getProfile(req)
+    profiles[n][profiles[n].indexOf(profiles[n].find(x => x.id == req.body.id))].current = req.body.current
+    profiles[n][profiles[n].indexOf(profiles[n].find(x => x.id == req.body.id))].duration = req.body.duration
+    fs.writeFileSync('profiles.json', JSON.stringify(profiles, null, '\t'), 'utf8', function(){})
+    res.sendStatus(200)
   }
-  res.sendStatus(200)
+  else{
+    ip = getIP(req.ip.substring(7))
+    res.render('login')
+    saveLog(`Illegal POST request from ${ip}. ${req.url}`)
+  }
 })
 
 //Password
@@ -167,7 +205,7 @@ app.post('/pass', function(req, res){
   if(pass == 'kecske'){
     let newDB = readUsers()
     if(!newDB.some(x => x === ip)){
-      newDB.push(ip)
+      newDB.push({"ip": ip, "profile": "-1"})
       fs.writeFileSync('users.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
       saveLog(`${ip} registered.`)
     }
@@ -178,13 +216,30 @@ app.post('/pass', function(req, res){
   res.sendStatus(200)
 })
 
+//Set profile
+app.post('/setprofile', function(req, res){
+  if(isRegistered(req) && req.body != undefined && "profileID" in req.body){
+    ip = getIP(req.ip.substring(7))
+    let users = readUsers()
+    users[users.indexOf(users.find(x => x.ip === ip))].profile = req.body.profileID
+    fs.writeFileSync('users.json', JSON.stringify(users, null, '\t'), 'utf8', function(){})
+    saveLog(`Profile ${req.body.profileID} set for ${ip}`)
+    res.sendStatus(200)
+  }
+  else{
+    ip = getIP(req.ip.substring(7))
+    res.render('login')
+    saveLog(`Illegal POST request from ${ip}. ${req.url}`)
+  }
+})
+
 //Logout
 app.post('/logout', function(req, res){
   if(isRegistered(req)){
     ip = getIP(req.ip.substring(7))
-    let newDB = readUsers()
-    newDB.splice(newDB.indexOf(ip), 1)
-    fs.writeFileSync('users.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+    let users = readUsers()
+    users.splice(users.indexOf(users.find(x => x.ip === ip)), 1)
+    fs.writeFileSync('users.json', JSON.stringify(users, null, '\t'), 'utf8', function(){})
     saveLog(`${ip} removed.`)
     res.sendStatus(200)
   }
@@ -200,12 +255,20 @@ app.post('/delete', function(req, res){
   if(isRegistered(req)){
     ip = getIP(req.ip.substring(7))
     let newDB = readDB()
+    let profiles = readProfiles()
     let title = newDB[req.body.n].title
+    for (let i = 0; i < Object.keys(profiles).length; i++) {
+      profiles[i].splice(req.body.n, 1)
+      for (let j = 0; j < profiles[i].length; j++) {
+        profiles[i][j].id = j
+      }
+    }
     newDB.splice(req.body.n, 1)
     for (let i = 0; i < newDB.length; i++) {
       newDB[i].id = i
     }
     fs.writeFileSync('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+    fs.writeFileSync('profiles.json', JSON.stringify(profiles, null, '\t'), 'utf8', function(){})
     res.sendStatus(200)
     saveLog(`"${title}" deleted by ${ip}.`)
   }
@@ -220,31 +283,31 @@ app.post('/delete', function(req, res){
 app.get('*', function(req, res){
   let service
   ip = getIP(req.ip.substring(7))
-  if(isRegistered(req)){
+  if(isRegistered(req) && profileAssigned(req)){
     if(req.url === '/db.json'){
       service = '/db.json'
-      res.send(readDB())
+      res.send(readProfiles())
     }
     else if(req.url === '/'){
       service = '/home'
-      res.render('home')
+      res.render('home', {"id": getProfile(req)})
     }
     else if(req.url === '/profile'){
       service = req.url
       res.render('profiles')
     }
-    else if(req.url.substring(0, 8) === '/assets/' && fs.existsSync(__dirname + req.url)){
+    else if(req.url.substring(0, 8) === '/assets/' && req.url != '/assets/' && fs.existsSync(__dirname + req.url)){
+      res.sendFile(__dirname + req.url)
+      service = ''
+    }
+    else if(req.url.substring(0,7) === '/media/' && req.url != '/media/' && fs.existsSync(__dirname + req.url)){
       res.sendFile(__dirname + req.url)
       service = req.url
     }
-    else if(req.url.substring(0,7) === '/media/' && fs.existsSync(__dirname + req.url)){
-      res.sendFile(__dirname + req.url)
-      service = req.url
-    }
-    else if(req.url.substring(0,7) === '/movie/' && req.url.substring(7) <= readDB().length){
+    else if(req.url.substring(0,7) === '/movie/' && req.url != '/movie/' && req.url.substring(7) <= readDB().length && req.url.substring(7) > -1){
       if(fs.existsSync(__dirname + '/media/' + readDB()[req.url.substring(7)].filename)){
         service = req.url
-        res.render('media', readDB()[req.url.substring(7)])
+        res.render('media', readProfiles()[getProfile(req)][req.url.substring(7)])
       }
       else{
         service = req.url
@@ -262,7 +325,7 @@ app.get('*', function(req, res){
       })
     }
     else if(req.url === '/favicon.ico'){
-      service = '/favicon.ico'
+      service = ''
       res.sendFile(__dirname + '/assets/favicon.png')
     }
     else{
@@ -272,11 +335,20 @@ app.get('*', function(req, res){
     if(service.substring(0,7) === '/media/'){
       saveLog(`${ip} is watching ${service}`)
     }
-    else saveLog(`${ip} served. ${service}`)
+    else if(service != '') saveLog(`${ip} served. ${service}`)
+  }
+  else if(isRegistered(req) && !profileAssigned(req) && req.url.substring(0, 8) === '/assets/' && req.url != '/assets/' && fs.existsSync(__dirname + req.url)){
+    res.sendFile(__dirname + req.url)
+  }
+  else if(isRegistered(req) && !profileAssigned(req)){
+    res.render('profiles')
+  }
+  else if(isRegistered(req) && !profileAssigned(req) && req.url === '/favicon.ico'){
+    res.sendFile(__dirname + '/assets/favicon.png')
   }
   else{
     if(req.url === '/favicon.ico'){
-      service = req.url
+      service = ''
       res.sendFile(__dirname + '/assets/login.png')
     }
     else{

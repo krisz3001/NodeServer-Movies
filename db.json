@@ -4,44 +4,20 @@
 		"image": "infinity.jpg",
 		"title": "Avengers: Infinity War",
 		"description": "A Marvel mozis univerzumának egészét felölelő, tíz év eseményeinek tetőpontját jelentő Bosszúállók: Végtelen háborúban minden idők legnagyobb és leghalálosabb leszámolására kerül sor. A Bosszúállóknak és szövetségeseiknek mindent kockára kell tenniük, hogy megfékezzék a nagy erejű Thanost, aki egy szemvillanás alatt elpusztíthatja a világot.",
-		"filename": "infinity.mp4",
-		"current": "6363.210813",
-		"duration": "8959.464"
+		"filename": "infinity.mp4"
 	},
 	{
 		"id": 1,
 		"image": "endgame.jpg",
 		"title": "Avengers: Endgame",
 		"description": "Thanos súlyos tette, amivel elpusztította az univerzum élőlényeinek felét és megtörte a Bosszúállókat, a megmaradt hősöket egy végső összecsapásra készteti a Marvel Studios huszonegy filmet megkoronázó, nagyszabású fináléjában, a Bosszúállók: Végjátékban.",
-		"filename": "endgame.mp4",
-		"current": "2783.701353",
-		"duration": "10870.32"
+		"filename": "endgame.mp4"
 	},
 	{
 		"id": 2,
 		"image": "farfromhome.jpg",
 		"title": "Spider-Man: Far From Home",
 		"description": "Pókember nem pihenhet. Az már kiderült, hogy az ifjú pók (Tom Holland) egyedül is képes megmenteni a világot, és csoportban is megállja a helyét, de közben ő úgy érzi, hogy neki is jár mindaz, ami bármelyik középiskolásnak: és a haverjaival európai utazásra indul. De éppen, amikor végre élvezhetné mindazt, amit a baráti lazulás kínálhat, újabb kihívás elé kell néznie. A rejtélyes Mysterio (Jake Gyllenhaal) miatt új kalandba indul, és könnyen lehet, hogy Pókember, aki nagy nehezen próbálja a hátizsákos utazást a hősi küzdelemmel összehangolni, kénytelen régi Bosszúálló társaitól segítséget kérni.",
-		"filename": "farfromhome.mp4",
-		"current": "1894.218432",
-		"duration": "7763.808"
-	},
-	{
-		"id": 3,
-		"image": "Screenshot_1.png",
-		"title": "A kurva szádat",
-		"description": "hány fokos?",
-		"filename": "stuck.mp4",
-		"current": "48.920639",
-		"duration": "76.0089"
-	},
-	{
-		"id": 4,
-		"image": "kokut.gif",
-		"title": "Kokut",
-		"description": "Több kokut",
-		"filename": "stuck.mp4",
-		"current": "0",
-		"duration": "0"
+		"filename": "farfromhome.mp4"
 	}
 ]

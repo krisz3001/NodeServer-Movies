@@ -20,9 +20,9 @@ function refresh(){
     fetch('/db.json')
     .then(response => response.json())
     .then(r => {
-        for (let i = 0; i < r.length; i++) {
-            items.innerHTML += newItem(r[i].image,r[i].title,r[i].description, i)
-            let w = (r[i].current/r[i].duration)*100
+        for (let i = 0; i < r[id].length; i++) {
+            items.innerHTML += newItem(r[id][i].image,r[id][i].title,r[id][i].description, i)
+            let w = (r[id][i].current/r[id][i].duration)*100
             document.getElementById(`progressbar${i}`).style.width = `${w}%`
             document.getElementById(`fullbar${i}`).style.width = !(w>0) ? '0%' : '100%'
         }
@@ -100,4 +100,14 @@ function saveProgress(){
 function progressBar(){
     let vid = document.getElementById('vid')
     document.getElementById('p').style.width = `${(vid.currentTime/vid.duration)*100}%`
+}
+function setProfile(profileID){
+    let formData = new FormData()
+    formData.append('profileID', profileID)
+    fetch('/setprofile', {method: "POST", body: formData})
+        .then(res => res.text)
+        .then(r => {
+            location.reload()
+            window.open('/','_self')
+        })
 }
