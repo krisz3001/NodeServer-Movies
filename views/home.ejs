@@ -22,13 +22,10 @@
 			<input type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" value="Add show" onclick="refreshList()">
 		  </li>
 		  <li class="nav-item m-2">
-            <input type="button" value="Expand" class="btn btn-primary" onclick="expand()">
-          </li>
-		  <li class="nav-item m-2">
-			  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-primary" onclick="br()">Battle Royale</a>
+			  <a href="/profile" class="btn btn-warning">Profiles</a>
 		  </li>
 		  <li class="nav-item m-2">
-			  <a href="/profile" class="btn btn-warning">Profiles</a>
+			<input type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#fModal" value="Working Features">
 		  </li>
 		  <li class="nav-item m-2">
 			<input type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#todoModal" value="To-Do">
@@ -100,7 +97,7 @@
 				<li><del>Teljesen egyedi ötlet: piros csík a kártya alján ami mutatja hol jársz az adott filmben</del></li>
 				<li><del>Profilrendszer (Who's watching?)</del></li>
 				<li>Sorozatok kezelésének implementálása</li>
-				<li>Felesleges menüpontok törlése</li>
+				<li><del>Felesleges menüpontok törlése</del></li>
 				<li>Kategóriákra bontás</li>
 				<li><del>Esetleg szenvedés a képekkel hogy ugyanolyan magasak legyenek de ne nézzenek ki úgy mint varga irén</del></li>
 				<li>Kód egyszerűsítés</li>
@@ -113,6 +110,33 @@
 		</div>
 	  </div>
 	</div>
+</div>
+<div class="modal fade" id="fModal" tabindex="-1" aria-labelledby="fModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+	<div class="modal-content bg-dark">
+	  <div class="modal-header">
+		<h5 class="modal-title" id="fModalLabel">Working Features</h5>
+		<button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+	  </div>
+	  <div class="modal-body">
+		  <ul>
+			  <li>Profilrendszer (Who's watching?)</li>
+			  <li>Film progress megjegyzése profilonként</li>
+			  <li>Jelszavas védelem</li>
+			  <li>Teljes reszponzivitás</li>
+			  <li>Filmek hozzáadása saját kép, cím, leírás megadásával</li>
+			  <li>Filmek eltávolítása</li>
+			  <li>A szerveren lévő mappából lehet a forrásfájlt kiválasztani</li>
+			  <li>Easter Eggek</li>
+			  <li>Kokut</li>
+			  <li>Kijátszhatatlan script</li>
+		  </ul>
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	  </div>
+	</div>
+  </div>
 </div>
   <script src="assets/script.js"></script>
 </body>

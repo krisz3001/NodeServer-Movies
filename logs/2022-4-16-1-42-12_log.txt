@@ -1,0 +1,212 @@
+This session was started on 2022.4.16. 1:42:12This session was started on 2022.4.16. 1:42:12
+[1:42:12] Log directory created.
+[1:42:12] Listening to port 3001...
+[1:42:12] Listening to port 80...
+[1:42:13] 85.67.31.222 on login page. /
+[1:42:13] 85.67.31.222 on login page. 
+[1:42:15] 85.67.31.222 registered.
+[1:42:19] Profile 0 set for 85.67.31.222
+[1:42:19] 85.67.31.222 served. /home
+[1:42:19] 85.67.31.222 served. /db.json
+[1:44:50] 185.82.218.64 on login page. /.env
+[1:47:4] 85.67.31.222 served. /home
+[1:47:4] 85.67.31.222 served. /db.json
+[1:47:44] 85.67.31.222 served. /home
+[1:47:44] 85.67.31.222 served. /db.json
+[1:48:29] 85.67.31.222 served. /home
+[1:48:29] 85.67.31.222 served. /db.json
+[1:48:42] 85.67.31.222 served. /home
+[1:48:42] 85.67.31.222 served. /db.json
+[1:50:23] 85.67.31.222 served. /home
+[1:50:23] 85.67.31.222 served. /db.json
+[1:50:39] 85.67.31.222 served. /home
+[1:50:39] 85.67.31.222 served. /db.json
+[1:50:54] 85.67.31.222 served. /home
+[1:50:54] 85.67.31.222 served. /db.json
+[1:53:20] 85.67.31.222 served. /list
+[1:54:16] 85.67.31.222 served. /home
+[1:54:16] 85.67.31.222 served. /db.json
+[1:54:47] 85.67.31.222 served. /list
+[1:55:34] 85.67.31.222 served. /home
+[1:55:34] 85.67.31.222 served. /db.json
+[1:55:42] 85.67.31.222 served. /list
+[1:56:14] 85.67.31.222 removed.
+[1:56:14] 85.67.31.222 on login page. /
+[1:56:14] 85.67.31.222 on login page. 
+[1:56:17] 85.67.31.222 registered.
+[1:56:20] Profile 2 set for 85.67.31.222
+[1:56:21] 85.67.31.222 served. /home
+[1:56:21] 85.67.31.222 served. /db.json
+[1:57:59] 85.67.31.222 served. /home
+[1:57:59] 85.67.31.222 served. /db.json
+[1:58:21] 85.67.31.222 served. /home
+[1:58:21] 85.67.31.222 served. /db.json
+[1:59:16] 85.67.31.222 served. /list
+[1:59:22] 85.67.31.222 removed.
+[1:59:22] 85.67.31.222 on login page. /
+[1:59:22] 85.67.31.222 on login page. 
+[1:59:48] 192.168.1.2 on login page. /
+[1:59:53] 192.168.1.2 on login page. /
+[1:59:57] 192.168.1.2 registered.
+[2:0:7] Profile 0 set for 192.168.1.2
+[2:0:7] 192.168.1.2 served. /home
+[2:0:7] 192.168.1.2 served. /db.json
+[2:0:20] 192.168.1.2 served. /movie/0
+[2:0:20] 192.168.1.2 is watching /media/infinity.mp4
+[2:0:20] 192.168.1.2 is watching /media/infinity.mp4
+[2:0:20] 192.168.1.2 is watching /media/infinity.mp4
+[2:0:21] 192.168.1.2 is watching /media/infinity.mp4
+[2:0:22] 192.168.1.2 is watching /media/infinity.mp4
+[2:0:31] 192.168.1.2 is watching /media/infinity.mp4
+[2:0:33] 192.168.1.2 served. /home
+[2:0:33] 192.168.1.2 served. /db.json
+[2:0:38] 192.168.1.2 served. /profile
+[2:0:38] Profile 1 set for 192.168.1.2
+[2:0:38] 192.168.1.2 served. /home
+[2:0:38] 192.168.1.2 served. /db.json
+[2:0:42] 192.168.1.2 served. /profile
+[2:0:43] Profile 2 set for 192.168.1.2
+[2:0:43] 192.168.1.2 served. /home
+[2:0:43] 192.168.1.2 served. /db.json
+[2:0:44] 192.168.1.2 served. /profile
+[2:0:52] Profile 0 set for 192.168.1.2
+[2:0:52] 192.168.1.2 served. /home
+[2:0:52] 192.168.1.2 served. /db.json
+[2:0:54] 192.168.1.2 served. /movie/0
+[2:0:54] 192.168.1.2 is watching /media/infinity.mp4
+[2:0:54] 192.168.1.2 is watching /media/infinity.mp4
+[2:0:54] 192.168.1.2 is watching /media/infinity.mp4
+[2:0:55] 192.168.1.2 is watching /media/infinity.mp4
+[2:0:57] 192.168.1.2 served. /home
+[2:0:57] 192.168.1.2 served. /db.json
+[2:0:59] 192.168.1.2 served. /profile
+[2:0:59] Profile 0 set for 192.168.1.2
+[2:0:59] 192.168.1.2 served. /home
+[2:1:0] 192.168.1.2 served. /db.json
+[2:1:1] 192.168.1.2 served. /movie/0
+[2:1:1] 192.168.1.2 is watching /media/infinity.mp4
+[2:1:1] 192.168.1.2 is watching /media/infinity.mp4
+[2:1:1] 192.168.1.2 is watching /media/infinity.mp4
+[2:1:1] 192.168.1.2 is watching /media/infinity.mp4
+[2:1:1] 192.168.1.2 is watching /media/infinity.mp4
+[2:1:28] 192.168.1.2 served. /movie/0
+[2:1:28] 192.168.1.2 is watching /media/infinity.mp4
+[2:1:28] 192.168.1.2 is watching /media/infinity.mp4
+[2:1:28] 192.168.1.2 is watching /media/infinity.mp4
+[2:1:43] 192.168.1.2 served. /movie/0
+[2:1:43] 192.168.1.2 is watching /media/infinity.mp4
+[2:1:43] 192.168.1.2 is watching /media/infinity.mp4
+[2:1:44] 192.168.1.2 is watching /media/infinity.mp4
+[2:1:47] 192.168.1.2 removed.
+[2:1:48] Illegal POST request from 192.168.1.2. /progress
+[2:1:48] Illegal POST request from 192.168.1.2. /progress
+[2:1:48] 192.168.1.2 on login page. /
+[2:1:48] 192.168.1.2 on login page. 
+[2:1:51] 192.168.1.2 registered.
+[2:1:53] Profile 0 set for 192.168.1.2
+[2:1:53] 192.168.1.2 served. /home
+[2:1:53] 192.168.1.2 served. /db.json
+[2:2:32] 192.168.1.2 served. /home
+[2:2:32] 192.168.1.2 served. /db.json
+[2:3:42] 192.168.1.2 served. /movie/0
+[2:3:42] 192.168.1.2 is watching /media/infinity.mp4
+[2:3:43] 192.168.1.2 is watching /media/infinity.mp4
+[2:3:43] 192.168.1.2 is watching /media/infinity.mp4
+[2:3:52] 192.168.1.2 served. /movie/0
+[2:3:52] 192.168.1.2 is watching /media/infinity.mp4
+[2:3:52] 192.168.1.2 is watching /media/infinity.mp4
+[2:3:54] 192.168.1.2 served. /profile
+[2:4:1] Profile 0 set for 192.168.1.2
+[2:4:1] 192.168.1.2 served. /home
+[2:4:2] 192.168.1.2 served. /db.json
+[2:4:3] 192.168.1.2 served. /movie/0
+[2:4:3] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:3] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:4] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:5] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:5] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:10] 192.168.1.2 served. /profile
+[2:4:11] Profile 0 set for 192.168.1.2
+[2:4:11] 192.168.1.2 served. /home
+[2:4:11] 192.168.1.2 served. /db.json
+[2:4:14] 192.168.1.2 served. /profile
+[2:4:15] Profile 1 set for 192.168.1.2
+[2:4:15] 192.168.1.2 served. /home
+[2:4:15] 192.168.1.2 served. /db.json
+[2:4:16] 192.168.1.2 served. /profile
+[2:4:16] Profile 2 set for 192.168.1.2
+[2:4:16] 192.168.1.2 served. /home
+[2:4:17] 192.168.1.2 served. /db.json
+[2:4:18] 192.168.1.2 served. /profile
+[2:4:18] Profile 3 set for 192.168.1.2
+[2:4:18] 192.168.1.2 served. /home
+[2:4:19] 192.168.1.2 served. /db.json
+[2:4:20] 192.168.1.2 served. /movie/0
+[2:4:20] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:20] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:20] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:21] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:21] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:21] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:21] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:21] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:21] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:21] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:21] 192.168.1.2 is watching /media/infinity.mp4
+[2:4:25] 192.168.1.2 served. /profile
+[2:4:29] Profile 0 set for 192.168.1.2
+[2:4:29] 192.168.1.2 served. /home
+[2:4:29] 192.168.1.2 served. /db.json
+[2:4:30] 192.168.1.2 served. /profile
+[2:4:31] Profile 2 set for 192.168.1.2
+[2:4:31] 192.168.1.2 served. /home
+[2:4:31] 192.168.1.2 served. /db.json
+[2:4:32] 192.168.1.2 served. /profile
+[2:4:33] Profile 3 set for 192.168.1.2
+[2:4:33] 192.168.1.2 served. /home
+[2:4:33] 192.168.1.2 served. /db.json
+[2:4:35] 192.168.1.2 served. /profile
+[2:4:36] Profile 3 set for 192.168.1.2
+[2:4:36] 192.168.1.2 served. /home
+[2:4:36] 192.168.1.2 served. /db.json
+[2:4:37] 192.168.1.2 served. /movie/1
+[2:4:37] 192.168.1.2 is watching /media/endgame.mp4
+[2:4:38] 192.168.1.2 is watching /media/endgame.mp4
+[2:4:38] 192.168.1.2 is watching /media/endgame.mp4
+[2:4:38] 192.168.1.2 is watching /media/endgame.mp4
+[2:4:40] 192.168.1.2 is watching /media/endgame.mp4
+[2:4:43] 192.168.1.2 served. /profile
+[2:4:43] Profile 3 set for 192.168.1.2
+[2:4:43] 192.168.1.2 served. /home
+[2:4:44] 192.168.1.2 served. /db.json
+[2:4:45] 192.168.1.2 served. /movie/2
+[2:4:45] 192.168.1.2 is watching /media/farfromhome.mp4
+[2:4:45] 192.168.1.2 is watching /media/farfromhome.mp4
+[2:4:46] 192.168.1.2 is watching /media/farfromhome.mp4
+[2:4:46] 192.168.1.2 is watching /media/farfromhome.mp4
+[2:4:47] 192.168.1.2 is watching /media/farfromhome.mp4
+[2:4:49] 192.168.1.2 served. /home
+[2:4:49] 192.168.1.2 served. /db.json
+[2:5:33] 192.168.1.2 served. /profile
+[2:5:33] Profile 0 set for 192.168.1.2
+[2:5:33] 192.168.1.2 served. /home
+[2:5:33] 192.168.1.2 served. /db.json
+[2:5:35] 192.168.1.2 served. /movie/0
+[2:5:35] 192.168.1.2 is watching /media/infinity.mp4
+[2:5:35] 192.168.1.2 is watching /media/infinity.mp4
+[2:5:35] 192.168.1.2 is watching /media/infinity.mp4
+[2:5:35] 192.168.1.2 is watching /media/infinity.mp4
+[2:5:36] 192.168.1.2 is watching /media/infinity.mp4
+[2:5:37] 192.168.1.2 is watching /media/infinity.mp4
+[2:5:37] 192.168.1.2 is watching /media/infinity.mp4
+[2:5:39] 192.168.1.2 served. /home
+[2:5:40] 192.168.1.2 served. /db.json
+[2:5:45] 192.168.1.2 served. /movie/0
+[2:5:45] 192.168.1.2 is watching /media/infinity.mp4
+[2:5:45] 192.168.1.2 is watching /media/infinity.mp4
+[2:5:46] 192.168.1.2 is watching /media/infinity.mp4
+[2:5:48] 192.168.1.2 is watching /media/infinity.mp4
+[2:5:49] 192.168.1.2 served. /home
+[2:5:50] 192.168.1.2 served. /db.json
+[2:9:26] 192.168.1.2 served. /home
+[2:9:26] 192.168.1.2 served. /db.json
