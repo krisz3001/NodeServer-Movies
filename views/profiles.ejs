@@ -53,30 +53,77 @@
         <h1 class="text-center my-5">Who's watching?</h1>
         <div class="col-sm-3 col-6 bg-dark p d-flex">
             <a class="m-auto profile d-flex" onclick="setProfile(0)">
-                <div class="profile-pic border border-secondary btn" style="background-image: url('/assets/blue.png')"></div>
-                <h4 class="text-secondary">Szia</h4>
+                <div class="profile-pic border border-secondary btn p-0" style="background-image: url('/assets/<%= profiles[0].image %>')">
+                    <div class="d-none edit-div w-100 h-100 rounded d-flex" style="background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center;">
+                        <div style="width: 50px; height: 50px; background: transparent url('/assets/edit.png') center/contain no-repeat;"></div>
+                    </div>
+                </div>
+                <h4 class="text-secondary p-name"><%= profiles[0].name %></h4>
             </a>
         </div>
         <div class="col-sm-3 col-6 bg-dark p d-flex">
             <a class="m-auto profile d-flex" onclick="setProfile(1)">
-                <div class="profile-pic border border-secondary btn" style="background-image: url('/assets/yellow.png')"></div>
-                <h4 class="text-secondary">Lajos!</h4>
+                <div class="profile-pic border border-secondary btn p-0" style="background-image: url('/assets/<%= profiles[1].image %>')">
+                    <div class="d-none edit-div w-100 h-100 rounded d-flex" style="background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center;">
+                        <div style="width: 50px; height: 50px; background: transparent url('/assets/edit.png') center/contain no-repeat;"></div>
+                    </div>
+                </div>
+                <h4 class="text-secondary p-name"><%= profiles[1].name %></h4>
             </a>
         </div>
         <div class="col-sm-3 col-6 bg-dark p d-flex">
             <a class="m-auto profile d-flex" onclick="setProfile(2)">
-                <div class="profile-pic border border-secondary btn" style="background-image: url('/assets/red.png')"></div>
-                <h4 class="text-secondary">Kutyáidat</h4>
+                <div class="profile-pic border border-secondary btn p-0" style="background-image: url('/assets/<%= profiles[2].image %>')">
+                    <div class="d-none edit-div w-100 h-100 rounded d-flex" style="background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center;">
+                        <div style="width: 50px; height: 50px; background: transparent url('/assets/edit.png') center/contain no-repeat;"></div>
+                    </div>
+                </div>
+                <h4 class="text-secondary p-name"><%= profiles[2].name %></h4>
             </a>
         </div>
         <div class="col-sm-3 col-6 bg-dark p d-flex">
             <a class="m-auto profile d-flex" onclick="setProfile(3)">
-                <div class="profile-pic border border-secondary btn" style="background-image: url('/assets/Screenshot_1.png')"></div>
-                <h4 class="text-secondary">sétáltatod?</h4>
+                <div class="profile-pic border border-secondary btn p-0" style="background-image: url('/assets/<%= profiles[3].image %>')">
+                    <div class="d-none edit-div w-100 h-100 rounded d-flex" style="background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center;">
+                        <div style="width: 50px; height: 50px; background: transparent url('/assets/edit.png') center/contain no-repeat;"></div>
+                    </div>
+                </div>
+                <h4 class="text-secondary p-name"><%= profiles[3].name %></h4>
             </a>
         </div>
-        <a href="" id="edit" class="btn m-auto text-secondary border border-secondary">Edit profiles (WIP)</a>
+        <a onclick="toggleEdit()" id="edit" class="btn m-auto text-secondary border border-secondary">Edit profiles</a>
     </div>
+  </div>
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+	  <div class="modal-content bg-dark">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="editModalLabel">Edit profile</h5>
+		  <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+            <p class="d-none" id="id"></p>
+			<form>
+				<div class="form-group row">
+					<label for="image" class="col-sm-2 col-form-label">Image</label>
+					<div class="col-sm-7">
+						<input type="file" id="image" accept=".jpg,.png,.gif">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="name" class="col-sm-2 col-form-label">Name</label>
+					<div class="col-sm-10">
+						<input type="text" id="name" class="form-control" placeholder="Name">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		  <input type="button" class="btn btn-primary" data-bs-dismiss="modal" value="Edit" onclick="editProfile()">
+		</div>
+	  </div>
+	</div>
   </div>
   <script src="/assets/script.js"></script>
 </body>

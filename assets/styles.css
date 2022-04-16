@@ -25,3 +25,15 @@
     height: auto;
     overflow: visible;
 }
+#profile{
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1/1;
+    transition: .15s ease-in-out;
+}
+#profile:hover{
+    border-color: white!important;
+    cursor: pointer;
+}

@@ -62,7 +62,6 @@ function readUsers(){
   try {
     users = JSON.parse(fs.readFileSync('users.json'))
   } catch (error) {
-    console.log(error);
     fs.writeFileSync(users_path, JSON.stringify([]))
     saveLog('users.json file created.')
   }
@@ -73,14 +72,15 @@ app.set('view engine', 'ejs');
 app.use(fileupload())
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-//Reading db.json
 let br = __dirname + '/br.json'
+
+//Reading db.json
 function readDB(){
-  let db = []
+  let db = {"0":[],"1":[],"2":[],"3":[]}
   try {
-    db = JSON.parse(fs.readFileSync('db.json'))
+    db = JSON.parse(fs.readFileSync(__dirname + '/db.json'))
   } catch (error) {
-    fs.writeFileSync(__dirname + '/db.json', JSON.stringify(db))
+    fs.writeFileSync(__dirname + '/db.json', JSON.stringify(db, null, '\t'))
     saveLog('db.json file created.')
   }
   return db
@@ -88,14 +88,14 @@ function readDB(){
 
 //Reading profiles.json
 function readProfiles(){
-  let db = {"0":[],"1":[],"2":[],"3":[]}
+  let profiles = [{"id":0,"name": "Profile 1", "image": "favicon.png"},{"id":1,"name": "Profile 2", "image": "favicon.png"},{"id":2,"name": "Profile 3", "image": "favicon.png"},{"id":3,"name": "Profile 4", "image": "favicon.png"}]
   try {
-    db = JSON.parse(fs.readFileSync('profiles.json'))
+    profiles = JSON.parse(fs.readFileSync(__dirname + '/profiles.json'))
   } catch (error) {
-    fs.writeFileSync(__dirname + 'profiles.json', JSON.stringify(db))
+    fs.writeFileSync(__dirname + '/profiles.json', JSON.stringify(profiles, null, '\t'))
     saveLog('profiles.json file created.')
   }
-  return db
+  return profiles
 }
 
 //IP
@@ -158,18 +158,14 @@ app.post('/upload', function(req,res){
       img = req.files.image.name
       fs.writeFileSync(__dirname + '/assets/' + img, req.files.image.data, function(err){
         if(err) throw err
-        saveLog(`${img} downloaded.`)
       })
+      saveLog(`${img} downloaded.`)
     }
-    let newDB = readDB()
-    let profiles = readProfiles()
-    let item = {"id":newDB.length ,"image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename}
-    for (let i = 0; i < Object.keys(profiles).length; i++) {
-      profiles[i].push({"id":newDB.length ,"image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename, "current": "0", "duration": "0"})
+    let db = readDB()
+    for (let i = 0; i < Object.keys(db).length; i++) {
+      db[i].push({"id":db[i].length ,"image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename, "current": "0", "duration": "0"})
     }
-    newDB.push(item)
-    fs.writeFileSync('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
-    fs.writeFileSync('profiles.json', JSON.stringify(profiles, null, '\t'), 'utf8', function(){})
+    fs.writeFileSync('db.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
     res.sendStatus(200)
     ip = getIP(req.ip.substring(7))
     saveLog(`"${req.body.title}" added by ${ip}.`)
@@ -181,14 +177,40 @@ app.post('/upload', function(req,res){
   }
 })
 
+//Edit profile
+app.post('/editprofile', function(req, res){
+  if(isRegistered(req) && req.body != undefined){
+    let profiles = readProfiles()
+    let img = profiles[req.body.id].image
+    if(req.files){
+      img = req.files.image.name
+      fs.writeFileSync(__dirname + '/assets/' + img, req.files.image.data, function(err){
+        if(err) throw err
+      })
+      saveLog(`${img} downloaded.`)
+    }
+    profiles[req.body.id].name = req.body.name
+    profiles[req.body.id].image = img
+    fs.writeFileSync(__dirname + '/profiles.json', JSON.stringify(profiles, null, '\t'))
+    res.sendStatus(200)
+    ip = getIP(req.ip.substring(7))
+    saveLog(`Profile ${req.body.id} edited by ${ip}. Name: ${req.body.name}, Image: ${img}`)
+  }
+  else{
+    ip = getIP(req.ip.substring(7))
+    res.render('login')
+    saveLog(`Illegal POST request from ${ip}. ${req.url}`)
+  }
+})
+
 //Saving progress
 app.post('/progress', function(req, res){
   if(isRegistered(req)){
-    let profiles = readProfiles()
+    let db = readDB()
     let n = getProfile(req)
-    profiles[n][profiles[n].indexOf(profiles[n].find(x => x.id == req.body.id))].current = req.body.current
-    profiles[n][profiles[n].indexOf(profiles[n].find(x => x.id == req.body.id))].duration = req.body.duration
-    fs.writeFileSync('profiles.json', JSON.stringify(profiles, null, '\t'), 'utf8', function(){})
+    db[n][db[n].indexOf(db[n].find(x => x.id == req.body.id))].current = req.body.current
+    db[n][db[n].indexOf(db[n].find(x => x.id == req.body.id))].duration = req.body.duration
+    fs.writeFileSync('db.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
     res.sendStatus(200)
   }
   else{
@@ -203,10 +225,10 @@ app.post('/pass', function(req, res){
   ip = getIP(req.ip.substring(7))
   let pass = req.body.pass
   if(pass == 'kecske'){
-    let newDB = readUsers()
-    if(!newDB.some(x => x === ip)){
-      newDB.push({"ip": ip, "profile": "-1"})
-      fs.writeFileSync('users.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
+    let users = readUsers()
+    if(!users.some(x => x === ip)){
+      users.push({"ip": ip, "profile": "-1"})
+      fs.writeFileSync('users.json', JSON.stringify(users, null, '\t'), 'utf8', function(){})
       saveLog(`${ip} registered.`)
     }
   }
@@ -254,21 +276,15 @@ app.post('/logout', function(req, res){
 app.post('/delete', function(req, res){
   if(isRegistered(req)){
     ip = getIP(req.ip.substring(7))
-    let newDB = readDB()
-    let profiles = readProfiles()
-    let title = newDB[req.body.n].title
-    for (let i = 0; i < Object.keys(profiles).length; i++) {
-      profiles[i].splice(req.body.n, 1)
-      for (let j = 0; j < profiles[i].length; j++) {
-        profiles[i][j].id = j
+    let db = readDB()
+    let title = db[getProfile(req)][req.body.n].title
+    for (let i = 0; i < Object.keys(db).length; i++) {
+      db[i].splice(req.body.n, 1)
+      for (let j = 0; j < db[i].length; j++) {
+        db[i][j].id = j
       }
     }
-    newDB.splice(req.body.n, 1)
-    for (let i = 0; i < newDB.length; i++) {
-      newDB[i].id = i
-    }
-    fs.writeFileSync('db.json', JSON.stringify(newDB, null, '\t'), 'utf8', function(){})
-    fs.writeFileSync('profiles.json', JSON.stringify(profiles, null, '\t'), 'utf8', function(){})
+    fs.writeFileSync('db.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
     res.sendStatus(200)
     saveLog(`"${title}" deleted by ${ip}.`)
   }
@@ -286,15 +302,16 @@ app.get('*', function(req, res){
   if(isRegistered(req) && profileAssigned(req)){
     if(req.url === '/db.json'){
       service = '/db.json'
-      res.send(readProfiles())
+      res.send(readDB())
     }
     else if(req.url === '/'){
       service = '/home'
-      res.render('home', {"id": getProfile(req)})
+      let profiles = readProfiles()[getProfile(req)]
+      res.render('home', {"id": getProfile(req), "name": profiles.name, "image": profiles.image})
     }
     else if(req.url === '/profile'){
       service = req.url
-      res.render('profiles')
+      res.render('profiles', {"profiles": readProfiles()})
     }
     else if(req.url.substring(0, 8) === '/assets/' && req.url != '/assets/' && fs.existsSync(__dirname + req.url)){
       res.sendFile(__dirname + req.url)
@@ -304,10 +321,10 @@ app.get('*', function(req, res){
       res.sendFile(__dirname + req.url)
       service = req.url
     }
-    else if(req.url.substring(0,7) === '/movie/' && req.url != '/movie/' && req.url.substring(7) <= readDB().length && req.url.substring(7) > -1){
-      if(fs.existsSync(__dirname + '/media/' + readDB()[req.url.substring(7)].filename)){
+    else if(req.url.substring(0,7) === '/movie/' && req.url != '/movie/' && req.url.substring(7) <= readDB()[getProfile(req)].length && req.url.substring(7) > -1){
+      if(fs.existsSync(__dirname + '/media/' + readDB()[getProfile(req)][req.url.substring(7)].filename)){
         service = req.url
-        res.render('media', readProfiles()[getProfile(req)][req.url.substring(7)])
+        res.render('media', readDB()[getProfile(req)][req.url.substring(7)])
       }
       else{
         service = req.url
@@ -341,7 +358,7 @@ app.get('*', function(req, res){
     res.sendFile(__dirname + req.url)
   }
   else if(isRegistered(req) && !profileAssigned(req)){
-    res.render('profiles')
+    res.render('profiles', {"profiles": readProfiles()})
   }
   else if(isRegistered(req) && !profileAssigned(req) && req.url === '/favicon.ico'){
     res.sendFile(__dirname + '/assets/favicon.png')

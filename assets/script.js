@@ -111,3 +111,36 @@ function setProfile(profileID){
             window.open('/','_self')
         })
 }
+function toggleEdit(){
+    let edit = document.getElementsByClassName('edit-div')
+    let profile = document.getElementsByClassName('profile')
+    let b = document.getElementById('edit')
+    for (let i = 0; i < edit.length; i++) {
+        edit[i].classList.toggle('d-none')
+        if(!profile[i].getAttribute('onclick').includes('show')) profile[i].setAttribute('onclick', `showEdit(${i})`)
+        else profile[i].setAttribute('onclick', `setProfile(${i})`)
+    }
+    if(b.innerHTML.includes('Edit')) b.innerHTML = 'Done'
+    else b.innerHTML = 'Edit profiles'
+}
+function showEdit(n){
+    let modal = new bootstrap.Modal(document.getElementById('editModal'))
+    document.getElementById('id').innerHTML = n
+    document.getElementById('name').value = document.getElementsByClassName('p-name')[n].innerHTML
+    modal.show()
+}
+function editProfile(){
+    let image = document.getElementById('image')
+    let name = document.getElementById('name')
+    if(name.value.length == 0) return
+    let formData = new FormData()
+    formData.append("id", document.getElementById('id').innerHTML)
+    formData.append("image", image.files[0])
+    formData.append("name", name.value)
+    fetch('/editprofile', {method: "POST", body : formData})
+        .then(response => response.text)
+        .then(r => {
+            location.reload()
+            window.open('/profile','_self')
+        })
+}
