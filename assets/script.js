@@ -1,3 +1,7 @@
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 function expand(){
     //document.getElementById('items').innerHTML += newItem('placeholder.jpg','Title','Description')
     let formData = new FormData()
@@ -144,4 +148,14 @@ function editProfile(){
             location.reload()
             window.open('/profile','_self')
         })
+}
+function undo(){
+    fetch('/undo')
+        .then(res => res.text)
+        .then(r => refresh())
+}
+function redo(){
+    fetch('/redo')
+        .then(res => res.text)
+        .then(r => refresh())
 }

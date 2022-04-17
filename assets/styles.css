@@ -40,3 +40,10 @@
 .item:hover .pbar{
     display: none;
 }
+.tooltip-inner{
+    background-color: #dc3545;
+    box-shadow: 0px 0px 4px black;
+}
+.tooltip-arrow::before{
+    border-bottom-color: #dc3545!important;
+}

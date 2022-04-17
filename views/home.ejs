@@ -22,10 +22,13 @@
 			<input type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" value="Add show" onclick="refreshList()">
 		  </li>
 		  <li class="nav-item m-2">
-			<input type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#fModal" value="Working Features">
+			<input type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#todoModal" value="To-Do">
 		  </li>
 		  <li class="nav-item m-2">
-			<input type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#todoModal" value="To-Do">
+			<button class="btn btn-danger" onclick="undo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Undo the very last change">Undo</button>
+		  </li>
+		  <li class="nav-item m-2">
+			<button class="btn btn-danger" onclick="redo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Redo that has been undone">Redo</button>
 		  </li>
 		  <li class="nav-item d-none m-2" id="br_count"></li>
         </ul>

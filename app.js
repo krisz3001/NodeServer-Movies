@@ -86,6 +86,30 @@ function readDB(){
   return db
 }
 
+//Reading backup
+function readBackup(){
+  let db = {"0":[],"1":[],"2":[],"3":[]}
+  try {
+    db = JSON.parse(fs.readFileSync(__dirname + '/backup.json'))
+  } catch (error) {
+    fs.writeFileSync(__dirname + '/backup.json', JSON.stringify(db, null, '\t'))
+    saveLog('backup.json file created.')
+  }
+  return db
+}
+
+//Reading backup_redo
+function readBackupRedo(){
+  let db = {"0":[],"1":[],"2":[],"3":[]}
+  try {
+    db = JSON.parse(fs.readFileSync(__dirname + '/backup_redo.json'))
+  } catch (error) {
+    fs.writeFileSync(__dirname + '/backup_redo.json', JSON.stringify(db, null, '\t'))
+    saveLog('backup_redo.json file created.')
+  }
+  return db
+}
+
 //Reading profiles.json
 function readProfiles(){
   let profiles = [{"id":0,"name": "Profile 1", "image": "favicon.png"},{"id":1,"name": "Profile 2", "image": "favicon.png"},{"id":2,"name": "Profile 3", "image": "favicon.png"},{"id":3,"name": "Profile 4", "image": "favicon.png"}]
@@ -161,6 +185,7 @@ app.post('/upload', function(req,res){
       saveLog(`${img} downloaded.`)
     }
     let db = readDB()
+    fs.writeFileSync(__dirname + '/backup.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
     getVideoDurationInSeconds('/media/' + req.body.filename).then(x => {
       let duration = x
       for (let i = 0; i < Object.keys(db).length; i++) {
@@ -214,6 +239,20 @@ app.post('/progress', function(req, res){
     db[n][db[n].indexOf(db[n].find(x => x.id == req.body.id))].duration = req.body.duration
     fs.writeFileSync('db.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
     res.sendStatus(200)
+  }
+  else{
+    ip = getIP(req.ip.substring(7))
+    res.render('login')
+    saveLog(`Illegal POST request from ${ip}. ${req.url}`)
+  }
+})
+
+//Get progress
+app.post('/getprogress', function(req, res){
+  if(isRegistered(req)){
+    let db = readDB()
+    let n = getProfile(req)
+    res.send({"current": db[n][req.body.id].current})
   }
   else{
     ip = getIP(req.ip.substring(7))
@@ -280,6 +319,7 @@ app.post('/delete', function(req, res){
     ip = getIP(req.ip.substring(7))
     let db = readDB()
     let title = db[getProfile(req)][req.body.n].title
+    fs.writeFileSync(__dirname + '/backup.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
     for (let i = 0; i < Object.keys(db).length; i++) {
       db[i].splice(req.body.n, 1)
       for (let j = 0; j < db[i].length; j++) {
@@ -328,13 +368,24 @@ app.get('*', function(req, res){
         service = req.url
         let profiles = readProfiles()[getProfile(req)]
         let item = readDB()[getProfile(req)][req.url.substring(7)]
-        let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "title": item.title, "filename": item.filename, "image": item.image, "description": item.description, "current": item.current}
+        let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "title": item.title, "filename": item.filename, "image": item.image, "description": item.description}
         res.render('media', db)
       }
       else{
         service = req.url
         res.render('404')
       }
+    }
+    else if(req.url === '/undo'){
+      service = req.url
+      fs.writeFileSync(__dirname + '/backup_redo.json', JSON.stringify(readDB(), null, '\t'), 'utf8', function(){})
+      fs.writeFileSync('db.json', JSON.stringify(readBackup(), null, '\t'), 'utf8', function(){})
+      res.sendStatus(200)
+    }
+    else if(req.url === '/redo'){
+      service = req.url
+      fs.writeFileSync('db.json', JSON.stringify(readBackupRedo(), null, '\t'), 'utf8', function(){})
+      res.sendStatus(200)
     }
     else if(req.url === '/list'){
       service = req.url

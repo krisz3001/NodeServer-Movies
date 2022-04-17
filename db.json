@@ -6,7 +6,7 @@
 			"title": "Iron Man",
 			"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
 			"filename": "ironman.mp4",
-			"current": "2558.265799",
+			"current": "4461.943697",
 			"duration": "7561.704"
 		},
 		{
@@ -15,7 +15,7 @@
 			"title": "Iron Man 2",
 			"description": "Kiderült, hogy a szuperhős Vasember valójában Tony Stark. Kihasználva az iránta való érdeklődést a milliárdos feltaláló fel akarja hívni a figyelmet a közjó szolgálatába állítható technikai újdonságokra. A kormány azonban azt szeretné, ha fejlesztéseit a hadsereg kapná. Tony azonban nem akarja megosztani a Vasemberrel kapcsolatos információit, attól fél, hogy azok rossz kezekbe kerülnek. Közben felbukkan egy rejtélyes figura a Stark család múltjából. Ivan Vanko a saját fegyverével akarja elpusztítani a Vasembert. A szuperhős kénytelen újra akcióba lépni, hogy a barátai segítségével legyőzze azokat az erőket, amelyek őt és az emberiséget fenyegetik.",
 			"filename": "ironman2.mp4",
-			"current": "4079.346615",
+			"current": "2465.450634",
 			"duration": "7479.168"
 		},
 		{
@@ -34,7 +34,7 @@
 			"description": "A Marvel mozis univerzumának egészét felölelő, tíz év eseményeinek tetőpontját jelentő Bosszúállók: Végtelen háborúban minden idők legnagyobb és leghalálosabb leszámolására kerül sor. A Bosszúállóknak és szövetségeseiknek mindent kockára kell tenniük, hogy megfékezzék a nagy erejű Thanost, aki egy szemvillanás alatt elpusztíthatja a világot.",
 			"filename": "infinity.mp4",
 			"current": "0",
-			"duration": "8957.574"
+			"duration": "8959.464"
 		},
 		{
 			"id": 4,
@@ -42,7 +42,7 @@
 			"title": "Avengers: Endgame",
 			"description": "Thanos súlyos tette, amivel elpusztította az univerzum élőlényeinek felét és megtörte a Bosszúállókat, a megmaradt hősöket egy végső összecsapásra készteti a Marvel Studios huszonegy filmet megkoronázó, nagyszabású fináléjában, a Bosszúállók: Végjátékban.",
 			"filename": "endgame.mp4",
-			"current": "0",
+			"current": "2793.868041",
 			"duration": "10870.32"
 		},
 		{
@@ -62,6 +62,24 @@
 			"filename": "kingsman2.mp4",
 			"current": "0",
 			"duration": "8462.304"
+		},
+		{
+			"id": 7,
+			"image": "ivosgyerek.gif",
+			"title": "Hello?",
+			"description": "Helaú?",
+			"filename": "stuck.mp4",
+			"current": "0",
+			"duration": "76.0089"
+		},
+		{
+			"id": 8,
+			"image": "infinity.jpg",
+			"title": "a",
+			"description": "a",
+			"filename": "endgame.mp4",
+			"current": "0",
+			"duration": "10868.483"
 		}
 	],
 	"1": [
@@ -72,7 +90,7 @@
 			"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
 			"filename": "ironman.mp4",
 			"current": "0",
-			"duration": "7561.68"
+			"duration": "7561.704"
 		},
 		{
 			"id": 1,
@@ -127,6 +145,24 @@
 			"filename": "kingsman2.mp4",
 			"current": "0",
 			"duration": "8462.304"
+		},
+		{
+			"id": 7,
+			"image": "ivosgyerek.gif",
+			"title": "Hello?",
+			"description": "Helaú?",
+			"filename": "stuck.mp4",
+			"current": "0",
+			"duration": "76.0089"
+		},
+		{
+			"id": 8,
+			"image": "infinity.jpg",
+			"title": "a",
+			"description": "a",
+			"filename": "endgame.mp4",
+			"current": "0",
+			"duration": "10868.483"
 		}
 	],
 	"2": [
@@ -192,6 +228,24 @@
 			"filename": "kingsman2.mp4",
 			"current": "0",
 			"duration": "8462.246"
+		},
+		{
+			"id": 7,
+			"image": "ivosgyerek.gif",
+			"title": "Hello?",
+			"description": "Helaú?",
+			"filename": "stuck.mp4",
+			"current": "0",
+			"duration": "76.0089"
+		},
+		{
+			"id": 8,
+			"image": "infinity.jpg",
+			"title": "a",
+			"description": "a",
+			"filename": "endgame.mp4",
+			"current": "0",
+			"duration": "10868.483"
 		}
 	],
 	"3": [
@@ -257,6 +311,24 @@
 			"filename": "kingsman2.mp4",
 			"current": "0",
 			"duration": "8462.246"
+		},
+		{
+			"id": 7,
+			"image": "ivosgyerek.gif",
+			"title": "Hello?",
+			"description": "Helaú?",
+			"filename": "stuck.mp4",
+			"current": "0",
+			"duration": "76.0089"
+		},
+		{
+			"id": 8,
+			"image": "infinity.jpg",
+			"title": "a",
+			"description": "a",
+			"filename": "endgame.mp4",
+			"current": "0",
+			"duration": "10868.483"
 		}
 	]
 }
