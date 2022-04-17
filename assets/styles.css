@@ -37,3 +37,6 @@
     border-color: white!important;
     cursor: pointer;
 }
+.item:hover .pbar{
+    display: none;
+}

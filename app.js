@@ -3,7 +3,7 @@ var app = express();
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var fileupload = require('express-fileupload');
-const { use } = require('express/lib/application');
+const { getVideoDurationInSeconds } = require('get-video-duration')
 let ip
 
 function time(){
@@ -50,8 +50,8 @@ function saveLog(log){
   console.log(time() + log)
 }
 //media mappa létrehozása
-if(!fs.existsSync(__dirname + '/media')){
-  fs.mkdirSync(__dirname + '/media')
+if(!fs.existsSync('/media')){
+  fs.mkdirSync('/media')
   saveLog('Media folder created.')
 }
 
@@ -97,7 +97,6 @@ function readProfiles(){
   }
   return profiles
 }
-
 //IP
 function getIP(ip){
   if(ip==='') return '192.168.1.2'
@@ -162,13 +161,16 @@ app.post('/upload', function(req,res){
       saveLog(`${img} downloaded.`)
     }
     let db = readDB()
-    for (let i = 0; i < Object.keys(db).length; i++) {
-      db[i].push({"id":db[i].length ,"image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename, "current": "0", "duration": "0"})
-    }
-    fs.writeFileSync('db.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
-    res.sendStatus(200)
-    ip = getIP(req.ip.substring(7))
-    saveLog(`"${req.body.title}" added by ${ip}.`)
+    getVideoDurationInSeconds('/media/' + req.body.filename).then(x => {
+      let duration = x
+      for (let i = 0; i < Object.keys(db).length; i++) {
+        db[i].push({"id":db[i].length ,"image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename, "current": "0", "duration": `${duration}`})
+      }
+      fs.writeFileSync('db.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
+      res.sendStatus(200)
+      ip = getIP(req.ip.substring(7))
+      saveLog(`"${req.body.title}" added by ${ip}.`)
+    })
   }
   else{
     ip = getIP(req.ip.substring(7))
@@ -317,14 +319,17 @@ app.get('*', function(req, res){
       res.sendFile(__dirname + req.url)
       service = ''
     }
-    else if(req.url.substring(0,7) === '/media/' && req.url != '/media/' && fs.existsSync(__dirname + req.url)){
-      res.sendFile(__dirname + req.url)
+    else if(req.url.substring(0,7) === '/media/' && req.url != '/media/' && fs.existsSync(req.url)){
+      res.sendFile(req.url)
       service = req.url
     }
     else if(req.url.substring(0,7) === '/movie/' && req.url != '/movie/' && req.url.substring(7) <= readDB()[getProfile(req)].length && req.url.substring(7) > -1){
-      if(fs.existsSync(__dirname + '/media/' + readDB()[getProfile(req)][req.url.substring(7)].filename)){
+      if(fs.existsSync('/media/' + readDB()[getProfile(req)][req.url.substring(7)].filename)){
         service = req.url
-        res.render('media', readDB()[getProfile(req)][req.url.substring(7)])
+        let profiles = readProfiles()[getProfile(req)]
+        let item = readDB()[getProfile(req)][req.url.substring(7)]
+        let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "title": item.title, "filename": item.filename, "image": item.image, "description": item.description, "current": item.current}
+        res.render('media', db)
       }
       else{
         service = req.url
@@ -334,7 +339,7 @@ app.get('*', function(req, res){
     else if(req.url === '/list'){
       service = req.url
       let list = []
-      fs.readdir(__dirname + '/media', (err, files) => {
+      fs.readdir('/media', (err, files) => {
         files.forEach(x=>{
           list.push(x)
         })

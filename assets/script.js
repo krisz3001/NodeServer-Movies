@@ -8,8 +8,8 @@ function expand(){
         .then(response => response.text)
         .then(r => refresh())
 }
-function newItem(img, title, desc, n){
-    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item"><img src="/assets/delete.png" class="d-none delete_img img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark" id="fullbar${n}"><div id="progressbar${n}" style="width: 0; height: 5px; background: red;"></div></div></div><div class="item-info d-none bg-dark p-2 border border-secondary w-100 rounded-bottom"><p class="h5">${title}</p><a class="btn btn-success w-100" href="/movie/${n}">Play</a><p class="text-justify m-0">${desc}</p></div></div>`
+function newItem(img, title, desc, n, w, current, duration){
+    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item"><img src="/assets/delete.png" class="d-none delete_img img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info d-none bg-dark p-2 border border-secondary w-100 rounded-bottom"><p class="h5">${title}</p><div class="row mb-2"><div class="col-sm-7"><div class="bg-secondary" style="height: 5px; width: 100%; margin-top: 0.6rem"><div style="height: 5px; background-color: red; width: ${w}%"></div></div></div><div class="col-sm-5 p-sm-0"><p class="m-0 text-left">${current}/${duration} perc</p></div></div><a class="btn btn-success w-100" href="/movie/${n}">Play</a><p class="m-0">${desc}</p></div></div>`
 }
 function newOption(value){
     return `<option value="${value}">${value}</option`
@@ -21,9 +21,10 @@ function refresh(){
     .then(response => response.json())
     .then(r => {
         for (let i = 0; i < r[id].length; i++) {
-            items.innerHTML += newItem(r[id][i].image,r[id][i].title,r[id][i].description, i)
             let w = (r[id][i].current/r[id][i].duration)*100
-            document.getElementById(`progressbar${i}`).style.width = `${w}%`
+            let current = Math.round(r[id][i].current/60)
+            let duration = Math.round(r[id][i].duration/60)
+            items.innerHTML += newItem(r[id][i].image,r[id][i].title,r[id][i].description, i, w, current, duration)
             document.getElementById(`fullbar${i}`).style.width = !(w>0) ? '0%' : '100%'
         }
 })

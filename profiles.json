@@ -1,8 +1,8 @@
 [
 	{
 		"id": 0,
-		"name": "Szia",
-		"image": "blue.png"
+		"name": "Viktor",
+		"image": "Untitled.png"
 	},
 	{
 		"id": 1,
@@ -11,12 +11,12 @@
 	},
 	{
 		"id": 2,
-		"name": "Kutyáidat",
-		"image": "red.png"
+		"name": "Profile 3",
+		"image": "favicon.png"
 	},
 	{
 		"id": 3,
-		"name": "sétáltatod?",
-		"image": "Screenshot_1.png"
+		"name": "Profile 4",
+		"image": "blue.png"
 	}
 ]
