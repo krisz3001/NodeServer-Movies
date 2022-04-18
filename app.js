@@ -4,64 +4,58 @@ var fs = require('fs');
 var bodyParser = require('body-parser');
 var fileupload = require('express-fileupload');
 const { getVideoDurationInSeconds } = require('get-video-duration');
-const { json } = require('express/lib/response');
 let ip
 
-function time(){
-  let date = new Date();
-  return '[' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + '] ';
-}
-//launch time
-let getLaunchTime = new Date();
-var month = getLaunchTime.getMonth()+1;
-var launchTime = getLaunchTime.getFullYear() + '-' + month + '-' + getLaunchTime.getDate() + '-' + getLaunchTime.getHours() + '-' + getLaunchTime.getMinutes() + '-' + getLaunchTime.getSeconds();
-var sessionStart = 'This session was started on ' + getLaunchTime.getFullYear() + '.' + month + '.' + getLaunchTime.getDate() + '. ' + getLaunchTime.getHours() + ':' + getLaunchTime.getMinutes() + ':' + getLaunchTime.getSeconds();
-const logName = 'logs/' + launchTime + '_log.txt'
+//Launch time
+let d = new Date()
+let month = d.getMonth()+1 < 10 ? `0${d.getMonth()+1}` : d.getMonth()+1
+let day = d.getDate() < 10 ? `0${d.getDate()}` : d.getDate()
+let hours = d.getHours() < 10 ? `0${d.getHours()}` : d.getHours()
+let minutes = d.getMinutes() < 10 ? `0${d.getMinutes()}` : d.getMinutes()
+let seconds = d.getSeconds() < 10 ? `0${d.getSeconds()}` : d.getSeconds()
+let launchTime = `${d.getFullYear()}-${month}-${day}-${hours}-${minutes}-${seconds}`
+let sessionStart = `This session was started on ${d.getFullYear()}.${month}.${day}. ${hours}:${minutes}:${seconds}`
 
-//save log
+//Database paths
+const db_path = `${__dirname}/db.json`
+const profiles_path = `${__dirname}/profiles.json`
+const users_path = `${__dirname}/users.json`
+const backup_path = `${__dirname}/backup.json`
+const backup_redo_path = `${__dirname}/backup_redo.json`
+const logDir_path = `${__dirname}/logs/`
+const log_path = `${__dirname}/logs/${launchTime}_log.txt`
+const br_path = `${__dirname}/br.json`
+const mediaDir_path = `/media/`
+const assetsDir_path = `${__dirname}/assets/`
+saveLog(sessionStart)
+
+//Get time
+function time(){
+  let date = new Date()
+  let h = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours()
+  let m = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes()
+  let s = date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds()
+  return `[${h}:${m}:${s}] `
+}
+//Save log
 function saveLog(log){
-  if(!fs.existsSync(__dirname + '/logs')){
-    fs.mkdirSync(__dirname + '/logs');
+  try {
+    fs.appendFileSync(log_path, `\n${time()}${log}`, function(){})
+  } catch (err) {
+    fs.mkdirSync(logDir_path)
+    fs.appendFileSync(log_path, `\n${time()}${log}`, function(){})
     saveLog('Log directory created.')
-    fs.appendFileSync(logName, sessionStart, function(err){
-      if(err) throw err;
-    });
-    fs.appendFileSync(logName, '\n' + time() + 'Log directory created.', function(err){
-      if(err) throw err;
-    });
-    fs.appendFileSync(logName, '\n' + time() + log, function(err){
-      if(err) throw err;
-    });
-  } else{
-    if(!fs.existsSync(__dirname + '/' + logName)){
-      fs.appendFileSync(logName, sessionStart, function(err){
-        if(err) throw err;
-        else{
-          fs.appendFileSync(logName, '\n' + time() + log, function(err){
-            if(err) throw err;
-          });
-        }
-      });
-    } else{
-      fs.appendFileSync(logName, '\n' + time() + log, function(err){
-        if(err) throw err;
-      });
-    }
   }
-  console.log(time() + log)
+  console.log(time() + log);
 }
-//media mappa létrehozása
-if(!fs.existsSync('/media')){
-  fs.mkdirSync('/media')
-  saveLog('Media folder created.')
-}
+//Media mappa létrehozása
+!fs.existsSync(mediaDir_path) ? fs.mkdirSync(mediaDir_path) + saveLog('Media folder created.') : ''
 
 //Get allowed users
-let users_path = __dirname + '/users.json'
 function readUsers(){
   let users = []
   try {
-    users = JSON.parse(fs.readFileSync('users.json'))
+    users = JSON.parse(fs.readFileSync(users_path))
   } catch (error) {
     fs.writeFileSync(users_path, JSON.stringify([]))
     saveLog('users.json file created.')
@@ -79,9 +73,9 @@ let br = __dirname + '/br.json'
 function readDB(){
   let db = {"0":[],"1":[],"2":[],"3":[]}
   try {
-    db = JSON.parse(fs.readFileSync(__dirname + '/db.json'))
+    db = JSON.parse(fs.readFileSync(db_path))
   } catch (error) {
-    fs.writeFileSync(__dirname + '/db.json', JSON.stringify(db, null, '\t'))
+    fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'))
     saveLog('db.json file created.')
   }
   return db
@@ -91,9 +85,9 @@ function readDB(){
 function readBackup(){
   let db = {"0":[],"1":[],"2":[],"3":[]}
   try {
-    db = JSON.parse(fs.readFileSync(__dirname + '/backup.json'))
+    db = JSON.parse(fs.readFileSync(backup_path))
   } catch (error) {
-    fs.writeFileSync(__dirname + '/backup.json', JSON.stringify(db, null, '\t'))
+    fs.writeFileSync(backup_path, JSON.stringify(db, null, '\t'))
     saveLog('backup.json file created.')
   }
   return db
@@ -103,9 +97,9 @@ function readBackup(){
 function readBackupRedo(){
   let db = {"0":[],"1":[],"2":[],"3":[]}
   try {
-    db = JSON.parse(fs.readFileSync(__dirname + '/backup_redo.json'))
+    db = JSON.parse(fs.readFileSync(backup_redo_path))
   } catch (error) {
-    fs.writeFileSync(__dirname + '/backup_redo.json', JSON.stringify(db, null, '\t'))
+    fs.writeFileSync(backup_redo_path, JSON.stringify(db, null, '\t'))
     saveLog('backup_redo.json file created.')
   }
   return db
@@ -115,9 +109,9 @@ function readBackupRedo(){
 function readProfiles(){
   let profiles = [{"id":0,"name": "Profile 1", "image": "favicon.png"},{"id":1,"name": "Profile 2", "image": "favicon.png"},{"id":2,"name": "Profile 3", "image": "favicon.png"},{"id":3,"name": "Profile 4", "image": "favicon.png"}]
   try {
-    profiles = JSON.parse(fs.readFileSync(__dirname + '/profiles.json'))
+    profiles = JSON.parse(fs.readFileSync(profiles_path))
   } catch (error) {
-    fs.writeFileSync(__dirname + '/profiles.json', JSON.stringify(profiles, null, '\t'))
+    fs.writeFileSync(profiles_path, JSON.stringify(profiles, null, '\t'))
     saveLog('profiles.json file created.')
   }
   return profiles
@@ -151,12 +145,12 @@ app.post('/br', urlencodedParser, function(req, res) {
   if(isRegistered(req)){
     let txt
     try {
-      txt = {"count":JSON.parse(fs.readFileSync('br.json')).count+1}
+      txt = {"count":JSON.parse(fs.readFileSync(br_path)).count+1}
     } catch (error) {
       txt = {"count":1}
-      fs.writeFileSync(br, JSON.stringify(txt, null, '\t'))
+      fs.writeFileSync(br_path, JSON.stringify(txt, null, '\t'))
     }
-    fs.writeFileSync(br, JSON.stringify(txt, null, '\t'))
+    fs.writeFileSync(br_path, JSON.stringify(txt, null, '\t'))
     res.send(txt)
     ip = getIP(req.ip.substring(7))
     saveLog(ip + " baited.")
@@ -180,19 +174,19 @@ app.post('/upload', function(req,res){
     let img = 'placeholder.jpg'
     if(req.files){
       img = req.files.image.name
-      fs.writeFileSync(__dirname + '/assets/' + img, req.files.image.data, function(err){
+      fs.writeFileSync(assetsDir_path + img, req.files.image.data, function(err){
         if(err) throw err
       })
       saveLog(`${img} downloaded.`)
     }
     let db = readDB()
-    fs.writeFileSync(__dirname + '/backup.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
-    getVideoDurationInSeconds('/media/' + req.body.filename).then(x => {
+    fs.writeFileSync(backup_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
+    getVideoDurationInSeconds(mediaDir_path + req.body.filename).then(x => {
       let duration = x
       for (let i = 0; i < Object.keys(db).length; i++) {
         db[i].push({"id":db[i].length ,"image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename, "current": "0", "duration": `${duration}`})
       }
-      fs.writeFileSync('db.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
+      fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
       res.sendStatus(200)
       ip = getIP(req.ip.substring(7))
       saveLog(`"${req.body.title}" added by ${ip}.`)
@@ -212,14 +206,14 @@ app.post('/editprofile', function(req, res){
     let img = profiles[req.body.id].image
     if(req.files){
       img = req.files.image.name
-      fs.writeFileSync(__dirname + '/assets/' + img, req.files.image.data, function(err){
+      fs.writeFileSync(assetsDir_path + img, req.files.image.data, function(err){
         if(err) throw err
       })
       saveLog(`${img} downloaded.`)
     }
     profiles[req.body.id].name = req.body.name
     profiles[req.body.id].image = img
-    fs.writeFileSync(__dirname + '/profiles.json', JSON.stringify(profiles, null, '\t'))
+    fs.writeFileSync(profiles_path, JSON.stringify(profiles, null, '\t'))
     res.sendStatus(200)
     ip = getIP(req.ip.substring(7))
     saveLog(`Profile ${req.body.id} edited by ${ip}. Name: ${req.body.name}, Image: ${img}`)
@@ -238,7 +232,7 @@ app.post('/progress', function(req, res){
     let n = getProfile(req)
     db[n][db[n].indexOf(db[n].find(x => x.id == req.body.id))].current = req.body.current
     db[n][db[n].indexOf(db[n].find(x => x.id == req.body.id))].duration = req.body.duration
-    fs.writeFileSync('db.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
+    fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
     res.sendStatus(200)
   }
   else{
@@ -270,7 +264,7 @@ app.post('/pass', function(req, res){
     let users = readUsers()
     if(!users.some(x => x === ip)){
       users.push({"ip": ip, "profile": "-1"})
-      fs.writeFileSync('users.json', JSON.stringify(users, null, '\t'), 'utf8', function(){})
+      fs.writeFileSync(users_path, JSON.stringify(users, null, '\t'), 'utf8', function(){})
       saveLog(`${ip} registered.`)
     }
   }
@@ -286,7 +280,7 @@ app.post('/setprofile', function(req, res){
     ip = getIP(req.ip.substring(7))
     let users = readUsers()
     users[users.indexOf(users.find(x => x.ip === ip))].profile = req.body.profileID
-    fs.writeFileSync('users.json', JSON.stringify(users, null, '\t'), 'utf8', function(){})
+    fs.writeFileSync(users_path, JSON.stringify(users, null, '\t'), 'utf8', function(){})
     saveLog(`Profile ${req.body.profileID} set for ${ip}`)
     res.sendStatus(200)
   }
@@ -303,7 +297,7 @@ app.post('/logout', function(req, res){
     ip = getIP(req.ip.substring(7))
     let users = readUsers()
     users.splice(users.indexOf(users.find(x => x.ip === ip)), 1)
-    fs.writeFileSync('users.json', JSON.stringify(users, null, '\t'), 'utf8', function(){})
+    fs.writeFileSync(users_path, JSON.stringify(users, null, '\t'), 'utf8', function(){})
     saveLog(`${ip} removed.`)
     res.sendStatus(200)
   }
@@ -320,14 +314,14 @@ app.post('/delete', function(req, res){
     ip = getIP(req.ip.substring(7))
     let db = readDB()
     let title = db[getProfile(req)][req.body.n].title
-    fs.writeFileSync(__dirname + '/backup.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
+    fs.writeFileSync(backup_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
     for (let i = 0; i < Object.keys(db).length; i++) {
       db[i].splice(req.body.n, 1)
       for (let j = 0; j < db[i].length; j++) {
         db[i][j].id = j
       }
     }
-    fs.writeFileSync('db.json', JSON.stringify(db, null, '\t'), 'utf8', function(){})
+    fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
     res.sendStatus(200)
     saveLog(`"${title}" deleted by ${ip}.`)
   }
@@ -365,7 +359,7 @@ app.get('*', function(req, res){
       service = req.url
     }
     else if(req.url.substring(0,7) === '/movie/' && req.url != '/movie/' && req.url.substring(7) <= readDB()[getProfile(req)].length && req.url.substring(7) > -1){
-      if(fs.existsSync('/media/' + readDB()[getProfile(req)][req.url.substring(7)].filename)){
+      if(fs.existsSync(mediaDir_path + readDB()[getProfile(req)][req.url.substring(7)].filename)){
         service = req.url
         let profiles = readProfiles()[getProfile(req)]
         let item = readDB()[getProfile(req)][req.url.substring(7)]
@@ -379,19 +373,19 @@ app.get('*', function(req, res){
     }
     else if(req.url === '/undo'){
       service = req.url
-      if(JSON.stringify(readBackup()) != JSON.stringify(readDB())) fs.writeFileSync(__dirname + '/backup_redo.json', JSON.stringify(readDB(), null, '\t'), 'utf8', function(){})
-      fs.writeFileSync('db.json', JSON.stringify(readBackup(), null, '\t'), 'utf8', function(){})
+      if(JSON.stringify(readBackup()) != JSON.stringify(readDB())) fs.writeFileSync(backup_redo_path, JSON.stringify(readDB(), null, '\t'), 'utf8', function(){})
+      fs.writeFileSync(db_path, JSON.stringify(readBackup(), null, '\t'), 'utf8', function(){})
       res.sendStatus(200)
     }
     else if(req.url === '/redo'){
       service = req.url
-      fs.writeFileSync('db.json', JSON.stringify(readBackupRedo(), null, '\t'), 'utf8', function(){})
+      fs.writeFileSync(db_path, JSON.stringify(readBackupRedo(), null, '\t'), 'utf8', function(){})
       res.sendStatus(200)
     }
     else if(req.url === '/list'){
       service = req.url
       let list = []
-      fs.readdir('/media', (err, files) => {
+      fs.readdir(mediaDir_path, (err, files) => {
         files.forEach(x=>{
           list.push(x)
         })
