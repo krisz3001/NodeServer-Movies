@@ -30,6 +30,9 @@
 		  <li class="nav-item m-2">
 			<button class="btn btn-danger" onclick="redo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Redo that has been undone">Redo</button>
 		  </li>
+		  <li class="nav-item m-2">
+			<button class="btn btn-danger" onclick="alert('Abban a pillanatban szétbaszná az egészet a faszba nézd meg xd'); br()">Delete all</button>
+		  </li>
 		  <li class="nav-item d-none m-2" id="br_count"></li>
         </ul>
 		<p class="m-2"><%= name %></p>
@@ -105,6 +108,8 @@
 				<li>Kód egyszerűsítés</li>
 				<li><del>Több kokut</del></li>
 				<li>Opció link megadására fájlnév helyett</li>
+				<li><del>Autosave percenként</del></li>
+				<li><del>Undo, redo</del></li>
 			</ul>
 		</div>
 		<div class="modal-footer">

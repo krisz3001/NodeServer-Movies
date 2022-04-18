@@ -3,7 +3,8 @@ var app = express();
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var fileupload = require('express-fileupload');
-const { getVideoDurationInSeconds } = require('get-video-duration')
+const { getVideoDurationInSeconds } = require('get-video-duration');
+const { json } = require('express/lib/response');
 let ip
 
 function time(){
@@ -378,7 +379,7 @@ app.get('*', function(req, res){
     }
     else if(req.url === '/undo'){
       service = req.url
-      fs.writeFileSync(__dirname + '/backup_redo.json', JSON.stringify(readDB(), null, '\t'), 'utf8', function(){})
+      if(JSON.stringify(readBackup()) != JSON.stringify(readDB())) fs.writeFileSync(__dirname + '/backup_redo.json', JSON.stringify(readDB(), null, '\t'), 'utf8', function(){})
       fs.writeFileSync('db.json', JSON.stringify(readBackup(), null, '\t'), 'utf8', function(){})
       res.sendStatus(200)
     }
