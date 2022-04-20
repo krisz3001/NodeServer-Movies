@@ -40,10 +40,10 @@ function time(){
 //Save log
 function saveLog(log){
   try {
-    fs.appendFileSync(log_path, `\n${time()}${log}`, function(){})
+    fs.appendFileSync(log_path, `${time()}${log}\n`, function(){})
   } catch (err) {
     fs.mkdirSync(logDir_path)
-    fs.appendFileSync(log_path, `\n${time()}${log}`, function(){})
+    fs.appendFileSync(log_path, `${time()}${log}\n`, function(){})
     saveLog('Log directory created.')
   }
   console.log(time() + log);
@@ -66,8 +66,6 @@ function readUsers(){
 app.set('view engine', 'ejs');
 app.use(fileupload())
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
-
-let br = __dirname + '/br.json'
 
 //Reading db.json
 function readDB(){
@@ -181,16 +179,45 @@ app.post('/upload', function(req,res){
     }
     let db = readDB()
     fs.writeFileSync(backup_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
-    getVideoDurationInSeconds(mediaDir_path + req.body.filename).then(x => {
-      let duration = x
-      for (let i = 0; i < Object.keys(db).length; i++) {
-        db[i].push({"id":db[i].length ,"image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename, "current": "0", "duration": `${duration}`})
-      }
-      fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
-      res.sendStatus(200)
-      ip = getIP(req.ip.substring(7))
-      saveLog(`"${req.body.title}" added by ${ip}.`)
-    })
+    if(fs.lstatSync(mediaDir_path + req.body.filename).isDirectory()){
+      let list = []
+      let seasons = 0
+      let episodes = []
+      let episode_progress = []
+      files = fs.readdirSync(mediaDir_path + req.body.filename)
+      files.forEach(x => list.push(x))
+      let counter = 0
+      list.forEach(x => {
+        let season = x.split('.')[0].split('_')[1]
+        if(season > seasons) episodes.push(0)
+        seasons = season > seasons ? season : seasons
+        episodes[season-1]++
+        getVideoDurationInSeconds(mediaDir_path + `/${x.split('_')[0]}/` + x).then(y => {
+          episode_progress.push({"filename": x, "current": 0, "duration": `${y}`})
+        }).then(z => {
+          counter++
+          if(counter === list.length){
+            for (let i = 0; i < Object.keys(db).length; i++) {
+              db[i].push({"id": db[i].length, "type": "series", "image": img, "title": req.body.title, "description": req.body.description, "episode_progress": episode_progress, "progress": "1_1", "seasons": seasons, "episodes": episodes})
+            }
+            fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
+            res.sendStatus(200)
+            saveLog(`"${req.body.title}" added by ${ip}. (${episodes.reduce((a,b)=>a+b,0)} episodes)`)
+          }
+        })
+      })
+    }
+    else{
+      getVideoDurationInSeconds(mediaDir_path + req.body.filename).then(x => {
+        for (let i = 0; i < Object.keys(db).length; i++) {
+          db[i].push({"id": db[i].length, "type": "movie", "image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename, "current": "0", "duration": `${x}`})
+        }
+        fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
+        res.sendStatus(200)
+        ip = getIP(req.ip.substring(7))
+        saveLog(`"${req.body.title}" added by ${ip}.`)
+      })
+    }
   }
   else{
     ip = getIP(req.ip.substring(7))
@@ -267,11 +294,22 @@ app.post('/pass', function(req, res){
       fs.writeFileSync(users_path, JSON.stringify(users, null, '\t'), 'utf8', function(){})
       saveLog(`${ip} registered.`)
     }
+    res.sendStatus(200)
+  }
+  else if(pass == 'adjlog'){
+    let log = fs.readFileSync(log_path, 'utf8').toString()
+    res.send(log)
+    saveLog(`${ip} asked for the log.`)
+  }
+  else if(pass == 'abandonship'){
+    saveLog(`${ip} invokes emergency shutdown.`)
+    res.sendStatus(200)
+    process.exit()
   }
   else{
     saveLog(`${ip} is trying to get in with "${pass}".`)
+    res.sendStatus(200)
   }
-  res.sendStatus(200)
 })
 
 //Set profile
@@ -338,7 +376,7 @@ app.get('*', function(req, res){
   ip = getIP(req.ip.substring(7))
   if(isRegistered(req) && profileAssigned(req)){
     if(req.url === '/db.json'){
-      service = '/db.json'
+      service = ''
       res.send(readDB())
     }
     else if(req.url === '/'){
@@ -368,6 +406,29 @@ app.get('*', function(req, res){
       }
       else{
         service = req.url
+        res.render('404')
+      }
+    }
+    else if(req.url.substring(0,8) === '/series/' && req.url != '/series/' && req.url.split('/').length === 6){
+      try {
+        fs.lstatSync(mediaDir_path + req.url.substring(8).split('/')[1]).isDirectory()
+        service = req.url
+        let split = req.url.split('/')
+        let name = split[3]
+        let s = split[4]
+        let e = split[5]
+        if(fs.existsSync(mediaDir_path + `${name}/${name}_${s}_${e}.mp4`)){
+          let profiles = readProfiles()[getProfile(req)]
+          let item = readDB()[getProfile(req)][split[2]]
+          let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "title": item.title, "filename": `${name}/${name}_${s}_${e}.mp4`, "image": item.image, "description": item.description}
+          res.render('media', db)
+        }
+        else{
+          service = `/404 (${req.url})`
+          res.render('404')
+        }
+      } catch (error) {
+        service = `/404 (${req.url})`
         res.render('404')
       }
     }

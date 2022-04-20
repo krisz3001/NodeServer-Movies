@@ -6,7 +6,7 @@
 			"title": "Iron Man",
 			"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
 			"filename": "ironman.mp4",
-			"current": "4461.943697",
+			"current": "4465.881462",
 			"duration": "7561.704"
 		},
 		{
@@ -15,7 +15,7 @@
 			"title": "Iron Man 2",
 			"description": "Kiderült, hogy a szuperhős Vasember valójában Tony Stark. Kihasználva az iránta való érdeklődést a milliárdos feltaláló fel akarja hívni a figyelmet a közjó szolgálatába állítható technikai újdonságokra. A kormány azonban azt szeretné, ha fejlesztéseit a hadsereg kapná. Tony azonban nem akarja megosztani a Vasemberrel kapcsolatos információit, attól fél, hogy azok rossz kezekbe kerülnek. Közben felbukkan egy rejtélyes figura a Stark család múltjából. Ivan Vanko a saját fegyverével akarja elpusztítani a Vasembert. A szuperhős kénytelen újra akcióba lépni, hogy a barátai segítségével legyőzze azokat az erőket, amelyek őt és az emberiséget fenyegetik.",
 			"filename": "ironman2.mp4",
-			"current": "2465.450634",
+			"current": "2469.388341",
 			"duration": "7479.168"
 		},
 		{
@@ -78,8 +78,69 @@
 			"title": "Én tudok főzni, én áldoztam ezért: 7-kor fölkeltem, marhát pucoltam, az, hogy egy faszszopó geci kurva elment a retkes kurva anyjába, nem érdekel, 260 kilométert utaztak a cigányok, nehogymár olyan nyerje baszdmeg aki nem tud főzni!",
 			"description": "Én, aki reggel óta főzök, hát menjetek a faszomba, baszd meg a gecibe, szórakoztok velem, hagyjatok már baszdmeg, mi a faszt szavazzak?  Ez egy főzőverseny baszki, há' mit szavazzak? Mit szavazzak baszdmeg? Mit, hogy a pincér csinálja meg az étteremben? Hétkor pucoltam a marhapörköltet, faszszopó.  Baszki. Gyere ide, gyere ide, kisköcsög! Gyere, most mondd el! Aki erős, itt megáll előttem. Hétkor elkezdtem pucolni a marhapörköltet, mi a faszomra szavazzak?  Hát kinek van igaza gyerekek? Egy verseny, én ezért nem aludtam 1-2-3 napot. A menyasszonyomat nyüstöltem, hogy pucolja a krumplit, érted? Pucolta a krumplit, a Papp Dani baszdmeg - úgy, hogy neki családi programja volt baszdmeg - rohangált ide, hogy a terítést idehozza. Én könyörögtem itt a lakóknak - ne csititgass Timi, kérlek - mert itt halt meg a szomszéd. És akkor szavazzuk meg. Hát nyerjen olyan aki nem tud főzni? Nyerjen a rómeó?  Ez egy főzőverseny: a Rómeó tud úgy főzni mint én? Rómeó, szerinted tudsz úgy főzni mint én? Jó, de azt megcsináltam.  Te mit csináltál? Jó, akkor a Győző nyert, jóéjszakát, szevasztok.",
 			"filename": "damu.mp4",
-			"current": "0",
+			"current": "55.044571",
 			"duration": "124.319637"
+		},
+		{
+			"id": 9,
+			"type": "series",
+			"image": "whatif.jpg",
+			"title": "What if...?",
+			"description": "What if?",
+			"episode_progress": [
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": 0,
+					"duration": "1933.5"
+				},
+				{
+					"filename": "whatif_1_1.mp4",
+					"current": 0,
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_3.mp4",
+					"current": 0,
+					"duration": "1823.291992"
+				},
+				{
+					"filename": "whatif_1_4.mp4",
+					"current": 0,
+					"duration": "2078.708984"
+				},
+				{
+					"filename": "whatif_1_6.mp4",
+					"current": 0,
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_5.mp4",
+					"current": 0,
+					"duration": "1798.208984"
+				},
+				{
+					"filename": "whatif_1_9.mp4",
+					"current": 0,
+					"duration": "1982.916992"
+				},
+				{
+					"filename": "whatif_1_8.mp4",
+					"current": 0,
+					"duration": "1703.541992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": 0,
+					"duration": "1970.833984"
+				}
+			],
+			"progress": "1_1",
+			"seasons": "1",
+			"episodes": [
+				9
+			],
+			"current": "463.945023",
+			"duration": "1872.96"
 		}
 	],
 	"1": [
@@ -163,6 +224,65 @@
 			"filename": "damu.mp4",
 			"current": "0",
 			"duration": "124.266667"
+		},
+		{
+			"id": 9,
+			"type": "series",
+			"image": "whatif.jpg",
+			"title": "What if...?",
+			"description": "What if?",
+			"episode_progress": [
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": 0,
+					"duration": "1933.5"
+				},
+				{
+					"filename": "whatif_1_1.mp4",
+					"current": 0,
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_3.mp4",
+					"current": 0,
+					"duration": "1823.291992"
+				},
+				{
+					"filename": "whatif_1_4.mp4",
+					"current": 0,
+					"duration": "2078.708984"
+				},
+				{
+					"filename": "whatif_1_6.mp4",
+					"current": 0,
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_5.mp4",
+					"current": 0,
+					"duration": "1798.208984"
+				},
+				{
+					"filename": "whatif_1_9.mp4",
+					"current": 0,
+					"duration": "1982.916992"
+				},
+				{
+					"filename": "whatif_1_8.mp4",
+					"current": 0,
+					"duration": "1703.541992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": 0,
+					"duration": "1970.833984"
+				}
+			],
+			"progress": "1_1",
+			"seasons": "1",
+			"episodes": [
+				9
+			]
 		}
 	],
 	"2": [
@@ -246,6 +366,65 @@
 			"filename": "damu.mp4",
 			"current": "0",
 			"duration": "124.266667"
+		},
+		{
+			"id": 9,
+			"type": "series",
+			"image": "whatif.jpg",
+			"title": "What if...?",
+			"description": "What if?",
+			"episode_progress": [
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": 0,
+					"duration": "1933.5"
+				},
+				{
+					"filename": "whatif_1_1.mp4",
+					"current": 0,
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_3.mp4",
+					"current": 0,
+					"duration": "1823.291992"
+				},
+				{
+					"filename": "whatif_1_4.mp4",
+					"current": 0,
+					"duration": "2078.708984"
+				},
+				{
+					"filename": "whatif_1_6.mp4",
+					"current": 0,
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_5.mp4",
+					"current": 0,
+					"duration": "1798.208984"
+				},
+				{
+					"filename": "whatif_1_9.mp4",
+					"current": 0,
+					"duration": "1982.916992"
+				},
+				{
+					"filename": "whatif_1_8.mp4",
+					"current": 0,
+					"duration": "1703.541992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": 0,
+					"duration": "1970.833984"
+				}
+			],
+			"progress": "1_1",
+			"seasons": "1",
+			"episodes": [
+				9
+			]
 		}
 	],
 	"3": [
@@ -329,6 +508,65 @@
 			"filename": "damu.mp4",
 			"current": "0",
 			"duration": "124.266667"
+		},
+		{
+			"id": 9,
+			"type": "series",
+			"image": "whatif.jpg",
+			"title": "What if...?",
+			"description": "What if?",
+			"episode_progress": [
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": 0,
+					"duration": "1933.5"
+				},
+				{
+					"filename": "whatif_1_1.mp4",
+					"current": 0,
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_3.mp4",
+					"current": 0,
+					"duration": "1823.291992"
+				},
+				{
+					"filename": "whatif_1_4.mp4",
+					"current": 0,
+					"duration": "2078.708984"
+				},
+				{
+					"filename": "whatif_1_6.mp4",
+					"current": 0,
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_5.mp4",
+					"current": 0,
+					"duration": "1798.208984"
+				},
+				{
+					"filename": "whatif_1_9.mp4",
+					"current": 0,
+					"duration": "1982.916992"
+				},
+				{
+					"filename": "whatif_1_8.mp4",
+					"current": 0,
+					"duration": "1703.541992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": 0,
+					"duration": "1970.833984"
+				}
+			],
+			"progress": "1_1",
+			"seasons": "1",
+			"episodes": [
+				9
+			]
 		}
 	]
 }
