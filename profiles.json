@@ -1,22 +1,22 @@
 [
 	{
 		"id": 0,
+		"name": "Én",
+		"image": "blue.png"
+	},
+	{
+		"id": 1,
+		"name": "Lajos",
+		"image": "Screenshot_1.png"
+	},
+	{
+		"id": 2,
 		"name": "Viktor",
 		"image": "Untitled.png"
 	},
 	{
-		"id": 1,
-		"name": "Fórzsi",
-		"image": "unknown4.png"
-	},
-	{
-		"id": 2,
-		"name": "Profile 3",
-		"image": "favicon.png"
-	},
-	{
 		"id": 3,
 		"name": "official tester",
-		"image": "hangman.png"
+		"image": "favicon.png"
 	}
 ]

@@ -43,7 +43,12 @@
         fetch('/pass', {method: "POST", body : formData})
         .then(res => res.text())
         .then(r => {
-            if(r.length != 2){
+            if(r == 'lololol'){
+              window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ','_blank')
+              document.getElementById('pass').value = ''
+              alert('Azt hitted úgy hagyom mi :D')
+            }
+            else if(r.length != 2){
               document.getElementById('l').innerText = r
               let modal = new bootstrap.Modal(document.getElementById('lModal'))
               modal.show()

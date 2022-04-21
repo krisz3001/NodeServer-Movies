@@ -2,172 +2,7 @@
 	"0": [
 		{
 			"id": 0,
-			"image": "ironman.jpg",
-			"title": "Iron Man",
-			"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
-			"filename": "ironman.mp4",
-			"current": "4465.881462",
-			"duration": "7561.704"
-		},
-		{
-			"id": 1,
-			"image": "ironman2.jpg",
-			"title": "Iron Man 2",
-			"description": "Kiderült, hogy a szuperhős Vasember valójában Tony Stark. Kihasználva az iránta való érdeklődést a milliárdos feltaláló fel akarja hívni a figyelmet a közjó szolgálatába állítható technikai újdonságokra. A kormány azonban azt szeretné, ha fejlesztéseit a hadsereg kapná. Tony azonban nem akarja megosztani a Vasemberrel kapcsolatos információit, attól fél, hogy azok rossz kezekbe kerülnek. Közben felbukkan egy rejtélyes figura a Stark család múltjából. Ivan Vanko a saját fegyverével akarja elpusztítani a Vasembert. A szuperhős kénytelen újra akcióba lépni, hogy a barátai segítségével legyőzze azokat az erőket, amelyek őt és az emberiséget fenyegetik.",
-			"filename": "ironman2.mp4",
-			"current": "2469.388341",
-			"duration": "7479.168"
-		},
-		{
-			"id": 2,
-			"image": "ironman3.jpg",
-			"title": "Iron Man 3",
-			"description": "A legutóbbi küldetése után Tony Stark talonba tette a Vasembert. A tudós-szuperhős boldogan él egykori asszisztensével, ám álmatlanságban szenved, és pánikrohamok gyötrik. Amikor merényletek sora rázza meg a várost, Stark úgy dönt, hogy felveszi a (vas)kesztyűt, és szembeszáll a titokzatos ellenséggel. A Vasemberen végzett legújabb fejlesztése azonban még nem tökéletes, ráadásul felbukkan néhány korábbi ismerőse is. Az ösztönei és a találékonysága segítségével talán sikerül felülemelkedni a nehézségeken.",
-			"filename": "ironman3.mp4",
-			"current": "1713.461538",
-			"duration": "7832.928"
-		},
-		{
-			"id": 3,
-			"image": "infinity.jpg",
-			"title": "Avengers: Infinity War",
-			"description": "A Marvel mozis univerzumának egészét felölelő, tíz év eseményeinek tetőpontját jelentő Bosszúállók: Végtelen háborúban minden idők legnagyobb és leghalálosabb leszámolására kerül sor. A Bosszúállóknak és szövetségeseiknek mindent kockára kell tenniük, hogy megfékezzék a nagy erejű Thanost, aki egy szemvillanás alatt elpusztíthatja a világot.",
-			"filename": "infinity.mp4",
-			"current": "0",
-			"duration": "8959.464"
-		},
-		{
-			"id": 4,
-			"image": "endgame.jpg",
-			"title": "Avengers: Endgame",
-			"description": "Thanos súlyos tette, amivel elpusztította az univerzum élőlényeinek felét és megtörte a Bosszúállókat, a megmaradt hősöket egy végső összecsapásra készteti a Marvel Studios huszonegy filmet megkoronázó, nagyszabású fináléjában, a Bosszúállók: Végjátékban.",
-			"filename": "endgame.mp4",
-			"current": "2793.868041",
-			"duration": "10870.32"
-		},
-		{
-			"id": 5,
-			"image": "farfromhome.jpg",
-			"title": "Spider-Man: Far From Home",
-			"description": "Pókember nem pihenhet. Az már kiderült, hogy az ifjú pók (Tom Holland) egyedül is képes megmenteni a világot, és csoportban is megállja a helyét, de közben ő úgy érzi, hogy neki is jár mindaz, ami bármelyik középiskolásnak: és a haverjaival európai utazásra indul. De éppen, amikor végre élvezhetné mindazt, amit a baráti lazulás kínálhat, újabb kihívás elé kell néznie. A rejtélyes Mysterio (Jake Gyllenhaal) miatt új kalandba indul, és könnyen lehet, hogy Pókember, aki nagy nehezen próbálja a hátizsákos utazást a hősi küzdelemmel összehangolni, kénytelen régi Bosszúálló társaitól segítséget kérni.",
-			"filename": "farfromhome.mp4",
-			"current": "0",
-			"duration": "7763.756"
-		},
-		{
-			"id": 6,
-			"image": "kingsman2.jpg",
-			"title": "Kingsman: The Golden Circle",
-			"description": "Ha a világot valami rettenetes baj, világuralomra törő főgonosz vagy más efféle rémség fenyegeti, akkor sem kell félnünk: van szakember, aki megállítja a gonoszságot. A Kingsman közelharcra és rejtvényfejtésre egyaránt tökéletesen kiképzett, úriember ügynökei majdnem mindig tudják, mi a teendő. De néha a \\\"majdnem mindig\\\" is kevés. Az új ellenség (Julianne Moore) természetesen világuralomra tör, valószínűleg őrült, és biztosan lángész: sikeresen csapdába csalja a Kingsman-csapatot, és felrobbantja a központjukat. Csak az újonc Töki (Taron Egerton) és kiképzője, Merlin (Mark Strong) ússza meg a támadást: ők Amerikába menekülnek, ahol a szervezetükhöz hasonló, helyi cég, a Statesman egy embere (Halle Berry) várja őket. Együtt vágnak neki, eddigi legkeményebb, legveszélyesebb feladatuk leküzdésének.",
-			"filename": "kingsman2.mp4",
-			"current": "0",
-			"duration": "8462.304"
-		},
-		{
-			"id": 7,
-			"image": "ivosgyerek.gif",
-			"title": "Hello?",
-			"description": "Helaú?",
-			"filename": "stuck.mp4",
-			"current": "0",
-			"duration": "76.0089"
-		},
-		{
-			"id": 8,
-			"image": "maxresdefault.jpg",
-			"title": "Én tudok főzni, én áldoztam ezért: 7-kor fölkeltem, marhát pucoltam, az, hogy egy faszszopó geci kurva elment a retkes kurva anyjába, nem érdekel, 260 kilométert utaztak a cigányok, nehogymár olyan nyerje baszdmeg aki nem tud főzni!",
-			"description": "Én, aki reggel óta főzök, hát menjetek a faszomba, baszd meg a gecibe, szórakoztok velem, hagyjatok már baszdmeg, mi a faszt szavazzak?  Ez egy főzőverseny baszki, há' mit szavazzak? Mit szavazzak baszdmeg? Mit, hogy a pincér csinálja meg az étteremben? Hétkor pucoltam a marhapörköltet, faszszopó.  Baszki. Gyere ide, gyere ide, kisköcsög! Gyere, most mondd el! Aki erős, itt megáll előttem. Hétkor elkezdtem pucolni a marhapörköltet, mi a faszomra szavazzak?  Hát kinek van igaza gyerekek? Egy verseny, én ezért nem aludtam 1-2-3 napot. A menyasszonyomat nyüstöltem, hogy pucolja a krumplit, érted? Pucolta a krumplit, a Papp Dani baszdmeg - úgy, hogy neki családi programja volt baszdmeg - rohangált ide, hogy a terítést idehozza. Én könyörögtem itt a lakóknak - ne csititgass Timi, kérlek - mert itt halt meg a szomszéd. És akkor szavazzuk meg. Hát nyerjen olyan aki nem tud főzni? Nyerjen a rómeó?  Ez egy főzőverseny: a Rómeó tud úgy főzni mint én? Rómeó, szerinted tudsz úgy főzni mint én? Jó, de azt megcsináltam.  Te mit csináltál? Jó, akkor a Győző nyert, jóéjszakát, szevasztok.",
-			"filename": "damu.mp4",
-			"current": "55.044571",
-			"duration": "124.319637"
-		}
-	],
-	"1": [
-		{
-			"id": 0,
-			"image": "ironman.jpg",
-			"title": "Iron Man",
-			"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
-			"filename": "ironman.mp4",
-			"current": "0",
-			"duration": "7561.704"
-		},
-		{
-			"id": 1,
-			"image": "ironman2.jpg",
-			"title": "Iron Man 2",
-			"description": "Kiderült, hogy a szuperhős Vasember valójában Tony Stark. Kihasználva az iránta való érdeklődést a milliárdos feltaláló fel akarja hívni a figyelmet a közjó szolgálatába állítható technikai újdonságokra. A kormány azonban azt szeretné, ha fejlesztéseit a hadsereg kapná. Tony azonban nem akarja megosztani a Vasemberrel kapcsolatos információit, attól fél, hogy azok rossz kezekbe kerülnek. Közben felbukkan egy rejtélyes figura a Stark család múltjából. Ivan Vanko a saját fegyverével akarja elpusztítani a Vasembert. A szuperhős kénytelen újra akcióba lépni, hogy a barátai segítségével legyőzze azokat az erőket, amelyek őt és az emberiséget fenyegetik.",
-			"filename": "ironman2.mp4",
-			"current": "0",
-			"duration": "7479.139"
-		},
-		{
-			"id": 2,
-			"image": "ironman3.jpg",
-			"title": "Iron Man 3",
-			"description": "A legutóbbi küldetése után Tony Stark talonba tette a Vasembert. A tudós-szuperhős boldogan él egykori asszisztensével, ám álmatlanságban szenved, és pánikrohamok gyötrik. Amikor merényletek sora rázza meg a várost, Stark úgy dönt, hogy felveszi a (vas)kesztyűt, és szembeszáll a titokzatos ellenséggel. A Vasemberen végzett legújabb fejlesztése azonban még nem tökéletes, ráadásul felbukkan néhány korábbi ismerőse is. Az ösztönei és a találékonysága segítségével talán sikerül felülemelkedni a nehézségeken.",
-			"filename": "ironman3.mp4",
-			"current": "0",
-			"duration": "7832.867"
-		},
-		{
-			"id": 3,
-			"image": "infinity.jpg",
-			"title": "Avengers: Infinity War",
-			"description": "A Marvel mozis univerzumának egészét felölelő, tíz év eseményeinek tetőpontját jelentő Bosszúállók: Végtelen háborúban minden idők legnagyobb és leghalálosabb leszámolására kerül sor. A Bosszúállóknak és szövetségeseiknek mindent kockára kell tenniük, hogy megfékezzék a nagy erejű Thanost, aki egy szemvillanás alatt elpusztíthatja a világot.",
-			"filename": "infinity.mp4",
-			"current": "0",
-			"duration": "8959.464"
-		},
-		{
-			"id": 4,
-			"image": "endgame.jpg",
-			"title": "Avengers: Endgame",
-			"description": "Thanos súlyos tette, amivel elpusztította az univerzum élőlényeinek felét és megtörte a Bosszúállókat, a megmaradt hősöket egy végső összecsapásra készteti a Marvel Studios huszonegy filmet megkoronázó, nagyszabású fináléjában, a Bosszúállók: Végjátékban.",
-			"filename": "endgame.mp4",
-			"current": "0",
-			"duration": "10868.483"
-		},
-		{
-			"id": 5,
-			"image": "farfromhome.jpg",
-			"title": "Spider-Man: Far From Home",
-			"description": "Pókember nem pihenhet. Az már kiderült, hogy az ifjú pók (Tom Holland) egyedül is képes megmenteni a világot, és csoportban is megállja a helyét, de közben ő úgy érzi, hogy neki is jár mindaz, ami bármelyik középiskolásnak: és a haverjaival európai utazásra indul. De éppen, amikor végre élvezhetné mindazt, amit a baráti lazulás kínálhat, újabb kihívás elé kell néznie. A rejtélyes Mysterio (Jake Gyllenhaal) miatt új kalandba indul, és könnyen lehet, hogy Pókember, aki nagy nehezen próbálja a hátizsákos utazást a hősi küzdelemmel összehangolni, kénytelen régi Bosszúálló társaitól segítséget kérni.",
-			"filename": "farfromhome.mp4",
-			"current": "0",
-			"duration": "7763.756"
-		},
-		{
-			"id": 6,
-			"image": "kingsman2.jpg",
-			"title": "Kingsman: The Golden Circle",
-			"description": "Ha a világot valami rettenetes baj, világuralomra törő főgonosz vagy más efféle rémség fenyegeti, akkor sem kell félnünk: van szakember, aki megállítja a gonoszságot. A Kingsman közelharcra és rejtvényfejtésre egyaránt tökéletesen kiképzett, úriember ügynökei majdnem mindig tudják, mi a teendő. De néha a \\\"majdnem mindig\\\" is kevés. Az új ellenség (Julianne Moore) természetesen világuralomra tör, valószínűleg őrült, és biztosan lángész: sikeresen csapdába csalja a Kingsman-csapatot, és felrobbantja a központjukat. Csak az újonc Töki (Taron Egerton) és kiképzője, Merlin (Mark Strong) ússza meg a támadást: ők Amerikába menekülnek, ahol a szervezetükhöz hasonló, helyi cég, a Statesman egy embere (Halle Berry) várja őket. Együtt vágnak neki, eddigi legkeményebb, legveszélyesebb feladatuk leküzdésének.",
-			"filename": "kingsman2.mp4",
-			"current": "0",
-			"duration": "8462.304"
-		},
-		{
-			"id": 7,
-			"image": "ivosgyerek.gif",
-			"title": "Hello?",
-			"description": "Helaú?",
-			"filename": "stuck.mp4",
-			"current": "0",
-			"duration": "76.0089"
-		},
-		{
-			"id": 8,
-			"image": "maxresdefault.jpg",
-			"title": "Én tudok főzni, én áldoztam ezért: 7-kor fölkeltem, marhát pucoltam, az, hogy egy faszszopó geci kurva elment a retkes kurva anyjába, nem érdekel, 260 kilométert utaztak a cigányok, nehogymár olyan nyerje baszdmeg aki nem tud főzni!",
-			"description": "Én, aki reggel óta főzök, hát menjetek a faszomba, baszd meg a gecibe, szórakoztok velem, hagyjatok már baszdmeg, mi a faszt szavazzak?  Ez egy főzőverseny baszki, há' mit szavazzak? Mit szavazzak baszdmeg? Mit, hogy a pincér csinálja meg az étteremben? Hétkor pucoltam a marhapörköltet, faszszopó.  Baszki. Gyere ide, gyere ide, kisköcsög! Gyere, most mondd el! Aki erős, itt megáll előttem. Hétkor elkezdtem pucolni a marhapörköltet, mi a faszomra szavazzak?  Hát kinek van igaza gyerekek? Egy verseny, én ezért nem aludtam 1-2-3 napot. A menyasszonyomat nyüstöltem, hogy pucolja a krumplit, érted? Pucolta a krumplit, a Papp Dani baszdmeg - úgy, hogy neki családi programja volt baszdmeg - rohangált ide, hogy a terítést idehozza. Én könyörögtem itt a lakóknak - ne csititgass Timi, kérlek - mert itt halt meg a szomszéd. És akkor szavazzuk meg. Hát nyerjen olyan aki nem tud főzni? Nyerjen a rómeó?  Ez egy főzőverseny: a Rómeó tud úgy főzni mint én? Rómeó, szerinted tudsz úgy főzni mint én? Jó, de azt megcsináltam.  Te mit csináltál? Jó, akkor a Győző nyert, jóéjszakát, szevasztok.",
-			"filename": "damu.mp4",
-			"current": "0",
-			"duration": "124.266667"
-		}
-	],
-	"2": [
-		{
-			"id": 0,
+			"type": "movie",
 			"image": "ironman.jpg",
 			"title": "Iron Man",
 			"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
@@ -177,6 +12,7 @@
 		},
 		{
 			"id": 1,
+			"type": "movie",
 			"image": "ironman2.jpg",
 			"title": "Iron Man 2",
 			"description": "Kiderült, hogy a szuperhős Vasember valójában Tony Stark. Kihasználva az iránta való érdeklődést a milliárdos feltaláló fel akarja hívni a figyelmet a közjó szolgálatába állítható technikai újdonságokra. A kormány azonban azt szeretné, ha fejlesztéseit a hadsereg kapná. Tony azonban nem akarja megosztani a Vasemberrel kapcsolatos információit, attól fél, hogy azok rossz kezekbe kerülnek. Közben felbukkan egy rejtélyes figura a Stark család múltjából. Ivan Vanko a saját fegyverével akarja elpusztítani a Vasembert. A szuperhős kénytelen újra akcióba lépni, hogy a barátai segítségével legyőzze azokat az erőket, amelyek őt és az emberiséget fenyegetik.",
@@ -186,6 +22,7 @@
 		},
 		{
 			"id": 2,
+			"type": "movie",
 			"image": "ironman3.jpg",
 			"title": "Iron Man 3",
 			"description": "A legutóbbi küldetése után Tony Stark talonba tette a Vasembert. A tudós-szuperhős boldogan él egykori asszisztensével, ám álmatlanságban szenved, és pánikrohamok gyötrik. Amikor merényletek sora rázza meg a várost, Stark úgy dönt, hogy felveszi a (vas)kesztyűt, és szembeszáll a titokzatos ellenséggel. A Vasemberen végzett legújabb fejlesztése azonban még nem tökéletes, ráadásul felbukkan néhány korábbi ismerőse is. Az ösztönei és a találékonysága segítségével talán sikerül felülemelkedni a nehézségeken.",
@@ -195,6 +32,7 @@
 		},
 		{
 			"id": 3,
+			"type": "movie",
 			"image": "infinity.jpg",
 			"title": "Avengers: Infinity War",
 			"description": "A Marvel mozis univerzumának egészét felölelő, tíz év eseményeinek tetőpontját jelentő Bosszúállók: Végtelen háborúban minden idők legnagyobb és leghalálosabb leszámolására kerül sor. A Bosszúállóknak és szövetségeseiknek mindent kockára kell tenniük, hogy megfékezzék a nagy erejű Thanost, aki egy szemvillanás alatt elpusztíthatja a világot.",
@@ -204,15 +42,17 @@
 		},
 		{
 			"id": 4,
+			"type": "movie",
 			"image": "endgame.jpg",
 			"title": "Avengers: Endgame",
 			"description": "Thanos súlyos tette, amivel elpusztította az univerzum élőlényeinek felét és megtörte a Bosszúállókat, a megmaradt hősöket egy végső összecsapásra készteti a Marvel Studios huszonegy filmet megkoronázó, nagyszabású fináléjában, a Bosszúállók: Végjátékban.",
 			"filename": "endgame.mp4",
-			"current": "0",
-			"duration": "10868.483"
+			"current": "3183.441649",
+			"duration": "10870.32"
 		},
 		{
 			"id": 5,
+			"type": "movie",
 			"image": "farfromhome.jpg",
 			"title": "Spider-Man: Far From Home",
 			"description": "Pókember nem pihenhet. Az már kiderült, hogy az ifjú pók (Tom Holland) egyedül is képes megmenteni a világot, és csoportban is megállja a helyét, de közben ő úgy érzi, hogy neki is jár mindaz, ami bármelyik középiskolásnak: és a haverjaival európai utazásra indul. De éppen, amikor végre élvezhetné mindazt, amit a baráti lazulás kínálhat, újabb kihívás elé kell néznie. A rejtélyes Mysterio (Jake Gyllenhaal) miatt új kalandba indul, és könnyen lehet, hogy Pókember, aki nagy nehezen próbálja a hátizsákos utazást a hősi küzdelemmel összehangolni, kénytelen régi Bosszúálló társaitól segítséget kérni.",
@@ -222,15 +62,17 @@
 		},
 		{
 			"id": 6,
+			"type": "movie",
 			"image": "kingsman2.jpg",
 			"title": "Kingsman: The Golden Circle",
-			"description": "Ha a világot valami rettenetes baj, világuralomra törő főgonosz vagy más efféle rémség fenyegeti, akkor sem kell félnünk: van szakember, aki megállítja a gonoszságot. A Kingsman közelharcra és rejtvényfejtésre egyaránt tökéletesen kiképzett, úriember ügynökei majdnem mindig tudják, mi a teendő. De néha a \\\"majdnem mindig\\\" is kevés. Az új ellenség (Julianne Moore) természetesen világuralomra tör, valószínűleg őrült, és biztosan lángész: sikeresen csapdába csalja a Kingsman-csapatot, és felrobbantja a központjukat. Csak az újonc Töki (Taron Egerton) és kiképzője, Merlin (Mark Strong) ússza meg a támadást: ők Amerikába menekülnek, ahol a szervezetükhöz hasonló, helyi cég, a Statesman egy embere (Halle Berry) várja őket. Együtt vágnak neki, eddigi legkeményebb, legveszélyesebb feladatuk leküzdésének.",
+			"description": "Ha a világot valami rettenetes baj, világuralomra törő főgonosz vagy más efféle rémség fenyegeti, akkor sem kell félnünk: van szakember, aki megállítja a gonoszságot. A Kingsman közelharcra és rejtvényfejtésre egyaránt tökéletesen kiképzett, úriember ügynökei majdnem mindig tudják, mi a teendő. De néha a \"majdnem mindig\" is kevés. Az új ellenség (Julianne Moore) természetesen világuralomra tör, valószínűleg őrült, és biztosan lángész: sikeresen csapdába csalja a Kingsman-csapatot, és felrobbantja a központjukat. Csak az újonc Töki (Taron Egerton) és kiképzője, Merlin (Mark Strong) ússza meg a támadást: ők Amerikába menekülnek, ahol a szervezetükhöz hasonló, helyi cég, a Statesman egy embere (Halle Berry) várja őket. Együtt vágnak neki, eddigi legkeményebb, legveszélyesebb feladatuk leküzdésének.",
 			"filename": "kingsman2.mp4",
 			"current": "0",
-			"duration": "8462.246"
+			"duration": "8462.304"
 		},
 		{
 			"id": 7,
+			"type": "movie",
 			"image": "ivosgyerek.gif",
 			"title": "Hello?",
 			"description": "Helaú?",
@@ -240,26 +82,88 @@
 		},
 		{
 			"id": 8,
+			"type": "movie",
 			"image": "maxresdefault.jpg",
-			"title": "Én tudok főzni, én áldoztam ezért: 7-kor fölkeltem, marhát pucoltam, az, hogy egy faszszopó geci kurva elment a retkes kurva anyjába, nem érdekel, 260 kilométert utaztak a cigányok, nehogymár olyan nyerje baszdmeg aki nem tud főzni!",
-			"description": "Én, aki reggel óta főzök, hát menjetek a faszomba, baszd meg a gecibe, szórakoztok velem, hagyjatok már baszdmeg, mi a faszt szavazzak?  Ez egy főzőverseny baszki, há' mit szavazzak? Mit szavazzak baszdmeg? Mit, hogy a pincér csinálja meg az étteremben? Hétkor pucoltam a marhapörköltet, faszszopó.  Baszki. Gyere ide, gyere ide, kisköcsög! Gyere, most mondd el! Aki erős, itt megáll előttem. Hétkor elkezdtem pucolni a marhapörköltet, mi a faszomra szavazzak?  Hát kinek van igaza gyerekek? Egy verseny, én ezért nem aludtam 1-2-3 napot. A menyasszonyomat nyüstöltem, hogy pucolja a krumplit, érted? Pucolta a krumplit, a Papp Dani baszdmeg - úgy, hogy neki családi programja volt baszdmeg - rohangált ide, hogy a terítést idehozza. Én könyörögtem itt a lakóknak - ne csititgass Timi, kérlek - mert itt halt meg a szomszéd. És akkor szavazzuk meg. Hát nyerjen olyan aki nem tud főzni? Nyerjen a rómeó?  Ez egy főzőverseny: a Rómeó tud úgy főzni mint én? Rómeó, szerinted tudsz úgy főzni mint én? Jó, de azt megcsináltam.  Te mit csináltál? Jó, akkor a Győző nyert, jóéjszakát, szevasztok.",
+			"title": "260 kilómétert utaztak a cigányok",
+			"description": "Én tudok főzni, én áldoztam ezért: 7-kor fölkeltem, marhát pucoltam, az, hogy egy faszszopó geci kurva elment a retkes kurva anyjába, nem érdekel, 260 kilométert utaztak a cigányok, nehogymár olyan nyerje baszdmeg aki nem tud főzni! Én, aki reggel óta főzök, hát menjetek a faszomba, baszd meg a gecibe, szórakoztok velem, hagyjatok már baszdmeg, mi a faszt szavazzak?  Ez egy főzőverseny baszki, há' mit szavazzak? Mit szavazzak baszdmeg? Mit, hogy a pincér csinálja meg az étteremben? Hétkor pucoltam a marhapörköltet, faszszopó.  Baszki. Gyere ide, gyere ide, kisköcsög! Gyere, most mondd el! Aki erős, itt megáll előttem. Hétkor elkezdtem pucolni a marhapörköltet, mi a faszomra szavazzak?  Hát kinek van igaza gyerekek? Egy verseny, én ezért nem aludtam 1-2-3 napot. A menyasszonyomat nyüstöltem, hogy pucolja a krumplit, érted? Pucolta a krumplit, a Papp Dani baszdmeg - úgy, hogy neki családi programja volt baszdmeg - rohangált ide, hogy a terítést idehozza. Én könyörögtem itt a lakóknak - ne csititgass Timi, kérlek - mert itt halt meg a szomszéd. És akkor szavazzuk meg. Hát nyerjen olyan aki nem tud főzni? Nyerjen a rómeó?  Ez egy főzőverseny: a Rómeó tud úgy főzni mint én? Rómeó, szerinted tudsz úgy főzni mint én? Jó, de azt megcsináltam.  Te mit csináltál? Jó, akkor a Győző nyert, jóéjszakát, szevasztok.",
 			"filename": "damu.mp4",
-			"current": "0",
-			"duration": "124.266667"
+			"current": "56.990284",
+			"duration": "124.319637"
+		},
+		{
+			"id": 9,
+			"type": "series",
+			"image": "whatif.jpg",
+			"title": "Marvel: What if...?",
+			"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
+			"episode_progress": [
+				{
+					"filename": "whatif_1_6.mp4",
+					"current": "0",
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_3.mp4",
+					"current": "0",
+					"duration": "1823.318"
+				},
+				{
+					"filename": "whatif_1_4.mp4",
+					"current": "0",
+					"duration": "2078.708984"
+				},
+				{
+					"filename": "whatif_1_5.mp4",
+					"current": "0",
+					"duration": "1798.208984"
+				},
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": "0",
+					"duration": "1933.547"
+				},
+				{
+					"filename": "whatif_1_8.mp4",
+					"current": "0",
+					"duration": "1703.541992"
+				},
+				{
+					"filename": "whatif_1_1.mp4",
+					"current": "0",
+					"duration": "1872.875"
+				},
+				{
+					"filename": "whatif_1_9.mp4",
+					"current": "0",
+					"duration": "1982.916992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": "0",
+					"duration": "1970.833984"
+				}
+			],
+			"progress": "whatif_1_1.mp4",
+			"seasons": "1",
+			"episodes": [
+				9
+			]
 		}
 	],
-	"3": [
+	"1": [
 		{
 			"id": 0,
+			"type": "movie",
 			"image": "ironman.jpg",
 			"title": "Iron Man",
 			"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
 			"filename": "ironman.mp4",
 			"current": "0",
-			"duration": "7561.704"
+			"duration": "7561.68"
 		},
 		{
 			"id": 1,
+			"type": "movie",
 			"image": "ironman2.jpg",
 			"title": "Iron Man 2",
 			"description": "Kiderült, hogy a szuperhős Vasember valójában Tony Stark. Kihasználva az iránta való érdeklődést a milliárdos feltaláló fel akarja hívni a figyelmet a közjó szolgálatába állítható technikai újdonságokra. A kormány azonban azt szeretné, ha fejlesztéseit a hadsereg kapná. Tony azonban nem akarja megosztani a Vasemberrel kapcsolatos információit, attól fél, hogy azok rossz kezekbe kerülnek. Közben felbukkan egy rejtélyes figura a Stark család múltjából. Ivan Vanko a saját fegyverével akarja elpusztítani a Vasembert. A szuperhős kénytelen újra akcióba lépni, hogy a barátai segítségével legyőzze azokat az erőket, amelyek őt és az emberiséget fenyegetik.",
@@ -269,6 +173,7 @@
 		},
 		{
 			"id": 2,
+			"type": "movie",
 			"image": "ironman3.jpg",
 			"title": "Iron Man 3",
 			"description": "A legutóbbi küldetése után Tony Stark talonba tette a Vasembert. A tudós-szuperhős boldogan él egykori asszisztensével, ám álmatlanságban szenved, és pánikrohamok gyötrik. Amikor merényletek sora rázza meg a várost, Stark úgy dönt, hogy felveszi a (vas)kesztyűt, és szembeszáll a titokzatos ellenséggel. A Vasemberen végzett legújabb fejlesztése azonban még nem tökéletes, ráadásul felbukkan néhány korábbi ismerőse is. Az ösztönei és a találékonysága segítségével talán sikerül felülemelkedni a nehézségeken.",
@@ -278,6 +183,7 @@
 		},
 		{
 			"id": 3,
+			"type": "movie",
 			"image": "infinity.jpg",
 			"title": "Avengers: Infinity War",
 			"description": "A Marvel mozis univerzumának egészét felölelő, tíz év eseményeinek tetőpontját jelentő Bosszúállók: Végtelen háborúban minden idők legnagyobb és leghalálosabb leszámolására kerül sor. A Bosszúállóknak és szövetségeseiknek mindent kockára kell tenniük, hogy megfékezzék a nagy erejű Thanost, aki egy szemvillanás alatt elpusztíthatja a világot.",
@@ -287,6 +193,7 @@
 		},
 		{
 			"id": 4,
+			"type": "movie",
 			"image": "endgame.jpg",
 			"title": "Avengers: Endgame",
 			"description": "Thanos súlyos tette, amivel elpusztította az univerzum élőlényeinek felét és megtörte a Bosszúállókat, a megmaradt hősöket egy végső összecsapásra készteti a Marvel Studios huszonegy filmet megkoronázó, nagyszabású fináléjában, a Bosszúállók: Végjátékban.",
@@ -296,6 +203,7 @@
 		},
 		{
 			"id": 5,
+			"type": "movie",
 			"image": "farfromhome.jpg",
 			"title": "Spider-Man: Far From Home",
 			"description": "Pókember nem pihenhet. Az már kiderült, hogy az ifjú pók (Tom Holland) egyedül is képes megmenteni a világot, és csoportban is megállja a helyét, de közben ő úgy érzi, hogy neki is jár mindaz, ami bármelyik középiskolásnak: és a haverjaival európai utazásra indul. De éppen, amikor végre élvezhetné mindazt, amit a baráti lazulás kínálhat, újabb kihívás elé kell néznie. A rejtélyes Mysterio (Jake Gyllenhaal) miatt új kalandba indul, és könnyen lehet, hogy Pókember, aki nagy nehezen próbálja a hátizsákos utazást a hősi küzdelemmel összehangolni, kénytelen régi Bosszúálló társaitól segítséget kérni.",
@@ -305,15 +213,17 @@
 		},
 		{
 			"id": 6,
+			"type": "movie",
 			"image": "kingsman2.jpg",
 			"title": "Kingsman: The Golden Circle",
-			"description": "Ha a világot valami rettenetes baj, világuralomra törő főgonosz vagy más efféle rémség fenyegeti, akkor sem kell félnünk: van szakember, aki megállítja a gonoszságot. A Kingsman közelharcra és rejtvényfejtésre egyaránt tökéletesen kiképzett, úriember ügynökei majdnem mindig tudják, mi a teendő. De néha a \\\"majdnem mindig\\\" is kevés. Az új ellenség (Julianne Moore) természetesen világuralomra tör, valószínűleg őrült, és biztosan lángész: sikeresen csapdába csalja a Kingsman-csapatot, és felrobbantja a központjukat. Csak az újonc Töki (Taron Egerton) és kiképzője, Merlin (Mark Strong) ússza meg a támadást: ők Amerikába menekülnek, ahol a szervezetükhöz hasonló, helyi cég, a Statesman egy embere (Halle Berry) várja őket. Együtt vágnak neki, eddigi legkeményebb, legveszélyesebb feladatuk leküzdésének.",
+			"description": "Ha a világot valami rettenetes baj, világuralomra törő főgonosz vagy más efféle rémség fenyegeti, akkor sem kell félnünk: van szakember, aki megállítja a gonoszságot. A Kingsman közelharcra és rejtvényfejtésre egyaránt tökéletesen kiképzett, úriember ügynökei majdnem mindig tudják, mi a teendő. De néha a \"majdnem mindig\" is kevés. Az új ellenség (Julianne Moore) természetesen világuralomra tör, valószínűleg őrült, és biztosan lángész: sikeresen csapdába csalja a Kingsman-csapatot, és felrobbantja a központjukat. Csak az újonc Töki (Taron Egerton) és kiképzője, Merlin (Mark Strong) ússza meg a támadást: ők Amerikába menekülnek, ahol a szervezetükhöz hasonló, helyi cég, a Statesman egy embere (Halle Berry) várja őket. Együtt vágnak neki, eddigi legkeményebb, legveszélyesebb feladatuk leküzdésének.",
 			"filename": "kingsman2.mp4",
 			"current": "0",
 			"duration": "8462.246"
 		},
 		{
 			"id": 7,
+			"type": "movie",
 			"image": "ivosgyerek.gif",
 			"title": "Hello?",
 			"description": "Helaú?",
@@ -323,12 +233,374 @@
 		},
 		{
 			"id": 8,
+			"type": "movie",
 			"image": "maxresdefault.jpg",
-			"title": "Én tudok főzni, én áldoztam ezért: 7-kor fölkeltem, marhát pucoltam, az, hogy egy faszszopó geci kurva elment a retkes kurva anyjába, nem érdekel, 260 kilométert utaztak a cigányok, nehogymár olyan nyerje baszdmeg aki nem tud főzni!",
-			"description": "Én, aki reggel óta főzök, hát menjetek a faszomba, baszd meg a gecibe, szórakoztok velem, hagyjatok már baszdmeg, mi a faszt szavazzak?  Ez egy főzőverseny baszki, há' mit szavazzak? Mit szavazzak baszdmeg? Mit, hogy a pincér csinálja meg az étteremben? Hétkor pucoltam a marhapörköltet, faszszopó.  Baszki. Gyere ide, gyere ide, kisköcsög! Gyere, most mondd el! Aki erős, itt megáll előttem. Hétkor elkezdtem pucolni a marhapörköltet, mi a faszomra szavazzak?  Hát kinek van igaza gyerekek? Egy verseny, én ezért nem aludtam 1-2-3 napot. A menyasszonyomat nyüstöltem, hogy pucolja a krumplit, érted? Pucolta a krumplit, a Papp Dani baszdmeg - úgy, hogy neki családi programja volt baszdmeg - rohangált ide, hogy a terítést idehozza. Én könyörögtem itt a lakóknak - ne csititgass Timi, kérlek - mert itt halt meg a szomszéd. És akkor szavazzuk meg. Hát nyerjen olyan aki nem tud főzni? Nyerjen a rómeó?  Ez egy főzőverseny: a Rómeó tud úgy főzni mint én? Rómeó, szerinted tudsz úgy főzni mint én? Jó, de azt megcsináltam.  Te mit csináltál? Jó, akkor a Győző nyert, jóéjszakát, szevasztok.",
+			"title": "260 kilómétert utaztak a cigányok",
+			"description": "Én tudok főzni, én áldoztam ezért: 7-kor fölkeltem, marhát pucoltam, az, hogy egy faszszopó geci kurva elment a retkes kurva anyjába, nem érdekel, 260 kilométert utaztak a cigányok, nehogymár olyan nyerje baszdmeg aki nem tud főzni! Én, aki reggel óta főzök, hát menjetek a faszomba, baszd meg a gecibe, szórakoztok velem, hagyjatok már baszdmeg, mi a faszt szavazzak?  Ez egy főzőverseny baszki, há' mit szavazzak? Mit szavazzak baszdmeg? Mit, hogy a pincér csinálja meg az étteremben? Hétkor pucoltam a marhapörköltet, faszszopó.  Baszki. Gyere ide, gyere ide, kisköcsög! Gyere, most mondd el! Aki erős, itt megáll előttem. Hétkor elkezdtem pucolni a marhapörköltet, mi a faszomra szavazzak?  Hát kinek van igaza gyerekek? Egy verseny, én ezért nem aludtam 1-2-3 napot. A menyasszonyomat nyüstöltem, hogy pucolja a krumplit, érted? Pucolta a krumplit, a Papp Dani baszdmeg - úgy, hogy neki családi programja volt baszdmeg - rohangált ide, hogy a terítést idehozza. Én könyörögtem itt a lakóknak - ne csititgass Timi, kérlek - mert itt halt meg a szomszéd. És akkor szavazzuk meg. Hát nyerjen olyan aki nem tud főzni? Nyerjen a rómeó?  Ez egy főzőverseny: a Rómeó tud úgy főzni mint én? Rómeó, szerinted tudsz úgy főzni mint én? Jó, de azt megcsináltam.  Te mit csináltál? Jó, akkor a Győző nyert, jóéjszakát, szevasztok.",
 			"filename": "damu.mp4",
 			"current": "0",
 			"duration": "124.266667"
+		},
+		{
+			"id": 9,
+			"type": "series",
+			"image": "whatif.jpg",
+			"title": "Marvel: What if...?",
+			"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
+			"episode_progress": [
+				{
+					"filename": "whatif_1_6.mp4",
+					"current": "0",
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_3.mp4",
+					"current": "0",
+					"duration": "1823.291992"
+				},
+				{
+					"filename": "whatif_1_4.mp4",
+					"current": "0",
+					"duration": "2078.708984"
+				},
+				{
+					"filename": "whatif_1_5.mp4",
+					"current": "0",
+					"duration": "1798.208984"
+				},
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": "0",
+					"duration": "1933.5"
+				},
+				{
+					"filename": "whatif_1_8.mp4",
+					"current": "0",
+					"duration": "1703.541992"
+				},
+				{
+					"filename": "whatif_1_1.mp4",
+					"current": "0",
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_9.mp4",
+					"current": "0",
+					"duration": "1982.916992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": "0",
+					"duration": "1970.833984"
+				}
+			],
+			"progress": "whatif_1_1.mp4",
+			"seasons": "1",
+			"episodes": [
+				9
+			]
+		}
+	],
+	"2": [
+		{
+			"id": 0,
+			"type": "movie",
+			"image": "ironman.jpg",
+			"title": "Iron Man",
+			"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
+			"filename": "ironman.mp4",
+			"current": "0",
+			"duration": "7561.68"
+		},
+		{
+			"id": 1,
+			"type": "movie",
+			"image": "ironman2.jpg",
+			"title": "Iron Man 2",
+			"description": "Kiderült, hogy a szuperhős Vasember valójában Tony Stark. Kihasználva az iránta való érdeklődést a milliárdos feltaláló fel akarja hívni a figyelmet a közjó szolgálatába állítható technikai újdonságokra. A kormány azonban azt szeretné, ha fejlesztéseit a hadsereg kapná. Tony azonban nem akarja megosztani a Vasemberrel kapcsolatos információit, attól fél, hogy azok rossz kezekbe kerülnek. Közben felbukkan egy rejtélyes figura a Stark család múltjából. Ivan Vanko a saját fegyverével akarja elpusztítani a Vasembert. A szuperhős kénytelen újra akcióba lépni, hogy a barátai segítségével legyőzze azokat az erőket, amelyek őt és az emberiséget fenyegetik.",
+			"filename": "ironman2.mp4",
+			"current": "0",
+			"duration": "7479.139"
+		},
+		{
+			"id": 2,
+			"type": "movie",
+			"image": "ironman3.jpg",
+			"title": "Iron Man 3",
+			"description": "A legutóbbi küldetése után Tony Stark talonba tette a Vasembert. A tudós-szuperhős boldogan él egykori asszisztensével, ám álmatlanságban szenved, és pánikrohamok gyötrik. Amikor merényletek sora rázza meg a várost, Stark úgy dönt, hogy felveszi a (vas)kesztyűt, és szembeszáll a titokzatos ellenséggel. A Vasemberen végzett legújabb fejlesztése azonban még nem tökéletes, ráadásul felbukkan néhány korábbi ismerőse is. Az ösztönei és a találékonysága segítségével talán sikerül felülemelkedni a nehézségeken.",
+			"filename": "ironman3.mp4",
+			"current": "0",
+			"duration": "7832.867"
+		},
+		{
+			"id": 3,
+			"type": "movie",
+			"image": "infinity.jpg",
+			"title": "Avengers: Infinity War",
+			"description": "A Marvel mozis univerzumának egészét felölelő, tíz év eseményeinek tetőpontját jelentő Bosszúállók: Végtelen háborúban minden idők legnagyobb és leghalálosabb leszámolására kerül sor. A Bosszúállóknak és szövetségeseiknek mindent kockára kell tenniük, hogy megfékezzék a nagy erejű Thanost, aki egy szemvillanás alatt elpusztíthatja a világot.",
+			"filename": "infinity.mp4",
+			"current": "0",
+			"duration": "8957.574"
+		},
+		{
+			"id": 4,
+			"type": "movie",
+			"image": "endgame.jpg",
+			"title": "Avengers: Endgame",
+			"description": "Thanos súlyos tette, amivel elpusztította az univerzum élőlényeinek felét és megtörte a Bosszúállókat, a megmaradt hősöket egy végső összecsapásra készteti a Marvel Studios huszonegy filmet megkoronázó, nagyszabású fináléjában, a Bosszúállók: Végjátékban.",
+			"filename": "endgame.mp4",
+			"current": "0",
+			"duration": "10868.483"
+		},
+		{
+			"id": 5,
+			"type": "movie",
+			"image": "farfromhome.jpg",
+			"title": "Spider-Man: Far From Home",
+			"description": "Pókember nem pihenhet. Az már kiderült, hogy az ifjú pók (Tom Holland) egyedül is képes megmenteni a világot, és csoportban is megállja a helyét, de közben ő úgy érzi, hogy neki is jár mindaz, ami bármelyik középiskolásnak: és a haverjaival európai utazásra indul. De éppen, amikor végre élvezhetné mindazt, amit a baráti lazulás kínálhat, újabb kihívás elé kell néznie. A rejtélyes Mysterio (Jake Gyllenhaal) miatt új kalandba indul, és könnyen lehet, hogy Pókember, aki nagy nehezen próbálja a hátizsákos utazást a hősi küzdelemmel összehangolni, kénytelen régi Bosszúálló társaitól segítséget kérni.",
+			"filename": "farfromhome.mp4",
+			"current": "0",
+			"duration": "7763.756"
+		},
+		{
+			"id": 6,
+			"type": "movie",
+			"image": "kingsman2.jpg",
+			"title": "Kingsman: The Golden Circle",
+			"description": "Ha a világot valami rettenetes baj, világuralomra törő főgonosz vagy más efféle rémség fenyegeti, akkor sem kell félnünk: van szakember, aki megállítja a gonoszságot. A Kingsman közelharcra és rejtvényfejtésre egyaránt tökéletesen kiképzett, úriember ügynökei majdnem mindig tudják, mi a teendő. De néha a \"majdnem mindig\" is kevés. Az új ellenség (Julianne Moore) természetesen világuralomra tör, valószínűleg őrült, és biztosan lángész: sikeresen csapdába csalja a Kingsman-csapatot, és felrobbantja a központjukat. Csak az újonc Töki (Taron Egerton) és kiképzője, Merlin (Mark Strong) ússza meg a támadást: ők Amerikába menekülnek, ahol a szervezetükhöz hasonló, helyi cég, a Statesman egy embere (Halle Berry) várja őket. Együtt vágnak neki, eddigi legkeményebb, legveszélyesebb feladatuk leküzdésének.",
+			"filename": "kingsman2.mp4",
+			"current": "0",
+			"duration": "8462.246"
+		},
+		{
+			"id": 7,
+			"type": "movie",
+			"image": "ivosgyerek.gif",
+			"title": "Hello?",
+			"description": "Helaú?",
+			"filename": "stuck.mp4",
+			"current": "0",
+			"duration": "76.0089"
+		},
+		{
+			"id": 8,
+			"type": "movie",
+			"image": "maxresdefault.jpg",
+			"title": "260 kilómétert utaztak a cigányok",
+			"description": "Én tudok főzni, én áldoztam ezért: 7-kor fölkeltem, marhát pucoltam, az, hogy egy faszszopó geci kurva elment a retkes kurva anyjába, nem érdekel, 260 kilométert utaztak a cigányok, nehogymár olyan nyerje baszdmeg aki nem tud főzni! Én, aki reggel óta főzök, hát menjetek a faszomba, baszd meg a gecibe, szórakoztok velem, hagyjatok már baszdmeg, mi a faszt szavazzak?  Ez egy főzőverseny baszki, há' mit szavazzak? Mit szavazzak baszdmeg? Mit, hogy a pincér csinálja meg az étteremben? Hétkor pucoltam a marhapörköltet, faszszopó.  Baszki. Gyere ide, gyere ide, kisköcsög! Gyere, most mondd el! Aki erős, itt megáll előttem. Hétkor elkezdtem pucolni a marhapörköltet, mi a faszomra szavazzak?  Hát kinek van igaza gyerekek? Egy verseny, én ezért nem aludtam 1-2-3 napot. A menyasszonyomat nyüstöltem, hogy pucolja a krumplit, érted? Pucolta a krumplit, a Papp Dani baszdmeg - úgy, hogy neki családi programja volt baszdmeg - rohangált ide, hogy a terítést idehozza. Én könyörögtem itt a lakóknak - ne csititgass Timi, kérlek - mert itt halt meg a szomszéd. És akkor szavazzuk meg. Hát nyerjen olyan aki nem tud főzni? Nyerjen a rómeó?  Ez egy főzőverseny: a Rómeó tud úgy főzni mint én? Rómeó, szerinted tudsz úgy főzni mint én? Jó, de azt megcsináltam.  Te mit csináltál? Jó, akkor a Győző nyert, jóéjszakát, szevasztok.",
+			"filename": "damu.mp4",
+			"current": "0",
+			"duration": "124.266667"
+		},
+		{
+			"id": 9,
+			"type": "series",
+			"image": "whatif.jpg",
+			"title": "Marvel: What if...?",
+			"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
+			"episode_progress": [
+				{
+					"filename": "whatif_1_6.mp4",
+					"current": "0",
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_3.mp4",
+					"current": "0",
+					"duration": "1823.291992"
+				},
+				{
+					"filename": "whatif_1_4.mp4",
+					"current": "0",
+					"duration": "2078.708984"
+				},
+				{
+					"filename": "whatif_1_5.mp4",
+					"current": "0",
+					"duration": "1798.208984"
+				},
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": "0",
+					"duration": "1933.5"
+				},
+				{
+					"filename": "whatif_1_8.mp4",
+					"current": "0",
+					"duration": "1703.541992"
+				},
+				{
+					"filename": "whatif_1_1.mp4",
+					"current": "0",
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_9.mp4",
+					"current": "0",
+					"duration": "1982.916992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": "0",
+					"duration": "1970.833984"
+				}
+			],
+			"progress": "whatif_1_1.mp4",
+			"seasons": "1",
+			"episodes": [
+				9
+			]
+		}
+	],
+	"3": [
+		{
+			"id": 0,
+			"type": "movie",
+			"image": "ironman.jpg",
+			"title": "Iron Man",
+			"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
+			"filename": "ironman.mp4",
+			"current": "0",
+			"duration": "7561.68"
+		},
+		{
+			"id": 1,
+			"type": "movie",
+			"image": "ironman2.jpg",
+			"title": "Iron Man 2",
+			"description": "Kiderült, hogy a szuperhős Vasember valójában Tony Stark. Kihasználva az iránta való érdeklődést a milliárdos feltaláló fel akarja hívni a figyelmet a közjó szolgálatába állítható technikai újdonságokra. A kormány azonban azt szeretné, ha fejlesztéseit a hadsereg kapná. Tony azonban nem akarja megosztani a Vasemberrel kapcsolatos információit, attól fél, hogy azok rossz kezekbe kerülnek. Közben felbukkan egy rejtélyes figura a Stark család múltjából. Ivan Vanko a saját fegyverével akarja elpusztítani a Vasembert. A szuperhős kénytelen újra akcióba lépni, hogy a barátai segítségével legyőzze azokat az erőket, amelyek őt és az emberiséget fenyegetik.",
+			"filename": "ironman2.mp4",
+			"current": "0",
+			"duration": "7479.139"
+		},
+		{
+			"id": 2,
+			"type": "movie",
+			"image": "ironman3.jpg",
+			"title": "Iron Man 3",
+			"description": "A legutóbbi küldetése után Tony Stark talonba tette a Vasembert. A tudós-szuperhős boldogan él egykori asszisztensével, ám álmatlanságban szenved, és pánikrohamok gyötrik. Amikor merényletek sora rázza meg a várost, Stark úgy dönt, hogy felveszi a (vas)kesztyűt, és szembeszáll a titokzatos ellenséggel. A Vasemberen végzett legújabb fejlesztése azonban még nem tökéletes, ráadásul felbukkan néhány korábbi ismerőse is. Az ösztönei és a találékonysága segítségével talán sikerül felülemelkedni a nehézségeken.",
+			"filename": "ironman3.mp4",
+			"current": "0",
+			"duration": "7832.867"
+		},
+		{
+			"id": 3,
+			"type": "movie",
+			"image": "infinity.jpg",
+			"title": "Avengers: Infinity War",
+			"description": "A Marvel mozis univerzumának egészét felölelő, tíz év eseményeinek tetőpontját jelentő Bosszúállók: Végtelen háborúban minden idők legnagyobb és leghalálosabb leszámolására kerül sor. A Bosszúállóknak és szövetségeseiknek mindent kockára kell tenniük, hogy megfékezzék a nagy erejű Thanost, aki egy szemvillanás alatt elpusztíthatja a világot.",
+			"filename": "infinity.mp4",
+			"current": "0",
+			"duration": "8957.574"
+		},
+		{
+			"id": 4,
+			"type": "movie",
+			"image": "endgame.jpg",
+			"title": "Avengers: Endgame",
+			"description": "Thanos súlyos tette, amivel elpusztította az univerzum élőlényeinek felét és megtörte a Bosszúállókat, a megmaradt hősöket egy végső összecsapásra készteti a Marvel Studios huszonegy filmet megkoronázó, nagyszabású fináléjában, a Bosszúállók: Végjátékban.",
+			"filename": "endgame.mp4",
+			"current": "0",
+			"duration": "10868.483"
+		},
+		{
+			"id": 5,
+			"type": "movie",
+			"image": "farfromhome.jpg",
+			"title": "Spider-Man: Far From Home",
+			"description": "Pókember nem pihenhet. Az már kiderült, hogy az ifjú pók (Tom Holland) egyedül is képes megmenteni a világot, és csoportban is megállja a helyét, de közben ő úgy érzi, hogy neki is jár mindaz, ami bármelyik középiskolásnak: és a haverjaival európai utazásra indul. De éppen, amikor végre élvezhetné mindazt, amit a baráti lazulás kínálhat, újabb kihívás elé kell néznie. A rejtélyes Mysterio (Jake Gyllenhaal) miatt új kalandba indul, és könnyen lehet, hogy Pókember, aki nagy nehezen próbálja a hátizsákos utazást a hősi küzdelemmel összehangolni, kénytelen régi Bosszúálló társaitól segítséget kérni.",
+			"filename": "farfromhome.mp4",
+			"current": "0",
+			"duration": "7763.756"
+		},
+		{
+			"id": 6,
+			"type": "movie",
+			"image": "kingsman2.jpg",
+			"title": "Kingsman: The Golden Circle",
+			"description": "Ha a világot valami rettenetes baj, világuralomra törő főgonosz vagy más efféle rémség fenyegeti, akkor sem kell félnünk: van szakember, aki megállítja a gonoszságot. A Kingsman közelharcra és rejtvényfejtésre egyaránt tökéletesen kiképzett, úriember ügynökei majdnem mindig tudják, mi a teendő. De néha a \"majdnem mindig\" is kevés. Az új ellenség (Julianne Moore) természetesen világuralomra tör, valószínűleg őrült, és biztosan lángész: sikeresen csapdába csalja a Kingsman-csapatot, és felrobbantja a központjukat. Csak az újonc Töki (Taron Egerton) és kiképzője, Merlin (Mark Strong) ússza meg a támadást: ők Amerikába menekülnek, ahol a szervezetükhöz hasonló, helyi cég, a Statesman egy embere (Halle Berry) várja őket. Együtt vágnak neki, eddigi legkeményebb, legveszélyesebb feladatuk leküzdésének.",
+			"filename": "kingsman2.mp4",
+			"current": "0",
+			"duration": "8462.246"
+		},
+		{
+			"id": 7,
+			"type": "movie",
+			"image": "ivosgyerek.gif",
+			"title": "Hello?",
+			"description": "Helaú?",
+			"filename": "stuck.mp4",
+			"current": "0",
+			"duration": "76.0089"
+		},
+		{
+			"id": 8,
+			"type": "movie",
+			"image": "maxresdefault.jpg",
+			"title": "260 kilómétert utaztak a cigányok",
+			"description": "Én tudok főzni, én áldoztam ezért: 7-kor fölkeltem, marhát pucoltam, az, hogy egy faszszopó geci kurva elment a retkes kurva anyjába, nem érdekel, 260 kilométert utaztak a cigányok, nehogymár olyan nyerje baszdmeg aki nem tud főzni! Én, aki reggel óta főzök, hát menjetek a faszomba, baszd meg a gecibe, szórakoztok velem, hagyjatok már baszdmeg, mi a faszt szavazzak?  Ez egy főzőverseny baszki, há' mit szavazzak? Mit szavazzak baszdmeg? Mit, hogy a pincér csinálja meg az étteremben? Hétkor pucoltam a marhapörköltet, faszszopó.  Baszki. Gyere ide, gyere ide, kisköcsög! Gyere, most mondd el! Aki erős, itt megáll előttem. Hétkor elkezdtem pucolni a marhapörköltet, mi a faszomra szavazzak?  Hát kinek van igaza gyerekek? Egy verseny, én ezért nem aludtam 1-2-3 napot. A menyasszonyomat nyüstöltem, hogy pucolja a krumplit, érted? Pucolta a krumplit, a Papp Dani baszdmeg - úgy, hogy neki családi programja volt baszdmeg - rohangált ide, hogy a terítést idehozza. Én könyörögtem itt a lakóknak - ne csititgass Timi, kérlek - mert itt halt meg a szomszéd. És akkor szavazzuk meg. Hát nyerjen olyan aki nem tud főzni? Nyerjen a rómeó?  Ez egy főzőverseny: a Rómeó tud úgy főzni mint én? Rómeó, szerinted tudsz úgy főzni mint én? Jó, de azt megcsináltam.  Te mit csináltál? Jó, akkor a Győző nyert, jóéjszakát, szevasztok.",
+			"filename": "damu.mp4",
+			"current": "0",
+			"duration": "124.266667"
+		},
+		{
+			"id": 9,
+			"type": "series",
+			"image": "whatif.jpg",
+			"title": "Marvel: What if...?",
+			"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
+			"episode_progress": [
+				{
+					"filename": "whatif_1_6.mp4",
+					"current": "0",
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_3.mp4",
+					"current": "0",
+					"duration": "1823.291992"
+				},
+				{
+					"filename": "whatif_1_4.mp4",
+					"current": "0",
+					"duration": "2078.708984"
+				},
+				{
+					"filename": "whatif_1_5.mp4",
+					"current": "0",
+					"duration": "1798.208984"
+				},
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": "0",
+					"duration": "1933.5"
+				},
+				{
+					"filename": "whatif_1_8.mp4",
+					"current": "0",
+					"duration": "1703.541992"
+				},
+				{
+					"filename": "whatif_1_1.mp4",
+					"current": "0",
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_9.mp4",
+					"current": "0",
+					"duration": "1982.916992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": "0",
+					"duration": "1970.833984"
+				}
+			],
+			"progress": "whatif_1_1.mp4",
+			"seasons": "1",
+			"episodes": [
+				9
+			]
 		}
 	]
 }

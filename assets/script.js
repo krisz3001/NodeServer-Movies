@@ -13,12 +13,12 @@ function expand(){
         .then(r => refresh())
 }
 function newMovie(img, title, desc, n, w, current, duration){
-    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item"><img src="/assets/delete.png" class="d-none delete_img img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info d-none bg-dark p-2 border border-secondary w-100 rounded-bottom"><p class="h5">${title}</p><div class="row mb-2"><div class="col-sm-7"><div class="bg-secondary" style="height: 5px; width: 100%; margin-top: 0.6rem"><div style="height: 5px; background-color: red; width: ${w}%"></div></div></div><div class="col-sm-5 p-sm-0"><p class="m-0 text-left">${current}/${duration} perc</p></div></div><a class="btn btn-success w-100" href="/movie/${n}">Play</a><p class="m-0">${desc}</p></div></div>`
+    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item"><img src="/assets/delete.png" class="d-none delete_img img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info bg-dark p-2 border border-secondary w-100 rounded-bottom"><p class="h5">${title}</p><div class="row mb-2"><div class="col-sm-7"><div class="bg-secondary" style="height: 5px; width: 100%; margin-top: 0.6rem"><div style="height: 5px; background-color: red; width: ${w}%"></div></div></div><div class="col-sm-5 p-sm-0"><p class="m-0 text-left">${current}/${duration} perc</p></div></div><a class="btn btn-success w-100" href="/movie/${n}">Play</a><p class="mt-1 mb-0">${desc}</p></div></div>`
 }
 function newSeries(img, title, desc, n, w, s, e, dir, current, duration){
     let s_pretty = s < 10 ? `0${s}` : s
     let e_pretty = e < 10 ? `0${e}` : e
-    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item"><img src="/assets/delete.png" class="d-none delete_img img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info d-none bg-dark p-2 border border-secondary w-100 rounded-bottom"><p class="h5">${title}</p><div class="row mb-2"><div class="col-12"><div class="bg-secondary" style="height: 5px; width: 100%; margin-top: 0.6rem"><div style="height: 5px; background-color: red; width: ${w}%"></div></div></div><div class="col-12"><p class="m-0 my-1" style="float:left">S${s_pretty} E${e_pretty}</p><p style="float: right" class="my-1">${current}/${duration} perc</p></div></div><a class="btn btn-success w-100" href="/series/${n}/${dir}/${s}/${e}">Play</a><p class="m-0">${desc}</p></div></div>`
+    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item"><img src="/assets/delete.png" class="d-none delete_img img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info bg-dark p-2 border border-secondary w-100 rounded-bottom"><p class="h5">${title}</p><div class="row mb-2"><div class="col-12"><div class="bg-secondary" style="height: 5px; width: 100%; margin-top: 0.6rem"><div style="height: 5px; background-color: red; width: ${w}%"></div></div></div><div class="col-12"><p class="m-0 my-1" style="float:left">S${s_pretty} E${e_pretty}</p><p style="float: right" class="my-1">${current}/${duration} perc</p></div></div><a class="btn btn-success w-100" href="/series/${n}/${dir}/${s}/${e}">Play</a><p class="mt-1 mb-0">${desc}</p></div></div>`
 }
 function newOption(value){
     return `<option value="${value}">${value}</option`
@@ -31,11 +31,12 @@ function refresh(){
     .then(r => {
         for (let i = 0; i < r[id].length; i++) {
             if(r[id][i].type === 'series'){
-                let current = Math.round(r[id][i].episode_progress.find(x=>x.filename == `${r[id][i].episode_progress[0].filename.split('_')[0]}_${r[id][i].progress.split('_')[0]}_${r[id][i].progress.split('_')[1]}.mp4`).current/60)
-                let duration = Math.round(r[id][i].episode_progress.find(x=>x.filename == `${r[id][i].episode_progress[0].filename.split('_')[0]}_${r[id][i].progress.split('_')[0]}_${r[id][i].progress.split('_')[1]}.mp4`).duration/60)
+                let current = Math.round(r[id][i].episode_progress.find(x=>x.filename == r[id][i].progress).current/60)
+                let duration = Math.round(r[id][i].episode_progress.find(x=>x.filename == r[id][i].progress).duration/60)
                 let dir = `${r[id][i].episode_progress[0].filename.split('_')[0]}`
-                let w = (current/duration)*100
-                items.innerHTML += newSeries(r[id][i].image, r[id][i].title, r[id][i].description, i, w, r[id][i].progress.split('_')[0], r[id][i].progress.split('_')[1], dir, current, duration)
+                let w = (r[id][i].episode_progress.find(x=>x.filename == r[id][i].progress).current/r[id][i].episode_progress.find(x=>x.filename == r[id][i].progress).duration)*100
+                items.innerHTML += newSeries(r[id][i].image, r[id][i].title, r[id][i].description, i, w, r[id][i].progress.split('_')[1], r[id][i].progress.split('_')[2].split('.')[0], dir, current, duration)
+                document.getElementById(`fullbar${i}`).style.width = !(w>0) ? '0%' : '100%'
             }
             else{
                 let w = (r[id][i].current/r[id][i].duration)*100
@@ -102,19 +103,34 @@ function logout(){
             window.open('/','_self')
         })
 }
-let id
-function getID(n){
+let id, file, type
+function getID(n, fn, t){
     id = n
+    file = fn
+    type = t
 }
 function saveProgress(){
     let vid = document.getElementById('vid')
     let formData = new FormData()
-    formData.append("current", vid.currentTime)
-    formData.append("duration", vid.duration)
-    formData.append("id", id)
-    fetch('/progress', {method: "POST", body: formData})
-        .then(res => res.text)
-        .then(r => {})
+    if(type == 'movie'){
+        formData.append("current", vid.currentTime)
+        formData.append("duration", vid.duration)
+        formData.append("id", id)
+        formData.append("type", type)
+        fetch('/progress', {method: "POST", body: formData})
+            .then(res => res.text)
+            .then(r => {})
+    }
+    else{
+        formData.append("current", vid.currentTime)
+        formData.append("duration", vid.duration)
+        formData.append("id", id)
+        formData.append("type", type)
+        formData.append("filename", file)
+        fetch('/progress', {method: "POST", body: formData})
+            .then(res => res.text)
+            .then(r => {})
+    }
 }
 function progressBar(){
     let vid = document.getElementById('vid')

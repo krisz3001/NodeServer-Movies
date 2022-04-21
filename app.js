@@ -193,12 +193,12 @@ app.post('/upload', function(req,res){
         seasons = season > seasons ? season : seasons
         episodes[season-1]++
         getVideoDurationInSeconds(mediaDir_path + `/${x.split('_')[0]}/` + x).then(y => {
-          episode_progress.push({"filename": x, "current": 0, "duration": `${y}`})
+          episode_progress.push({"filename": x, "current": "0", "duration": `${y}`})
         }).then(z => {
           counter++
           if(counter === list.length){
             for (let i = 0; i < Object.keys(db).length; i++) {
-              db[i].push({"id": db[i].length, "type": "series", "image": img, "title": req.body.title, "description": req.body.description, "episode_progress": episode_progress, "progress": "1_1", "seasons": seasons, "episodes": episodes})
+              db[i].push({"id": db[i].length, "type": "series", "image": img, "title": req.body.title, "description": req.body.description, "episode_progress": episode_progress, "progress": `${episode_progress[0].filename.split('_')[0]}_1_1.mp4`, "seasons": seasons, "episodes": episodes})
             }
             fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
             res.sendStatus(200)
@@ -257,10 +257,23 @@ app.post('/progress', function(req, res){
   if(isRegistered(req)){
     let db = readDB()
     let n = getProfile(req)
-    db[n][db[n].indexOf(db[n].find(x => x.id == req.body.id))].current = req.body.current
-    db[n][db[n].indexOf(db[n].find(x => x.id == req.body.id))].duration = req.body.duration
-    fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
-    res.sendStatus(200)
+    if(req.body.type == 'movie'){
+      db[n][req.body.id].current = req.body.current
+      db[n][req.body.id].duration = req.body.duration
+      fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
+      res.sendStatus(200)
+    }
+    else if(req.body.type == 'series'){
+      db[n][req.body.id].episode_progress.find(x=>x.filename == req.body.filename.split('/')[1]).current = req.body.current
+      db[n][req.body.id].episode_progress.find(x=>x.filename == req.body.filename.split('/')[1]).duration = req.body.duration
+      db[n][req.body.id].progress = `${req.body.filename.split('/')[1]}`
+      fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
+      res.sendStatus(200)
+    }
+    else{
+      res.status(404)
+      saveLog(`Incorrect POST request from ${ip}. ${req.url}`)
+    }
   }
   else{
     ip = getIP(req.ip.substring(7))
@@ -274,7 +287,16 @@ app.post('/getprogress', function(req, res){
   if(isRegistered(req)){
     let db = readDB()
     let n = getProfile(req)
-    res.send({"current": db[n][req.body.id].current})
+    if(req.body.type == 'movie'){
+      res.send({"current": db[n][req.body.id].current})
+    } 
+    else if(req.body.type == 'series'){
+      res.send({"current": db[n][req.body.id].episode_progress.find(x=>x.filename == req.body.filename.split('/')[1]).current})
+    }
+    else{
+      res.status(404)
+      saveLog(`Incorrect POST request from ${ip}. ${req.url}`)
+    }
   }
   else{
     ip = getIP(req.ip.substring(7))
@@ -289,10 +311,13 @@ app.post('/pass', function(req, res){
   let pass = req.body.pass
   if(pass == 'kecske'){
     let users = readUsers()
-    if(!users.some(x => x === ip)){
+    if(!users.some(x => x.ip === ip)){
       users.push({"ip": ip, "profile": "-1"})
       fs.writeFileSync(users_path, JSON.stringify(users, null, '\t'), 'utf8', function(){})
       saveLog(`${ip} registered.`)
+    }
+    else{
+      saveLog(`Attempt of duplicate registration of ${ip}.`)
     }
     res.sendStatus(200)
   }
@@ -301,10 +326,14 @@ app.post('/pass', function(req, res){
     res.send(log)
     saveLog(`${ip} asked for the log.`)
   }
-  else if(pass == 'abandonship'){
+  else if(pass == 'mazsika1'){
     saveLog(`${ip} invokes emergency shutdown.`)
     res.sendStatus(200)
     process.exit()
+  }
+  else if(pass == 'abandonship'){
+    res.send('lololol')
+    saveLog(`${ip} wanted to abandon ship.`)
   }
   else{
     saveLog(`${ip} is trying to get in with "${pass}".`)
@@ -371,6 +400,7 @@ app.post('/delete', function(req, res){
 })
 
 //Queries
+let undone = false
 app.get('*', function(req, res){
   let service
   ip = getIP(req.ip.substring(7))
@@ -401,7 +431,7 @@ app.get('*', function(req, res){
         service = req.url
         let profiles = readProfiles()[getProfile(req)]
         let item = readDB()[getProfile(req)][req.url.substring(7)]
-        let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "title": item.title, "filename": item.filename, "image": item.image, "description": item.description}
+        let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "type": item.type, "title": item.title, "filename": item.filename, "image": item.image, "description": item.description}
         res.render('media', db)
       }
       else{
@@ -420,7 +450,7 @@ app.get('*', function(req, res){
         if(fs.existsSync(mediaDir_path + `${name}/${name}_${s}_${e}.mp4`)){
           let profiles = readProfiles()[getProfile(req)]
           let item = readDB()[getProfile(req)][split[2]]
-          let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "title": item.title, "filename": `${name}/${name}_${s}_${e}.mp4`, "image": item.image, "description": item.description}
+          let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "type": item.type, "title": item.title, "filename": `${name}/${name}_${s}_${e}.mp4`, "image": item.image, "description": item.description, "progress": item.progress, "seasons": item.seasons, "episodes": item.episodes}
           res.render('media', db)
         }
         else{
@@ -436,11 +466,16 @@ app.get('*', function(req, res){
       service = req.url
       if(JSON.stringify(readBackup()) != JSON.stringify(readDB())) fs.writeFileSync(backup_redo_path, JSON.stringify(readDB(), null, '\t'), 'utf8', function(){})
       fs.writeFileSync(db_path, JSON.stringify(readBackup(), null, '\t'), 'utf8', function(){})
+      undone = true
       res.sendStatus(200)
     }
     else if(req.url === '/redo'){
       service = req.url
-      fs.writeFileSync(db_path, JSON.stringify(readBackupRedo(), null, '\t'), 'utf8', function(){})
+      if(undone){
+        fs.writeFileSync(db_path, JSON.stringify(readBackupRedo(), null, '\t'), 'utf8', function(){})
+        undone = false
+      }
+      else saveLog(`Incorrect redo from ${ip}`)
       res.sendStatus(200)
     }
     else if(req.url === '/list'){

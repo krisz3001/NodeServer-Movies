@@ -1,21 +1,36 @@
-.row .item{
-    transition: 0.5s ease;
+.item{
+    transition: all 0.5s ease;
+    transition-delay: 0s;
 }
-.row .item .img_show{
+.item-info{
+    position: absolute;
+    height: auto;
+    max-height: 0;
+    padding: 0!important;
+    border: none!important;
+    overflow: hidden;
+    transition: max-height 0s ease 0s, padding 0s step-end 0s;
+}
+.item .img_show{
     aspect-ratio: 1200/675;
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position: center;
 }
-.row .item:hover{
+.item:hover{
     transform: scale(1.2);
+    transition-delay: 0.5s;
 }
-.row .item:hover > .item-info {
-    display: block!important;
+.item:hover > .item-info {
+    transition: max-height 0.5s ease 0.5s, padding 0s step-end 0.5s, border 0s step-end 0.5s;
+    padding: .5rem!important;
+    border: 1px solid #6c757d!important;
+    max-height: 300px;
     position: absolute;
     cursor: default;
+    overflow: hidden;
 }
-.row .item:hover > .delete_img {
+.item:hover > .delete_img {
     display: block!important;
     position: absolute;
     cursor: pointer;
@@ -52,4 +67,11 @@
 }
 .scrolled-up{
     transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+p{
+    font-size: small;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

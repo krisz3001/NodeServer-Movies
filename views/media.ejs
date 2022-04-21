@@ -19,7 +19,7 @@
       }
   </style>
 </head>
-<body class="bg-dark text-white" onload="getID('<%= id %>'); getProgress('<%= id %>')" onbeforeunload="saveProgress()">
+<body class="bg-dark text-white" onload="getID('<%= id %>', '<%= filename %>', '<%= type %>'); getProgress('<%= id %>', '<%= type %>', '<%= filename %>')" onbeforeunload="saveProgress()">
   <nav class="autohide navbar navbar-expand-md bg-black navbar-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">Netflix Prime +</a>
@@ -28,12 +28,30 @@
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav me-auto">
-		  <li class="nav-item m-2">
-			  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-primary" onclick="br()">Battle Royale</a>
-		  </li>
-		  <li class="nav-item m-2">
-			  <a href="/assets/si.jpg" class="btn btn-primary" target="_blank" onclick="br()">Changelog</a>
-		  </li>
+      <% if(type=='series' && filename.split('_')[1] <= seasons && filename.split('_')[2].split('.')[0] < episodes[seasons-1]){
+        let dir = filename.split('_')[0].split('/')[0]
+        let s = filename.split('_')[1]*1
+        let e = filename.split('_')[2].split('.')[0]*1
+        let next_link
+        if(e == episodes[s-1]) next_link = `/series/${id}/${dir}/${s+1}/${episodes[s+1]}`
+        else next_link = `/series/${id}/${dir}/${s}/${e+1}`
+      %>
+        <li class="nav-item m-2">
+          <a href="<%= next_link %>" class="btn btn-success">Next episode</a>
+        </li>
+      <% } %>
+		  <% if(type=='series' && !(filename.split('_')[1] == 1 && filename.split('_')[2].split('.')[0] == 1)){
+        let dir = filename.split('_')[0].split('/')[0]
+        let s = filename.split('_')[1]*1
+        let e = filename.split('_')[2].split('.')[0]*1
+        let prev_link
+        if(e == 1) link = `/series/${id}/${dir}/${s-1}/${episodes[s-2]}`
+        else prev_link = `/series/${id}/${dir}/${s}/${e-1}`
+      %>
+        <li class="nav-item m-2">
+          <a href="<%= prev_link %>" class="btn btn-success">Previous episode</a>
+        </li>
+      <% } %>
 		  <li class="nav-item d-none m-2" id="br_count"></li>
         </ul>
         <p class="m-2"><%= name %></p>
@@ -51,8 +69,11 @@
       </div>
     </div>
     <div class="container">
-      <h1 class="mt-3"><%= title %></h1>
-    <p><%= description %></p>
+      <h1 class="mt-3 float-start"><%= title %></h1>
+      <% if(type=='series'){ %>
+      <h1 class="mt-3 float-end"><%= `S${filename.split('_')[1]*1 < 10 ? 0 + '' + filename.split('_')[1]*1 : filename.split('_')[1]*1} E${filename.split('_')[2].split('.')[0]*1 < 10 ? 0 + '' + filename.split('_')[2].split('.')[0]*1 : filename.split('_')[2].split('.')[0]*1}` %></h1>
+      <% } %>
+    <p class="float-start"><%= description %></p>
     </div>
 	</div>
   <script>
@@ -65,14 +86,28 @@
       document.getElementById('init').classList.add('d-none')
       vid.play()
     }
-    function getProgress(id){
+    function getProgress(id, type, filename){
       let formData = new FormData()
-      formData.append("id", id)
-      fetch('/getprogress', {method: "POST", body : formData})
+      if(type == 'movie'){
+        formData.append("id", id)
+        formData.append("type", type)
+        fetch('/getprogress', {method: "POST", body : formData})
           .then(response => response.json())
           .then(r => {
               vid.currentTime = r.current
           })
+      } 
+      else{
+        formData.append("id", id)
+        formData.append("type", type)
+        formData.append("filename", filename)
+        console.log(filename);
+        fetch('/getprogress', {method: "POST", body : formData})
+          .then(response => response.json())
+          .then(r => {
+              vid.currentTime = r.current
+          })
+      }
     }
   </script>
 	<script src="/assets/script.js"></script>
