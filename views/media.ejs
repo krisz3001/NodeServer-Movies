@@ -28,24 +28,26 @@
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav me-auto">
-      <% if(type=='series' && filename.split('_')[1] <= seasons && filename.split('_')[2].split('.')[0] < episodes[seasons-1]){
-        let dir = filename.split('_')[0].split('/')[0]
-        let s = filename.split('_')[1]*1
-        let e = filename.split('_')[2].split('.')[0]*1
-        let next_link
-        if(e == episodes[s-1]) next_link = `/series/${id}/${dir}/${s+1}/${episodes[s+1]}`
-        else next_link = `/series/${id}/${dir}/${s}/${e+1}`
+      <% let next_link; let o = ' opacity-0 disabled'
+      if(type=='series'){
+        if(filename.split('_')[2].split('.')[0] != episodes[seasons-1] || episodes.length != filename.split('_')[1]){
+          o = ''
+          let dir = filename.split('_')[0].split('/')[0]
+          let s = filename.split('_')[1]*1
+          let e = filename.split('_')[2].split('.')[0]*1
+          if(e == episodes[s-1]) next_link = `/series/${id}/${dir}/${s+1}/1`
+          else next_link = `/series/${id}/${dir}/${s}/${e+1}`}
+      }
       %>
         <li class="nav-item m-2">
-          <a href="<%= next_link %>" class="btn btn-success">Next episode</a>
+          <a href="<%= next_link %>" class="btn btn-success<%=o%>">Next episode</a>
         </li>
-      <% } %>
 		  <% if(type=='series' && !(filename.split('_')[1] == 1 && filename.split('_')[2].split('.')[0] == 1)){
         let dir = filename.split('_')[0].split('/')[0]
         let s = filename.split('_')[1]*1
         let e = filename.split('_')[2].split('.')[0]*1
         let prev_link
-        if(e == 1) link = `/series/${id}/${dir}/${s-1}/${episodes[s-2]}`
+        if(e == 1) prev_link = `/series/${id}/${dir}/${s-1}/${episodes[s-2]}`
         else prev_link = `/series/${id}/${dir}/${s}/${e-1}`
       %>
         <li class="nav-item m-2">

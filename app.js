@@ -197,8 +197,11 @@ app.post('/upload', function(req,res){
         }).then(z => {
           counter++
           if(counter === list.length){
+            episode_progress.sort((a, b) => {
+              return a.filename.localeCompare(b.filename, 'en', {numeric: true})
+            })
             for (let i = 0; i < Object.keys(db).length; i++) {
-              db[i].push({"id": db[i].length, "type": "series", "image": img, "title": req.body.title, "description": req.body.description, "episode_progress": episode_progress, "progress": `${episode_progress[0].filename.split('_')[0]}_1_1.mp4`, "seasons": seasons, "episodes": episodes})
+              db[i].push({"id": db[i].length, "type": "series", "image": img, "title": req.body.title, "description": req.body.description, "episode_progress": episode_progress, "progress": episode_progress[0].filename, "seasons": seasons, "episodes": episodes})
             }
             fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
             res.sendStatus(200)
@@ -447,10 +450,12 @@ app.get('*', function(req, res){
         let name = split[3]
         let s = split[4]
         let e = split[5]
-        if(fs.existsSync(mediaDir_path + `${name}/${name}_${s}_${e}.mp4`)){
+        let mp4 = fs.existsSync(mediaDir_path + `${name}/${name}_${s}_${e}.mp4`)
+        let mkv = fs.existsSync(mediaDir_path + `${name}/${name}_${s}_${e}.mkv`)
+        if(mp4 || mkv){
           let profiles = readProfiles()[getProfile(req)]
           let item = readDB()[getProfile(req)][split[2]]
-          let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "type": item.type, "title": item.title, "filename": `${name}/${name}_${s}_${e}.mp4`, "image": item.image, "description": item.description, "progress": item.progress, "seasons": item.seasons, "episodes": item.episodes}
+          let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "type": item.type, "title": item.title, "filename": `${name}/${name}_${s}_${e}.${mkv ? 'mkv' : 'mp4'}`, "image": item.image, "description": item.description, "progress": item.progress, "seasons": item.seasons, "episodes": item.episodes}
           res.render('media', db)
         }
         else{

@@ -7,8 +7,8 @@
 			"title": "Iron Man",
 			"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
 			"filename": "ironman.mp4",
-			"current": "0",
-			"duration": "7561.68"
+			"current": "1571.69825",
+			"duration": "7561.704"
 		},
 		{
 			"id": 1,
@@ -93,19 +93,235 @@
 		{
 			"id": 9,
 			"type": "series",
+			"image": "daredevil.jpg",
+			"title": "Marvel: Daredevil",
+			"description": "Matt Murdock gyermekkorában egy baleset következtében megvakul, de egy vegyszernek köszönhetően a többi érzékszerve emberfelettivé válik és kialakul egy radarérzék is amivel a környezetét \"látja\". Matt Murdock nappal mint ügyvéd, éjjel mint álarcos igazságosztó védi Hell's Kitchen környékét a bűnözőktől.",
+			"episode_progress": [
+				{
+					"filename": "daredevil_1_1.mkv",
+					"current": "0",
+					"duration": "3158.272"
+				},
+				{
+					"filename": "daredevil_1_2.mkv",
+					"current": "0",
+					"duration": "3175.296"
+				},
+				{
+					"filename": "daredevil_1_3.mkv",
+					"current": "0",
+					"duration": "3122.24"
+				},
+				{
+					"filename": "daredevil_1_4.mkv",
+					"current": "0",
+					"duration": "3136.298"
+				},
+				{
+					"filename": "daredevil_1_5.mkv",
+					"current": "0",
+					"duration": "3341.44"
+				},
+				{
+					"filename": "daredevil_1_6.mkv",
+					"current": "0",
+					"duration": "2891.968"
+				},
+				{
+					"filename": "daredevil_1_7.mkv",
+					"current": "0",
+					"duration": "3010.112"
+				},
+				{
+					"filename": "daredevil_1_8.mkv",
+					"current": "0",
+					"duration": "3188.288"
+				},
+				{
+					"filename": "daredevil_1_9.mkv",
+					"current": "0",
+					"duration": "3440.554"
+				},
+				{
+					"filename": "daredevil_1_10.mkv",
+					"current": "0",
+					"duration": "3379.456"
+				},
+				{
+					"filename": "daredevil_1_11.mkv",
+					"current": "0",
+					"duration": "3512.618"
+				},
+				{
+					"filename": "daredevil_1_12.mkv",
+					"current": "0",
+					"duration": "3566.698"
+				},
+				{
+					"filename": "daredevil_1_13.mkv",
+					"current": "0",
+					"duration": "3336.448"
+				},
+				{
+					"filename": "daredevil_2_1.mkv",
+					"current": "0",
+					"duration": "2890.026"
+				},
+				{
+					"filename": "daredevil_2_2.mkv",
+					"current": "0",
+					"duration": "2982.058"
+				},
+				{
+					"filename": "daredevil_2_3.mkv",
+					"current": "0",
+					"duration": "2876.97"
+				},
+				{
+					"filename": "daredevil_2_4.mkv",
+					"current": "0",
+					"duration": "3614.698"
+				},
+				{
+					"filename": "daredevil_2_5.mkv",
+					"current": "0",
+					"duration": "3328.448"
+				},
+				{
+					"filename": "daredevil_2_6.mkv",
+					"current": "0",
+					"duration": "3332.416"
+				},
+				{
+					"filename": "daredevil_2_7.mkv",
+					"current": "0",
+					"duration": "3366.442"
+				},
+				{
+					"filename": "daredevil_2_8.mkv",
+					"current": "0",
+					"duration": "3243.328"
+				},
+				{
+					"filename": "daredevil_2_9.mkv",
+					"current": "0",
+					"duration": "3552.682"
+				},
+				{
+					"filename": "daredevil_2_10.mkv",
+					"current": "0",
+					"duration": "3113.194"
+				},
+				{
+					"filename": "daredevil_2_11.mkv",
+					"current": "0",
+					"duration": "3298.41"
+				},
+				{
+					"filename": "daredevil_2_12.mkv",
+					"current": "0",
+					"duration": "3131.2"
+				},
+				{
+					"filename": "daredevil_2_13.mkv",
+					"current": "0",
+					"duration": "3442.538"
+				},
+				{
+					"filename": "daredevil_3_1.mkv",
+					"current": "0",
+					"duration": "3151.168"
+				},
+				{
+					"filename": "daredevil_3_2.mkv",
+					"current": "0",
+					"duration": "2924.928"
+				},
+				{
+					"filename": "daredevil_3_3.mkv",
+					"current": "0",
+					"duration": "2918.954"
+				},
+				{
+					"filename": "daredevil_3_4.mkv",
+					"current": "0",
+					"duration": "3211.242"
+				},
+				{
+					"filename": "daredevil_3_5.mkv",
+					"current": "0",
+					"duration": "2912.938"
+				},
+				{
+					"filename": "daredevil_3_6.mkv",
+					"current": "0",
+					"duration": "3203.2"
+				},
+				{
+					"filename": "daredevil_3_7.mkv",
+					"current": "0",
+					"duration": "2936.96"
+				},
+				{
+					"filename": "daredevil_3_8.mkv",
+					"current": "0",
+					"duration": "2972.992"
+				},
+				{
+					"filename": "daredevil_3_9.mkv",
+					"current": "0",
+					"duration": "3187.2"
+				},
+				{
+					"filename": "daredevil_3_10.mkv",
+					"current": "0",
+					"duration": "2720.746"
+				},
+				{
+					"filename": "daredevil_3_11.mkv",
+					"current": "1122.136018",
+					"duration": "2932.97"
+				},
+				{
+					"filename": "daredevil_3_12.mkv",
+					"current": "0",
+					"duration": "3263.274"
+				},
+				{
+					"filename": "daredevil_3_13.mkv",
+					"current": "0",
+					"duration": "3185.194"
+				}
+			],
+			"progress": "daredevil_3_11.mkv",
+			"seasons": "3",
+			"episodes": [
+				13,
+				13,
+				13
+			]
+		},
+		{
+			"id": 10,
+			"type": "series",
 			"image": "whatif.jpg",
-			"title": "Marvel: What if...?",
+			"title": "Marvel: What if?",
 			"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
 			"episode_progress": [
 				{
-					"filename": "whatif_1_6.mp4",
+					"filename": "whatif_1_1.mp4",
+					"current": "100.504087",
+					"duration": "1872.875"
+				},
+				{
+					"filename": "whatif_1_2.mp4",
 					"current": "0",
-					"duration": "1862.541992"
+					"duration": "1933.5"
 				},
 				{
 					"filename": "whatif_1_3.mp4",
 					"current": "0",
-					"duration": "1823.318"
+					"duration": "1823.291992"
 				},
 				{
 					"filename": "whatif_1_4.mp4",
@@ -118,9 +334,14 @@
 					"duration": "1798.208984"
 				},
 				{
-					"filename": "whatif_1_2.mp4",
+					"filename": "whatif_1_6.mp4",
 					"current": "0",
-					"duration": "1933.547"
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": "0",
+					"duration": "1970.833984"
 				},
 				{
 					"filename": "whatif_1_8.mp4",
@@ -128,19 +349,9 @@
 					"duration": "1703.541992"
 				},
 				{
-					"filename": "whatif_1_1.mp4",
-					"current": "0",
-					"duration": "1872.875"
-				},
-				{
 					"filename": "whatif_1_9.mp4",
 					"current": "0",
 					"duration": "1982.916992"
-				},
-				{
-					"filename": "whatif_1_7.mp4",
-					"current": "0",
-					"duration": "1970.833984"
 				}
 			],
 			"progress": "whatif_1_1.mp4",
@@ -148,6 +359,16 @@
 			"episodes": [
 				9
 			]
+		},
+		{
+			"id": 11,
+			"type": "movie",
+			"image": "Screenshot_1.png",
+			"title": "a",
+			"description": "a",
+			"filename": "farfromhome.mp4",
+			"current": "0",
+			"duration": "7763.756"
 		}
 	],
 	"1": [
@@ -244,14 +465,230 @@
 		{
 			"id": 9,
 			"type": "series",
+			"image": "daredevil.jpg",
+			"title": "Marvel: Daredevil",
+			"description": "Matt Murdock gyermekkorában egy baleset következtében megvakul, de egy vegyszernek köszönhetően a többi érzékszerve emberfelettivé válik és kialakul egy radarérzék is amivel a környezetét \"látja\". Matt Murdock nappal mint ügyvéd, éjjel mint álarcos igazságosztó védi Hell's Kitchen környékét a bűnözőktől.",
+			"episode_progress": [
+				{
+					"filename": "daredevil_1_1.mkv",
+					"current": "0",
+					"duration": "3158.272"
+				},
+				{
+					"filename": "daredevil_1_2.mkv",
+					"current": "0",
+					"duration": "3175.296"
+				},
+				{
+					"filename": "daredevil_1_3.mkv",
+					"current": "0",
+					"duration": "3122.24"
+				},
+				{
+					"filename": "daredevil_1_4.mkv",
+					"current": "0",
+					"duration": "3136.298"
+				},
+				{
+					"filename": "daredevil_1_5.mkv",
+					"current": "0",
+					"duration": "3341.44"
+				},
+				{
+					"filename": "daredevil_1_6.mkv",
+					"current": "0",
+					"duration": "2891.968"
+				},
+				{
+					"filename": "daredevil_1_7.mkv",
+					"current": "0",
+					"duration": "3010.112"
+				},
+				{
+					"filename": "daredevil_1_8.mkv",
+					"current": "0",
+					"duration": "3188.288"
+				},
+				{
+					"filename": "daredevil_1_9.mkv",
+					"current": "0",
+					"duration": "3440.554"
+				},
+				{
+					"filename": "daredevil_1_10.mkv",
+					"current": "0",
+					"duration": "3379.456"
+				},
+				{
+					"filename": "daredevil_1_11.mkv",
+					"current": "0",
+					"duration": "3512.618"
+				},
+				{
+					"filename": "daredevil_1_12.mkv",
+					"current": "0",
+					"duration": "3566.698"
+				},
+				{
+					"filename": "daredevil_1_13.mkv",
+					"current": "0",
+					"duration": "3336.448"
+				},
+				{
+					"filename": "daredevil_2_1.mkv",
+					"current": "0",
+					"duration": "2890.026"
+				},
+				{
+					"filename": "daredevil_2_2.mkv",
+					"current": "0",
+					"duration": "2982.058"
+				},
+				{
+					"filename": "daredevil_2_3.mkv",
+					"current": "0",
+					"duration": "2876.97"
+				},
+				{
+					"filename": "daredevil_2_4.mkv",
+					"current": "0",
+					"duration": "3614.698"
+				},
+				{
+					"filename": "daredevil_2_5.mkv",
+					"current": "0",
+					"duration": "3328.448"
+				},
+				{
+					"filename": "daredevil_2_6.mkv",
+					"current": "0",
+					"duration": "3332.416"
+				},
+				{
+					"filename": "daredevil_2_7.mkv",
+					"current": "0",
+					"duration": "3366.442"
+				},
+				{
+					"filename": "daredevil_2_8.mkv",
+					"current": "0",
+					"duration": "3243.328"
+				},
+				{
+					"filename": "daredevil_2_9.mkv",
+					"current": "0",
+					"duration": "3552.682"
+				},
+				{
+					"filename": "daredevil_2_10.mkv",
+					"current": "0",
+					"duration": "3113.194"
+				},
+				{
+					"filename": "daredevil_2_11.mkv",
+					"current": "0",
+					"duration": "3298.41"
+				},
+				{
+					"filename": "daredevil_2_12.mkv",
+					"current": "0",
+					"duration": "3131.2"
+				},
+				{
+					"filename": "daredevil_2_13.mkv",
+					"current": "0",
+					"duration": "3442.538"
+				},
+				{
+					"filename": "daredevil_3_1.mkv",
+					"current": "0",
+					"duration": "3151.168"
+				},
+				{
+					"filename": "daredevil_3_2.mkv",
+					"current": "0",
+					"duration": "2924.928"
+				},
+				{
+					"filename": "daredevil_3_3.mkv",
+					"current": "0",
+					"duration": "2918.954"
+				},
+				{
+					"filename": "daredevil_3_4.mkv",
+					"current": "0",
+					"duration": "3211.242"
+				},
+				{
+					"filename": "daredevil_3_5.mkv",
+					"current": "0",
+					"duration": "2912.938"
+				},
+				{
+					"filename": "daredevil_3_6.mkv",
+					"current": "0",
+					"duration": "3203.2"
+				},
+				{
+					"filename": "daredevil_3_7.mkv",
+					"current": "0",
+					"duration": "2936.96"
+				},
+				{
+					"filename": "daredevil_3_8.mkv",
+					"current": "0",
+					"duration": "2972.992"
+				},
+				{
+					"filename": "daredevil_3_9.mkv",
+					"current": "0",
+					"duration": "3187.2"
+				},
+				{
+					"filename": "daredevil_3_10.mkv",
+					"current": "0",
+					"duration": "2720.746"
+				},
+				{
+					"filename": "daredevil_3_11.mkv",
+					"current": "0",
+					"duration": "2932.97"
+				},
+				{
+					"filename": "daredevil_3_12.mkv",
+					"current": "0",
+					"duration": "3263.274"
+				},
+				{
+					"filename": "daredevil_3_13.mkv",
+					"current": "0",
+					"duration": "3185.194"
+				}
+			],
+			"progress": "daredevil_1_1.mkv",
+			"seasons": "3",
+			"episodes": [
+				13,
+				13,
+				13
+			]
+		},
+		{
+			"id": 10,
+			"type": "series",
 			"image": "whatif.jpg",
-			"title": "Marvel: What if...?",
+			"title": "Marvel: What if?",
 			"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
 			"episode_progress": [
 				{
-					"filename": "whatif_1_6.mp4",
+					"filename": "whatif_1_1.mp4",
 					"current": "0",
-					"duration": "1862.541992"
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": "0",
+					"duration": "1933.5"
 				},
 				{
 					"filename": "whatif_1_3.mp4",
@@ -269,9 +706,14 @@
 					"duration": "1798.208984"
 				},
 				{
-					"filename": "whatif_1_2.mp4",
+					"filename": "whatif_1_6.mp4",
 					"current": "0",
-					"duration": "1933.5"
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": "0",
+					"duration": "1970.833984"
 				},
 				{
 					"filename": "whatif_1_8.mp4",
@@ -279,19 +721,9 @@
 					"duration": "1703.541992"
 				},
 				{
-					"filename": "whatif_1_1.mp4",
-					"current": "0",
-					"duration": "1872.833984"
-				},
-				{
 					"filename": "whatif_1_9.mp4",
 					"current": "0",
 					"duration": "1982.916992"
-				},
-				{
-					"filename": "whatif_1_7.mp4",
-					"current": "0",
-					"duration": "1970.833984"
 				}
 			],
 			"progress": "whatif_1_1.mp4",
@@ -299,6 +731,16 @@
 			"episodes": [
 				9
 			]
+		},
+		{
+			"id": 11,
+			"type": "movie",
+			"image": "Screenshot_1.png",
+			"title": "a",
+			"description": "a",
+			"filename": "farfromhome.mp4",
+			"current": "0",
+			"duration": "7763.756"
 		}
 	],
 	"2": [
@@ -395,14 +837,230 @@
 		{
 			"id": 9,
 			"type": "series",
+			"image": "daredevil.jpg",
+			"title": "Marvel: Daredevil",
+			"description": "Matt Murdock gyermekkorában egy baleset következtében megvakul, de egy vegyszernek köszönhetően a többi érzékszerve emberfelettivé válik és kialakul egy radarérzék is amivel a környezetét \"látja\". Matt Murdock nappal mint ügyvéd, éjjel mint álarcos igazságosztó védi Hell's Kitchen környékét a bűnözőktől.",
+			"episode_progress": [
+				{
+					"filename": "daredevil_1_1.mkv",
+					"current": "0",
+					"duration": "3158.272"
+				},
+				{
+					"filename": "daredevil_1_2.mkv",
+					"current": "0",
+					"duration": "3175.296"
+				},
+				{
+					"filename": "daredevil_1_3.mkv",
+					"current": "0",
+					"duration": "3122.24"
+				},
+				{
+					"filename": "daredevil_1_4.mkv",
+					"current": "0",
+					"duration": "3136.298"
+				},
+				{
+					"filename": "daredevil_1_5.mkv",
+					"current": "0",
+					"duration": "3341.44"
+				},
+				{
+					"filename": "daredevil_1_6.mkv",
+					"current": "0",
+					"duration": "2891.968"
+				},
+				{
+					"filename": "daredevil_1_7.mkv",
+					"current": "0",
+					"duration": "3010.112"
+				},
+				{
+					"filename": "daredevil_1_8.mkv",
+					"current": "0",
+					"duration": "3188.288"
+				},
+				{
+					"filename": "daredevil_1_9.mkv",
+					"current": "0",
+					"duration": "3440.554"
+				},
+				{
+					"filename": "daredevil_1_10.mkv",
+					"current": "0",
+					"duration": "3379.456"
+				},
+				{
+					"filename": "daredevil_1_11.mkv",
+					"current": "0",
+					"duration": "3512.618"
+				},
+				{
+					"filename": "daredevil_1_12.mkv",
+					"current": "0",
+					"duration": "3566.698"
+				},
+				{
+					"filename": "daredevil_1_13.mkv",
+					"current": "0",
+					"duration": "3336.448"
+				},
+				{
+					"filename": "daredevil_2_1.mkv",
+					"current": "0",
+					"duration": "2890.026"
+				},
+				{
+					"filename": "daredevil_2_2.mkv",
+					"current": "0",
+					"duration": "2982.058"
+				},
+				{
+					"filename": "daredevil_2_3.mkv",
+					"current": "0",
+					"duration": "2876.97"
+				},
+				{
+					"filename": "daredevil_2_4.mkv",
+					"current": "0",
+					"duration": "3614.698"
+				},
+				{
+					"filename": "daredevil_2_5.mkv",
+					"current": "0",
+					"duration": "3328.448"
+				},
+				{
+					"filename": "daredevil_2_6.mkv",
+					"current": "0",
+					"duration": "3332.416"
+				},
+				{
+					"filename": "daredevil_2_7.mkv",
+					"current": "0",
+					"duration": "3366.442"
+				},
+				{
+					"filename": "daredevil_2_8.mkv",
+					"current": "0",
+					"duration": "3243.328"
+				},
+				{
+					"filename": "daredevil_2_9.mkv",
+					"current": "0",
+					"duration": "3552.682"
+				},
+				{
+					"filename": "daredevil_2_10.mkv",
+					"current": "0",
+					"duration": "3113.194"
+				},
+				{
+					"filename": "daredevil_2_11.mkv",
+					"current": "0",
+					"duration": "3298.41"
+				},
+				{
+					"filename": "daredevil_2_12.mkv",
+					"current": "0",
+					"duration": "3131.2"
+				},
+				{
+					"filename": "daredevil_2_13.mkv",
+					"current": "0",
+					"duration": "3442.538"
+				},
+				{
+					"filename": "daredevil_3_1.mkv",
+					"current": "0",
+					"duration": "3151.168"
+				},
+				{
+					"filename": "daredevil_3_2.mkv",
+					"current": "0",
+					"duration": "2924.928"
+				},
+				{
+					"filename": "daredevil_3_3.mkv",
+					"current": "0",
+					"duration": "2918.954"
+				},
+				{
+					"filename": "daredevil_3_4.mkv",
+					"current": "0",
+					"duration": "3211.242"
+				},
+				{
+					"filename": "daredevil_3_5.mkv",
+					"current": "0",
+					"duration": "2912.938"
+				},
+				{
+					"filename": "daredevil_3_6.mkv",
+					"current": "0",
+					"duration": "3203.2"
+				},
+				{
+					"filename": "daredevil_3_7.mkv",
+					"current": "0",
+					"duration": "2936.96"
+				},
+				{
+					"filename": "daredevil_3_8.mkv",
+					"current": "0",
+					"duration": "2972.992"
+				},
+				{
+					"filename": "daredevil_3_9.mkv",
+					"current": "0",
+					"duration": "3187.2"
+				},
+				{
+					"filename": "daredevil_3_10.mkv",
+					"current": "0",
+					"duration": "2720.746"
+				},
+				{
+					"filename": "daredevil_3_11.mkv",
+					"current": "0",
+					"duration": "2932.97"
+				},
+				{
+					"filename": "daredevil_3_12.mkv",
+					"current": "0",
+					"duration": "3263.274"
+				},
+				{
+					"filename": "daredevil_3_13.mkv",
+					"current": "0",
+					"duration": "3185.194"
+				}
+			],
+			"progress": "daredevil_1_1.mkv",
+			"seasons": "3",
+			"episodes": [
+				13,
+				13,
+				13
+			]
+		},
+		{
+			"id": 10,
+			"type": "series",
 			"image": "whatif.jpg",
-			"title": "Marvel: What if...?",
+			"title": "Marvel: What if?",
 			"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
 			"episode_progress": [
 				{
-					"filename": "whatif_1_6.mp4",
+					"filename": "whatif_1_1.mp4",
 					"current": "0",
-					"duration": "1862.541992"
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": "0",
+					"duration": "1933.5"
 				},
 				{
 					"filename": "whatif_1_3.mp4",
@@ -420,9 +1078,14 @@
 					"duration": "1798.208984"
 				},
 				{
-					"filename": "whatif_1_2.mp4",
+					"filename": "whatif_1_6.mp4",
 					"current": "0",
-					"duration": "1933.5"
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": "0",
+					"duration": "1970.833984"
 				},
 				{
 					"filename": "whatif_1_8.mp4",
@@ -430,19 +1093,9 @@
 					"duration": "1703.541992"
 				},
 				{
-					"filename": "whatif_1_1.mp4",
-					"current": "0",
-					"duration": "1872.833984"
-				},
-				{
 					"filename": "whatif_1_9.mp4",
 					"current": "0",
 					"duration": "1982.916992"
-				},
-				{
-					"filename": "whatif_1_7.mp4",
-					"current": "0",
-					"duration": "1970.833984"
 				}
 			],
 			"progress": "whatif_1_1.mp4",
@@ -450,6 +1103,16 @@
 			"episodes": [
 				9
 			]
+		},
+		{
+			"id": 11,
+			"type": "movie",
+			"image": "Screenshot_1.png",
+			"title": "a",
+			"description": "a",
+			"filename": "farfromhome.mp4",
+			"current": "0",
+			"duration": "7763.756"
 		}
 	],
 	"3": [
@@ -546,14 +1209,230 @@
 		{
 			"id": 9,
 			"type": "series",
+			"image": "daredevil.jpg",
+			"title": "Marvel: Daredevil",
+			"description": "Matt Murdock gyermekkorában egy baleset következtében megvakul, de egy vegyszernek köszönhetően a többi érzékszerve emberfelettivé válik és kialakul egy radarérzék is amivel a környezetét \"látja\". Matt Murdock nappal mint ügyvéd, éjjel mint álarcos igazságosztó védi Hell's Kitchen környékét a bűnözőktől.",
+			"episode_progress": [
+				{
+					"filename": "daredevil_1_1.mkv",
+					"current": "0",
+					"duration": "3158.272"
+				},
+				{
+					"filename": "daredevil_1_2.mkv",
+					"current": "0",
+					"duration": "3175.296"
+				},
+				{
+					"filename": "daredevil_1_3.mkv",
+					"current": "0",
+					"duration": "3122.24"
+				},
+				{
+					"filename": "daredevil_1_4.mkv",
+					"current": "0",
+					"duration": "3136.298"
+				},
+				{
+					"filename": "daredevil_1_5.mkv",
+					"current": "0",
+					"duration": "3341.44"
+				},
+				{
+					"filename": "daredevil_1_6.mkv",
+					"current": "0",
+					"duration": "2891.968"
+				},
+				{
+					"filename": "daredevil_1_7.mkv",
+					"current": "0",
+					"duration": "3010.112"
+				},
+				{
+					"filename": "daredevil_1_8.mkv",
+					"current": "0",
+					"duration": "3188.288"
+				},
+				{
+					"filename": "daredevil_1_9.mkv",
+					"current": "0",
+					"duration": "3440.554"
+				},
+				{
+					"filename": "daredevil_1_10.mkv",
+					"current": "0",
+					"duration": "3379.456"
+				},
+				{
+					"filename": "daredevil_1_11.mkv",
+					"current": "0",
+					"duration": "3512.618"
+				},
+				{
+					"filename": "daredevil_1_12.mkv",
+					"current": "0",
+					"duration": "3566.698"
+				},
+				{
+					"filename": "daredevil_1_13.mkv",
+					"current": "0",
+					"duration": "3336.448"
+				},
+				{
+					"filename": "daredevil_2_1.mkv",
+					"current": "0",
+					"duration": "2890.026"
+				},
+				{
+					"filename": "daredevil_2_2.mkv",
+					"current": "0",
+					"duration": "2982.058"
+				},
+				{
+					"filename": "daredevil_2_3.mkv",
+					"current": "0",
+					"duration": "2876.97"
+				},
+				{
+					"filename": "daredevil_2_4.mkv",
+					"current": "0",
+					"duration": "3614.698"
+				},
+				{
+					"filename": "daredevil_2_5.mkv",
+					"current": "0",
+					"duration": "3328.448"
+				},
+				{
+					"filename": "daredevil_2_6.mkv",
+					"current": "0",
+					"duration": "3332.416"
+				},
+				{
+					"filename": "daredevil_2_7.mkv",
+					"current": "0",
+					"duration": "3366.442"
+				},
+				{
+					"filename": "daredevil_2_8.mkv",
+					"current": "0",
+					"duration": "3243.328"
+				},
+				{
+					"filename": "daredevil_2_9.mkv",
+					"current": "0",
+					"duration": "3552.682"
+				},
+				{
+					"filename": "daredevil_2_10.mkv",
+					"current": "0",
+					"duration": "3113.194"
+				},
+				{
+					"filename": "daredevil_2_11.mkv",
+					"current": "0",
+					"duration": "3298.41"
+				},
+				{
+					"filename": "daredevil_2_12.mkv",
+					"current": "0",
+					"duration": "3131.2"
+				},
+				{
+					"filename": "daredevil_2_13.mkv",
+					"current": "0",
+					"duration": "3442.538"
+				},
+				{
+					"filename": "daredevil_3_1.mkv",
+					"current": "0",
+					"duration": "3151.168"
+				},
+				{
+					"filename": "daredevil_3_2.mkv",
+					"current": "0",
+					"duration": "2924.928"
+				},
+				{
+					"filename": "daredevil_3_3.mkv",
+					"current": "0",
+					"duration": "2918.954"
+				},
+				{
+					"filename": "daredevil_3_4.mkv",
+					"current": "0",
+					"duration": "3211.242"
+				},
+				{
+					"filename": "daredevil_3_5.mkv",
+					"current": "0",
+					"duration": "2912.938"
+				},
+				{
+					"filename": "daredevil_3_6.mkv",
+					"current": "0",
+					"duration": "3203.2"
+				},
+				{
+					"filename": "daredevil_3_7.mkv",
+					"current": "0",
+					"duration": "2936.96"
+				},
+				{
+					"filename": "daredevil_3_8.mkv",
+					"current": "0",
+					"duration": "2972.992"
+				},
+				{
+					"filename": "daredevil_3_9.mkv",
+					"current": "0",
+					"duration": "3187.2"
+				},
+				{
+					"filename": "daredevil_3_10.mkv",
+					"current": "0",
+					"duration": "2720.746"
+				},
+				{
+					"filename": "daredevil_3_11.mkv",
+					"current": "0",
+					"duration": "2932.97"
+				},
+				{
+					"filename": "daredevil_3_12.mkv",
+					"current": "0",
+					"duration": "3263.274"
+				},
+				{
+					"filename": "daredevil_3_13.mkv",
+					"current": "0",
+					"duration": "3185.194"
+				}
+			],
+			"progress": "daredevil_1_1.mkv",
+			"seasons": "3",
+			"episodes": [
+				13,
+				13,
+				13
+			]
+		},
+		{
+			"id": 10,
+			"type": "series",
 			"image": "whatif.jpg",
-			"title": "Marvel: What if...?",
+			"title": "Marvel: What if?",
 			"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
 			"episode_progress": [
 				{
-					"filename": "whatif_1_6.mp4",
+					"filename": "whatif_1_1.mp4",
 					"current": "0",
-					"duration": "1862.541992"
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": "0",
+					"duration": "1933.5"
 				},
 				{
 					"filename": "whatif_1_3.mp4",
@@ -571,9 +1450,14 @@
 					"duration": "1798.208984"
 				},
 				{
-					"filename": "whatif_1_2.mp4",
+					"filename": "whatif_1_6.mp4",
 					"current": "0",
-					"duration": "1933.5"
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": "0",
+					"duration": "1970.833984"
 				},
 				{
 					"filename": "whatif_1_8.mp4",
@@ -581,19 +1465,9 @@
 					"duration": "1703.541992"
 				},
 				{
-					"filename": "whatif_1_1.mp4",
-					"current": "0",
-					"duration": "1872.833984"
-				},
-				{
 					"filename": "whatif_1_9.mp4",
 					"current": "0",
 					"duration": "1982.916992"
-				},
-				{
-					"filename": "whatif_1_7.mp4",
-					"current": "0",
-					"duration": "1970.833984"
 				}
 			],
 			"progress": "whatif_1_1.mp4",
@@ -601,6 +1475,16 @@
 			"episodes": [
 				9
 			]
+		},
+		{
+			"id": 11,
+			"type": "movie",
+			"image": "Screenshot_1.png",
+			"title": "a",
+			"description": "a",
+			"filename": "farfromhome.mp4",
+			"current": "0",
+			"duration": "7763.756"
 		}
 	]
 }
