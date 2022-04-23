@@ -191,7 +191,6 @@ function redo(){
         .then(r => refresh())
 }
 let autohide = document.querySelector('.autohide');
-let navbar_height = document.querySelector('.navbar').offsetHeight;
 if(autohide){
     var last_scroll_top = window.scrollY;
     window.addEventListener('scroll', function() {

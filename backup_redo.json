@@ -300,6 +300,65 @@
 				13,
 				13
 			]
+		},
+		{
+			"id": 10,
+			"type": "series",
+			"image": "whatif.jpg",
+			"title": "Marvel: What if?",
+			"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
+			"episode_progress": [
+				{
+					"filename": "whatif_1_1.mp4",
+					"current": "100.504087",
+					"duration": "1872.875"
+				},
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": "0",
+					"duration": "1933.5"
+				},
+				{
+					"filename": "whatif_1_3.mp4",
+					"current": "0",
+					"duration": "1823.291992"
+				},
+				{
+					"filename": "whatif_1_4.mp4",
+					"current": "0",
+					"duration": "2078.708984"
+				},
+				{
+					"filename": "whatif_1_5.mp4",
+					"current": "0",
+					"duration": "1798.208984"
+				},
+				{
+					"filename": "whatif_1_6.mp4",
+					"current": "0",
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": "0",
+					"duration": "1970.833984"
+				},
+				{
+					"filename": "whatif_1_8.mp4",
+					"current": "0",
+					"duration": "1703.541992"
+				},
+				{
+					"filename": "whatif_1_9.mp4",
+					"current": "0",
+					"duration": "1982.916992"
+				}
+			],
+			"progress": "whatif_1_1.mp4",
+			"seasons": "1",
+			"episodes": [
+				9
+			]
 		}
 	],
 	"1": [
@@ -602,6 +661,65 @@
 				13,
 				13,
 				13
+			]
+		},
+		{
+			"id": 10,
+			"type": "series",
+			"image": "whatif.jpg",
+			"title": "Marvel: What if?",
+			"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
+			"episode_progress": [
+				{
+					"filename": "whatif_1_1.mp4",
+					"current": "0",
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": "0",
+					"duration": "1933.5"
+				},
+				{
+					"filename": "whatif_1_3.mp4",
+					"current": "0",
+					"duration": "1823.291992"
+				},
+				{
+					"filename": "whatif_1_4.mp4",
+					"current": "0",
+					"duration": "2078.708984"
+				},
+				{
+					"filename": "whatif_1_5.mp4",
+					"current": "0",
+					"duration": "1798.208984"
+				},
+				{
+					"filename": "whatif_1_6.mp4",
+					"current": "0",
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": "0",
+					"duration": "1970.833984"
+				},
+				{
+					"filename": "whatif_1_8.mp4",
+					"current": "0",
+					"duration": "1703.541992"
+				},
+				{
+					"filename": "whatif_1_9.mp4",
+					"current": "0",
+					"duration": "1982.916992"
+				}
+			],
+			"progress": "whatif_1_1.mp4",
+			"seasons": "1",
+			"episodes": [
+				9
 			]
 		}
 	],
@@ -906,6 +1024,65 @@
 				13,
 				13
 			]
+		},
+		{
+			"id": 10,
+			"type": "series",
+			"image": "whatif.jpg",
+			"title": "Marvel: What if?",
+			"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
+			"episode_progress": [
+				{
+					"filename": "whatif_1_1.mp4",
+					"current": "0",
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": "0",
+					"duration": "1933.5"
+				},
+				{
+					"filename": "whatif_1_3.mp4",
+					"current": "0",
+					"duration": "1823.291992"
+				},
+				{
+					"filename": "whatif_1_4.mp4",
+					"current": "0",
+					"duration": "2078.708984"
+				},
+				{
+					"filename": "whatif_1_5.mp4",
+					"current": "0",
+					"duration": "1798.208984"
+				},
+				{
+					"filename": "whatif_1_6.mp4",
+					"current": "0",
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": "0",
+					"duration": "1970.833984"
+				},
+				{
+					"filename": "whatif_1_8.mp4",
+					"current": "0",
+					"duration": "1703.541992"
+				},
+				{
+					"filename": "whatif_1_9.mp4",
+					"current": "0",
+					"duration": "1982.916992"
+				}
+			],
+			"progress": "whatif_1_1.mp4",
+			"seasons": "1",
+			"episodes": [
+				9
+			]
 		}
 	],
 	"3": [
@@ -1208,6 +1385,65 @@
 				13,
 				13,
 				13
+			]
+		},
+		{
+			"id": 10,
+			"type": "series",
+			"image": "whatif.jpg",
+			"title": "Marvel: What if?",
+			"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
+			"episode_progress": [
+				{
+					"filename": "whatif_1_1.mp4",
+					"current": "0",
+					"duration": "1872.833984"
+				},
+				{
+					"filename": "whatif_1_2.mp4",
+					"current": "0",
+					"duration": "1933.5"
+				},
+				{
+					"filename": "whatif_1_3.mp4",
+					"current": "0",
+					"duration": "1823.291992"
+				},
+				{
+					"filename": "whatif_1_4.mp4",
+					"current": "0",
+					"duration": "2078.708984"
+				},
+				{
+					"filename": "whatif_1_5.mp4",
+					"current": "0",
+					"duration": "1798.208984"
+				},
+				{
+					"filename": "whatif_1_6.mp4",
+					"current": "0",
+					"duration": "1862.541992"
+				},
+				{
+					"filename": "whatif_1_7.mp4",
+					"current": "0",
+					"duration": "1970.833984"
+				},
+				{
+					"filename": "whatif_1_8.mp4",
+					"current": "0",
+					"duration": "1703.541992"
+				},
+				{
+					"filename": "whatif_1_9.mp4",
+					"current": "0",
+					"duration": "1982.916992"
+				}
+			],
+			"progress": "whatif_1_1.mp4",
+			"seasons": "1",
+			"episodes": [
+				9
 			]
 		}
 	]
