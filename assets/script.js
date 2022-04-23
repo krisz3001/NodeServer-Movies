@@ -133,10 +133,6 @@ function saveProgress(){
             .then(r => {})
     }
 }
-function progressBar(){
-    let vid = document.getElementById('vid')
-    document.getElementById('p').style.width = `${(vid.currentTime/vid.duration)*100}%`
-}
 function setProfile(profileID){
     let formData = new FormData()
     formData.append('profileID', profileID)
@@ -207,7 +203,7 @@ if(autohide){
     }); 
 }
 function newEpisode(n, image, duration, w, link){
-    return `<a class="row border-top border-bottom border-secondary p-2 episode text-decoration-none text-white" href="${link}"><div class="col-2 d-flex align-items-center justify-content-center fs-3">${n}</div><div class="col-4 rounded p-0" style="background-image: url('/assets/${image}'); aspect-ratio: 16/9; background-size: contain; background-repeat: no-repeat;"><div class="d-flex align-items-center justify-content-center h-100"><div class="episodePlayBtn rounded-circle opacity-0" style="width: calc(100% / 4); aspect-ratio: 1/1; background-image: url(/assets/play1.png); background-size: contain;"></div></div><div class="bg-secondary w-100 rounded-bottom overflow-hidden"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="col-6"><div class="d-flex flex-column justify-content-sm-between flex-sm-row fw-bold"><p class="m-0">Episode ${n}</p><p>${duration} ${duration > 1 ? 'minutes' : 'minute'}</p></div></div></a>`
+    return `<a class="row border-top border-bottom border-secondary p-2 episode text-decoration-none text-white" href="${link}"><div class="col-2 d-flex align-items-center justify-content-center fs-3">${n}</div><div class="col-4 rounded p-0" style="background-image: url('/assets/${image}'); aspect-ratio: 16/9; background-size: contain; background-repeat: no-repeat;"><div class="d-flex align-items-center justify-content-center h-100"><div class="episodePlayBtn rounded-circle opacity-0" style="width: calc(100% / 4); aspect-ratio: 1/1; background-image: url(/assets/play.png); background-size: contain;"></div></div><div class="bg-secondary w-100 rounded-bottom overflow-hidden"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="col-6"><div class="d-flex flex-column justify-content-sm-between flex-sm-row fw-bold"><p class="m-0">Episode ${n}</p><p>${duration} ${duration > 1 ? 'minutes' : 'minute'}</p></div></div></a>`
 }
 function refreshEpisodes(n){
     let season = document.getElementById('seasonSelect').value

@@ -76,7 +76,7 @@
     overflow: hidden;
 }
 .play{
-    background-image: url('/assets/play1.png');
+    background-image: url('/assets/play.png');
     background-size: cover;
     background-repeat: no-repeat;
     aspect-ratio: 1/1;
@@ -92,7 +92,7 @@
     padding: 0;
 }
 .details:hover{
-    background-color: #6c757d;
+    background-color: #42464b;
     cursor: pointer;
 }
 .play:hover{

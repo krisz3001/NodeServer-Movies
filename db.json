@@ -17,8 +17,8 @@
 			"title": "Iron Man 2",
 			"description": "Kiderült, hogy a szuperhős Vasember valójában Tony Stark. Kihasználva az iránta való érdeklődést a milliárdos feltaláló fel akarja hívni a figyelmet a közjó szolgálatába állítható technikai újdonságokra. A kormány azonban azt szeretné, ha fejlesztéseit a hadsereg kapná. Tony azonban nem akarja megosztani a Vasemberrel kapcsolatos információit, attól fél, hogy azok rossz kezekbe kerülnek. Közben felbukkan egy rejtélyes figura a Stark család múltjából. Ivan Vanko a saját fegyverével akarja elpusztítani a Vasembert. A szuperhős kénytelen újra akcióba lépni, hogy a barátai segítségével legyőzze azokat az erőket, amelyek őt és az emberiséget fenyegetik.",
 			"filename": "ironman2.mp4",
-			"current": "0",
-			"duration": "7479.139"
+			"current": "3.185575",
+			"duration": "7479.168"
 		},
 		{
 			"id": 2,
@@ -87,7 +87,7 @@
 			"title": "260 kilómétert utaztak a cigányok",
 			"description": "Én tudok főzni, én áldoztam ezért: 7-kor fölkeltem, marhát pucoltam, az, hogy egy faszszopó geci kurva elment a retkes kurva anyjába, nem érdekel, 260 kilométert utaztak a cigányok, nehogymár olyan nyerje baszdmeg aki nem tud főzni! Én, aki reggel óta főzök, hát menjetek a faszomba, baszd meg a gecibe, szórakoztok velem, hagyjatok már baszdmeg, mi a faszt szavazzak?  Ez egy főzőverseny baszki, há' mit szavazzak? Mit szavazzak baszdmeg? Mit, hogy a pincér csinálja meg az étteremben? Hétkor pucoltam a marhapörköltet, faszszopó.  Baszki. Gyere ide, gyere ide, kisköcsög! Gyere, most mondd el! Aki erős, itt megáll előttem. Hétkor elkezdtem pucolni a marhapörköltet, mi a faszomra szavazzak?  Hát kinek van igaza gyerekek? Egy verseny, én ezért nem aludtam 1-2-3 napot. A menyasszonyomat nyüstöltem, hogy pucolja a krumplit, érted? Pucolta a krumplit, a Papp Dani baszdmeg - úgy, hogy neki családi programja volt baszdmeg - rohangált ide, hogy a terítést idehozza. Én könyörögtem itt a lakóknak - ne csititgass Timi, kérlek - mert itt halt meg a szomszéd. És akkor szavazzuk meg. Hát nyerjen olyan aki nem tud főzni? Nyerjen a rómeó?  Ez egy főzőverseny: a Rómeó tud úgy főzni mint én? Rómeó, szerinted tudsz úgy főzni mint én? Jó, de azt megcsináltam.  Te mit csináltál? Jó, akkor a Győző nyert, jóéjszakát, szevasztok.",
 			"filename": "damu.mp4",
-			"current": "102.654434",
+			"current": "5.63776",
 			"duration": "124.319637"
 		},
 		{
@@ -325,7 +325,7 @@
 				},
 				{
 					"filename": "whatif_1_4.mp4",
-					"current": "13.427615",
+					"current": "18.917649",
 					"duration": "2078.763"
 				},
 				{
@@ -358,6 +358,50 @@
 			"seasons": "1",
 			"episodes": [
 				9
+			]
+		},
+		{
+			"id": 11,
+			"type": "series",
+			"image": "loki.jpg",
+			"title": "Marvel: Loki",
+			"description": "Miután Loki ellopta a Tesseractot, őrizetbe veszi egy szervezet, ami az időt felügyeli. Segítségével egy hosszú időutazásra indulnak, amely folyamán megváltoztatja az emberek történelmét, és emiatt hatalmas kalamajkába kerül.",
+			"episode_progress": [
+				{
+					"filename": "loki_1_1.mp4",
+					"current": "931.008832",
+					"duration": "3090.603"
+				},
+				{
+					"filename": "loki_1_2.mp4",
+					"current": "0",
+					"duration": "3192.208984"
+				},
+				{
+					"filename": "loki_1_3.mp4",
+					"current": "0",
+					"duration": "2458.083984"
+				},
+				{
+					"filename": "loki_1_4.mp4",
+					"current": "0",
+					"duration": "2860.875"
+				},
+				{
+					"filename": "loki_1_5.mp4",
+					"current": "0",
+					"duration": "2909.208984"
+				},
+				{
+					"filename": "loki_1_6.mp4",
+					"current": "0",
+					"duration": "2722.208984"
+				}
+			],
+			"progress": "loki_1_1.mp4",
+			"seasons": "1",
+			"episodes": [
+				6
 			]
 		}
 	],
@@ -721,6 +765,50 @@
 			"episodes": [
 				9
 			]
+		},
+		{
+			"id": 11,
+			"type": "series",
+			"image": "loki.jpg",
+			"title": "Marvel: Loki",
+			"description": "Miután Loki ellopta a Tesseractot, őrizetbe veszi egy szervezet, ami az időt felügyeli. Segítségével egy hosszú időutazásra indulnak, amely folyamán megváltoztatja az emberek történelmét, és emiatt hatalmas kalamajkába kerül.",
+			"episode_progress": [
+				{
+					"filename": "loki_1_1.mp4",
+					"current": "0",
+					"duration": "3090.458984"
+				},
+				{
+					"filename": "loki_1_2.mp4",
+					"current": "0",
+					"duration": "3192.208984"
+				},
+				{
+					"filename": "loki_1_3.mp4",
+					"current": "0",
+					"duration": "2458.083984"
+				},
+				{
+					"filename": "loki_1_4.mp4",
+					"current": "0",
+					"duration": "2860.875"
+				},
+				{
+					"filename": "loki_1_5.mp4",
+					"current": "0",
+					"duration": "2909.208984"
+				},
+				{
+					"filename": "loki_1_6.mp4",
+					"current": "0",
+					"duration": "2722.208984"
+				}
+			],
+			"progress": "loki_1_1.mp4",
+			"seasons": "1",
+			"episodes": [
+				6
+			]
 		}
 	],
 	"2": [
@@ -1083,6 +1171,50 @@
 			"episodes": [
 				9
 			]
+		},
+		{
+			"id": 11,
+			"type": "series",
+			"image": "loki.jpg",
+			"title": "Marvel: Loki",
+			"description": "Miután Loki ellopta a Tesseractot, őrizetbe veszi egy szervezet, ami az időt felügyeli. Segítségével egy hosszú időutazásra indulnak, amely folyamán megváltoztatja az emberek történelmét, és emiatt hatalmas kalamajkába kerül.",
+			"episode_progress": [
+				{
+					"filename": "loki_1_1.mp4",
+					"current": "0",
+					"duration": "3090.458984"
+				},
+				{
+					"filename": "loki_1_2.mp4",
+					"current": "0",
+					"duration": "3192.208984"
+				},
+				{
+					"filename": "loki_1_3.mp4",
+					"current": "0",
+					"duration": "2458.083984"
+				},
+				{
+					"filename": "loki_1_4.mp4",
+					"current": "0",
+					"duration": "2860.875"
+				},
+				{
+					"filename": "loki_1_5.mp4",
+					"current": "0",
+					"duration": "2909.208984"
+				},
+				{
+					"filename": "loki_1_6.mp4",
+					"current": "0",
+					"duration": "2722.208984"
+				}
+			],
+			"progress": "loki_1_1.mp4",
+			"seasons": "1",
+			"episodes": [
+				6
+			]
 		}
 	],
 	"3": [
@@ -1444,6 +1576,50 @@
 			"seasons": "1",
 			"episodes": [
 				9
+			]
+		},
+		{
+			"id": 11,
+			"type": "series",
+			"image": "loki.jpg",
+			"title": "Marvel: Loki",
+			"description": "Miután Loki ellopta a Tesseractot, őrizetbe veszi egy szervezet, ami az időt felügyeli. Segítségével egy hosszú időutazásra indulnak, amely folyamán megváltoztatja az emberek történelmét, és emiatt hatalmas kalamajkába kerül.",
+			"episode_progress": [
+				{
+					"filename": "loki_1_1.mp4",
+					"current": "0",
+					"duration": "3090.458984"
+				},
+				{
+					"filename": "loki_1_2.mp4",
+					"current": "0",
+					"duration": "3192.208984"
+				},
+				{
+					"filename": "loki_1_3.mp4",
+					"current": "0",
+					"duration": "2458.083984"
+				},
+				{
+					"filename": "loki_1_4.mp4",
+					"current": "0",
+					"duration": "2860.875"
+				},
+				{
+					"filename": "loki_1_5.mp4",
+					"current": "0",
+					"duration": "2909.208984"
+				},
+				{
+					"filename": "loki_1_6.mp4",
+					"current": "0",
+					"duration": "2722.208984"
+				}
+			],
+			"progress": "loki_1_1.mp4",
+			"seasons": "1",
+			"episodes": [
+				6
 			]
 		}
 	]

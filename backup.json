@@ -7,7 +7,7 @@
 			"title": "Iron Man",
 			"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
 			"filename": "ironman.mp4",
-			"current": "1571.69825",
+			"current": "2054.694202",
 			"duration": "7561.704"
 		},
 		{
@@ -67,7 +67,7 @@
 			"title": "Kingsman: The Golden Circle",
 			"description": "Ha a világot valami rettenetes baj, világuralomra törő főgonosz vagy más efféle rémség fenyegeti, akkor sem kell félnünk: van szakember, aki megállítja a gonoszságot. A Kingsman közelharcra és rejtvényfejtésre egyaránt tökéletesen kiképzett, úriember ügynökei majdnem mindig tudják, mi a teendő. De néha a \"majdnem mindig\" is kevés. Az új ellenség (Julianne Moore) természetesen világuralomra tör, valószínűleg őrült, és biztosan lángész: sikeresen csapdába csalja a Kingsman-csapatot, és felrobbantja a központjukat. Csak az újonc Töki (Taron Egerton) és kiképzője, Merlin (Mark Strong) ússza meg a támadást: ők Amerikába menekülnek, ahol a szervezetükhöz hasonló, helyi cég, a Statesman egy embere (Halle Berry) várja őket. Együtt vágnak neki, eddigi legkeményebb, legveszélyesebb feladatuk leküzdésének.",
 			"filename": "kingsman2.mp4",
-			"current": "0",
+			"current": "21.2763",
 			"duration": "8462.304"
 		},
 		{
@@ -87,7 +87,7 @@
 			"title": "260 kilómétert utaztak a cigányok",
 			"description": "Én tudok főzni, én áldoztam ezért: 7-kor fölkeltem, marhát pucoltam, az, hogy egy faszszopó geci kurva elment a retkes kurva anyjába, nem érdekel, 260 kilométert utaztak a cigányok, nehogymár olyan nyerje baszdmeg aki nem tud főzni! Én, aki reggel óta főzök, hát menjetek a faszomba, baszd meg a gecibe, szórakoztok velem, hagyjatok már baszdmeg, mi a faszt szavazzak?  Ez egy főzőverseny baszki, há' mit szavazzak? Mit szavazzak baszdmeg? Mit, hogy a pincér csinálja meg az étteremben? Hétkor pucoltam a marhapörköltet, faszszopó.  Baszki. Gyere ide, gyere ide, kisköcsög! Gyere, most mondd el! Aki erős, itt megáll előttem. Hétkor elkezdtem pucolni a marhapörköltet, mi a faszomra szavazzak?  Hát kinek van igaza gyerekek? Egy verseny, én ezért nem aludtam 1-2-3 napot. A menyasszonyomat nyüstöltem, hogy pucolja a krumplit, érted? Pucolta a krumplit, a Papp Dani baszdmeg - úgy, hogy neki családi programja volt baszdmeg - rohangált ide, hogy a terítést idehozza. Én könyörögtem itt a lakóknak - ne csititgass Timi, kérlek - mert itt halt meg a szomszéd. És akkor szavazzuk meg. Hát nyerjen olyan aki nem tud főzni? Nyerjen a rómeó?  Ez egy főzőverseny: a Rómeó tud úgy főzni mint én? Rómeó, szerinted tudsz úgy főzni mint én? Jó, de azt megcsináltam.  Te mit csináltál? Jó, akkor a Győző nyert, jóéjszakát, szevasztok.",
 			"filename": "damu.mp4",
-			"current": "56.990284",
+			"current": "102.654434",
 			"duration": "124.319637"
 		},
 		{
@@ -99,7 +99,7 @@
 			"episode_progress": [
 				{
 					"filename": "daredevil_1_1.mkv",
-					"current": "0",
+					"current": "517.685265",
 					"duration": "3158.272"
 				},
 				{
@@ -279,7 +279,7 @@
 				},
 				{
 					"filename": "daredevil_3_11.mkv",
-					"current": "1122.136018",
+					"current": "0",
 					"duration": "2932.97"
 				},
 				{
@@ -293,7 +293,7 @@
 					"duration": "3185.194"
 				}
 			],
-			"progress": "daredevil_3_11.mkv",
+			"progress": "daredevil_1_1.mkv",
 			"seasons": "3",
 			"episodes": [
 				13,
@@ -310,7 +310,7 @@
 			"episode_progress": [
 				{
 					"filename": "whatif_1_1.mp4",
-					"current": "100.504087",
+					"current": "104.837769",
 					"duration": "1872.875"
 				},
 				{
@@ -325,8 +325,8 @@
 				},
 				{
 					"filename": "whatif_1_4.mp4",
-					"current": "0",
-					"duration": "2078.708984"
+					"current": "13.427615",
+					"duration": "2078.763"
 				},
 				{
 					"filename": "whatif_1_5.mp4",
@@ -351,24 +351,14 @@
 				{
 					"filename": "whatif_1_9.mp4",
 					"current": "0",
-					"duration": "1982.916992"
+					"duration": "1982.955"
 				}
 			],
-			"progress": "whatif_1_1.mp4",
+			"progress": "whatif_1_4.mp4",
 			"seasons": "1",
 			"episodes": [
 				9
 			]
-		},
-		{
-			"id": 11,
-			"type": "movie",
-			"image": "Screenshot_1.png",
-			"title": "a",
-			"description": "a",
-			"filename": "farfromhome.mp4",
-			"current": "0",
-			"duration": "7763.756"
 		}
 	],
 	"1": [
@@ -731,16 +721,6 @@
 			"episodes": [
 				9
 			]
-		},
-		{
-			"id": 11,
-			"type": "movie",
-			"image": "Screenshot_1.png",
-			"title": "a",
-			"description": "a",
-			"filename": "farfromhome.mp4",
-			"current": "0",
-			"duration": "7763.756"
 		}
 	],
 	"2": [
@@ -1103,16 +1083,6 @@
 			"episodes": [
 				9
 			]
-		},
-		{
-			"id": 11,
-			"type": "movie",
-			"image": "Screenshot_1.png",
-			"title": "a",
-			"description": "a",
-			"filename": "farfromhome.mp4",
-			"current": "0",
-			"duration": "7763.756"
 		}
 	],
 	"3": [
@@ -1475,16 +1445,6 @@
 			"episodes": [
 				9
 			]
-		},
-		{
-			"id": 11,
-			"type": "movie",
-			"image": "Screenshot_1.png",
-			"title": "a",
-			"description": "a",
-			"filename": "farfromhome.mp4",
-			"current": "0",
-			"duration": "7763.756"
 		}
 	]
 }
