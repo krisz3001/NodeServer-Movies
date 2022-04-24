@@ -20,6 +20,9 @@ function playing(){
     clearTimeout(overlayTimer)
     hideCursor()
     startAutosave()
+    document.getElementsByTagName('body')[0].style.cursor = 'default'
+    document.getElementById('overlay').classList.remove('d-flex')
+    document.getElementById('overlay').classList.add('d-none')
 }
 function afk(){
     if(vid.paused && everStarted){

@@ -47,7 +47,7 @@
 			"title": "Avengers: Endgame",
 			"description": "Thanos súlyos tette, amivel elpusztította az univerzum élőlényeinek felét és megtörte a Bosszúállókat, a megmaradt hősöket egy végső összecsapásra készteti a Marvel Studios huszonegy filmet megkoronázó, nagyszabású fináléjában, a Bosszúállók: Végjátékban.",
 			"filename": "endgame.mp4",
-			"current": "3183.441649",
+			"current": "3324.288077",
 			"duration": "10870.32"
 		},
 		{
@@ -87,7 +87,7 @@
 			"title": "260 kilómétert utaztak a cigányok",
 			"description": "Én tudok főzni, én áldoztam ezért: 7-kor fölkeltem, marhát pucoltam, az, hogy egy faszszopó geci kurva elment a retkes kurva anyjába, nem érdekel, 260 kilométert utaztak a cigányok, nehogymár olyan nyerje baszdmeg aki nem tud főzni! Én, aki reggel óta főzök, hát menjetek a faszomba, baszd meg a gecibe, szórakoztok velem, hagyjatok már baszdmeg, mi a faszt szavazzak?  Ez egy főzőverseny baszki, há' mit szavazzak? Mit szavazzak baszdmeg? Mit, hogy a pincér csinálja meg az étteremben? Hétkor pucoltam a marhapörköltet, faszszopó.  Baszki. Gyere ide, gyere ide, kisköcsög! Gyere, most mondd el! Aki erős, itt megáll előttem. Hétkor elkezdtem pucolni a marhapörköltet, mi a faszomra szavazzak?  Hát kinek van igaza gyerekek? Egy verseny, én ezért nem aludtam 1-2-3 napot. A menyasszonyomat nyüstöltem, hogy pucolja a krumplit, érted? Pucolta a krumplit, a Papp Dani baszdmeg - úgy, hogy neki családi programja volt baszdmeg - rohangált ide, hogy a terítést idehozza. Én könyörögtem itt a lakóknak - ne csititgass Timi, kérlek - mert itt halt meg a szomszéd. És akkor szavazzuk meg. Hát nyerjen olyan aki nem tud főzni? Nyerjen a rómeó?  Ez egy főzőverseny: a Rómeó tud úgy főzni mint én? Rómeó, szerinted tudsz úgy főzni mint én? Jó, de azt megcsináltam.  Te mit csináltál? Jó, akkor a Győző nyert, jóéjszakát, szevasztok.",
 			"filename": "damu.mp4",
-			"current": "5.63776",
+			"current": "6.661789",
 			"duration": "124.319637"
 		},
 		{
@@ -99,7 +99,7 @@
 			"episode_progress": [
 				{
 					"filename": "daredevil_1_1.mkv",
-					"current": "517.685265",
+					"current": "518.675751",
 					"duration": "3158.272"
 				},
 				{
@@ -402,6 +402,101 @@
 			"seasons": "1",
 			"episodes": [
 				6
+			]
+		},
+		{
+			"id": 12,
+			"type": "series",
+			"image": "mandalorian.jpg",
+			"title": "The Mandalorian",
+			"description": "A The Mandalorian (A mandalori) az első élőszereplős Star Wars-sorozat, amely 2019 novemberében debütált a Disney+ nevű streaming-szolgáltatásában. A hivatalosan még magyar cím nélküli The Mandalorian sorozat főszereplője egy magányos mandalori fejvadász (Pedro Pascal), aki bonyolult küldetéseket vállalva jut egy hatalmas összeesküvés nyomára. A sorozatot Jon Favreau a Vasember 1-2, Az oroszlánkirály és A dzsungel könyve rendezője készítette el a Disney számára.",
+			"episode_progress": [
+				{
+					"filename": "mandalorian_1_1.mp4",
+					"current": "0",
+					"duration": "1926.925"
+				},
+				{
+					"filename": "mandalorian_1_2.mp4",
+					"current": "0",
+					"duration": "1721.303"
+				},
+				{
+					"filename": "mandalorian_1_3.mp4",
+					"current": "0",
+					"duration": "1537.37"
+				},
+				{
+					"filename": "mandalorian_1_4.mp4",
+					"current": "0",
+					"duration": "1623.584"
+				},
+				{
+					"filename": "mandalorian_1_5.mp4",
+					"current": "0",
+					"duration": "1864.822"
+				},
+				{
+					"filename": "mandalorian_1_6.mp4",
+					"current": "0",
+					"duration": "1127.21"
+				},
+				{
+					"filename": "mandalorian_1_7.mp4",
+					"current": "0",
+					"duration": "1359.609"
+				},
+				{
+					"filename": "mandalorian_1_8.mp4",
+					"current": "0",
+					"duration": "2255.67"
+				},
+				{
+					"filename": "mandalorian_2_1.mp4",
+					"current": "0",
+					"duration": "3108.814"
+				},
+				{
+					"filename": "mandalorian_2_2.mp4",
+					"current": "0",
+					"duration": "2372.829"
+				},
+				{
+					"filename": "mandalorian_2_3.mp4",
+					"current": "0",
+					"duration": "1982.731"
+				},
+				{
+					"filename": "mandalorian_2_4.mp4",
+					"current": "0",
+					"duration": "2225.932"
+				},
+				{
+					"filename": "mandalorian_2_5.mp4",
+					"current": "0",
+					"duration": "2685.28"
+				},
+				{
+					"filename": "mandalorian_2_6.mp4",
+					"current": "0",
+					"duration": "1904.862"
+				},
+				{
+					"filename": "mandalorian_2_7.mp4",
+					"current": "0",
+					"duration": "2179.456"
+				},
+				{
+					"filename": "mandalorian_2_8.mp4",
+					"current": "0",
+					"duration": "2644.559"
+				}
+			],
+			"progress": "mandalorian_1_1.mp4",
+			"seasons": "2",
+			"episodes": [
+				8,
+				8
 			]
 		}
 	],
@@ -809,6 +904,101 @@
 			"episodes": [
 				6
 			]
+		},
+		{
+			"id": 12,
+			"type": "series",
+			"image": "mandalorian.jpg",
+			"title": "The Mandalorian",
+			"description": "A The Mandalorian (A mandalori) az első élőszereplős Star Wars-sorozat, amely 2019 novemberében debütált a Disney+ nevű streaming-szolgáltatásában. A hivatalosan még magyar cím nélküli The Mandalorian sorozat főszereplője egy magányos mandalori fejvadász (Pedro Pascal), aki bonyolult küldetéseket vállalva jut egy hatalmas összeesküvés nyomára. A sorozatot Jon Favreau a Vasember 1-2, Az oroszlánkirály és A dzsungel könyve rendezője készítette el a Disney számára.",
+			"episode_progress": [
+				{
+					"filename": "mandalorian_1_1.mp4",
+					"current": "0",
+					"duration": "1926.925"
+				},
+				{
+					"filename": "mandalorian_1_2.mp4",
+					"current": "0",
+					"duration": "1721.303"
+				},
+				{
+					"filename": "mandalorian_1_3.mp4",
+					"current": "0",
+					"duration": "1537.37"
+				},
+				{
+					"filename": "mandalorian_1_4.mp4",
+					"current": "0",
+					"duration": "1623.584"
+				},
+				{
+					"filename": "mandalorian_1_5.mp4",
+					"current": "0",
+					"duration": "1864.822"
+				},
+				{
+					"filename": "mandalorian_1_6.mp4",
+					"current": "0",
+					"duration": "1127.21"
+				},
+				{
+					"filename": "mandalorian_1_7.mp4",
+					"current": "0",
+					"duration": "1359.609"
+				},
+				{
+					"filename": "mandalorian_1_8.mp4",
+					"current": "0",
+					"duration": "2255.67"
+				},
+				{
+					"filename": "mandalorian_2_1.mp4",
+					"current": "0",
+					"duration": "3108.814"
+				},
+				{
+					"filename": "mandalorian_2_2.mp4",
+					"current": "0",
+					"duration": "2372.829"
+				},
+				{
+					"filename": "mandalorian_2_3.mp4",
+					"current": "0",
+					"duration": "1982.731"
+				},
+				{
+					"filename": "mandalorian_2_4.mp4",
+					"current": "0",
+					"duration": "2225.932"
+				},
+				{
+					"filename": "mandalorian_2_5.mp4",
+					"current": "0",
+					"duration": "2685.28"
+				},
+				{
+					"filename": "mandalorian_2_6.mp4",
+					"current": "0",
+					"duration": "1904.862"
+				},
+				{
+					"filename": "mandalorian_2_7.mp4",
+					"current": "0",
+					"duration": "2179.456"
+				},
+				{
+					"filename": "mandalorian_2_8.mp4",
+					"current": "0",
+					"duration": "2644.559"
+				}
+			],
+			"progress": "mandalorian_1_1.mp4",
+			"seasons": "2",
+			"episodes": [
+				8,
+				8
+			]
 		}
 	],
 	"2": [
@@ -1215,6 +1405,101 @@
 			"episodes": [
 				6
 			]
+		},
+		{
+			"id": 12,
+			"type": "series",
+			"image": "mandalorian.jpg",
+			"title": "The Mandalorian",
+			"description": "A The Mandalorian (A mandalori) az első élőszereplős Star Wars-sorozat, amely 2019 novemberében debütált a Disney+ nevű streaming-szolgáltatásában. A hivatalosan még magyar cím nélküli The Mandalorian sorozat főszereplője egy magányos mandalori fejvadász (Pedro Pascal), aki bonyolult küldetéseket vállalva jut egy hatalmas összeesküvés nyomára. A sorozatot Jon Favreau a Vasember 1-2, Az oroszlánkirály és A dzsungel könyve rendezője készítette el a Disney számára.",
+			"episode_progress": [
+				{
+					"filename": "mandalorian_1_1.mp4",
+					"current": "0",
+					"duration": "1926.925"
+				},
+				{
+					"filename": "mandalorian_1_2.mp4",
+					"current": "0",
+					"duration": "1721.303"
+				},
+				{
+					"filename": "mandalorian_1_3.mp4",
+					"current": "0",
+					"duration": "1537.37"
+				},
+				{
+					"filename": "mandalorian_1_4.mp4",
+					"current": "0",
+					"duration": "1623.584"
+				},
+				{
+					"filename": "mandalorian_1_5.mp4",
+					"current": "0",
+					"duration": "1864.822"
+				},
+				{
+					"filename": "mandalorian_1_6.mp4",
+					"current": "0",
+					"duration": "1127.21"
+				},
+				{
+					"filename": "mandalorian_1_7.mp4",
+					"current": "0",
+					"duration": "1359.609"
+				},
+				{
+					"filename": "mandalorian_1_8.mp4",
+					"current": "0",
+					"duration": "2255.67"
+				},
+				{
+					"filename": "mandalorian_2_1.mp4",
+					"current": "0",
+					"duration": "3108.814"
+				},
+				{
+					"filename": "mandalorian_2_2.mp4",
+					"current": "0",
+					"duration": "2372.829"
+				},
+				{
+					"filename": "mandalorian_2_3.mp4",
+					"current": "0",
+					"duration": "1982.731"
+				},
+				{
+					"filename": "mandalorian_2_4.mp4",
+					"current": "0",
+					"duration": "2225.932"
+				},
+				{
+					"filename": "mandalorian_2_5.mp4",
+					"current": "0",
+					"duration": "2685.28"
+				},
+				{
+					"filename": "mandalorian_2_6.mp4",
+					"current": "0",
+					"duration": "1904.862"
+				},
+				{
+					"filename": "mandalorian_2_7.mp4",
+					"current": "0",
+					"duration": "2179.456"
+				},
+				{
+					"filename": "mandalorian_2_8.mp4",
+					"current": "0",
+					"duration": "2644.559"
+				}
+			],
+			"progress": "mandalorian_1_1.mp4",
+			"seasons": "2",
+			"episodes": [
+				8,
+				8
+			]
 		}
 	],
 	"3": [
@@ -1620,6 +1905,101 @@
 			"seasons": "1",
 			"episodes": [
 				6
+			]
+		},
+		{
+			"id": 12,
+			"type": "series",
+			"image": "mandalorian.jpg",
+			"title": "The Mandalorian",
+			"description": "A The Mandalorian (A mandalori) az első élőszereplős Star Wars-sorozat, amely 2019 novemberében debütált a Disney+ nevű streaming-szolgáltatásában. A hivatalosan még magyar cím nélküli The Mandalorian sorozat főszereplője egy magányos mandalori fejvadász (Pedro Pascal), aki bonyolult küldetéseket vállalva jut egy hatalmas összeesküvés nyomára. A sorozatot Jon Favreau a Vasember 1-2, Az oroszlánkirály és A dzsungel könyve rendezője készítette el a Disney számára.",
+			"episode_progress": [
+				{
+					"filename": "mandalorian_1_1.mp4",
+					"current": "0",
+					"duration": "1926.925"
+				},
+				{
+					"filename": "mandalorian_1_2.mp4",
+					"current": "0",
+					"duration": "1721.303"
+				},
+				{
+					"filename": "mandalorian_1_3.mp4",
+					"current": "0",
+					"duration": "1537.37"
+				},
+				{
+					"filename": "mandalorian_1_4.mp4",
+					"current": "0",
+					"duration": "1623.584"
+				},
+				{
+					"filename": "mandalorian_1_5.mp4",
+					"current": "0",
+					"duration": "1864.822"
+				},
+				{
+					"filename": "mandalorian_1_6.mp4",
+					"current": "0",
+					"duration": "1127.21"
+				},
+				{
+					"filename": "mandalorian_1_7.mp4",
+					"current": "0",
+					"duration": "1359.609"
+				},
+				{
+					"filename": "mandalorian_1_8.mp4",
+					"current": "0",
+					"duration": "2255.67"
+				},
+				{
+					"filename": "mandalorian_2_1.mp4",
+					"current": "0",
+					"duration": "3108.814"
+				},
+				{
+					"filename": "mandalorian_2_2.mp4",
+					"current": "0",
+					"duration": "2372.829"
+				},
+				{
+					"filename": "mandalorian_2_3.mp4",
+					"current": "0",
+					"duration": "1982.731"
+				},
+				{
+					"filename": "mandalorian_2_4.mp4",
+					"current": "0",
+					"duration": "2225.932"
+				},
+				{
+					"filename": "mandalorian_2_5.mp4",
+					"current": "0",
+					"duration": "2685.28"
+				},
+				{
+					"filename": "mandalorian_2_6.mp4",
+					"current": "0",
+					"duration": "1904.862"
+				},
+				{
+					"filename": "mandalorian_2_7.mp4",
+					"current": "0",
+					"duration": "2179.456"
+				},
+				{
+					"filename": "mandalorian_2_8.mp4",
+					"current": "0",
+					"duration": "2644.559"
+				}
+			],
+			"progress": "mandalorian_1_1.mp4",
+			"seasons": "2",
+			"episodes": [
+				8,
+				8
 			]
 		}
 	]

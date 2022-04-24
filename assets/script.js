@@ -237,6 +237,7 @@ function details(n, show_type, img, w, current, duration, link, s, e, seasons, e
     document.getElementById('detailsEpisodes').classList.add('d-none')
     document.getElementById('detailsEpisodes').classList.remove('d-block')
     document.getElementById('detailsPlay').setAttribute('href', link)
+    document.getElementById('detailsCurrentEpisode').innerText = ``
     if(show_type == 'series'){
         document.getElementById('detailsCurrentEpisode').innerText = `S${s} E${e}`
         document.getElementById('detailsEpisodes').classList.add('d-block')
