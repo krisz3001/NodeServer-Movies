@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.ico">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body class="bg-dark text-white" onload="getID('<%= id %>'); refresh()">
+<body class="bg-dark text-white" onload="getID('<%= id %>'); refresh(); refreshTodo(0)">
   <nav class="autohide navbar navbar-expand-md bg-black navbar-dark sticky fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">Netflix Prime +</a>
@@ -25,13 +25,14 @@
 			<input type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#todoModal" value="To-Do">
 		  </li>
 		  <li class="nav-item m-2">
-			<button class="btn btn-danger" onclick="alert('Abban a pillanatban szétbaszná az egészet a faszba nézd meg xd'); br()" style="max-height: 38px; overflow: hidden;">Delete all</button>
+			<button class="btn btn-danger disabled" onclick="deleteMode()" style="max-height: 38px; overflow: hidden;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Show or hide delete buttons">Delete mode</button>
 		  </li>
 		  <li class="nav-item m-2">
-			<button class="btn btn-danger" onclick="undo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Undo the very last change" style="background-image: url('/assets/undo.png'); height: 38px; width: 38px; background-size: contain; background-repeat: no-repeat; background-position: center;"></button>
-		  </li>
-		  <li class="nav-item m-2">
+			<button class="btn btn-danger me-2" onclick="undo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Undo the very last change" style="background-image: url('/assets/undo.png'); height: 38px; width: 38px; background-size: contain; background-repeat: no-repeat; background-position: center;"></button>
 			<button class="btn btn-danger" onclick="redo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Redo that has been undone" style="background-image: url('/assets/redo.png'); height: 38px; width: 38px; background-size: contain; background-repeat: no-repeat; background-position: center;"></button>
+		  </li>
+		  <li class="nav-item m-2">
+			  <button class="btn btn-success" onclick="randomMovie()">Random movie</button>
 		  </li>
 		  <li class="nav-item d-none m-2" id="br_count"></li>
         </ul>
@@ -93,27 +94,15 @@
 	  <div class="modal-content bg-dark">
 		<div class="modal-header">
 		  <h5 class="modal-title" id="todoModalLabel">To-Do List</h5>
+		  <button class="btn btn-success mx-2" onclick="showCompleted()" id="completedBtn">Show completed</button>
 		  <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
-			<ul>
-				<li><del>Megerősítés törlésnél</del></li>
-				<li><del>Teljesen egyedi ötlet: piros csík a kártya alján ami mutatja hol jársz az adott filmben</del></li>
-				<li><del>Profilrendszer (Who's watching?)</del></li>
-				<li><del>Sorozatok kezelésének implementálása</del></li>
-				<li><del>Felesleges menüpontok törlése</del></li>
-				<li>Kategóriákra bontás</li>
-				<li><del>Esetleg szenvedés a képekkel hogy ugyanolyan magasak legyenek de ne nézzenek ki úgy mint varga irén</del></li>
-				<li>Watch2gether!</li>
-				<li>Kód egyszerűsítés</li>
-				<li><del>Több kokut</del></li>
-				<li>Opció link megadására fájlnév helyett</li>
-				<li><del>Autosave percenként</del></li>
-				<li><del>Undo, redo</del></li>
-				<li><del>Filmeknél bővebb információ, sorozatoknál epizódlista kattintásra</del></li>
-				<li>Saját vezérlők a lejátszónál és overlay</li>
-				<li>Fiókrendszer</li>
-			</ul>
+			<ul id="todo"></ul>
+			<input type="text" class="w-100" id="new-todo">
+			<div class="d-flex justify-content-center">
+				<button id="add-todo-btn" class="btn btn-success mt-2" onclick="addTodo()">Add</button>
+			</div>
 		</div>
 		<div class="modal-footer">
 		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

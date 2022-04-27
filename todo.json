@@ -1,0 +1,98 @@
+[
+	{
+		"todo": "Megerősítés törlésnél",
+		"completed": true
+	},
+	{
+		"todo": "Teljesen egyedi ötlet: piros csík a kártya alján ami mutatja hol jársz az adott filmben",
+		"completed": true
+	},
+	{
+		"todo": "Profilrendszer (Who's watching?)",
+		"completed": true
+	},
+	{
+		"todo": "Sorozatok kezelésének implementálása",
+		"completed": true
+	},
+	{
+		"todo": "Felesleges menüpontok törlése",
+		"completed": false
+	},
+	{
+		"todo": "Kategóriákra bontás",
+		"completed": false
+	},
+	{
+		"todo": "Esetleg szenvedés a képekkel hogy ugyanolyan magasak legyenek de ne nézzenek ki úgy mint varga irén",
+		"completed": true
+	},
+	{
+		"todo": "Watch2gether!",
+		"completed": true
+	},
+	{
+		"todo": "Kód egyszerűsítés",
+		"completed": false
+	},
+	{
+		"todo": "Több kokut",
+		"completed": true
+	},
+	{
+		"todo": "Opció link megadására fájlnév helyett",
+		"completed": false
+	},
+	{
+		"todo": "Autosave percenként",
+		"completed": true
+	},
+	{
+		"todo": "Undo, redo",
+		"completed": true
+	},
+	{
+		"todo": "Filmeknél bővebb információ, sorozatoknál epizódlista kattintásra",
+		"completed": true
+	},
+	{
+		"todo": "Saját vezérlők a lejátszónál és overlay",
+		"completed": true
+	},
+	{
+		"todo": "Fiókrendszer",
+		"completed": true
+	},
+	{
+		"todo": "Add todo befejezése",
+		"completed": true
+	},
+	{
+		"todo": "to do listen kulon tab a completed dolgoknak",
+		"completed": true
+	},
+	{
+		"todo": "to do listen miutan beirtad az otleted a textbox resetelese",
+		"completed": true
+	},
+	{
+		"todo": "faszerkezet a subsequent/related filmeknek(ertsd pl: marvel/ironman)",
+		"completed": false
+	},
+	{
+		"todo": "enterrel ugyanazt csinalja mint az add gomb a todo listnel",
+		"completed": true
+	},
+	{
+		"todo": "Hol a TLOTR???",
+		"completed": false
+	},
+	{
+		"todo": "a random lehessen konyebben ujraporgetheto",
+		"completed": false
+	},
+	{
+		"todo": "Delete újraírása",
+		"completed": false
+	}
+]

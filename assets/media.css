@@ -7,11 +7,13 @@
     transition: .15s ease-in-out;
 }
 video{
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
 }
-video::-webkit-media-controls-fullscreen-button {
-    display: none;
+@media (min-width: 1000px){
+    video{
+        object-fit: contain;
+    }
 }
 #p{
     width: 100%!important;
@@ -45,9 +47,13 @@ video::-webkit-media-controls-fullscreen-button {
     left: 5px;
     height: 50px;
     padding: 10px 0 0 10px;
+    justify-content: flex-start;
 }
 #bottomLine{
     height: 50px;
+}
+.scrolled-down .episodeChanger{
+    display: none;
 }
 .scrolled-down-bottom{
     transform:translateY(100%); transition: all 0.3s ease-in-out;

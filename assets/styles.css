@@ -111,3 +111,7 @@
 .episode:hover{
     cursor: pointer;
 }
+#todo li:hover{
+    text-decoration: line-through;
+    cursor: pointer;
+}

@@ -4,17 +4,13 @@ var fs = require('fs');
 var bodyParser = require('body-parser');
 var fileupload = require('express-fileupload');
 const { getVideoDurationInSeconds } = require('get-video-duration');
+const { use } = require('express/lib/application');
 let ip
 
 //Launch time
 let d = new Date()
-let month = d.getMonth()+1 < 10 ? `0${d.getMonth()+1}` : d.getMonth()+1
-let day = d.getDate() < 10 ? `0${d.getDate()}` : d.getDate()
-let hours = d.getHours() < 10 ? `0${d.getHours()}` : d.getHours()
-let minutes = d.getMinutes() < 10 ? `0${d.getMinutes()}` : d.getMinutes()
-let seconds = d.getSeconds() < 10 ? `0${d.getSeconds()}` : d.getSeconds()
-let launchTime = `${d.getFullYear()}-${month}-${day}-${hours}-${minutes}-${seconds}`
-let sessionStart = `This session was started on ${d.getFullYear()}.${month}.${day}. ${hours}:${minutes}:${seconds}`
+let launchTime = d.toLocaleString().replace(/[ ]/g, '').replace(/[^0-9]/g, '-')
+let sessionStart = `This session was started on ${d.toLocaleString()}`
 
 //Database paths
 const db_path = `${__dirname}/db.json`
@@ -27,6 +23,11 @@ const log_path = `${__dirname}/logs/${launchTime}_log.txt`
 const br_path = `${__dirname}/br.json`
 const mediaDir_path = `/media/`
 const assetsDir_path = `${__dirname}/assets/`
+const todo_path = `${__dirname}/todo.json`
+const accounts_path = `${__dirname}/accounts.json`
+const durations_path = `${__dirname}/durations.json`
+const accountsDir_path = `${__dirname}/accounts/`
+const secret = 'kecske'
 saveLog(sessionStart)
 
 //Get time
@@ -48,10 +49,13 @@ function saveLog(log){
   }
   console.log(time() + log);
 }
-//Media mappa létrehozása
+//Create media directory
 !fs.existsSync(mediaDir_path) ? fs.mkdirSync(mediaDir_path) + saveLog('Media folder created.') : ''
 
-//Get allowed users
+//Create accounts directory
+!fs.existsSync(accountsDir_path) ? fs.mkdirSync(accountsDir_path) + saveLog('Accounts folder created.') : ''
+
+//Get logged in users
 function readUsers(){
   let users = []
   try {
@@ -67,9 +71,21 @@ app.set('view engine', 'ejs');
 app.use(fileupload())
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
+//Reading todo.json
+function readTodo(){
+  let db = []
+  try {
+    db = JSON.parse(fs.readFileSync(todo_path))
+  } catch (error) {
+    fs.writeFileSync(todo_path, JSON.stringify(db, null, '\t'))
+    saveLog('todo.json file created.')
+  }
+  return db
+}
+
 //Reading db.json
 function readDB(){
-  let db = {"0":[],"1":[],"2":[],"3":[]}
+  let db = []
   try {
     db = JSON.parse(fs.readFileSync(db_path))
   } catch (error) {
@@ -77,6 +93,30 @@ function readDB(){
     saveLog('db.json file created.')
   }
   return db
+}
+
+//Reading durations.json
+function readDurations(){
+  let durations = []
+  try {
+    durations = JSON.parse(fs.readFileSync(durations_path))
+  } catch (error) {
+    fs.writeFileSync(durations_path, JSON.stringify(durations, null, '\t'))
+    saveLog('durations.json file created.')
+  }
+  return durations
+}
+
+//Reading accounts.json
+function readAccounts(){
+  let acc = []
+  try {
+    acc = JSON.parse(fs.readFileSync(accounts_path))
+  } catch (error) {
+    fs.writeFileSync(accounts_path, JSON.stringify(acc, null, '\t'))
+    saveLog('accounts.json file created.')
+  }
+  return acc
 }
 
 //Reading backup
@@ -103,17 +143,29 @@ function readBackupRedo(){
   return db
 }
 
-//Reading profiles.json
+//Reading profiles
 function readProfiles(){
-  let profiles = [{"id":0,"name": "Profile 1", "image": "favicon.png"},{"id":1,"name": "Profile 2", "image": "favicon.png"},{"id":2,"name": "Profile 3", "image": "favicon.png"},{"id":3,"name": "Profile 4", "image": "favicon.png"}]
+  let profiles = [{"id":0,"name": "Profile 1", "image": "blue.png"},{"id":1,"name": "Profile 2", "image": "yellow.png"},{"id":2,"name": "Profile 3", "image": "red.png"},{"id":3,"name": "Profile 4", "image": "favicon.png"}]
+  let users = readUsers()
+  let acc = readAccounts()
+  let username = acc[users.find(x=>x.ip == ip).account].username
   try {
-    profiles = JSON.parse(fs.readFileSync(profiles_path))
+    profiles = JSON.parse(fs.readFileSync(accountsDir_path + username + '_profiles.json'))
   } catch (error) {
-    fs.writeFileSync(profiles_path, JSON.stringify(profiles, null, '\t'))
-    saveLog('profiles.json file created.')
+    fs.writeFileSync(accountsDir_path + username + '_profiles.json', JSON.stringify(profiles, null, '\t'))
+    saveLog(username + '_profiles.json file created.')
   }
   return profiles
 }
+
+//Write profiles
+function writeProfiles(n, db){
+  let users = readUsers()
+  let acc = readAccounts()
+  let username = acc[users.find(x=>x.ip == ip).account].username
+  fs.writeFileSync(accountsDir_path + username + '_profiles.json', JSON.stringify(db, null, '\t'))
+}
+
 //IP
 function getIP(ip){
   if(ip==='') return '192.168.1.2'
@@ -166,6 +218,29 @@ function getProfile(req){
   return users[users.indexOf(users.find(x => x.ip === getIP(req.ip.substring(7))))].profile
 }
 
+//Read account's json
+function readAccountDB(n){
+  let users = readUsers()
+  let acc = readAccounts()
+  let username = acc[users.find(x=>x.ip == n).account].username
+  let durations = readDurations()
+  try {
+    durations = JSON.parse(fs.readFileSync(accountsDir_path + username + '.json'))
+  } catch (error) {
+    fs.writeFileSync(accountsDir_path + username + '.json', JSON.stringify([[],[],[],[]], null, '\t'))
+    saveLog(username + '.json file created.')
+  }
+  return durations
+}
+
+//Write account's json
+function writeAccountDB(n, db){
+  let users = readUsers()
+  let acc = readAccounts()
+  let username = acc[users.find(x=>x.ip == n).account].username
+  fs.writeFileSync(accountsDir_path + username + '.json', JSON.stringify(db, null, '\t'))
+}
+
 //Upload
 app.post('/upload', function(req,res){
   if(isRegistered(req)){
@@ -178,6 +253,7 @@ app.post('/upload', function(req,res){
       saveLog(`${img} downloaded.`)
     }
     let db = readDB()
+    let durations = readDurations()
     fs.writeFileSync(backup_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
     if(fs.lstatSync(mediaDir_path + req.body.filename).isDirectory()){
       let list = []
@@ -200,10 +276,10 @@ app.post('/upload', function(req,res){
             episode_progress.sort((a, b) => {
               return a.filename.localeCompare(b.filename, 'en', {numeric: true})
             })
-            for (let i = 0; i < Object.keys(db).length; i++) {
-              db[i].push({"id": db[i].length, "type": "series", "image": img, "title": req.body.title, "description": req.body.description, "episode_progress": episode_progress, "progress": episode_progress[0].filename, "seasons": seasons, "episodes": episodes})
-            }
+            db.push({"id": db.length, "type": "series", "image": img, "title": req.body.title, "description": req.body.description, "seasons": seasons, "episodes": episodes})
             fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
+            durations.push({"id": durations.length, "progress": episode_progress[0].filename, "episode_progress": episode_progress})
+            fs.writeFileSync(durations_path, JSON.stringify(durations, null, '\t'), 'utf8', function(){})
             res.sendStatus(200)
             saveLog(`"${req.body.title}" added by ${ip}. (${episodes.reduce((a,b)=>a+b,0)} episodes)`)
           }
@@ -211,11 +287,11 @@ app.post('/upload', function(req,res){
       })
     }
     else{
+      db.push({"id": db.length, "type": "movie", "image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename})
+      fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
       getVideoDurationInSeconds(mediaDir_path + req.body.filename).then(x => {
-        for (let i = 0; i < Object.keys(db).length; i++) {
-          db[i].push({"id": db[i].length, "type": "movie", "image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename, "current": "0", "duration": `${x}`})
-        }
-        fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
+        durations.push({"id": durations.length, "current": "0", "duration": `${x}`})
+        fs.writeFileSync(durations_path, JSON.stringify(durations, null, '\t'), 'utf8', function(){})
         res.sendStatus(200)
         ip = getIP(req.ip.substring(7))
         saveLog(`"${req.body.title}" added by ${ip}.`)
@@ -232,6 +308,7 @@ app.post('/upload', function(req,res){
 //Edit profile
 app.post('/editprofile', function(req, res){
   if(isRegistered(req) && req.body != undefined){
+    ip = getIP(req.ip.substring(7))
     let profiles = readProfiles()
     let img = profiles[req.body.id].image
     if(req.files){
@@ -243,9 +320,8 @@ app.post('/editprofile', function(req, res){
     }
     profiles[req.body.id].name = req.body.name
     profiles[req.body.id].image = img
-    fs.writeFileSync(profiles_path, JSON.stringify(profiles, null, '\t'))
+    writeProfiles(ip, profiles)
     res.sendStatus(200)
-    ip = getIP(req.ip.substring(7))
     saveLog(`Profile ${req.body.id} edited by ${ip}. Name: ${req.body.name}, Image: ${img}`)
   }
   else{
@@ -255,22 +331,53 @@ app.post('/editprofile', function(req, res){
   }
 })
 
+//Add new To-Do
+app.post('/todo', function(req, res){
+  if(isRegistered(req) && req.body != undefined){
+    let todo = readTodo()
+    todo.push({"todo": req.body.todo, "completed": false})
+    fs.writeFileSync(todo_path, JSON.stringify(todo, null, '\t'))
+    res.send(todo)
+  }
+  else{
+    ip = getIP(req.ip.substring(7))
+    res.render('login')
+    saveLog(`Illegal POST request from ${ip}. ${req.url}`)
+  }
+})
+
+//Line out todo
+app.post('/completed', function(req, res){
+  if(isRegistered(req) && req.body != undefined){
+    let todo = readTodo()
+    if(todo[req.body.id].completed) todo[req.body.id].completed = false
+    else todo[req.body.id].completed = true
+    fs.writeFileSync(todo_path, JSON.stringify(todo, null, '\t'))
+    res.sendStatus(200)
+  }
+  else{
+    ip = getIP(req.ip.substring(7))
+    res.render('login')
+    saveLog(`Illegal POST request from ${ip}. ${req.url}`)
+  }
+})
+
 //Saving progress
-app.post('/progress', function(req, res){
+app.post('/setprogress', function(req, res){
   if(isRegistered(req)){
-    let db = readDB()
+    let db = readAccountDB(ip)
     let n = getProfile(req)
     if(req.body.type == 'movie'){
       db[n][req.body.id].current = req.body.current
       db[n][req.body.id].duration = req.body.duration
-      fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
+      writeAccountDB(ip, db)
       res.sendStatus(200)
     }
     else if(req.body.type == 'series'){
       db[n][req.body.id].episode_progress.find(x=>x.filename == req.body.filename.split('/')[1]).current = req.body.current
       db[n][req.body.id].episode_progress.find(x=>x.filename == req.body.filename.split('/')[1]).duration = req.body.duration
       db[n][req.body.id].progress = `${req.body.filename.split('/')[1]}`
-      fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
+      writeAccountDB(ip, db)
       res.sendStatus(200)
     }
     else{
@@ -288,7 +395,7 @@ app.post('/progress', function(req, res){
 //Get progress
 app.post('/getprogress', function(req, res){
   if(isRegistered(req)){
-    let db = readDB()
+    let db = readAccountDB(ip)
     let n = getProfile(req)
     if(req.body.type == 'movie'){
       res.send({"current": db[n][req.body.id].current})
@@ -308,20 +415,40 @@ app.post('/getprogress', function(req, res){
   }
 })
 
-//Password
-app.post('/pass', function(req, res){
+//Register new account
+app.post('/register', function(req, res){
   ip = getIP(req.ip.substring(7))
-  let pass = req.body.pass
-  if(pass == 'kecske'){
+  let acc = readAccounts()
+  let users = readUsers()
+  if(req.body.secret == secret && !req.body.username.includes(' ') && !req.body.pass.includes(' ') && !acc.some(x=>x.username == req.body.username)){
+    acc.push({"username": req.body.username, "password": req.body.pass, "time" : new Date().toLocaleString(), "ip" : ip})
+    fs.writeFileSync(accounts_path, JSON.stringify(acc, null, '\t'), 'utf8', function(){})
+    users.push({"ip": ip, "account": acc.length-1, "profile": "-1"})
+    fs.writeFileSync(users_path, JSON.stringify(users, null, '\t'), 'utf8', function(){})
+    let p = readDurations()
+    fs.writeFileSync(`${accountsDir_path}/${req.body.username}.json`, JSON.stringify([p,p,p,p], null, '\t'), 'utf8', function(){})
+    fs.writeFileSync(`${accountsDir_path}/${req.body.username}_profiles.json`, JSON.stringify([{"id":0,"name": "Profile 1", "image": "blue.png"},{"id":1,"name": "Profile 2", "image": "yellow.png"},{"id":2,"name": "Profile 3", "image": "red.png"},{"id":3,"name": "Profile 4", "image": "favicon.png"}], null, '\t'), 'utf8', function(){})
+    res.sendStatus(200)
+    saveLog(`New account registered by ${ip}. (${req.body.username})`)
+  }
+  else{
+    saveLog(`${ip} is trying to register with username: "${req.body.username}", password: "${req.body.pass}", secret: "${req.body.secret}"`)
+    res.sendStatus(200)
+  }
+})
+
+//Login
+app.post('/login', function(req, res){
+  ip = getIP(req.ip.substring(7))
+  let username = req.body.username
+  let pass = req.body.password
+  let acc = readAccounts()
+  let account = acc.find(x=>x.username == username)
+  if(account != undefined && account.password == pass){
     let users = readUsers()
-    if(!users.some(x => x.ip === ip)){
-      users.push({"ip": ip, "profile": "-1"})
-      fs.writeFileSync(users_path, JSON.stringify(users, null, '\t'), 'utf8', function(){})
-      saveLog(`${ip} registered.`)
-    }
-    else{
-      saveLog(`Attempt of duplicate registration of ${ip}.`)
-    }
+    users.push({"ip": ip, "account": acc.findIndex(x=>x.username == username), "profile": -1})
+    fs.writeFileSync(users_path, JSON.stringify(users, null, '\t'), 'utf8', function(){})
+    saveLog(`${ip} logged in. (${username})`)
     res.sendStatus(200)
   }
   else if(pass == 'adjlog'){
@@ -339,7 +466,7 @@ app.post('/pass', function(req, res){
     saveLog(`${ip} wanted to abandon ship.`)
   }
   else{
-    saveLog(`${ip} is trying to get in with "${pass}".`)
+    saveLog(`${ip} is trying to log in with username: "${username}", password: "${pass}".`)
     res.sendStatus(200)
   }
 })
@@ -410,7 +537,20 @@ app.get('*', function(req, res){
   if(isRegistered(req) && profileAssigned(req)){
     if(req.url === '/db.json'){
       service = ''
-      res.send(readDB())
+      let db = readDB()
+      let durations = readDurations()
+      let accDB = readAccountDB(ip)
+      let merged = [[],[],[],[]]
+      for (let i = 0; i < Object.keys(accDB).length; i++) {
+        for (let j = 0; j < db.length; j++) {
+          if(accDB[i][j] != undefined){
+            merged[i].push({...db[j], ...accDB[i][j]})
+          }
+          else merged[i].push({...db[j], ...durations[j]})
+        }
+      }
+      writeAccountDB(ip, merged)
+      res.send(merged)
     }
     else if(req.url === '/'){
       service = '/home'
@@ -429,11 +569,11 @@ app.get('*', function(req, res){
       res.sendFile(req.url)
       service = req.url
     }
-    else if(req.url.substring(0,7) === '/movie/' && req.url != '/movie/' && req.url.substring(7) <= readDB()[getProfile(req)].length && req.url.substring(7) > -1){
-      if(fs.existsSync(mediaDir_path + readDB()[getProfile(req)][req.url.substring(7)].filename)){
+    else if(req.url.substring(0,7) === '/movie/' && req.url != '/movie/' && req.url.substring(7) <= readDB().length && req.url.substring(7) > -1){
+      if(fs.existsSync(mediaDir_path + readDB()[req.url.substring(7)].filename)){
         service = req.url
         let profiles = readProfiles()[getProfile(req)]
-        let item = readDB()[getProfile(req)][req.url.substring(7)]
+        let item = readDB()[req.url.substring(7)]
         let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "type": item.type, "title": item.title, "filename": item.filename, "image": item.image, "description": item.description}
         res.render('media', db)
       }
@@ -454,7 +594,7 @@ app.get('*', function(req, res){
         let mkv = fs.existsSync(mediaDir_path + `${name}/${name}_${s}_${e}.mkv`)
         if(mp4 || mkv){
           let profiles = readProfiles()[getProfile(req)]
-          let item = readDB()[getProfile(req)][split[2]]
+          let item = readAccountDB(ip)[getProfile(req)][split[2]]
           let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "type": item.type, "title": item.title, "filename": `${name}/${name}_${s}_${e}.${mkv ? 'mkv' : 'mp4'}`, "image": item.image, "description": item.description, "progress": item.progress, "seasons": item.seasons, "episodes": item.episodes}
           res.render('media', db)
         }
@@ -482,6 +622,10 @@ app.get('*', function(req, res){
       }
       else saveLog(`Incorrect redo from ${ip}`)
       res.sendStatus(200)
+    }
+    else if(req.url === '/todo'){
+      service = ''
+      res.send(readTodo())
     }
     else if(req.url === '/list'){
       service = req.url

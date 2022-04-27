@@ -14,12 +14,12 @@ function expand(){
 }
 //<a class="btn btn-success w-100" href="/movie/${n}">Play</a>
 function newMovie(img, title, desc, n, w, current, duration){
-    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item"><img src="/assets/delete.png" class="d-none delete_img img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info bg-dark p-2 border border-secondary w-100 rounded-bottom"><div class="row m-0 mb-1"><a class="col-2 play rounded-circle" href="/movie/${n}"></a><div class="col-8"></div><a class="col-2 details rounded-circle" onclick="details(${n}, 'movie', '${img}', '${w}', '${current}', '${duration}', '/movie/${n}')"></a></div><p class="h5" id="cardTitle${n}">${title}</p><div class="d-flex align-items-center"><div class="bg-secondary w-100" style="height: 5px;"><div style="height: 5px; background-color: red; width: ${w}%"></div></div><div><p class="my-1 text-nowrap p-1" style="font-size: small;">${current}/${duration} ${duration > 1 ? 'minutes' : 'minute'}</p></div></div><p class="mt-1 mb-0 desc" id="cardDescription${n}">${desc}</p></div></div>`
+    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item movie"><img src="/assets/delete.png" class="d-none delete-show img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info bg-dark p-2 border border-secondary w-100 rounded-bottom"><div class="row m-0 mb-1"><a class="col-2 play rounded-circle" href="/movie/${n}"></a><div class="col-8"></div><a class="col-2 details rounded-circle" onclick="details(${n}, 'movie', '${img}', '${w}', '${current}', '${duration}', '/movie/${n}')"></a></div><p class="h5" id="cardTitle${n}">${title}</p><div class="d-flex align-items-center"><div class="bg-secondary w-100" style="height: 5px;"><div style="height: 5px; background-color: red; width: ${w}%"></div></div><div><p class="my-1 text-nowrap p-1" style="font-size: small;">${current}/${duration} ${duration > 1 ? 'minutes' : 'minute'}</p></div></div><p class="mt-1 mb-0 desc" id="cardDescription${n}">${desc}</p></div></div>`
 }
 function newSeries(img, title, desc, n, w, s, e, dir, current, duration, seasons, episodes){
     let s_pretty = s < 10 ? `0${s}` : s
     let e_pretty = e < 10 ? `0${e}` : e
-    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item"><img src="/assets/delete.png" class="d-none delete_img img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info bg-dark p-2 border border-secondary w-100 rounded-bottom"><div class="row m-0 mb-1"><a class="col-2 play rounded-circle" href="/series/${n}/${dir}/${s}/${e}"></a><div class="col-8"></div><a class="col-2 details rounded-circle" onclick="details(${n}, 'series', '${img}', '${w}', '${current}', '${duration}', '/series/${n}/${dir}/${s}/${e}', '${s_pretty}', '${e_pretty}', '${seasons}', [${episodes}])"></a></div><p class="h5" id="cardTitle${n}">${title}</p><div class="row mb-2"><div class="col-12"><div class="bg-secondary" style="height: 5px; width: 100%; margin-top: 0.6rem"><div style="height: 5px; background-color: red; width: ${w}%"></div></div></div><div class="col-12"><p class="m-0 my-1" style="float:left">S${s_pretty} E${e_pretty}</p><p style="float: right" class="my-1">${current}/${duration} ${duration > 1 ? 'minutes' : 'minute'}</p></div></div><p class="mt-1 mb-0 desc" id="cardDescription${n}">${desc}</p></div></div>`
+    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item series"><img src="/assets/delete.png" class="d-none delete-show img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info bg-dark p-2 border border-secondary w-100 rounded-bottom"><div class="row m-0 mb-1"><a class="col-2 play rounded-circle" href="/series/${n}/${dir}/${s}/${e}"></a><div class="col-8"></div><a class="col-2 details rounded-circle" onclick="details(${n}, 'series', '${img}', '${w}', '${current}', '${duration}', '/series/${n}/${dir}/${s}/${e}', '${s_pretty}', '${e_pretty}', '${seasons}', [${episodes}])"></a></div><p class="h5" id="cardTitle${n}">${title}</p><div class="row mb-2"><div class="col-12"><div class="bg-secondary" style="height: 5px; width: 100%; margin-top: 0.6rem"><div style="height: 5px; background-color: red; width: ${w}%"></div></div></div><div class="col-12"><p class="m-0 my-1" style="float:left">S${s_pretty} E${e_pretty}</p><p style="float: right" class="my-1">${current}/${duration} ${duration > 1 ? 'minutes' : 'minute'}</p></div></div><p class="mt-1 mb-0 desc" id="cardDescription${n}">${desc}</p></div></div>`
 }
 function newOption(value){
     return `<option value="${value}">${value}</option`
@@ -118,7 +118,7 @@ function saveProgress(){
         formData.append("duration", vid.duration)
         formData.append("id", id)
         formData.append("type", type)
-        fetch('/progress', {method: "POST", body: formData})
+        fetch('/setprogress', {method: "POST", body: formData})
             .then(res => res.text)
             .then(r => {})
     }
@@ -128,7 +128,7 @@ function saveProgress(){
         formData.append("id", id)
         formData.append("type", type)
         formData.append("filename", file)
-        fetch('/progress', {method: "POST", body: formData})
+        fetch('/setprogress', {method: "POST", body: formData})
             .then(res => res.text)
             .then(r => {})
     }
@@ -255,4 +255,59 @@ function details(n, show_type, img, w, current, duration, link, s, e, seasons, e
         refreshEpisodes(n)
     }
     m.show()
+}
+function deleteMode(){
+    let del = document.getElementsByClassName('delete-show');
+    for (let i = 0; i < del.length; i++) {
+        del[i].classList.toggle('delete_img')
+    }
+}
+let toggleCompleted = 0
+function refreshTodo(c){
+    fetch('/todo')
+    .then(res => res.json())
+    .then(r => {
+        let todo = document.getElementById('todo')
+        todo.innerHTML = ''
+        for (let i = 0; i < r.length; i++) {
+            if(toggleCompleted == 0 && !r[i].completed) todo.innerHTML += `<li onclick="lineOut(${i})">${r[i].todo}</li>`
+            else if(toggleCompleted == 1) todo.innerHTML += `<li onclick="lineOut(${i})">${r[i].completed ? '<del>' : ''}${r[i].todo}${r[i].completed ? '</del>' : ''}</li>`
+        }
+    })
+}
+function showCompleted(){
+    document.getElementById('completedBtn').innerHTML = toggleCompleted == 0 ? 'Hide completed' : 'Show completed' 
+    toggleCompleted = toggleCompleted == 0 ? 1 : 0
+    refreshTodo(toggleCompleted)
+}
+function addTodo(){
+    let formData = new FormData()
+    formData.append("todo", document.getElementById('new-todo').value)
+    document.getElementById('new-todo').value = ''
+    fetch('/todo', {method: "POST", body : formData})
+        .then(response => response.json())
+        .then(r => refreshTodo(toggleCompleted))
+}
+function lineOut(n){
+    let formData = new FormData()
+    formData.append("id", n)
+    fetch('/completed', {method: "POST", body: formData})
+    .then(res => res.text)
+    .then(r => refreshTodo(toggleCompleted))
+}
+document.getElementById('new-todo').addEventListener("keydown", function(e){
+    if(e.keyCode === 13) document.getElementById('add-todo-btn').click()
+})
+function randomMovie(){
+    let movie = false
+    let movie_id = 0
+    let items = document.getElementsByClassName('item')
+    while (!movie) {
+        let r = Math.floor(Math.random() * items.length)
+        if(items[r].classList.contains('movie')){
+            movie = true
+            movie_id = r
+        }
+    }
+    window.open(`/movie/${movie_id}`,'_self')
 }
