@@ -19,18 +19,18 @@
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav me-auto">
 		  <li class="nav-item m-2">
-			<input type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" value="Add show" onclick="refreshList()">
+			<input type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" value="Add show" onclick="refreshList(); refreshCategoryList()">
 		  </li>
 		  <li class="nav-item m-2">
 			<input type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#todoModal" value="To-Do">
 		  </li>
-		  <li class="nav-item m-2">
+		  <!-- <li class="nav-item m-2">
 			<button class="btn btn-danger disabled" onclick="deleteMode()" style="max-height: 38px; overflow: hidden;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Show or hide delete buttons">Delete mode</button>
 		  </li>
 		  <li class="nav-item m-2">
-			<button class="btn btn-danger me-2" onclick="undo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Undo the very last change" style="background-image: url('/assets/undo.png'); height: 38px; width: 38px; background-size: contain; background-repeat: no-repeat; background-position: center;"></button>
-			<button class="btn btn-danger" onclick="redo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Redo that has been undone" style="background-image: url('/assets/redo.png'); height: 38px; width: 38px; background-size: contain; background-repeat: no-repeat; background-position: center;"></button>
-		  </li>
+			<button class="btn btn-danger me-2 disabled" onclick="undo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Undo the very last change" style="background-image: url('/assets/undo.png'); height: 38px; width: 38px; background-size: contain; background-repeat: no-repeat; background-position: center;"></button>
+			<button class="btn btn-danger disabled" onclick="redo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Redo that has been undone" style="background-image: url('/assets/redo.png'); height: 38px; width: 38px; background-size: contain; background-repeat: no-repeat; background-position: center;"></button>
+		  </li> -->
 		  <li class="nav-item m-2">
 			  <button class="btn btn-success" onclick="randomMovie()">Random movie</button>
 		  </li>
@@ -42,10 +42,7 @@
       </div>
     </div>
   </nav>
-  <div class="container p-5 my-5">
-    <div class="row" id="items">
-	</div>
-  </div>
+  <div class="row mx-5" id="items"></div>
   <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 	  <div class="modal-content bg-dark">
@@ -74,7 +71,14 @@
 					</div>
 				</div>
 				<div class="form-group row my-sm-2">
-					<label for="filename" class="col-sm-2 col-form-label">Filename</label>
+					<label for="categorySelect" class="col-sm-2 col-form-label">Category</label>
+					<div class="col-sm-10">
+						<select class="form-select" id="categorySelect">
+						</select>
+					</div>
+				</div>
+				<div class="form-group row my-sm-2">
+					<label for="filenameSelect" class="col-sm-2 col-form-label">Filename</label>
 					<div class="col-sm-10">
 						<select class="form-select" id="filenameSelect">
 						  </select>

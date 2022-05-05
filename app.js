@@ -27,7 +27,9 @@ const todo_path = `${__dirname}/todo.json`
 const accounts_path = `${__dirname}/accounts.json`
 const durations_path = `${__dirname}/durations.json`
 const accountsDir_path = `${__dirname}/accounts/`
+const categories_path = `${__dirname}/categories.json`
 const secret = 'kecske'
+const secret2 = 'Nikoletta'
 saveLog(sessionStart)
 
 //Get time
@@ -93,6 +95,18 @@ function readDB(){
     saveLog('db.json file created.')
   }
   return db
+}
+
+//Reading categories.json
+function readCategories(){
+  let categories = ["Uncategorized"]
+  try {
+    categories = JSON.parse(fs.readFileSync(categories_path))
+  } catch (error) {
+    fs.writeFileSync(categories_path, JSON.stringify(categories, null, '\t'))
+    saveLog('categories.json file created.')
+  }
+  return categories
 }
 
 //Reading durations.json
@@ -224,10 +238,11 @@ function readAccountDB(n){
   let acc = readAccounts()
   let username = acc[users.find(x=>x.ip == n).account].username
   let durations = readDurations()
+  durations = [durations,durations,durations,durations]
   try {
     durations = JSON.parse(fs.readFileSync(accountsDir_path + username + '.json'))
   } catch (error) {
-    fs.writeFileSync(accountsDir_path + username + '.json', JSON.stringify([[],[],[],[]], null, '\t'))
+    fs.writeFileSync(accountsDir_path + username + '.json', JSON.stringify(durations, null, '\t'))
     saveLog(username + '.json file created.')
   }
   return durations
@@ -276,7 +291,7 @@ app.post('/upload', function(req,res){
             episode_progress.sort((a, b) => {
               return a.filename.localeCompare(b.filename, 'en', {numeric: true})
             })
-            db.push({"id": db.length, "type": "series", "image": img, "title": req.body.title, "description": req.body.description, "seasons": seasons, "episodes": episodes})
+            db.push({"id": db.length, "type": "series", "image": img, "title": req.body.title, "description": req.body.description, "category": req.body.category, "seasons": seasons, "episodes": episodes})
             fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
             durations.push({"id": durations.length, "progress": episode_progress[0].filename, "episode_progress": episode_progress})
             fs.writeFileSync(durations_path, JSON.stringify(durations, null, '\t'), 'utf8', function(){})
@@ -287,7 +302,7 @@ app.post('/upload', function(req,res){
       })
     }
     else{
-      db.push({"id": db.length, "type": "movie", "image": img, "title": req.body.title, "description": req.body.description, "filename": req.body.filename})
+      db.push({"id": db.length, "type": "movie", "image": img, "title": req.body.title, "description": req.body.description, "category": req.body.category, "filename": req.body.filename})
       fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
       getVideoDurationInSeconds(mediaDir_path + req.body.filename).then(x => {
         durations.push({"id": durations.length, "current": "0", "duration": `${x}`})
@@ -348,12 +363,41 @@ app.post('/todo', function(req, res){
 
 //Line out todo
 app.post('/completed', function(req, res){
+  ip = getIP(req.ip.substring(7))
   if(isRegistered(req) && req.body != undefined){
-    let todo = readTodo()
-    if(todo[req.body.id].completed) todo[req.body.id].completed = false
-    else todo[req.body.id].completed = true
-    fs.writeFileSync(todo_path, JSON.stringify(todo, null, '\t'))
-    res.sendStatus(200)
+    if(readAccounts()[readUsers().find(x=>x.ip === ip).account].rank === 1){
+      let todo = readTodo()
+      if(todo[req.body.id].completed) todo[req.body.id].completed = false
+      else todo[req.body.id].completed = true
+      fs.writeFileSync(todo_path, JSON.stringify(todo, null, '\t'))
+      res.sendStatus(200)
+    }
+    else{
+      res.sendStatus(200)
+      saveLog(`Forbidden To-Do activity from ${ip}`)
+    }
+  }
+  else{
+    res.render('login')
+    saveLog(`Illegal POST request from ${ip}. ${req.url}`)
+  }
+})
+
+//Random movie
+app.post('/random', function(req, res){
+  if(isRegistered(req)){
+    let movie = false
+    let movie_id = 0
+    let db = readDB()
+    while (!movie) {
+        let r = Math.floor(Math.random() * db.length)
+        if(db[r].type === 'movie'){
+            movie = true
+            movie_id = r
+        }
+    }
+    res.send(movie_id.toString())
+    if(movie == false) res.send('nomoviefound')
   }
   else{
     ip = getIP(req.ip.substring(7))
@@ -420,8 +464,13 @@ app.post('/register', function(req, res){
   ip = getIP(req.ip.substring(7))
   let acc = readAccounts()
   let users = readUsers()
-  if(req.body.secret == secret && !req.body.username.includes(' ') && !req.body.pass.includes(' ') && !acc.some(x=>x.username == req.body.username)){
-    acc.push({"username": req.body.username, "password": req.body.pass, "time" : new Date().toLocaleString(), "ip" : ip})
+  if(acc.some(x=>x.username == req.body.username)) res.send('userexists')
+  else if(req.body.username == '') res.send('nousername')
+  else if(req.body.pass == '') res.send('nopassword')
+  else if(req.body.secret == '') res.send('nosecret')
+  else if(req.body.username.includes(' ') || req.body.pass.includes(' ')) res.send('invalidformat')
+  else if(req.body.secret == secret || req.body.secret == secret2){
+    acc.push({"username": req.body.username, "password": req.body.pass, "time" : new Date().toLocaleString(), "ip" : ip, "rank": 0})
     fs.writeFileSync(accounts_path, JSON.stringify(acc, null, '\t'), 'utf8', function(){})
     users.push({"ip": ip, "account": acc.length-1, "profile": "-1"})
     fs.writeFileSync(users_path, JSON.stringify(users, null, '\t'), 'utf8', function(){})
@@ -433,7 +482,7 @@ app.post('/register', function(req, res){
   }
   else{
     saveLog(`${ip} is trying to register with username: "${req.body.username}", password: "${req.body.pass}", secret: "${req.body.secret}"`)
-    res.sendStatus(200)
+    res.send('invalidsecret')
   }
 })
 
@@ -467,7 +516,7 @@ app.post('/login', function(req, res){
   }
   else{
     saveLog(`${ip} is trying to log in with username: "${username}", password: "${pass}".`)
-    res.sendStatus(200)
+    res.send('loginerror')
   }
 })
 
@@ -543,13 +592,16 @@ app.get('*', function(req, res){
       let merged = [[],[],[],[]]
       for (let i = 0; i < Object.keys(accDB).length; i++) {
         for (let j = 0; j < db.length; j++) {
-          if(accDB[i][j] != undefined){
-            merged[i].push({...db[j], ...accDB[i][j]})
+          if(accDB[i].find(x=>x.id == j) != undefined){
+            merged[i].push({...db[j], ...accDB[i].find(x=>x.id == j)})
           }
-          else merged[i].push({...db[j], ...durations[j]})
+          else{
+            accDB[i].push(durations[j])
+            merged[i].push({...db[j], ...durations[j]})
+          }
         }
       }
-      writeAccountDB(ip, merged)
+      writeAccountDB(ip, accDB)
       res.send(merged)
     }
     else if(req.url === '/'){
@@ -567,14 +619,15 @@ app.get('*', function(req, res){
     }
     else if(req.url.substring(0,7) === '/media/' && req.url != '/media/' && fs.existsSync(req.url)){
       res.sendFile(req.url)
-      service = req.url
+      service = ''
     }
     else if(req.url.substring(0,7) === '/movie/' && req.url != '/movie/' && req.url.substring(7) <= readDB().length && req.url.substring(7) > -1){
       if(fs.existsSync(mediaDir_path + readDB()[req.url.substring(7)].filename)){
-        service = req.url
+        service = ''
         let profiles = readProfiles()[getProfile(req)]
         let item = readDB()[req.url.substring(7)]
         let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "type": item.type, "title": item.title, "filename": item.filename, "image": item.image, "description": item.description}
+        saveLog(`${ip} is watching "${item.title}" (${item.filename})`)
         res.render('media', db)
       }
       else{
@@ -585,7 +638,7 @@ app.get('*', function(req, res){
     else if(req.url.substring(0,8) === '/series/' && req.url != '/series/' && req.url.split('/').length === 6){
       try {
         fs.lstatSync(mediaDir_path + req.url.substring(8).split('/')[1]).isDirectory()
-        service = req.url
+        service = ''
         let split = req.url.split('/')
         let name = split[3]
         let s = split[4]
@@ -596,6 +649,7 @@ app.get('*', function(req, res){
           let profiles = readProfiles()[getProfile(req)]
           let item = readAccountDB(ip)[getProfile(req)][split[2]]
           let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "type": item.type, "title": item.title, "filename": `${name}/${name}_${s}_${e}.${mkv ? 'mkv' : 'mp4'}`, "image": item.image, "description": item.description, "progress": item.progress, "seasons": item.seasons, "episodes": item.episodes}
+          saveLog(`${ip} is watching "${item.title}" S${s < 10 ? '0' + s : s} E${e < 10 ? '0' + e : e} (${name}_${s}_${e}.${mkv ? 'mkv' : 'mp4'})`)
           res.render('media', db)
         }
         else{
@@ -637,6 +691,10 @@ app.get('*', function(req, res){
         res.send(list)
       })
     }
+    else if(req.url === '/categories'){
+      service = ''
+      res.send(readCategories())
+    }
     else if(req.url === '/favicon.ico'){
       service = ''
       res.sendFile(__dirname + '/assets/favicon.png')
@@ -645,10 +703,7 @@ app.get('*', function(req, res){
       service = `/404 (${req.url})`
       res.render('404')
     }
-    if(service.substring(0,7) === '/media/'){
-      saveLog(`${ip} is watching ${service}`)
-    }
-    else if(service != '') saveLog(`${ip} served. ${service}`)
+    if(service != '') saveLog(`${ip} served. ${service}`)
   }
   else if(isRegistered(req) && !profileAssigned(req) && req.url.substring(0, 8) === '/assets/' && req.url != '/assets/' && fs.existsSync(__dirname + req.url)){
     res.sendFile(__dirname + req.url)

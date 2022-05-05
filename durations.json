@@ -324,42 +324,6 @@
 	},
 	{
 		"id": 10,
-		"progress": "loki_1_1.mp4",
-		"episode_progress": [
-			{
-				"filename": "loki_1_1.mp4",
-				"current": "0",
-				"duration": "3090.458984"
-			},
-			{
-				"filename": "loki_1_2.mp4",
-				"current": "0",
-				"duration": "3192.208984"
-			},
-			{
-				"filename": "loki_1_3.mp4",
-				"current": "0",
-				"duration": "2458.083984"
-			},
-			{
-				"filename": "loki_1_4.mp4",
-				"current": "0",
-				"duration": "2860.875"
-			},
-			{
-				"filename": "loki_1_5.mp4",
-				"current": "0",
-				"duration": "2909.208984"
-			},
-			{
-				"filename": "loki_1_6.mp4",
-				"current": "0",
-				"duration": "2722.208984"
-			}
-		]
-	},
-	{
-		"id": 11,
 		"progress": "mandalorian_1_1.mp4",
 		"episode_progress": [
 			{
@@ -445,13 +409,69 @@
 		]
 	},
 	{
-		"id": 12,
+		"id": 11,
 		"current": "0",
 		"duration": "76.0089"
 	},
 	{
-		"id": 13,
+		"id": 12,
 		"current": "0",
 		"duration": "124.266667"
+	},
+	{
+		"id": 13,
+		"progress": "informant_1_1.mkv",
+		"episode_progress": [
+			{
+				"filename": "informant_1_1.mkv",
+				"current": "0",
+				"duration": "2610.09"
+			},
+			{
+				"filename": "informant_1_2.mkv",
+				"current": "0",
+				"duration": "2575.082"
+			},
+			{
+				"filename": "informant_1_3.mkv",
+				"current": "0",
+				"duration": "2582.08"
+			},
+			{
+				"filename": "informant_1_4.mkv",
+				"current": "0",
+				"duration": "2673.002"
+			},
+			{
+				"filename": "informant_1_5.mkv",
+				"current": "0",
+				"duration": "2793.002"
+			},
+			{
+				"filename": "informant_1_6.mkv",
+				"current": "0",
+				"duration": "2629.04"
+			}
+		]
+	},
+	{
+		"id": 14,
+		"current": "0",
+		"duration": "124.266667"
+	},
+	{
+		"id": 15,
+		"current": "0",
+		"duration": "124.266667"
+	},
+	{
+		"id": 16,
+		"current": "0",
+		"duration": "124.266667"
+	},
+	{
+		"id": 17,
+		"current": "0",
+		"duration": "8957.574"
 	}
 ]

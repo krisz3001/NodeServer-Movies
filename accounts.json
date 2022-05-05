@@ -1,1 +1,23 @@
-[]
+[
+	{
+		"username": "krisz",
+		"password": "mazsola1",
+		"time": "2022. 04. 27. 21:45:33",
+		"ip": "84.236.100.21",
+		"rank": 1
+	},
+	{
+		"username": "mcbulazs",
+		"password": "asd123",
+		"time": "2022. 05. 02. 18:51:35",
+		"ip": "100.70.77.6",
+		"rank": 0
+	},
+	{
+		"username": "Szabolcs",
+		"password": "Mazsika1",
+		"time": "2022. 05. 05. 18:36:03",
+		"ip": "192.168.1.17",
+		"rank": 0
+	}
+]

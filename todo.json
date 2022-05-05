@@ -17,11 +17,11 @@
 	},
 	{
 		"todo": "Felesleges menüpontok törlése",
-		"completed": false
+		"completed": true
 	},
 	{
 		"todo": "Kategóriákra bontás",
-		"completed": false
+		"completed": true
 	},
 	{
 		"todo": "Esetleg szenvedés a képekkel hogy ugyanolyan magasak legyenek de ne nézzenek ki úgy mint varga irén",
@@ -29,10 +29,10 @@
 	},
 	{
 		"todo": "Watch2gether!",
-		"completed": true
+		"completed": false
 	},
 	{
-		"todo": "Kód egyszerűsítés",
+		"todo": "Kód cleanup",
 		"completed": false
 	},
 	{
@@ -56,7 +56,7 @@
 		"completed": true
 	},
 	{
-		"todo": "Saját vezérlők a lejátszónál és overlay",
+		"todo": "Overlay a lejátszónál",
 		"completed": true
 	},
 	{
@@ -77,7 +77,7 @@
 	},
 	{
 		"todo": "faszerkezet a subsequent/related filmeknek(ertsd pl: marvel/ironman)",
-		"completed": false
+		"completed": true
 	},
 	{
 		"todo": "enterrel ugyanazt csinalja mint az add gomb a todo listnel",
@@ -89,10 +89,70 @@
 	},
 	{
 		"todo": "a random lehessen konyebben ujraporgetheto",
-		"completed": false
+		"completed": true
 	},
 	{
 		"todo": "Delete újraírása",
+		"completed": false
+	},
+	{
+		"todo": "Undo, redo újraírása",
+		"completed": false
+	},
+	{
+		"todo": "beléptetés / regisztrálás ellátása hibaüzenetekkel",
+		"completed": true
+	},
+	{
+		"todo": "Account rank, és jogok hozzá pl todo completion",
+		"completed": true
+	},
+	{
+		"todo": "Account jogosultságok továbbfejlesztése",
+		"completed": false
+	},
+	{
+		"todo": "Profilkép módosítás lehetősége már feltöltött képek közül",
+		"completed": false
+	},
+	{
+		"todo": "Admin oldal",
+		"completed": false
+	},
+	{
+		"todo": "GUI elrendezés módosításra vagy valami eszköz hozzá",
+		"completed": false
+	},
+	{
+		"todo": "Fiók adatlap",
+		"completed": false
+	},
+	{
+		"todo": "Progress ugratása következő epizódra okosan ha már csak a stáblista van (eddig a nagy ötlet hogy ha 2 perc van hátra a főoldalon már a kövit mutatja)",
+		"completed": false
+	},
+	{
+		"todo": "Fiókműveletek",
+		"completed": false
+	},
+	{
+		"todo": "Hangerő szabályzó méretének növelése",
+		"completed": false
+	},
+	{
+		"todo": "Esetenkénti NaN duration okának kiderítése",
+		"completed": false
+	},
+	{
+		"todo": "Az egész adatbázis átírása SQL-re",
+		"completed": false
+	},
+	{
+		"todo": "db és duration delete friendly párosítása",
+		"completed": false
+	},
+	{
+		"todo": "Új kategória felvétele",
 		"completed": false
 	}
 ]

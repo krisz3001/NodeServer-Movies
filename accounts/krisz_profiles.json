@@ -1,0 +1,22 @@
+[
+	{
+		"id": 0,
+		"name": "Krisz",
+		"image": "blue.png"
+	},
+	{
+		"id": 1,
+		"name": "Profile 2",
+		"image": "yellow.png"
+	},
+	{
+		"id": 2,
+		"name": "Profile 3",
+		"image": "red.png"
+	},
+	{
+		"id": 3,
+		"name": "Profile 4",
+		"image": "favicon.png"
+	}
+]

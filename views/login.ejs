@@ -14,10 +14,11 @@
   <button class="btn btn-primary m-2 position-absolute" data-bs-toggle="modal" data-bs-target="#rModal">Register</button>
   <div class="container text-center" style="display: flex; align-items: center; justify-content: center; height: 500px; flex-direction: column;">
       <label for="username">Username</label>
-      <input type="text" id="username" autofocus>
+      <input type="text" id="username" autofocus oninput="editingLoginInfo()">
       <label for="pass">Password</label>
-      <input type="password" id="pass">
+      <input type="password" id="pass" pattern="([a-zA-Z]+)" oninput="editingLoginInfo()">
       <button id="b" class="btn btn-success m-2" onclick="login()">Log in</button>
+      <p class="text-danger invisible" id="invalid-login">Invalid user information</p>
   </div>
   <div class="modal fade" id="lModal" tabindex="-1" aria-labelledby="lModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -44,12 +45,13 @@
       <div class="modal-body">
         <div class="container" style="display: flex; align-items: center; justify-content: center; height: 300px; flex-direction: column;">
           <label for="r-username">Username</label>
-          <input type="text" id="r-username" autofocus>
+          <input type="text" id="r-username" autofocus oninput="editingRegisterInfo()">
           <label for="r-pass">Password</label>
-          <input type="password" id="r-pass">
+          <input type="password" id="r-pass" oninput="editingRegisterInfo()">
           <label for="secret">Secret</label>
-          <input type="password" id="secret">
+          <input type="password" id="secret" oninput="editingRegisterInfo()">
           <button id="b-new" class="btn btn-success m-2" onclick="register()">Send</button>
+          <p class="text-danger invisible text-center" id="invalid-register">Invalid information</p>
         </div>
       </div>
       <div class="modal-footer">
@@ -82,8 +84,34 @@
         fetch('/register', {method: "POST", body : formData})
         .then(res => res.text())
         .then(r => {
+          if(r == 'invalidsecret'){
+            document.getElementById('invalid-register').innerHTML = 'Invalid secret phrase'
+            document.getElementById('invalid-register').classList.remove('invisible')
+          }
+          else if(r == 'userexists'){
+            document.getElementById('invalid-register').innerHTML = 'Username already taken'
+            document.getElementById('invalid-register').classList.remove('invisible')
+          }
+          else if(r == 'invalidformat'){
+            document.getElementById('invalid-register').innerHTML = 'Username or password contains invalid characters'
+            document.getElementById('invalid-register').classList.remove('invisible')
+          }
+          else if(r == 'nousername'){
+            document.getElementById('invalid-register').innerHTML = 'Enter a username'
+            document.getElementById('invalid-register').classList.remove('invisible')
+          }
+          else if(r == 'nopassword'){
+            document.getElementById('invalid-register').innerHTML = 'Enter a password'
+            document.getElementById('invalid-register').classList.remove('invisible')
+          }
+          else if(r == 'nosecret'){
+            document.getElementById('invalid-register').innerHTML = 'Enter a secret phrase'
+            document.getElementById('invalid-register').classList.remove('invisible')
+          }
+          else{
             location.reload()
             window.open('/','_self')
+          }
         })
       }
       function login(){
@@ -98,11 +126,14 @@
               document.getElementById('pass').value = ''
               alert('Azt hitted úgy hagyom mi :D')
             }
-            else if(r.length != 2){
+            else if(r.includes('session')){
               document.getElementById('l').innerText = r
               let modal = new bootstrap.Modal(document.getElementById('lModal'))
               modal.show()
               document.getElementById('pass').value = ''
+            }
+            else if(r == 'loginerror'){
+              document.getElementById('invalid-login').classList.remove('invisible')
             }
             else{
               location.reload()
@@ -110,6 +141,12 @@
             }
         })
         }
+      function editingLoginInfo(){
+        document.getElementById('invalid-login').classList.add('invisible')
+      }
+      function editingRegisterInfo(){
+        document.getElementById('invalid-register').classList.add('invisible')
+      }
   </script>
 </body>
 </html>

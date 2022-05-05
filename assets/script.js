@@ -14,12 +14,12 @@ function expand(){
 }
 //<a class="btn btn-success w-100" href="/movie/${n}">Play</a>
 function newMovie(img, title, desc, n, w, current, duration){
-    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item movie"><img src="/assets/delete.png" class="d-none delete-show img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info bg-dark p-2 border border-secondary w-100 rounded-bottom"><div class="row m-0 mb-1"><a class="col-2 play rounded-circle" href="/movie/${n}"></a><div class="col-8"></div><a class="col-2 details rounded-circle" onclick="details(${n}, 'movie', '${img}', '${w}', '${current}', '${duration}', '/movie/${n}')"></a></div><p class="h5" id="cardTitle${n}">${title}</p><div class="d-flex align-items-center"><div class="bg-secondary w-100" style="height: 5px;"><div style="height: 5px; background-color: red; width: ${w}%"></div></div><div><p class="my-1 text-nowrap p-1" style="font-size: small;">${current}/${duration} ${duration > 1 ? 'minutes' : 'minute'}</p></div></div><p class="mt-1 mb-0 desc" id="cardDescription${n}">${desc}</p></div></div>`
+    return `<div class="col-sm-6 col-md-4 col-lg-3 col-12 p-0 item movie"><img src="/assets/delete.png" class="d-none delete-show img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info bg-dark p-2 border border-secondary w-100 rounded-bottom"><div class="row m-0 mb-1"><a class="col-2 play rounded-circle" href="/movie/${n}"></a><div class="col-8"></div><a class="col-2 details rounded-circle" onclick="details(${n}, 'movie', '${img}', '${w}', '${current}', '${duration}', '/movie/${n}')"></a></div><p class="h5" id="cardTitle${n}">${title}</p><div class="d-flex align-items-center"><div class="bg-secondary w-100" style="height: 5px;"><div style="height: 5px; background-color: red; width: ${w}%"></div></div><div><p class="my-1 text-nowrap p-1" style="font-size: small;">${current}/${duration} ${duration > 1 ? 'minutes' : 'minute'}</p></div></div><p class="mt-1 mb-0 desc" id="cardDescription${n}">${desc}</p></div></div>`
 }
 function newSeries(img, title, desc, n, w, s, e, dir, current, duration, seasons, episodes){
     let s_pretty = s < 10 ? `0${s}` : s
     let e_pretty = e < 10 ? `0${e}` : e
-    return `<div class="col-sm-4 col-lg-3 col-6 p-0 item series"><img src="/assets/delete.png" class="d-none delete-show img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info bg-dark p-2 border border-secondary w-100 rounded-bottom"><div class="row m-0 mb-1"><a class="col-2 play rounded-circle" href="/series/${n}/${dir}/${s}/${e}"></a><div class="col-8"></div><a class="col-2 details rounded-circle" onclick="details(${n}, 'series', '${img}', '${w}', '${current}', '${duration}', '/series/${n}/${dir}/${s}/${e}', '${s_pretty}', '${e_pretty}', '${seasons}', [${episodes}])"></a></div><p class="h5" id="cardTitle${n}">${title}</p><div class="row mb-2"><div class="col-12"><div class="bg-secondary" style="height: 5px; width: 100%; margin-top: 0.6rem"><div style="height: 5px; background-color: red; width: ${w}%"></div></div></div><div class="col-12"><p class="m-0 my-1" style="float:left">S${s_pretty} E${e_pretty}</p><p style="float: right" class="my-1">${current}/${duration} ${duration > 1 ? 'minutes' : 'minute'}</p></div></div><p class="mt-1 mb-0 desc" id="cardDescription${n}">${desc}</p></div></div>`
+    return `<div class="col-sm-6 col-md-4 col-lg-3 col-12 p-0 item series"><img src="/assets/delete.png" class="d-none delete-show img-fluid btn btn-danger position-absolute" onclick="deleteShow(${n})" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info bg-dark p-2 border border-secondary w-100 rounded-bottom"><div class="row m-0 mb-1"><a class="col-2 play rounded-circle" href="/series/${n}/${dir}/${s}/${e}"></a><div class="col-8"></div><a class="col-2 details rounded-circle" onclick="details(${n}, 'series', '${img}', '${w}', '${current}', '${duration}', '/series/${n}/${dir}/${s}/${e}', '${s_pretty}', '${e_pretty}', '${seasons}', [${episodes}])"></a></div><p class="h5" id="cardTitle${n}">${title}</p><div class="row mb-2"><div class="col-12"><div class="bg-secondary" style="height: 5px; width: 100%; margin-top: 0.6rem"><div style="height: 5px; background-color: red; width: ${w}%"></div></div></div><div class="col-12"><p class="m-0 my-1" style="float:left">S${s_pretty} E${e_pretty}</p><p style="float: right" class="my-1">${current}/${duration} ${duration > 1 ? 'minutes' : 'minute'}</p></div></div><p class="mt-1 mb-0 desc" id="cardDescription${n}">${desc}</p></div></div>`
 }
 function newOption(value){
     return `<option value="${value}">${value}</option`
@@ -27,27 +27,38 @@ function newOption(value){
 function refresh(){
     let items = document.getElementById('items')
     items.innerHTML = ''
-    fetch('/db.json')
-    .then(response => response.json())
+    let categories = []
+    fetch('/categories')
+    .then(res => res.json())
     .then(r => {
-        for (let i = 0; i < r[id].length; i++) {
-            if(r[id][i].type === 'series'){
-                let current = Math.round(r[id][i].episode_progress.find(x=>x.filename == r[id][i].progress).current/60)
-                let duration = Math.round(r[id][i].episode_progress.find(x=>x.filename == r[id][i].progress).duration/60)
-                let dir = `${r[id][i].episode_progress[0].filename.split('_')[0]}`
-                let w = (r[id][i].episode_progress.find(x=>x.filename == r[id][i].progress).current/r[id][i].episode_progress.find(x=>x.filename == r[id][i].progress).duration)*100
-                items.innerHTML += newSeries(r[id][i].image, r[id][i].title, r[id][i].description, i, w, r[id][i].progress.split('_')[1], r[id][i].progress.split('_')[2].split('.')[0], dir, current, duration, r[id][i].seasons, r[id][i].episodes)
-                document.getElementById(`fullbar${i}`).style.width = !(w>0) ? '0%' : '100%'
+        categories = r
+    })
+    .then(x => {
+        fetch('/db.json')
+        .then(res => res.json())
+        .then(r => {
+            for (let j = 0; j < categories.length; j++) {
+                items.innerHTML += `<h1 class="mb-2 mt-5 p-0">${categories[j]}</h1>`
+                for (let i = 0; i < r[id].length; i++) {
+                    if(r[id][i].type === 'series' && r[id][i].category === categories[j]){
+                        let current = Math.round(r[id][i].episode_progress.find(x=>x.filename == r[id][i].progress).current/60)
+                        let duration = Math.round(r[id][i].episode_progress.find(x=>x.filename == r[id][i].progress).duration/60)
+                        let dir = `${r[id][i].episode_progress[0].filename.split('_')[0]}`
+                        let w = (r[id][i].episode_progress.find(x=>x.filename == r[id][i].progress).current/r[id][i].episode_progress.find(x=>x.filename == r[id][i].progress).duration)*100
+                        items.innerHTML += newSeries(r[id][i].image, r[id][i].title, r[id][i].description, i, w, r[id][i].progress.split('_')[1], r[id][i].progress.split('_')[2].split('.')[0], dir, current, duration, r[id][i].seasons, r[id][i].episodes)
+                        document.getElementById(`fullbar${i}`).style.width = !(w>0) ? '0%' : '100%'
+                    }
+                    else if(r[id][i].category === categories[j]){
+                        let w = (r[id][i].current/r[id][i].duration)*100
+                        let current = Math.round(r[id][i].current/60)
+                        let duration = Math.round(r[id][i].duration/60)
+                        items.innerHTML += newMovie(r[id][i].image,r[id][i].title,r[id][i].description, i, w, current, duration)
+                        document.getElementById(`fullbar${i}`).style.width = !(w>0) ? '0%' : '100%'
+                    }
+                }
             }
-            else{
-                let w = (r[id][i].current/r[id][i].duration)*100
-                let current = Math.round(r[id][i].current/60)
-                let duration = Math.round(r[id][i].duration/60)
-                items.innerHTML += newMovie(r[id][i].image,r[id][i].title,r[id][i].description, i, w, current, duration)
-                document.getElementById(`fullbar${i}`).style.width = !(w>0) ? '0%' : '100%'
-            }
-        }
-})
+        })
+    })
 }
 function refreshList(){
     let filenameSelect = document.getElementById('filenameSelect')
@@ -57,6 +68,17 @@ function refreshList(){
         filenameSelect.innerHTML = `<option selected value="0">Choose file</option>`
         for (let i = 0; i < r.length; i++) {
             filenameSelect.innerHTML += newOption(r[i])
+        }
+    })
+}
+function refreshCategoryList(){
+    let categorySelect = document.getElementById('categorySelect')
+    fetch('/categories')
+    .then(res => res.json())
+    .then(r => {
+        categorySelect.innerHTML = `<option selected value="0">Choose category</option>`
+        for (let i = 0; i < r.length; i++) {
+            categorySelect.innerHTML += newOption(r[i])
         }
     })
 }
@@ -74,12 +96,14 @@ function addShow(){
     let title = document.getElementById('title')
     let desc = document.getElementById('desc')
     let fn = document.getElementById('filenameSelect')
-    if(title.value.length == 0 || desc.value.length == 0 || fn.value.length == 0 || fn.value == 0) return
+    let category = document.getElementById('categorySelect')
+    if(title.value.length == 0 || desc.value.length == 0 || fn.value.length == 0 || fn.value == 0 || category.value == 0) return
     let formData = new FormData()
     formData.append("image", image.files[0])
     formData.append("title", title.value)
     formData.append("description", desc.value)
     formData.append("filename", fn.value)
+    formData.append("category", category.value)
     fetch('/upload', {method: "POST", body : formData})
         .then(response => response.text)
         .then(r => refresh())
@@ -87,6 +111,7 @@ function addShow(){
     title.value = ''
     desc.value = ''
     fn.value = ''
+    category.value = ''
 }
 function deleteShow(n){
     if(!window.confirm("Are you sure?")) return
@@ -299,15 +324,10 @@ document.getElementById('new-todo').addEventListener("keydown", function(e){
     if(e.keyCode === 13) document.getElementById('add-todo-btn').click()
 })
 function randomMovie(){
-    let movie = false
-    let movie_id = 0
-    let items = document.getElementsByClassName('item')
-    while (!movie) {
-        let r = Math.floor(Math.random() * items.length)
-        if(items[r].classList.contains('movie')){
-            movie = true
-            movie_id = r
-        }
-    }
-    window.open(`/movie/${movie_id}`,'_self')
+    fetch('/random', {method: 'POST'})
+    .then(res => res.text())
+    .then(r => {
+        if(r == 'nomoviefound') window.open(`/`,'_self')
+        else window.open(`/movie/${r}`,'_self')
+    })
 }

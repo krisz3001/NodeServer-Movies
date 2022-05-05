@@ -12,9 +12,10 @@
 </head>
 <body id="main" class="bg-black text-white overflow-hidden d-flex align-items-center h-100" onload="getID('<%= id %>', '<%= filename %>', '<%= type %>'); getProgress('<%= id %>', '<%= type %>', '<%= filename %>')" onbeforeunload="saveProgress()" onmousemove="showCursor(); afk()">
   <div class="h-100 w-100 d-flex justify-content-center">
-    <video id="vid" onclick="//videoClick()" onplay="playing()" ondblclick="goFullscreen()" onpause="videoPaused()" ontimeupdate="//progressBar()" class="h-100" src="/media/<%= filename %>" controls></video>
-    <div id="topLine" class="w-100 d-flex">
+    <video preload="auto" id="vid" onclick="//videoClick()" onplay="playing()" ondblclick="goFullscreen()" onpause="videoPaused()" ontimeupdate="//progressBar()" class="h-100" src="/media/<%= filename %>" controls></video>
+    <div id="topLine" class="w-100 d-flex" style="z-index: 999;">
       <a href="/" id="backBtn" class="d-inline-block"></a>
+      <button class="ms-4 btn btn-success" onclick="randomMovie()">Random movie</button>
       <% let prev_link; let o = ' opacity-0 disabled'
       if(type=='series' && !(filename.split('_')[1] == 1 && filename.split('_')[2].split('.')[0] == 1)){
         let dir = filename.split('_')[0].split('/')[0]
