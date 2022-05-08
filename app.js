@@ -14,7 +14,6 @@ let sessionStart = `This session was started on ${d.toLocaleString()}`
 
 //Database paths
 const db_path = `${__dirname}/db.json`
-const profiles_path = `${__dirname}/profiles.json`
 const users_path = `${__dirname}/users.json`
 const backup_path = `${__dirname}/backup.json`
 const backup_redo_path = `${__dirname}/backup_redo.json`
@@ -173,7 +172,7 @@ function readProfiles(){
 }
 
 //Write profiles
-function writeProfiles(n, db){
+function writeProfiles(db){
   let users = readUsers()
   let acc = readAccounts()
   let username = acc[users.find(x=>x.ip == ip).account].username
@@ -270,47 +269,54 @@ app.post('/upload', function(req,res){
     let db = readDB()
     let durations = readDurations()
     fs.writeFileSync(backup_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
-    if(fs.lstatSync(mediaDir_path + req.body.filename).isDirectory()){
-      let list = []
-      let seasons = 0
-      let episodes = []
-      let episode_progress = []
-      files = fs.readdirSync(mediaDir_path + req.body.filename)
-      files.forEach(x => list.push(x))
-      let counter = 0
-      list.forEach(x => {
-        let season = x.split('.')[0].split('_')[1]
-        if(season > seasons) episodes.push(0)
-        seasons = season > seasons ? season : seasons
-        episodes[season-1]++
-        getVideoDurationInSeconds(mediaDir_path + `/${x.split('_')[0]}/` + x).then(y => {
-          episode_progress.push({"filename": x, "current": "0", "duration": `${y}`})
-        }).then(z => {
-          counter++
-          if(counter === list.length){
-            episode_progress.sort((a, b) => {
-              return a.filename.localeCompare(b.filename, 'en', {numeric: true})
-            })
-            db.push({"id": db.length, "type": "series", "image": img, "title": req.body.title, "description": req.body.description, "category": req.body.category, "seasons": seasons, "episodes": episodes})
-            fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
-            durations.push({"id": durations.length, "progress": episode_progress[0].filename, "episode_progress": episode_progress})
-            fs.writeFileSync(durations_path, JSON.stringify(durations, null, '\t'), 'utf8', function(){})
-            res.sendStatus(200)
-            saveLog(`"${req.body.title}" added by ${ip}. (${episodes.reduce((a,b)=>a+b,0)} episodes)`)
-          }
+    if(!db.some(x=>x.filename === req.body.filename)){
+      if(fs.lstatSync(mediaDir_path + req.body.filename).isDirectory()){
+        let list = []
+        let seasons = 0
+        let episodes = []
+        let episode_progress = []
+        files = fs.readdirSync(mediaDir_path + req.body.filename)
+        files.forEach(x => list.push(x))
+        let counter = 0
+        list.forEach(x => {
+          let season = x.split('.')[0].split('_')[1]
+          if(season > seasons) episodes.push(0)
+          seasons = season > seasons ? season : seasons
+          episodes[season-1]++
+          getVideoDurationInSeconds(mediaDir_path + `/${x.split('_')[0]}/` + x).then(y => {
+            episode_progress.push({"filename": x, "current": "0", "duration": `${y}`})
+          }).then(z => {
+            counter++
+            if(counter === list.length){
+              episode_progress.sort((a, b) => {
+                return a.filename.localeCompare(b.filename, 'en', {numeric: true})
+              })
+              db.push({"type": "series", "image": img, "title": req.body.title, "description": req.body.description, "category": req.body.category, "seasons": seasons, "filename": req.body.filename, "episodes": episodes})
+              fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
+              durations.push({"progress": episode_progress[0].filename, "filename": req.body.filename, "episode_progress": episode_progress})
+              fs.writeFileSync(durations_path, JSON.stringify(durations, null, '\t'), 'utf8', function(){})
+              res.sendStatus(200)
+              saveLog(`"${req.body.title}" added by ${ip}. (${episodes.reduce((a,b)=>a+b,0)} episodes)`)
+            }
+          })
         })
-      })
+      }
+      else{
+        db.push({"type": "movie", "image": img, "title": req.body.title, "description": req.body.description, "category": req.body.category, "filename": req.body.filename})
+        fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
+        getVideoDurationInSeconds(mediaDir_path + req.body.filename).then(x => {
+          durations.push({"filename": req.body.filename, "current": "0", "duration": `${x}`})
+          fs.writeFileSync(durations_path, JSON.stringify(durations, null, '\t'), 'utf8', function(){})
+          res.sendStatus(200)
+          ip = getIP(req.ip.substring(7))
+          saveLog(`"${req.body.title}" added by ${ip}.`)
+        })
+      }
     }
     else{
-      db.push({"id": db.length, "type": "movie", "image": img, "title": req.body.title, "description": req.body.description, "category": req.body.category, "filename": req.body.filename})
-      fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
-      getVideoDurationInSeconds(mediaDir_path + req.body.filename).then(x => {
-        durations.push({"id": durations.length, "current": "0", "duration": `${x}`})
-        fs.writeFileSync(durations_path, JSON.stringify(durations, null, '\t'), 'utf8', function(){})
-        res.sendStatus(200)
-        ip = getIP(req.ip.substring(7))
-        saveLog(`"${req.body.title}" added by ${ip}.`)
-      })
+      ip = getIP(req.ip.substring(7))
+      res.send('exists')
+      saveLog(`Attempt of adding duplicate movie or series named "${req.body.filename}" by ${ip}`)
     }
   }
   else{
@@ -335,7 +341,7 @@ app.post('/editprofile', function(req, res){
     }
     profiles[req.body.id].name = req.body.name
     profiles[req.body.id].image = img
-    writeProfiles(ip, profiles)
+    writeProfiles(profiles)
     res.sendStatus(200)
     saveLog(`Profile ${req.body.id} edited by ${ip}. Name: ${req.body.name}, Image: ${img}`)
   }
@@ -412,15 +418,15 @@ app.post('/setprogress', function(req, res){
     let db = readAccountDB(ip)
     let n = getProfile(req)
     if(req.body.type == 'movie'){
-      db[n][req.body.id].current = req.body.current
-      db[n][req.body.id].duration = req.body.duration
+      db[n][db[n].indexOf(db[n].find(x=>x.filename===req.body.filename))].current = req.body.current
+      db[n][db[n].indexOf(db[n].find(x=>x.filename===req.body.filename))].duration = req.body.duration
       writeAccountDB(ip, db)
       res.sendStatus(200)
     }
     else if(req.body.type == 'series'){
-      db[n][req.body.id].episode_progress.find(x=>x.filename == req.body.filename.split('/')[1]).current = req.body.current
-      db[n][req.body.id].episode_progress.find(x=>x.filename == req.body.filename.split('/')[1]).duration = req.body.duration
-      db[n][req.body.id].progress = `${req.body.filename.split('/')[1]}`
+      db[n][db[n].indexOf(db[n].find(x=>x.filename===req.body.directory))].episode_progress.find(x=>x.filename == req.body.filename).current = req.body.current
+      db[n][db[n].indexOf(db[n].find(x=>x.filename===req.body.directory))].episode_progress.find(x=>x.filename == req.body.filename).duration = req.body.duration
+      db[n][db[n].indexOf(db[n].find(x=>x.filename===req.body.directory))].progress = `${req.body.filename}`
       writeAccountDB(ip, db)
       res.sendStatus(200)
     }
@@ -442,10 +448,10 @@ app.post('/getprogress', function(req, res){
     let db = readAccountDB(ip)
     let n = getProfile(req)
     if(req.body.type == 'movie'){
-      res.send({"current": db[n][req.body.id].current})
+      res.send({"current": db[n][db[n].indexOf(db[n].find(x=>x.filename===req.body.filename))].current})
     } 
     else if(req.body.type == 'series'){
-      res.send({"current": db[n][req.body.id].episode_progress.find(x=>x.filename == req.body.filename.split('/')[1]).current})
+      res.send({"current": db[n][db[n].indexOf(db[n].find(x=>x.filename===req.body.directory))].episode_progress.find(x=>x.filename == req.body.filename).current})
     }
     else{
       res.status(404)
@@ -559,20 +565,44 @@ app.post('/delete', function(req, res){
   if(isRegistered(req)){
     ip = getIP(req.ip.substring(7))
     let db = readDB()
-    let title = db[getProfile(req)][req.body.n].title
+    let durations = readDurations()
+    let title = db.find(x=>x.filename===req.body.filename).title
     fs.writeFileSync(backup_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
-    for (let i = 0; i < Object.keys(db).length; i++) {
-      db[i].splice(req.body.n, 1)
-      for (let j = 0; j < db[i].length; j++) {
-        db[i][j].id = j
-      }
-    }
+    db.splice(db.indexOf(db.find(x=>x.filename===req.body.filename)), 1)
+    durations.splice(durations.indexOf(durations.find(x=>x.filename===req.body.filename)), 1)
     fs.writeFileSync(db_path, JSON.stringify(db, null, '\t'), 'utf8', function(){})
+    fs.writeFileSync(durations_path, JSON.stringify(durations, null, '\t'), 'utf8', function(){})
     res.sendStatus(200)
     saveLog(`"${title}" deleted by ${ip}.`)
   }
   else{
     ip = getIP(req.ip.substring(7))
+    res.render('login')
+    saveLog(`Illegal POST request from ${ip}. ${req.url}`)
+  }
+})
+
+//New Category
+app.post('/newcategory', function(req, res){
+  ip = getIP(req.ip.substring(7))
+  if(isRegistered(req)){
+    let categories = readCategories()
+    if(!categories.some(x=>x===req.body.category)){
+      categories.pop()
+      categories.pop()
+      categories.push(req.body.category)
+      categories.push('Meme')
+      categories.push('Uncategorized')
+      fs.writeFileSync(categories_path, JSON.stringify(categories, null, '\t'), 'utf8', function(){})
+      res.sendStatus(200)
+      saveLog(`"${req.body.category}" category added by ${ip}`)
+    }
+    else{
+      res.send('exists')
+      saveLog(`Attempt of adding duplicate category named "${req.body.category}"`)
+    }
+  }
+  else{
     res.render('login')
     saveLog(`Illegal POST request from ${ip}. ${req.url}`)
   }
@@ -592,17 +622,20 @@ app.get('*', function(req, res){
       let merged = [[],[],[],[]]
       for (let i = 0; i < Object.keys(accDB).length; i++) {
         for (let j = 0; j < db.length; j++) {
-          if(accDB[i].find(x=>x.id == j) != undefined){
-            merged[i].push({...db[j], ...accDB[i].find(x=>x.id == j)})
+          if(accDB[i][j] && !db.some(x=>x.filename===accDB[i][j].filename)){
+            accDB[i].splice(accDB[i].indexOf(accDB[i].find(x=>x.filename===accDB[i][j].filename)), 1)
+          }
+          if(!accDB[i].some(x=>x.filename===db[j].filename)){
+            accDB[i].splice(j, 0, durations[j])
+            merged[i].push({...db[j], ...durations[j]})
           }
           else{
-            accDB[i].push(durations[j])
-            merged[i].push({...db[j], ...durations[j]})
+            merged[i].push({...db[j], ...accDB[i].find(x=>x.filename===db[j].filename)})
           }
         }
       }
       writeAccountDB(ip, accDB)
-      res.send(merged)
+      res.send(merged[getProfile(req)])
     }
     else if(req.url === '/'){
       service = '/home'
@@ -624,9 +657,8 @@ app.get('*', function(req, res){
     else if(req.url.substring(0,7) === '/movie/' && req.url != '/movie/' && req.url.substring(7) <= readDB().length && req.url.substring(7) > -1){
       if(fs.existsSync(mediaDir_path + readDB()[req.url.substring(7)].filename)){
         service = ''
-        let profiles = readProfiles()[getProfile(req)]
         let item = readDB()[req.url.substring(7)]
-        let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "type": item.type, "title": item.title, "filename": item.filename, "image": item.image, "description": item.description}
+        let db = {"id": item.id, "type": item.type, "title": item.title, "filename": item.filename, "image": item.image, "description": item.description}
         saveLog(`${ip} is watching "${item.title}" (${item.filename})`)
         res.render('media', db)
       }
@@ -646,11 +678,14 @@ app.get('*', function(req, res){
         let mp4 = fs.existsSync(mediaDir_path + `${name}/${name}_${s}_${e}.mp4`)
         let mkv = fs.existsSync(mediaDir_path + `${name}/${name}_${s}_${e}.mkv`)
         if(mp4 || mkv){
-          let profiles = readProfiles()[getProfile(req)]
+          let db = readDB()
+          let accDB = readAccountDB(ip)[getProfile(req)]
           let item = readAccountDB(ip)[getProfile(req)][split[2]]
-          let db = {"name": profiles.name, "profile_image": profiles.image, "id": item.id, "type": item.type, "title": item.title, "filename": `${name}/${name}_${s}_${e}.${mkv ? 'mkv' : 'mp4'}`, "image": item.image, "description": item.description, "progress": item.progress, "seasons": item.seasons, "episodes": item.episodes}
+          let id = accDB.indexOf(accDB.find(x=>x.filename === item.filename))
+          item = {...db.find(x=>x.filename===item.filename), ...item}
+          let out = {"id": id, "type": item.type, "title": item.title, "filename": `${name}/${name}_${s}_${e}.${mkv ? 'mkv' : 'mp4'}`, "image": item.image, "description": item.description, "progress": item.progress, "seasons": item.seasons, "episodes": item.episodes}
           saveLog(`${ip} is watching "${item.title}" S${s < 10 ? '0' + s : s} E${e < 10 ? '0' + e : e} (${name}_${s}_${e}.${mkv ? 'mkv' : 'mp4'})`)
-          res.render('media', db)
+          res.render('media', out)
         }
         else{
           service = `/404 (${req.url})`
@@ -682,11 +717,12 @@ app.get('*', function(req, res){
       res.send(readTodo())
     }
     else if(req.url === '/list'){
-      service = req.url
+      service = ''
+      let db = readDB()
       let list = []
       fs.readdir(mediaDir_path, (err, files) => {
-        files.forEach(x=>{
-          list.push(x)
+        files.forEach(y=>{
+          if(!db.some(x=>x.filename === y)) list.push(y)
         })
         res.send(list)
       })

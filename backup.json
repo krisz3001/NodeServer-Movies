@@ -1,60 +1,5 @@
 [
 	{
-		"id": 0,
-		"type": "movie",
-		"image": "ironman.jpg",
-		"title": "Iron Man",
-		"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
-		"category": "Marvel",
-		"filename": "ironman.mp4"
-	},
-	{
-		"id": 1,
-		"type": "movie",
-		"image": "ironman2.jpg",
-		"title": "Iron Man 2",
-		"description": "Kiderült, hogy a szuperhős Vasember valójában Tony Stark. Kihasználva az iránta való érdeklődést a milliárdos feltaláló fel akarja hívni a figyelmet a közjó szolgálatába állítható technikai újdonságokra. A kormány azonban azt szeretné, ha fejlesztéseit a hadsereg kapná. Tony azonban nem akarja megosztani a Vasemberrel kapcsolatos információit, attól fél, hogy azok rossz kezekbe kerülnek. Közben felbukkan egy rejtélyes figura a Stark család múltjából. Ivan Vanko a saját fegyverével akarja elpusztítani a Vasembert. A szuperhős kénytelen újra akcióba lépni, hogy a barátai segítségével legyőzze azokat az erőket, amelyek őt és az emberiséget fenyegetik.",
-		"category": "Marvel",
-		"filename": "ironman2.mp4"
-	},
-	{
-		"id": 2,
-		"type": "movie",
-		"image": "ironman3.jpg",
-		"title": "Iron Man 3",
-		"description": "A legutóbbi küldetése után Tony Stark talonba tette a Vasembert. A tudós-szuperhős boldogan él egykori asszisztensével, ám álmatlanságban szenved, és pánikrohamok gyötrik. Amikor merényletek sora rázza meg a várost, Stark úgy dönt, hogy felveszi a (vas)kesztyűt, és szembeszáll a titokzatos ellenséggel. A Vasemberen végzett legújabb fejlesztése azonban még nem tökéletes, ráadásul felbukkan néhány korábbi ismerőse is. Az ösztönei és a találékonysága segítségével talán sikerül felülemelkedni a nehézségeken.",
-		"category": "Marvel",
-		"filename": "ironman3.mp4"
-	},
-	{
-		"id": 3,
-		"type": "movie",
-		"image": "infinity.jpg",
-		"title": "Avengers: Infinity War",
-		"description": "A Marvel mozis univerzumának egészét felölelő, tíz év eseményeinek tetőpontját jelentő Bosszúállók: Végtelen háborúban minden idők legnagyobb és leghalálosabb leszámolására kerül sor. A Bosszúállóknak és szövetségeseiknek mindent kockára kell tenniük, hogy megfékezzék a nagy erejű Thanost, aki egy szemvillanás alatt elpusztíthatja a világot.",
-		"category": "Marvel",
-		"filename": "infinity.mp4"
-	},
-	{
-		"id": 4,
-		"type": "movie",
-		"image": "endgame.jpg",
-		"title": "Avengers: Endgame",
-		"description": "Thanos súlyos tette, amivel elpusztította az univerzum élőlényeinek felét és megtörte a Bosszúállókat, a megmaradt hősöket egy végső összecsapásra készteti a Marvel Studios huszonegy filmet megkoronázó, nagyszabású fináléjában, a Bosszúállók: Végjátékban.",
-		"category": "Marvel",
-		"filename": "endgame.mp4"
-	},
-	{
-		"id": 5,
-		"type": "movie",
-		"image": "farfromhome.jpg",
-		"title": "Spider-Man: Far From Home",
-		"description": "Pókember nem pihenhet. Az már kiderült, hogy az ifjú pók (Tom Holland) egyedül is képes megmenteni a világot, és csoportban is megállja a helyét, de közben ő úgy érzi, hogy neki is jár mindaz, ami bármelyik középiskolásnak: és a haverjaival európai utazásra indul. De éppen, amikor végre élvezhetné mindazt, amit a baráti lazulás kínálhat, újabb kihívás elé kell néznie. A rejtélyes Mysterio (Jake Gyllenhaal) miatt új kalandba indul, és könnyen lehet, hogy Pókember, aki nagy nehezen próbálja a hátizsákos utazást a hősi küzdelemmel összehangolni, kénytelen régi Bosszúálló társaitól segítséget kérni.",
-		"category": "Marvel",
-		"filename": "farfromhome.mp4"
-	},
-	{
-		"id": 6,
 		"type": "movie",
 		"image": "kingsman2.jpg",
 		"title": "Kingsman: The Golden Circle",
@@ -63,58 +8,19 @@
 		"filename": "kingsman2.mp4"
 	},
 	{
-		"id": 7,
-		"type": "series",
-		"image": "daredevil.jpg",
-		"title": "Marvel: Daredevil",
-		"description": "Matt Murdock gyermekkorában egy baleset következtében megvakul, de egy vegyszernek köszönhetően a többi érzékszerve emberfelettivé válik és kialakul egy radarérzék is amivel a környezetét \"látja\". Matt Murdock nappal mint ügyvéd, éjjel mint álarcos igazságosztó védi Hell's Kitchen környékét a bűnözőktől.",
-		"category": "Marvel",
-		"seasons": "3",
-		"episodes": [
-			13,
-			13,
-			13
-		]
-	},
-	{
-		"id": 8,
-		"type": "series",
-		"image": "whatif.jpg",
-		"title": "Marvel: What if?",
-		"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
-		"category": "Marvel",
-		"seasons": "1",
-		"episodes": [
-			9
-		]
-	},
-	{
-		"id": 9,
-		"type": "series",
-		"image": "loki.jpg",
-		"title": "Marvel: Loki",
-		"description": "Miután Loki ellopta a Tesseractot, őrizetbe veszi egy szervezet, ami az időt felügyeli. Segítségével egy hosszú időutazásra indulnak, amely folyamán megváltoztatja az emberek történelmét, és emiatt hatalmas kalamajkába kerül.",
-		"category": "Marvel",
-		"seasons": "1",
-		"episodes": [
-			6
-		]
-	},
-	{
-		"id": 10,
 		"type": "series",
 		"image": "mandalorian.jpg",
 		"title": "The Mandalorian",
 		"description": "A The Mandalorian (A mandalori) az első élőszereplős Star Wars-sorozat, amely 2019 novemberében debütált a Disney+ nevű streaming-szolgáltatásában. A hivatalosan még magyar cím nélküli The Mandalorian sorozat főszereplője egy magányos mandalori fejvadász (Pedro Pascal), aki bonyolult küldetéseket vállalva jut egy hatalmas összeesküvés nyomára. A sorozatot Jon Favreau a Vasember 1-2, Az oroszlánkirály és A dzsungel könyve rendezője készítette el a Disney számára.",
 		"category": "Star Wars",
 		"seasons": "2",
+		"filename": "mandalorian",
 		"episodes": [
 			8,
 			8
 		]
 	},
 	{
-		"id": 11,
 		"type": "movie",
 		"image": "ivosgyerek.gif",
 		"title": "Hello?",
@@ -123,7 +29,6 @@
 		"filename": "stuck.mp4"
 	},
 	{
-		"id": 12,
 		"type": "movie",
 		"image": "maxresdefault.jpg",
 		"title": "260 kilómétert utaztak a cigányok",
@@ -132,24 +37,301 @@
 		"filename": "damu.mp4"
 	},
 	{
-		"id": 13,
 		"type": "series",
 		"image": "informant.jpg",
 		"title": "The Informant",
 		"description": "1985. A kommunista Magyarország a politikai változások küszöbén. A húszéves Gergő szíve tele van izgalommal és várakozással; Budapestre költözik, hogy a Gazdaságtudományi Egyetemen tanuljon. Kollégiumi élete első napján csatlakozik egy csapat demokratikus ellenzéki fiatalhoz, akik tüntetéseket szerveznek a kommunista rendszer ellen. A csoportot Száva Zsolt, a karizmatikus fiatal diák vezeti, aki hamarosan Gergő legjobb barátja lesz. A vidéki srác élete egy pillanat alatt megváltozik a gyönyörű lányok, bulik és politikai viták hatására.",
 		"category": "Uncategorized",
 		"seasons": "1",
+		"filename": "informant",
 		"episodes": [
 			6
 		]
 	},
 	{
-		"id": 14,
 		"type": "movie",
-		"image": "placeholder.jpg",
-		"title": "a",
-		"description": "a",
+		"image": "django.jpg",
+		"title": "Django Unchained",
+		"description": "Amerika déli része két évvel a polgárháború előtt. Egy különös módszereket követő profi fejvadász (Christoph Waltz) egy rabszolga (Jamie Foxx) segítségével nagy sikert ér el, és hálából felszabadítja Djangót. De a társak együtt maradnak, hogy megkeressék a fekete férfi feleségét (Kerry Washington), akit egy rabszolgapiacon láttak utoljára. A nyomok végül egy ültetvényre vezetik őket, melynek tulajdonosa (Leonardo DiCaprio) rabszolgáit - trénere segítségével - egymás elleni gladiátorküzdelemre képezi ki. A fejvadászoknak sikerül bejutniuk a birtokra, de nem biztos, hogy ki is jutnak onnan: a földesúr hű szolgája (Samuel L. Jackson) gyanút fog, és a kalandorok csapdába esnek. Dönteniük kell, hogy az önfeláldozás vagy a túlélés-e a fontosabb számukra.",
+		"category": "Uncategorized",
+		"filename": "django_unchained.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "oscar.jpg",
+		"title": "Oscar",
+		"description": "Angelo Provolone (Sylvester Stallone) ismert és megbecsült tagja az alvilágnak. Alkohol-csempészésből igen szép vagyonra tett szert, gyönyörű házzal és csodaszép feleséggel büszkélkedhet. Egy napon haldokló apja megesketi fiát, hogy felhagy a törvényszegéssel, a bűnözéssel és jó útra tér. Csakhogy a bűnös élet nem akar szakítani vele. Sőt, minden összeesküszik ellene: felbukkan egy lány, aki Angelót apjaként tünteti fel. Megjelenik az érzékeny lelkű nyelvészprofesszor, dr. Poole, aki a nap végén, mint vőlegény távozik. A szexis szobalány a felfordulás közepén kilép, ám nem a megfelelő kofferral távozik.",
+		"category": "Uncategorized",
+		"filename": "oscar.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "thesocialnetwork.jpg",
+		"title": "The Social Network",
+		"description": "Mark Zuckerberg jobban ért a számítógépekhez, mint a csajozáshoz. A Harvard egyetem diákja ideje nagy részét a gépe előtt tölti. 2003-ban új ötlettel áll elő: egy olyan oldalt indít a világhálón, ahol a haverok közösségi életet élhetnek. A kollégiumi szobából indult Facebook valóságos kommunikációs forradalmat hozott, és alapjaiban változtatta meg a világot, az emberi kapcsolatokat és megváltoztatta az alkotóját is. Hat esztendővel és ötszázmillió ismerőssel később Zuckerberg a világ legfiatalabb milliárdosa. Egykor békés, nyugodt életről álmodott, a siker azonban felkavarta mind a szakmai, mind a magánéletét.",
+		"category": "Uncategorized",
+		"filename": "socialnetwork.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "fuckyougoethe.jpg",
+		"title": "Fák jú, Tanár úr!",
+		"description": "A volt bűnöző, Zeki Müller (Elyas M'barek) barátnője elrejtette a férfi által ellopott pénzt, és valaki pont a szajré fölé húzott fel egy iskolát. Zekinek ebben a helyzetben nincs más választása, kénytelen helyettes tanárnak kiadni magát a Goethe Középiskolában, és ezáltal újabb problémával gazdagítja a német oktatási rendszert: minden idők legőrültebb pedagógusával. Éjszakánként titokban próbálja kiásni a pénzt, napközben pedig drasztikus, bár hatékony módszerekkel igyekszik megnevelni a 10/b rakoncátlan diákjait. Ugyan pedáns kolléganője, Lisi Schnabelstedt (Karoline Herfurth) elítéli a férfi radikális pedagógiai fogásait, azon kapja magát, hogy beleszeret, sőt még segít is neki előásni valamit, ami jóval többet ér a pénznél - Zeki erkölcsi integritását.",
+		"category": "Fák jú, Tanár úr!",
+		"filename": "fuckyougoethe.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "fuckyougoethe2.jpg",
+		"title": "Fák jú, Tanár úr! 2",
+		"description": "A történtek után Zeki Müller lett a Goethe suli sztárja, mindenki szereti. Véletlenül talált új hivatása iránt érzett lelkesedéséből azonban veszíteni kezd a korai kelések, az irritáló diákok és a véget nem érő papírmunka miatt. Ráadásul az ambiciózus igazgatónő a fejébe vette, hogy elhalássza a rivális elit iskola orra elől a Thaiföldi partneriskola-programot, hogy ezzel turbózza fel a lezüllött Goethe-t, így az Oktatási Minisztérium őket választhassa ki új országos kampányához. Müller és Schnabelstedt felügyelete alatt az első részből jól ismert Chantal, Zeynep és Danger vezette díszes társaság hozza a formáját első külföldi útjuk során is, bemutatva szociális inkompetenciájuk és általános műveletlenségük elképzelhetetlenül széles spektrumát. És mintha nem lenne elég Zekinek az állandó tanár-diák háború, még a sznob konkurencia nagyképű tanárával is fel kell vennie a harcot, akinek egyetlen célja, hogy pontot tegyen Müller tanári karrierjének végére.",
+		"category": "Fák jú, Tanár úr!",
+		"filename": "fuckyougoethe2.mp4"
+	},
+	{
+		"type": "series",
+		"image": "peakyblinders.jpg",
+		"title": "Peaky Blinders",
+		"description": "A múlt század eleji Birminghamben játszódik ez a nagy ívű brit gengsztersorozat, amely egy bűnbanda félelmet nem ismerő vezére, Thomas Shelby (Cillian Murphy) ambícióinak köszönhető gyors feltöréséről szól. A bűnszervezet magára irányítja a Belfastból érkezett Chester Campbell főfelügyelő (Sam Neill) figyelmét, akit maga Winston Churchill nevezett ki a helyi rendőrség élére. Kettejük háborúja az egész várost vérbe borítja. Thomas Shelby, a világháborúból megtért veterán különös ismertetőjellel ellátott bandája élén illegális fogadásokból és seftelésből szerzi minimális betevőjét, aztán mikor véletlenül hozzákerül egy helyi gyárból ellopott fegyverszállítmány, akkor nem csupán a gyors felemelkedés lehetősége villan fel előtte, de Chester Campbell felügyelő figyelmét is magára vonja, akit maga Winston Churchill hozatott át Írországból, hogy szerezze vissza az ellopott fegyvereket. Thomas nagynénje, Polly azt tanácsolja a fiúnak, hogy szolgáltassa vissza a fegyvereket, de a kísértés túl nagy. A fiatal bandavezérnek a bátyjával, Arthurral is meggyűlik a baja, aki nem szívesen hagyná ki a lóversenypálya tulajdonosát, Billy Kimbert a helyei versenyek megbundázásából. Thomas húga, Ada szerelmes Freddie Thorne-ba, aki megmentette Thomas életét a háborúban, és jelenleg marxista elveket vallva arra buzdítja a munkásokat, hogy követeljenek maguknak magasabb béreket. Campbell szemében ő legalább akkora veszélyt jelent, mint Thomas és bandája.",
+		"category": "Uncategorized",
+		"seasons": "1",
+		"filename": "peakyblinders",
+		"episodes": [
+			6
+		]
+	},
+	{
+		"type": "movie",
+		"image": "captainamerica.jpg",
+		"title": "Captain America: The First Avenger",
+		"description": "Javában dúl a második világháború 1941-ben. A lelkes és mindenre elszánt ifjú, Steve Rogers is jelentkezik a hadseregbe, ám a gyenge fizikuma miatt kiszuperálják a sorozáson. Ezért örömmel jelentkezik a titkos katonai kísérleti programba, az Újjászületés nevet viselő projektbe, melynek keretében szuperkatonát csinálnak belőle. Az izomkolosszussá fejlődött Amerika kapitány feladata megállítani a nácik titkos tudománmyos részlegét, a Hydrát, melyet a világuralmi törekvéseket dédelgető, rettegett Vörös Koponya vezet.",
 		"category": "Marvel",
-		"filename": "damu.mp4"
+		"filename": "captainamerica.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "captainmarvel.jpg",
+		"title": "Captain Marvel",
+		"description": "A Marvel Studios az 1990-es években játszódó filmje, a Marvel Kapitány egy teljesen új kaland a Marvel mozis univerzumának eddig nem ismert periódusából, amely Carol Danverst követi nyomon. Mikor egy két idegen faj közötti galaktikus háború eléri a Földet, Danvers néhány szövetségessel együtt az események forgatagában találja magát, s hamarosan a világegyetem egyik legerősebb hősévé válik.",
+		"category": "Marvel",
+		"filename": "captainmarvel.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "ironman.jpg",
+		"title": "Iron Man",
+		"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
+		"category": "Marvel",
+		"filename": "ironman.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "ironman2.jpg",
+		"title": "Iron Man 2",
+		"description": "Kiderült, hogy a szuperhős Vasember valójában Tony Stark. Kihasználva az iránta való érdeklődést a milliárdos feltaláló fel akarja hívni a figyelmet a közjó szolgálatába állítható technikai újdonságokra. A kormány azonban azt szeretné, ha fejlesztéseit a hadsereg kapná. Tony azonban nem akarja megosztani a Vasemberrel kapcsolatos információit, attól fél, hogy azok rossz kezekbe kerülnek. Közben felbukkan egy rejtélyes figura a Stark család múltjából. Ivan Vanko a saját fegyverével akarja elpusztítani a Vasembert. A szuperhős kénytelen újra akcióba lépni, hogy a barátai segítségével legyőzze azokat az erőket, amelyek őt és az emberiséget fenyegetik.",
+		"category": "Marvel",
+		"filename": "ironman2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "hulk.jpg",
+		"title": "The Incredible Hulk",
+		"description": "Bruce Banner, a tudós kétségbeesetten keresi a gyógymódot arra a gamma-sugárzásra, amely megmérgezte a sejtjeit, és egy fékezhetetlen haragú erőt szabadít fel benne: a Hulkot. Banner kénytelen az árnyékba húzódni, bujkálni, elszakadni attól az élettől, amit ismert, és attól a nőtől, akit szeretett, miközben menekül az őt üldöző \"Villám\" Ross tábornok és a hadigépezet elől, akik azért üldözik, hogy elkapják, és erejét brutálisan kihasználják. Emellett azonban feltűnik a színen egy új, szörnyű ellenfél, a Förtelem, akinek pusztító ereje még Hulkét is felülmúlja. Hősünknek tehát döntenie kell: vagy elfogadja a tudós békés életét, vagy felfedezi a hőst abban a lényben, aki benne lakozik.",
+		"category": "Marvel",
+		"filename": "hulk.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "thor.jpg",
+		"title": "Thor",
+		"description": "A hatalmas Thor rettenthetetlen harcos, óriási pörölyéről legendákat mesélnek. A csatában vitéz és legyőzhetetlen, ám makacssága és hirtelen haragú természete nem teszi őt alkalmassá arra, hogy apját kövesse Ashgar trónján. Képtelen lenne megfontoltan irányítani birodalmát. Thor meggondolatlan tette miatt újra fellángol egy régi háború. Büntetésül a Földre száműzik, ahol kénytelen az emberek között élni. Amikor a világából érkező gonosz le akarja igázni a Földet, Thornak el kell döntenie, melyik oldalra áll.",
+		"category": "Marvel",
+		"filename": "thor.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "avengers.jpg",
+		"title": "The Avengers",
+		"description": "Nick Fury (Samuel L. Jackson), az Ügynökség vezetője új fenyegetést észlel. Az ellenfél minden eddiginél nagyobb veszélyt jelent a Földre. Fury a katasztrófa elkerülésére összehívja a szuperhősöket. A toborzás eredményeként hamarosan sohasem látott szupercsapat néz farkasszemet az ellenséggel. Vasember (Robert Downey Jr.), Amerika kapitány (Chris Evans), a Fekete Özvegy (Scarlett Johansson) és a többiek indulnak harcba, hogy megakadályozzák bolygónk pusztulását. Bruce Banner (Mark Ruffalo) megfékezhetetlen alteregója, Hulk azonban kis híján mindent szétrombol.",
+		"category": "Marvel",
+		"filename": "avengers.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "ironman3.jpg",
+		"title": "Iron Man 3",
+		"description": "A legutóbbi küldetése után Tony Stark talonba tette a Vasembert. A tudós-szuperhős boldogan él egykori asszisztensével, ám álmatlanságban szenved, és pánikrohamok gyötrik. Amikor merényletek sora rázza meg a várost, Stark úgy dönt, hogy felveszi a (vas)kesztyűt, és szembeszáll a titokzatos ellenséggel. A Vasemberen végzett legújabb fejlesztése azonban még nem tökéletes, ráadásul felbukkan néhány korábbi ismerőse is. Az ösztönei és a találékonysága segítségével talán sikerül felülemelkedni a nehézségeken.",
+		"category": "Marvel",
+		"filename": "ironman3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "thor2.jpg",
+		"title": "Thor: The Dark World",
+		"description": "Amikor a Föld és a Kilenc Birodalom világa fedésbe kerül, megnyílnak a bolygók közötti dimenziókapuk. Ezt kihasználva akar mindent elpusztítani Malekith, a sötét elf, hogy visszataszítsa az univerzumot a teremtés előtti sötétségbe. Még Odin és Asgard sem tud szembeszállni azzal az ellenséggel, akivel Thornak szembe kell néznie. Veszélyes küldetése során újra találkozik szerelmével, az atomfizikus Jane Fosterrel, és ki kell szabadítania a börtönben sínylődő Lokit, hogy a segítségével visszaállítsa az univerzum rendjét.",
+		"category": "Marvel",
+		"filename": "thor2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "captainamerica2.jpg",
+		"title": "Captain America: The Winter Soldier",
+		"description": "Két évvel a New Yorkért folytatott csata után Amerika kapitány, azaz Steve Rogers Washingtonban él, és próbál alkalmazkodni a modern világ kihívásaihoz. Amikor azonban a S.H.I.E.L.D. egyik munkatársát megtámadják, a világot fenyegető összeesküvés közepén találja magát. Szövetségesével, a Fekete Özveggyel együtt ered az igazság nyomába, miközben bérgyilkosok hada próbálja elkapni őket. Hamarosan csatlakozik hozzájuk Sólyom is, ám így is minden erejükre szükség lesz, hogy leszámoljanak ellenfelükkel.",
+		"category": "Marvel",
+		"filename": "captainamerica2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "guardians.jpg",
+		"title": "Guardians of the Galaxy",
+		"description": "A kalandor Peter Quill ellopja a titokzatos gömböt, amelyre a bolygóközi uralomra törő Ronan is pályázik. A főgonosz ezért hajtóvadászatot indít utána. Menekülés közben Quill kényszerű szövetséget köt négy különös alakkal: Rockettel, Groottal, Gamorával és Draxszal. Az állig felfegyverzett mosómedve, az élő fára emlékeztető lény, a veszedelmes bérgyilkosnő és a Pusztító alkotják a Galaxis őrzőit. Quill rájön, hogy a titokzatos gömbnek milyen ereje van, és mekkora veszélyt jelent az univerzumra nézve.",
+		"category": "Marvel",
+		"filename": "guardians.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "guardians2.jpg",
+		"title": "Guardians of the Galaxy Vol. 2",
+		"description": "Miközben szól a Király Válogatáskazi #2, a Marvel produkciójában készült A galaxis őrzői vol. 2.-ben folytatódnak a csapat kalandjai, melyek a kozmosz távolabbi szegleteibe vezetik őket. Az őrzőknek sokat kell tenniük azért, hogy összetartsák újdonsült családjukat, miközben kiderítenek egyet s mást Peter Quill igazi szüleiről is.",
+		"category": "Marvel",
+		"filename": "guardians2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "ageofultron.jpg",
+		"title": "Avengers: Age of Ultron",
+		"description": "Amikor Tony Stark újra életet akar lehelni a parkolópályára állított békefenntartó programba, nem minden sikerül a tervei szerint. A Föld legnagyobb hőseinek, vagyis Vasembernek, Amerika kapitánynak, Thornak, a Hihetetlen Hulknak, a Fekete Özvegynek és Sólyomszemnek ezúttal a legvégső megmérettetésen kell helytállniuk, mivel a bolygó sorsáról van szó. A rettegett Ultron megjelenésével a Bosszúállókra vár a feladat, hogy megakadályozzák ördögi terve megvalósítását. Az egyedülálló, globális kaland azonban csupán vonakodva megköttetett szövetségek és nem várt események árán teljesedhet ki.",
+		"category": "Marvel",
+		"filename": "ageofultron.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "antman.jpg",
+		"title": "Ant-Man",
+		"description": "A Marvel Moziuniverzum következő epizódjában a nézők megismerkedhetnek az eredeti Bosszúállók egyik alapítójával, aki első alkalommal látható a mozivásznon. A Hangya szuperképessége, hogy rendkívül kis méretűre tud zsugorodni, miközben ereje megsokszorozódik. A Scott Lang polgári névre hallgató, rendkívül sikeres tolvaj sorsa úgy alakul, hogy akarva-akaratlanul hőssé válik, amikor segítenie kell egykori mentorának, Dr. Hank Pymnek. A doktor által tervezett speciális Hangya páncélra gonosz erők vetettek szemet, a két férfinak ezért meg kell akadályozni, hogy a különleges öltözet rossz kezekbe kerüljön. Pymnek és Langnek ezért együtt kell dolgoznia, hogy végrehajtsák a tökéletes rablást és ezzel megmentsék a világot.",
+		"category": "Marvel",
+		"filename": "antman.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "captainamerica3.jpg",
+		"title": "Captain America: Civil War",
+		"description": "Az Amerika kapitány: Polgárháborúban Steve Rogers az újjáalakult Bosszúállók csapatának élén próbál gondoskodni az emberiség biztonságáról. Azonban egy újabb incidens következik be, amelynek nem várt következményei lesznek. A Bosszúállókon egyre nő a politikai nyomás, hogy egy kormányzati szerv irányítsa őket, akiknek be kell számolniuk akcióikról. Az új rend megosztja a Bosszúállókat, a csapat két részre szakad. Az egyik csoport élén Steve Rogers áll, aki úgy véli, a Bosszúállóknak szabadon kellene tevékenykednie, hogy védelmezhessék az emberiséget. A másik frakció élén Tony Star, aki az irányítás és elszámoltathatóság eszméjét támogatja. A nézőknek döntenie kell, hogy melyik tábornak drukkolnak, miközben a háború immár két fronton zajlik.",
+		"category": "Marvel",
+		"filename": "captainamerica3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "homecoming.jpg",
+		"title": "Spider-Man: Homecoming",
+		"description": "Kamaszodni eleve nem könnyű, és Peter nem arról híres, hogy feltalálja magát. Nagyon vicces srác, mégsem tartozik a nagymenők közé. Nappal. Éjszaka azonban övé a nagyváros, és nemcsak utcaszinten. Különleges szerkóban lendül felhőkarcolóról felhőkarcolóra, nem lehet meglépni előle és nem könnyű legyőzni. Eddig legalábbis senkinek sem sikerült.De a Pókember most egészen új ellenségekkel találkozik, és úgy tűnik, még a szokásos humora is kevés lehet hozzá, hogy életben maradjon. Az új bajban új szövetségesek után kell néznie.",
+		"category": "Marvel",
+		"filename": "homecoming.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "doctorstrange.jpg",
+		"title": "Doctor Strange",
+		"description": "A világhírű idegsebész, Dr. Stephen Strange élete tragikus fordulatot vesz egy szörnyű autóbaleset következtében. Miután a kezeit attól kezdve használni képtelen orvosnak a hagyományos gyógymódok nem használnak, valószínűtlen helyen talál segítséget - egy titokzatos himalájai enklávé, a Kamar-Taj az utolsó reménye. Strange hamarosan rádöbben, ez a hely nem pusztán a gyógyításé, hanem a hadviselésé is: láthatatlan, sötét erőket kell visszaverniük, melyek világunk elpusztítására törekszenek. A doktor rövidesen válaszút elé kerül: visszatér régi, vagyonnal és népszerűséggel járó életéhez, vagy hátat fordít múltjának és újonnan szerzett mágikus képességeit latba vetve a világ szolgálatába áll a valaha volt legerősebb mágusként.",
+		"category": "Marvel",
+		"filename": "doctorstrange.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "blackpanther.jpg",
+		"title": "Black Panther",
+		"description": "A Marvel Studios Fekete Párduc című új filmjének hőse T'Challa, aki apja halálát követően hazatér az elszigetelt, ám technológiailag fejlett afrikai országba, Wakanda királyságába, hogy elfoglalja az őt megillető helyet a trónon. Ám mikor egy nagy hatalmú ősi ellenség ismét feltűnik a színen, T'Challa királyként és a Fekete Párducként is próbára tétetik: a félelmetes összecsapás kimenetelén nem pusztán Wakanda, hanem az egész világ sorsa áll. Árulások és veszélyek közepette az ifjú uralkodónak maga mellé kell állítania szövetségeseit és felszínre kell engednie a Fekete Párduc minden erejét, hogy legyőzze ellenfeleit és biztonságban tudhassa népét.",
+		"category": "Marvel",
+		"filename": "blackpanther.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "thor3.jpg",
+		"title": "Thor: Ragnarök",
+		"description": "A Marvel Studios új filmjében Thort pörölyétől megfosztva bebörtönzik az univerzum túlsó felén. Az idővel versenyt futva próbál visszajutni Asgardba, és megállítani a Ragnarököt; egy háborút, ami otthonának pusztulásával és az asgardi civilizáció eltűnésével járhat, és amit egy mindenható új ellenség, a könyörtelen Hela idézett elő. Először azonban túl kell élnie egy halálos gladiátorviadalt, amelyben ellenfele korábbi szövetségese és szintén a Bosszúállók tagja: a hihetetlen Hulk!",
+		"category": "Marvel",
+		"filename": "thor3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "antman2.jpg",
+		"title": "Ant-Man and The Wasp",
+		"description": "A Marvel Studios új filmjében az Amerika Kapitány: Polgárháború eseményeit követően Scott Lang kénytelen viselni döntései következményeit szuperhősként és apaként egyaránt. Próbál egyensúlyozni a magánéletében és a Hangyaként reá nehezedő felelősséggel, ám mikor Hope van Dyne és Dr. Hank Pym felkeresi, újabb küldetésre indul. A Darázs személyében társat is kap, így csapatban derítenek fel súlyos titkokat a múltból.",
+		"category": "Marvel",
+		"filename": "antman2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "blackwidow.jpg",
+		"title": "Black Widow",
+		"description": "A Marvel Studios akciódús kém-thrillerében, a FEKETE ÖZVEGY-ben Natasha Romanoff kénytelen lesz szembenézni múltja sötét epizódjaival, amikor egy veszedelmes összeesküvés hozzá is elér. Nyomában egy életére törő, kérlelhetetlen erővel, Natasha számot kell vessen kémes múltjával és családi kötelékeivel, amiket már jóval azelőtt felbontott, hogy Bosszúálló lett.",
+		"category": "Marvel",
+		"filename": "blackwidow.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "infinity.jpg",
+		"title": "Avengers: Infinity War",
+		"description": "A Marvel mozis univerzumának egészét felölelő, tíz év eseményeinek tetőpontját jelentő Bosszúállók: Végtelen háborúban minden idők legnagyobb és leghalálosabb leszámolására kerül sor. A Bosszúállóknak és szövetségeseiknek mindent kockára kell tenniük, hogy megfékezzék a nagy erejű Thanost, aki egy szemvillanás alatt elpusztíthatja a világot.",
+		"category": "Marvel",
+		"filename": "infinity.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "endgame.jpg",
+		"title": "Avengers: Endgame",
+		"description": "Thanos súlyos tette, amivel elpusztította az univerzum élőlényeinek felét és megtörte a Bosszúállókat, a megmaradt hősöket egy végső összecsapásra készteti a Marvel Studios huszonegy filmet megkoronázó, nagyszabású fináléjában, a Bosszúállók: Végjátékban.",
+		"category": "Marvel",
+		"filename": "endgame.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "shangchi.jpg",
+		"title": "Shang-Chi and the Legend of the Ten Rings",
+		"description": "Shang-Chi azt hitte, végleg lezárta a múltat, ám mikor a Tíz Gyűrű elnevezésű titokzatos szervezet hálójába kerül, kénytelen lesz újra szembenézni vele. A SHANG-CHI ÉS A TÍZ GYŰRŰ LEGENDÁJA címszerepét Simu Liu játssza, partnerei többek között Tony Leung, Awkwafina és Michelle Yeoh.",
+		"category": "Marvel",
+		"filename": "shangchi.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "farfromhome.jpg",
+		"title": "Spider-Man: Far From Home",
+		"description": "Pókember nem pihenhet. Az már kiderült, hogy az ifjú pók (Tom Holland) egyedül is képes megmenteni a világot, és csoportban is megállja a helyét, de közben ő úgy érzi, hogy neki is jár mindaz, ami bármelyik középiskolásnak: és a haverjaival európai utazásra indul. De éppen, amikor végre élvezhetné mindazt, amit a baráti lazulás kínálhat, újabb kihívás elé kell néznie. A rejtélyes Mysterio (Jake Gyllenhaal) miatt új kalandba indul, és könnyen lehet, hogy Pókember, aki nagy nehezen próbálja a hátizsákos utazást a hősi küzdelemmel összehangolni, kénytelen régi Bosszúálló társaitól segítséget kérni.",
+		"category": "Marvel",
+		"filename": "farfromhome.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "nowayhome.jpg",
+		"title": "Spider-Man: No Way Home",
+		"description": "Pókembernek sok és sokféle kalandja volt már, de ilyen még soha. Lekerült róla a maszk, a világ megtudta, kicsoda ő igazából, és most egy egészen új veszéllyel is számolnia kell: a nyilvánossággal. Többé nem tudja, kényelmesen kettéválasztani a magánéletét és a szuperhős-világot. Doktor Strange-hez fordul segítségért, de attól csak még jobban megkavarodik a helyzet.",
+		"category": "Marvel",
+		"filename": "nowayhome.mp4"
+	},
+	{
+		"type": "series",
+		"image": "daredevil.jpg",
+		"title": "Marvel: Daredevil",
+		"description": "Matt Murdock gyermekkorában egy baleset következtében megvakul, de egy vegyszernek köszönhetően a többi érzékszerve emberfelettivé válik és kialakul egy radarérzék is amivel a környezetét \"látja\". Matt Murdock nappal mint ügyvéd, éjjel mint álarcos igazságosztó védi Hell's Kitchen környékét a bűnözőktől.",
+		"category": "Marvel",
+		"seasons": "3",
+		"filename": "daredevil",
+		"episodes": [
+			13,
+			13,
+			13
+		]
+	},
+	{
+		"type": "series",
+		"image": "loki.jpg",
+		"title": "Marvel: Loki",
+		"description": "Miután Loki ellopta a Tesseractot, őrizetbe veszi egy szervezet, ami az időt felügyeli. Segítségével egy hosszú időutazásra indulnak, amely folyamán megváltoztatja az emberek történelmét, és emiatt hatalmas kalamajkába kerül.",
+		"category": "Marvel",
+		"seasons": "1",
+		"filename": "loki",
+		"episodes": [
+			6
+		]
 	}
 ]

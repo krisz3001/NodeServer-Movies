@@ -20,7 +20,7 @@
       }
       .profile-pic:hover{
         border-color: white!important;
-        background-image: url('/assets/kokut.gif')!important;
+        background-image: url('/assets/profile_pictures/kokut.gif')!important;
         background-size: cover;
       }
       #edit:hover{
@@ -53,9 +53,9 @@
         <h1 class="text-center my-5">Who's watching?</h1>
         <div class="col-sm-3 col-6 bg-dark p d-flex">
             <a class="m-auto profile d-flex" onclick="setProfile(0)">
-                <div class="profile-pic border border-secondary btn p-0" style="background-image: url('/assets/<%= profiles[0].image %>')">
+                <div class="profile-pic border border-secondary btn p-0" style="background-image: url('/assets/profile_pictures/<%= profiles[0].image %>')">
                     <div class="d-none edit-div w-100 h-100 rounded d-flex" style="background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center;">
-                        <div style="width: 50px; height: 50px; background: transparent url('/assets/edit.png') center/contain no-repeat;"></div>
+                        <div style="width: 50px; height: 50px; background: transparent url('/assets/controllers/edit.png') center/contain no-repeat;"></div>
                     </div>
                 </div>
                 <h4 class="text-secondary p-name"><%= profiles[0].name %></h4>
@@ -63,9 +63,9 @@
         </div>
         <div class="col-sm-3 col-6 bg-dark p d-flex">
             <a class="m-auto profile d-flex" onclick="setProfile(1)">
-                <div class="profile-pic border border-secondary btn p-0" style="background-image: url('/assets/<%= profiles[1].image %>')">
+                <div class="profile-pic border border-secondary btn p-0" style="background-image: url('/assets/profile_pictures/<%= profiles[1].image %>')">
                     <div class="d-none edit-div w-100 h-100 rounded d-flex" style="background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center;">
-                        <div style="width: 50px; height: 50px; background: transparent url('/assets/edit.png') center/contain no-repeat;"></div>
+                        <div style="width: 50px; height: 50px; background: transparent url('/assets/controllers/edit.png') center/contain no-repeat;"></div>
                     </div>
                 </div>
                 <h4 class="text-secondary p-name"><%= profiles[1].name %></h4>
@@ -73,9 +73,9 @@
         </div>
         <div class="col-sm-3 col-6 bg-dark p d-flex">
             <a class="m-auto profile d-flex" onclick="setProfile(2)">
-                <div class="profile-pic border border-secondary btn p-0" style="background-image: url('/assets/<%= profiles[2].image %>')">
+                <div class="profile-pic border border-secondary btn p-0" style="background-image: url('/assets/profile_pictures/<%= profiles[2].image %>')">
                     <div class="d-none edit-div w-100 h-100 rounded d-flex" style="background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center;">
-                        <div style="width: 50px; height: 50px; background: transparent url('/assets/edit.png') center/contain no-repeat;"></div>
+                        <div style="width: 50px; height: 50px; background: transparent url('/assets/controllers/edit.png') center/contain no-repeat;"></div>
                     </div>
                 </div>
                 <h4 class="text-secondary p-name"><%= profiles[2].name %></h4>
@@ -83,9 +83,9 @@
         </div>
         <div class="col-sm-3 col-6 bg-dark p d-flex">
             <a class="m-auto profile d-flex" onclick="setProfile(3)">
-                <div class="profile-pic border border-secondary btn p-0" style="background-image: url('/assets/<%= profiles[3].image %>')">
+                <div class="profile-pic border border-secondary btn p-0" style="background-image: url('/assets/profile_pictures/<%= profiles[3].image %>')">
                     <div class="d-none edit-div w-100 h-100 rounded d-flex" style="background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center;">
-                        <div style="width: 50px; height: 50px; background: transparent url('/assets/edit.png') center/contain no-repeat;"></div>
+                        <div style="width: 50px; height: 50px; background: transparent url('/assets/controllers/edit.png') center/contain no-repeat;"></div>
                     </div>
                 </div>
                 <h4 class="text-secondary p-name"><%= profiles[3].name %></h4>
@@ -125,6 +125,6 @@
 	  </div>
 	</div>
   </div>
-  <script src="/assets/script.js"></script>
+  <script src="/assets/js/script.js"></script>
 </body>
 </html>

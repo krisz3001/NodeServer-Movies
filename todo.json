@@ -28,10 +28,6 @@
 		"completed": true
 	},
 	{
-		"todo": "Watch2gether!",
-		"completed": false
-	},
-	{
 		"todo": "Kód cleanup",
 		"completed": false
 	},
@@ -93,7 +89,7 @@
 	},
 	{
 		"todo": "Delete újraírása",
-		"completed": false
+		"completed": true
 	},
 	{
 		"todo": "Undo, redo újraírása",
@@ -141,7 +137,7 @@
 	},
 	{
 		"todo": "Esetenkénti NaN duration okának kiderítése",
-		"completed": false
+		"completed": true
 	},
 	{
 		"todo": "Az egész adatbázis átírása SQL-re",
@@ -153,6 +149,18 @@
 	},
 	{
 		"todo": "Új kategória felvétele",
+		"completed": true
+	},
+	{
+		"todo": "Saját listám",
+		"completed": false
+	},
+	{
+		"todo": "Nézd tovább",
+		"completed": false
+	},
+	{
+		"todo": "subtitles",
 		"completed": false
 	}
 ]

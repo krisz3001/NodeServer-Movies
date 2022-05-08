@@ -1,0 +1,121 @@
+#items{
+    margin-top: 70px;
+    margin-bottom: 300px;
+}
+.item{
+    transition: all 0.5s ease;
+    transition-delay: 0s;
+}
+.item-info{
+    position: absolute;
+    height: auto;
+    max-height: 0;
+    padding: 0!important;
+    border: none!important;
+    overflow: hidden;
+    transition: max-height 0s ease 0s, padding 0s step-end 0s;
+}
+.item .img_show{
+    aspect-ratio: 1200/675;
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+.item:hover{
+    transform: scale(1.2);
+    transition-delay: 0.5s;
+}
+.item:hover > .item-info {
+    transition: max-height 0.5s ease 0.5s, padding 0s step-end 0.5s, border 0s step-end 0.5s;
+    padding: .5rem!important;
+    border: 1px solid #6c757d!important;
+    max-height: 300px;
+    position: absolute;
+    cursor: default;
+    overflow: hidden;
+}
+.item:hover > .delete_img {
+    display: block!important;
+    position: absolute;
+    cursor: pointer;
+}
+.item:hover > .img_show{
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+#profile{
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1/1;
+    transition: .15s ease-in-out;
+}
+#profile:hover{
+    border-color: white!important;
+    cursor: pointer;
+}
+.item:hover .pbar{
+    display: none;
+}
+.tooltip-inner{
+    background-color: #dc3545;
+    box-shadow: 0px 0px 4px black;
+}
+.tooltip-arrow::before{
+    border-bottom-color: #dc3545!important;
+}
+.scrolled-down{
+    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+    transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+.desc{
+    font-size: small;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.play{
+    background-image: url('/assets/controllers/play.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    padding: 0;
+}
+.details{
+    background-image: url('/assets/controllers/details.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    padding: 0;
+}
+.details:hover{
+    background-color: #42464b;
+    cursor: pointer;
+}
+.play:hover{
+    border: 1px solid white!important;
+    background-color: #6c757d;
+    cursor: pointer;
+}
+.episodePlayBtn{
+    opacity: 0!important;
+    transition: opacity 0.3s ease;
+}
+.episode:hover .episodePlayBtn{
+    cursor: pointer;
+    opacity: 1!important;
+}
+.episode:hover{
+    cursor: pointer;
+}
+#todo li:hover{
+    text-decoration: line-through;
+    cursor: pointer;
+}
