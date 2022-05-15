@@ -81,7 +81,7 @@
 	},
 	{
 		"todo": "Hol a TLOTR???",
-		"completed": false
+		"completed": true
 	},
 	{
 		"todo": "a random lehessen konyebben ujraporgetheto",
@@ -113,7 +113,7 @@
 	},
 	{
 		"todo": "Admin oldal",
-		"completed": false
+		"completed": true
 	},
 	{
 		"todo": "GUI elrendezés módosításra vagy valami eszköz hozzá",
@@ -161,6 +161,14 @@
 	},
 	{
 		"todo": "subtitles",
+		"completed": true
+	},
+	{
+		"todo": "kereső",
+		"completed": false
+	},
+	{
+		"todo": "Új epizód hozzáadása esetén db frissítése okosba",
 		"completed": false
 	}
 ]

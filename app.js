@@ -1,10 +1,8 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
-var bodyParser = require('body-parser');
 var fileupload = require('express-fileupload');
-const { getVideoDurationInSeconds } = require('get-video-duration');
-const { use } = require('express/lib/application');
+const getVideoDurationInSeconds = require('get-video-duration');
 let ip
 
 //Launch time
@@ -19,7 +17,7 @@ const backup_path = `${__dirname}/backup.json`
 const backup_redo_path = `${__dirname}/backup_redo.json`
 const logDir_path = `${__dirname}/logs/`
 const log_path = `${__dirname}/logs/${launchTime}_log.txt`
-const br_path = `${__dirname}/br.json`
+const bait_path = `${__dirname}/bait.json`
 const mediaDir_path = `/media/`
 const assetsDir_path = `${__dirname}/assets/`
 const todo_path = `${__dirname}/todo.json`
@@ -28,7 +26,7 @@ const durations_path = `${__dirname}/durations.json`
 const accountsDir_path = `${__dirname}/accounts/`
 const categories_path = `${__dirname}/categories.json`
 const secret = 'kecske'
-const secret2 = 'Nikoletta'
+const secret2 = 'Mhjnkdssz'
 saveLog(sessionStart)
 
 //Get time
@@ -70,7 +68,6 @@ function readUsers(){
 
 app.set('view engine', 'ejs');
 app.use(fileupload())
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 //Reading todo.json
 function readTodo(){
@@ -82,6 +79,18 @@ function readTodo(){
     saveLog('todo.json file created.')
   }
   return db
+}
+
+//Reading bait counter
+function readBait(){
+  let bait = {"count": 0}
+  try {
+    bait = JSON.parse(fs.readFileSync(bait_path))
+  } catch (error) {
+    fs.writeFileSync(bait_path, JSON.stringify(bait, null, '\t'))
+    saveLog('bait.json file created.')
+  }
+  return bait
 }
 
 //Reading db.json
@@ -203,18 +212,13 @@ function profileAssigned(req){
   else return false
 }
 
-//Battle Royale
-app.post('/br', urlencodedParser, function(req, res) {
+//Bait counter
+app.post('/bait', function(req, res) {
   if(isRegistered(req)){
-    let txt
-    try {
-      txt = {"count":JSON.parse(fs.readFileSync(br_path)).count+1}
-    } catch (error) {
-      txt = {"count":1}
-      fs.writeFileSync(br_path, JSON.stringify(txt, null, '\t'))
-    }
-    fs.writeFileSync(br_path, JSON.stringify(txt, null, '\t'))
-    res.send(txt)
+    let bait = readBait()
+    bait.count++
+    fs.writeFileSync(bait_path, JSON.stringify(bait, null, '\t'))
+    res.send(bait)
     ip = getIP(req.ip.substring(7))
     saveLog(ip + " baited.")
   } 
@@ -261,7 +265,7 @@ app.post('/upload', function(req,res){
     let img = 'placeholder.jpg'
     if(req.files){
       img = req.files.image.name
-      fs.writeFileSync(assetsDir_path + img, req.files.image.data, function(err){
+      fs.writeFileSync(assetsDir_path + 'covers/' + img, req.files.image.data, function(err){
         if(err) throw err
       })
       saveLog(`${img} downloaded.`)
@@ -334,7 +338,7 @@ app.post('/editprofile', function(req, res){
     let img = profiles[req.body.id].image
     if(req.files){
       img = req.files.image.name
-      fs.writeFileSync(assetsDir_path + img, req.files.image.data, function(err){
+      fs.writeFileSync(assetsDir_path + 'profile_pictures/' + img, req.files.image.data, function(err){
         if(err) throw err
       })
       saveLog(`${img} downloaded.`)
@@ -520,6 +524,9 @@ app.post('/login', function(req, res){
     res.send('lololol')
     saveLog(`${ip} wanted to abandon ship.`)
   }
+  else if(username == undefined){
+    res.sendStatus(200)
+  }
   else{
     saveLog(`${ip} is trying to log in with username: "${username}", password: "${pass}".`)
     res.send('loginerror')
@@ -640,7 +647,7 @@ app.get('*', function(req, res){
     else if(req.url === '/'){
       service = '/home'
       let profiles = readProfiles()[getProfile(req)]
-      res.render('home', {"id": getProfile(req), "name": profiles.name, "image": profiles.image})
+      res.render('home', {"id": getProfile(req), "name": profiles.name, "image": profiles.image, "rank": readAccounts()[readUsers().find(x=>x.ip === ip).account].rank})
     }
     else if(req.url === '/profile'){
       service = req.url
@@ -733,7 +740,23 @@ app.get('*', function(req, res){
     }
     else if(req.url === '/favicon.ico'){
       service = ''
-      res.sendFile(__dirname + '/assets/favicon.png')
+      res.sendFile(__dirname + '/assets/controllers/favicon.png')
+    }
+    else if(req.url === '/admin' && readAccounts()[readUsers().find(x=>x.ip === ip).account].rank === 1){
+      service = req.url
+      let profiles = readProfiles()[getProfile(req)]
+      let db = readDB()
+      let durations = readDurations()
+      let sum = 0
+      durations.forEach(x=>{
+        if(x.episode_progress == undefined) sum += x.duration*1
+        else{
+          x.episode_progress.forEach(y=>{
+            sum += y.duration*1
+          })
+        }
+      })
+      res.render('admin', {"id": getProfile(req), "name": profiles.name, "image": profiles.image, "rank": readAccounts()[readUsers().find(x=>x.ip === ip).account].rank, "registered": readAccounts().length, "shows": db.length,"movies_count": db.filter(x=>x.type==='movie').length, "series_count": db.filter(x=>x.type==='series').length, "bait_count": readBait().count,"duration_sum": `${Math.floor(sum/60/60)} ${Math.floor(sum/60 % 60)} ${Math.floor(sum % 60)}`})
     }
     else{
       service = `/404 (${req.url})`
@@ -748,12 +771,12 @@ app.get('*', function(req, res){
     res.render('profiles', {"profiles": readProfiles()})
   }
   else if(isRegistered(req) && !profileAssigned(req) && req.url === '/favicon.ico'){
-    res.sendFile(__dirname + '/assets/favicon.png')
+    res.sendFile(__dirname + '/assets/controllers/favicon.png')
   }
   else{
     if(req.url === '/favicon.ico'){
       service = ''
-      res.sendFile(__dirname + '/assets/login.png')
+      res.sendFile(__dirname + '/assets/controllers/login.png')
     }
     else{
       service = req.url

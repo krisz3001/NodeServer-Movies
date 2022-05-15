@@ -9,7 +9,7 @@
 	<link rel="icon" href="/favicon.ico">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body class="bg-dark text-white" onload="getID('<%= id %>'); refresh(); refreshTodo(0)">
+<body class="bg-dark text-white" onload="getID('<%= id %>'); refresh(); refreshTodo()">
 	<nav class="autohide navbar navbar-expand-md bg-black navbar-dark sticky fixed-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="/">Netflix Prime +</a>
@@ -35,7 +35,7 @@
 							value="To-Do">
 					</li>
 					<li class="nav-item m-2">
-			<button class="btn btn-danger disabled" onclick="deleteMode()" style="max-height: 38px; overflow: hidden;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Show or hide delete buttons">Delete mode</button>
+			<button class="btn btn-success" onclick="consolidate()" style="max-height: 38px; overflow: hidden;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Display without categories">Consolidate</button>
 		  </li>
 		  <!-- <li class="nav-item m-2">
 			<button class="btn btn-danger me-2 disabled" onclick="undo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Undo the very last change" style="background-image: url('/assets/controllers/undo.png'); height: 38px; width: 38px; background-size: contain; background-repeat: no-repeat; background-position: center;"></button>
@@ -44,8 +44,15 @@
 					<li class="nav-item m-2">
 						<button class="btn btn-success" onclick="randomMovie()">Random movie</button>
 					</li>
-					<li class="nav-item d-none m-2" id="br_count"></li>
+					<% 
+					if(rank == 1){ %>
+						<li class="nav-item m-2">
+							<a class="btn btn-primary" href="/admin">Admin</a>
+						</li>
+					<% } %>
+					<li class="nav-item d-none m-2" id="bait_count"></li>
 				</ul>
+				<div class="m-2" style="width: 30px; height: 30px; background-repeat: no-repeat; background-image: url('/assets/controllers/search.png'); background-size: contain; cursor: pointer;" onclick="alert('Work in progress')"></div>
 				<p class="m-2">
 					<%= name %>
 				</p>
@@ -61,7 +68,7 @@
 	</div> -->
 	<div class="row mx-5" id="items"></div>
 	<div class="w-100 bg-black d-flex justify-content-center align-items-center d-none" id="footer" style="height: 100px;">
-		<p class="m-0 text-center text-secondary">Notflex Prime +<br>Version 3.8.Hudson</p>
+		<p class="m-0 text-center text-secondary">Netflix Prime +<br>Version 3.8.Hudson</p>
 	</div>
 	<div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">

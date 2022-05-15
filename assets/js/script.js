@@ -26,8 +26,8 @@ function newOption(value){
 }
 function refresh(){
     let items = document.getElementById('items')
+    items.classList.remove('pt-5')
     document.getElementById('footer').classList.add('d-none')
-    items.innerHTML = ''
     let categories = []
     fetch('/categories')
     .then(res => res.json())
@@ -38,6 +38,7 @@ function refresh(){
         fetch('/db.json')
         .then(res => res.json())
         .then(r => {
+            items.innerHTML = ''
             for (let j = 0; j < categories.length; j++) {
                 items.innerHTML += `<h1 class="mb-2 mt-5 p-0">${categories[j]}</h1>`
                 for (let i = 0; i < r.length; i++) {
@@ -62,6 +63,35 @@ function refresh(){
         })
     })
 }
+function hide(){
+    document.getElementById('items').innerHTML = ''
+}
+function consolidate(){
+    fetch('/db.json')
+        .then(res => res.json())
+        .then(r => {
+            items.innerHTML = ''
+            items.classList.add('pt-5')
+            for (let i = 0; i < r.length; i++) {
+                if(r[i].type === 'series'){
+                    let current = Math.round(r[i].episode_progress.find(x=>x.filename == r[i].progress).current/60)
+                    let duration = Math.round(r[i].episode_progress.find(x=>x.filename == r[i].progress).duration/60)
+                    let dir = `${r[i].episode_progress[0].filename.split('_')[0]}`
+                    let w = (r[i].episode_progress.find(x=>x.filename == r[i].progress).current/r[i].episode_progress.find(x=>x.filename == r[i].progress).duration)*100
+                    items.innerHTML += newSeries(r[i].image, r[i].title, r[i].description, i, w, r[i].progress.split('_')[1], r[i].progress.split('_')[2].split('.')[0], dir, current, duration, r[i].seasons, r[i].episodes, r[i].filename)
+                    document.getElementById(`fullbar${i}`).style.width = !(w>0) ? '0%' : '100%'
+                }
+                else{
+                    let w = (r[i].current/r[i].duration)*100
+                    let current = Math.round(r[i].current/60)
+                    let duration = Math.round(r[i].duration/60)
+                    items.innerHTML += newMovie(r[i].image,r[i].title,r[i].description, i, w, current, duration, r[i].filename)
+                    document.getElementById(`fullbar${i}`).style.width = !(w>0) ? '0%' : '100%'
+                }
+            }
+            document.getElementById('footer').classList.remove('d-none')
+        })
+}
 function refreshList(){
     let filenameSelect = document.getElementById('filenameSelect')
     fetch('/list')
@@ -84,11 +114,11 @@ function refreshCategoryList(){
         }
     })
 }
-function br(){
-      fetch("/br", {method: 'POST', redirect: 'follow'})
+function bait(){
+      fetch("/bait", {method: 'POST', redirect: 'follow'})
         .then(response => response.json())
         .then(r => {
-            let a = document.getElementById('br_count')
+            let a = document.getElementById('bait_count')
             a.innerHTML = `Bait count: ${r.count}`
             a.style = 'display: block!important'
         })
@@ -282,7 +312,7 @@ function deleteMode(){
     }
 }
 let toggleCompleted = 0
-function refreshTodo(c){
+function refreshTodo(){
     fetch('/todo')
     .then(res => res.json())
     .then(r => {

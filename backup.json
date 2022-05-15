@@ -1,13 +1,5 @@
 [
 	{
-		"type": "movie",
-		"image": "kingsman2.jpg",
-		"title": "Kingsman: The Golden Circle",
-		"description": "Ha a világot valami rettenetes baj, világuralomra törő főgonosz vagy más efféle rémség fenyegeti, akkor sem kell félnünk: van szakember, aki megállítja a gonoszságot. A Kingsman közelharcra és rejtvényfejtésre egyaránt tökéletesen kiképzett, úriember ügynökei majdnem mindig tudják, mi a teendő. De néha a \"majdnem mindig\" is kevés. Az új ellenség (Julianne Moore) természetesen világuralomra tör, valószínűleg őrült, és biztosan lángész: sikeresen csapdába csalja a Kingsman-csapatot, és felrobbantja a központjukat. Csak az újonc Töki (Taron Egerton) és kiképzője, Merlin (Mark Strong) ússza meg a támadást: ők Amerikába menekülnek, ahol a szervezetükhöz hasonló, helyi cég, a Statesman egy embere (Halle Berry) várja őket. Együtt vágnak neki, eddigi legkeményebb, legveszélyesebb feladatuk leküzdésének.",
-		"category": "Kingsman",
-		"filename": "kingsman2.mp4"
-	},
-	{
 		"type": "series",
 		"image": "mandalorian.jpg",
 		"title": "The Mandalorian",
@@ -89,23 +81,11 @@
 		"filename": "fuckyougoethe2.mp4"
 	},
 	{
-		"type": "series",
-		"image": "peakyblinders.jpg",
-		"title": "Peaky Blinders",
-		"description": "A múlt század eleji Birminghamben játszódik ez a nagy ívű brit gengsztersorozat, amely egy bűnbanda félelmet nem ismerő vezére, Thomas Shelby (Cillian Murphy) ambícióinak köszönhető gyors feltöréséről szól. A bűnszervezet magára irányítja a Belfastból érkezett Chester Campbell főfelügyelő (Sam Neill) figyelmét, akit maga Winston Churchill nevezett ki a helyi rendőrség élére. Kettejük háborúja az egész várost vérbe borítja. Thomas Shelby, a világháborúból megtért veterán különös ismertetőjellel ellátott bandája élén illegális fogadásokból és seftelésből szerzi minimális betevőjét, aztán mikor véletlenül hozzákerül egy helyi gyárból ellopott fegyverszállítmány, akkor nem csupán a gyors felemelkedés lehetősége villan fel előtte, de Chester Campbell felügyelő figyelmét is magára vonja, akit maga Winston Churchill hozatott át Írországból, hogy szerezze vissza az ellopott fegyvereket. Thomas nagynénje, Polly azt tanácsolja a fiúnak, hogy szolgáltassa vissza a fegyvereket, de a kísértés túl nagy. A fiatal bandavezérnek a bátyjával, Arthurral is meggyűlik a baja, aki nem szívesen hagyná ki a lóversenypálya tulajdonosát, Billy Kimbert a helyei versenyek megbundázásából. Thomas húga, Ada szerelmes Freddie Thorne-ba, aki megmentette Thomas életét a háborúban, és jelenleg marxista elveket vallva arra buzdítja a munkásokat, hogy követeljenek maguknak magasabb béreket. Campbell szemében ő legalább akkora veszélyt jelent, mint Thomas és bandája.",
-		"category": "Uncategorized",
-		"seasons": "1",
-		"filename": "peakyblinders",
-		"episodes": [
-			6
-		]
-	},
-	{
 		"type": "movie",
 		"image": "captainamerica.jpg",
 		"title": "Captain America: The First Avenger",
 		"description": "Javában dúl a második világháború 1941-ben. A lelkes és mindenre elszánt ifjú, Steve Rogers is jelentkezik a hadseregbe, ám a gyenge fizikuma miatt kiszuperálják a sorozáson. Ezért örömmel jelentkezik a titkos katonai kísérleti programba, az Újjászületés nevet viselő projektbe, melynek keretében szuperkatonát csinálnak belőle. Az izomkolosszussá fejlődött Amerika kapitány feladata megállítani a nácik titkos tudománmyos részlegét, a Hydrát, melyet a világuralmi törekvéseket dédelgető, rettegett Vörös Koponya vezet.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "captainamerica.mp4"
 	},
 	{
@@ -113,7 +93,7 @@
 		"image": "captainmarvel.jpg",
 		"title": "Captain Marvel",
 		"description": "A Marvel Studios az 1990-es években játszódó filmje, a Marvel Kapitány egy teljesen új kaland a Marvel mozis univerzumának eddig nem ismert periódusából, amely Carol Danverst követi nyomon. Mikor egy két idegen faj közötti galaktikus háború eléri a Földet, Danvers néhány szövetségessel együtt az események forgatagában találja magát, s hamarosan a világegyetem egyik legerősebb hősévé válik.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "captainmarvel.mp4"
 	},
 	{
@@ -121,7 +101,7 @@
 		"image": "ironman.jpg",
 		"title": "Iron Man",
 		"description": "Tony Stark, a zseniális feltaláló és különc milliárdos éppen legújabb szuperfegyverét mutatja be, amikor a csoportot támadás éri és Tony mellkasába vasszilánk fúródik, mely lassan halad a szíve felé. Ráadásul foglyul ejtik és azt követelik tőle, hogy építsen meg egy minden eddiginél pusztítóbb fegyvert. Tony meg is építi, azonban egy olyan páncélöltözet formájában, amely segítségére lehet a szökésben és távol tartja a vasszilánkot a szívétől. Így születik meg a legendás Vasember.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "ironman.mp4"
 	},
 	{
@@ -129,7 +109,7 @@
 		"image": "ironman2.jpg",
 		"title": "Iron Man 2",
 		"description": "Kiderült, hogy a szuperhős Vasember valójában Tony Stark. Kihasználva az iránta való érdeklődést a milliárdos feltaláló fel akarja hívni a figyelmet a közjó szolgálatába állítható technikai újdonságokra. A kormány azonban azt szeretné, ha fejlesztéseit a hadsereg kapná. Tony azonban nem akarja megosztani a Vasemberrel kapcsolatos információit, attól fél, hogy azok rossz kezekbe kerülnek. Közben felbukkan egy rejtélyes figura a Stark család múltjából. Ivan Vanko a saját fegyverével akarja elpusztítani a Vasembert. A szuperhős kénytelen újra akcióba lépni, hogy a barátai segítségével legyőzze azokat az erőket, amelyek őt és az emberiséget fenyegetik.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "ironman2.mp4"
 	},
 	{
@@ -137,7 +117,7 @@
 		"image": "hulk.jpg",
 		"title": "The Incredible Hulk",
 		"description": "Bruce Banner, a tudós kétségbeesetten keresi a gyógymódot arra a gamma-sugárzásra, amely megmérgezte a sejtjeit, és egy fékezhetetlen haragú erőt szabadít fel benne: a Hulkot. Banner kénytelen az árnyékba húzódni, bujkálni, elszakadni attól az élettől, amit ismert, és attól a nőtől, akit szeretett, miközben menekül az őt üldöző \"Villám\" Ross tábornok és a hadigépezet elől, akik azért üldözik, hogy elkapják, és erejét brutálisan kihasználják. Emellett azonban feltűnik a színen egy új, szörnyű ellenfél, a Förtelem, akinek pusztító ereje még Hulkét is felülmúlja. Hősünknek tehát döntenie kell: vagy elfogadja a tudós békés életét, vagy felfedezi a hőst abban a lényben, aki benne lakozik.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "hulk.mp4"
 	},
 	{
@@ -145,7 +125,7 @@
 		"image": "thor.jpg",
 		"title": "Thor",
 		"description": "A hatalmas Thor rettenthetetlen harcos, óriási pörölyéről legendákat mesélnek. A csatában vitéz és legyőzhetetlen, ám makacssága és hirtelen haragú természete nem teszi őt alkalmassá arra, hogy apját kövesse Ashgar trónján. Képtelen lenne megfontoltan irányítani birodalmát. Thor meggondolatlan tette miatt újra fellángol egy régi háború. Büntetésül a Földre száműzik, ahol kénytelen az emberek között élni. Amikor a világából érkező gonosz le akarja igázni a Földet, Thornak el kell döntenie, melyik oldalra áll.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "thor.mp4"
 	},
 	{
@@ -153,7 +133,7 @@
 		"image": "avengers.jpg",
 		"title": "The Avengers",
 		"description": "Nick Fury (Samuel L. Jackson), az Ügynökség vezetője új fenyegetést észlel. Az ellenfél minden eddiginél nagyobb veszélyt jelent a Földre. Fury a katasztrófa elkerülésére összehívja a szuperhősöket. A toborzás eredményeként hamarosan sohasem látott szupercsapat néz farkasszemet az ellenséggel. Vasember (Robert Downey Jr.), Amerika kapitány (Chris Evans), a Fekete Özvegy (Scarlett Johansson) és a többiek indulnak harcba, hogy megakadályozzák bolygónk pusztulását. Bruce Banner (Mark Ruffalo) megfékezhetetlen alteregója, Hulk azonban kis híján mindent szétrombol.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "avengers.mp4"
 	},
 	{
@@ -161,7 +141,7 @@
 		"image": "ironman3.jpg",
 		"title": "Iron Man 3",
 		"description": "A legutóbbi küldetése után Tony Stark talonba tette a Vasembert. A tudós-szuperhős boldogan él egykori asszisztensével, ám álmatlanságban szenved, és pánikrohamok gyötrik. Amikor merényletek sora rázza meg a várost, Stark úgy dönt, hogy felveszi a (vas)kesztyűt, és szembeszáll a titokzatos ellenséggel. A Vasemberen végzett legújabb fejlesztése azonban még nem tökéletes, ráadásul felbukkan néhány korábbi ismerőse is. Az ösztönei és a találékonysága segítségével talán sikerül felülemelkedni a nehézségeken.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "ironman3.mp4"
 	},
 	{
@@ -169,7 +149,7 @@
 		"image": "thor2.jpg",
 		"title": "Thor: The Dark World",
 		"description": "Amikor a Föld és a Kilenc Birodalom világa fedésbe kerül, megnyílnak a bolygók közötti dimenziókapuk. Ezt kihasználva akar mindent elpusztítani Malekith, a sötét elf, hogy visszataszítsa az univerzumot a teremtés előtti sötétségbe. Még Odin és Asgard sem tud szembeszállni azzal az ellenséggel, akivel Thornak szembe kell néznie. Veszélyes küldetése során újra találkozik szerelmével, az atomfizikus Jane Fosterrel, és ki kell szabadítania a börtönben sínylődő Lokit, hogy a segítségével visszaállítsa az univerzum rendjét.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "thor2.mp4"
 	},
 	{
@@ -177,7 +157,7 @@
 		"image": "captainamerica2.jpg",
 		"title": "Captain America: The Winter Soldier",
 		"description": "Két évvel a New Yorkért folytatott csata után Amerika kapitány, azaz Steve Rogers Washingtonban él, és próbál alkalmazkodni a modern világ kihívásaihoz. Amikor azonban a S.H.I.E.L.D. egyik munkatársát megtámadják, a világot fenyegető összeesküvés közepén találja magát. Szövetségesével, a Fekete Özveggyel együtt ered az igazság nyomába, miközben bérgyilkosok hada próbálja elkapni őket. Hamarosan csatlakozik hozzájuk Sólyom is, ám így is minden erejükre szükség lesz, hogy leszámoljanak ellenfelükkel.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "captainamerica2.mp4"
 	},
 	{
@@ -185,7 +165,7 @@
 		"image": "guardians.jpg",
 		"title": "Guardians of the Galaxy",
 		"description": "A kalandor Peter Quill ellopja a titokzatos gömböt, amelyre a bolygóközi uralomra törő Ronan is pályázik. A főgonosz ezért hajtóvadászatot indít utána. Menekülés közben Quill kényszerű szövetséget köt négy különös alakkal: Rockettel, Groottal, Gamorával és Draxszal. Az állig felfegyverzett mosómedve, az élő fára emlékeztető lény, a veszedelmes bérgyilkosnő és a Pusztító alkotják a Galaxis őrzőit. Quill rájön, hogy a titokzatos gömbnek milyen ereje van, és mekkora veszélyt jelent az univerzumra nézve.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "guardians.mp4"
 	},
 	{
@@ -193,7 +173,7 @@
 		"image": "guardians2.jpg",
 		"title": "Guardians of the Galaxy Vol. 2",
 		"description": "Miközben szól a Király Válogatáskazi #2, a Marvel produkciójában készült A galaxis őrzői vol. 2.-ben folytatódnak a csapat kalandjai, melyek a kozmosz távolabbi szegleteibe vezetik őket. Az őrzőknek sokat kell tenniük azért, hogy összetartsák újdonsült családjukat, miközben kiderítenek egyet s mást Peter Quill igazi szüleiről is.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "guardians2.mp4"
 	},
 	{
@@ -201,7 +181,7 @@
 		"image": "ageofultron.jpg",
 		"title": "Avengers: Age of Ultron",
 		"description": "Amikor Tony Stark újra életet akar lehelni a parkolópályára állított békefenntartó programba, nem minden sikerül a tervei szerint. A Föld legnagyobb hőseinek, vagyis Vasembernek, Amerika kapitánynak, Thornak, a Hihetetlen Hulknak, a Fekete Özvegynek és Sólyomszemnek ezúttal a legvégső megmérettetésen kell helytállniuk, mivel a bolygó sorsáról van szó. A rettegett Ultron megjelenésével a Bosszúállókra vár a feladat, hogy megakadályozzák ördögi terve megvalósítását. Az egyedülálló, globális kaland azonban csupán vonakodva megköttetett szövetségek és nem várt események árán teljesedhet ki.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "ageofultron.mp4"
 	},
 	{
@@ -209,7 +189,7 @@
 		"image": "antman.jpg",
 		"title": "Ant-Man",
 		"description": "A Marvel Moziuniverzum következő epizódjában a nézők megismerkedhetnek az eredeti Bosszúállók egyik alapítójával, aki első alkalommal látható a mozivásznon. A Hangya szuperképessége, hogy rendkívül kis méretűre tud zsugorodni, miközben ereje megsokszorozódik. A Scott Lang polgári névre hallgató, rendkívül sikeres tolvaj sorsa úgy alakul, hogy akarva-akaratlanul hőssé válik, amikor segítenie kell egykori mentorának, Dr. Hank Pymnek. A doktor által tervezett speciális Hangya páncélra gonosz erők vetettek szemet, a két férfinak ezért meg kell akadályozni, hogy a különleges öltözet rossz kezekbe kerüljön. Pymnek és Langnek ezért együtt kell dolgoznia, hogy végrehajtsák a tökéletes rablást és ezzel megmentsék a világot.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "antman.mp4"
 	},
 	{
@@ -217,7 +197,7 @@
 		"image": "captainamerica3.jpg",
 		"title": "Captain America: Civil War",
 		"description": "Az Amerika kapitány: Polgárháborúban Steve Rogers az újjáalakult Bosszúállók csapatának élén próbál gondoskodni az emberiség biztonságáról. Azonban egy újabb incidens következik be, amelynek nem várt következményei lesznek. A Bosszúállókon egyre nő a politikai nyomás, hogy egy kormányzati szerv irányítsa őket, akiknek be kell számolniuk akcióikról. Az új rend megosztja a Bosszúállókat, a csapat két részre szakad. Az egyik csoport élén Steve Rogers áll, aki úgy véli, a Bosszúállóknak szabadon kellene tevékenykednie, hogy védelmezhessék az emberiséget. A másik frakció élén Tony Star, aki az irányítás és elszámoltathatóság eszméjét támogatja. A nézőknek döntenie kell, hogy melyik tábornak drukkolnak, miközben a háború immár két fronton zajlik.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "captainamerica3.mp4"
 	},
 	{
@@ -225,7 +205,7 @@
 		"image": "homecoming.jpg",
 		"title": "Spider-Man: Homecoming",
 		"description": "Kamaszodni eleve nem könnyű, és Peter nem arról híres, hogy feltalálja magát. Nagyon vicces srác, mégsem tartozik a nagymenők közé. Nappal. Éjszaka azonban övé a nagyváros, és nemcsak utcaszinten. Különleges szerkóban lendül felhőkarcolóról felhőkarcolóra, nem lehet meglépni előle és nem könnyű legyőzni. Eddig legalábbis senkinek sem sikerült.De a Pókember most egészen új ellenségekkel találkozik, és úgy tűnik, még a szokásos humora is kevés lehet hozzá, hogy életben maradjon. Az új bajban új szövetségesek után kell néznie.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "homecoming.mp4"
 	},
 	{
@@ -233,7 +213,7 @@
 		"image": "doctorstrange.jpg",
 		"title": "Doctor Strange",
 		"description": "A világhírű idegsebész, Dr. Stephen Strange élete tragikus fordulatot vesz egy szörnyű autóbaleset következtében. Miután a kezeit attól kezdve használni képtelen orvosnak a hagyományos gyógymódok nem használnak, valószínűtlen helyen talál segítséget - egy titokzatos himalájai enklávé, a Kamar-Taj az utolsó reménye. Strange hamarosan rádöbben, ez a hely nem pusztán a gyógyításé, hanem a hadviselésé is: láthatatlan, sötét erőket kell visszaverniük, melyek világunk elpusztítására törekszenek. A doktor rövidesen válaszút elé kerül: visszatér régi, vagyonnal és népszerűséggel járó életéhez, vagy hátat fordít múltjának és újonnan szerzett mágikus képességeit latba vetve a világ szolgálatába áll a valaha volt legerősebb mágusként.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "doctorstrange.mp4"
 	},
 	{
@@ -241,7 +221,7 @@
 		"image": "blackpanther.jpg",
 		"title": "Black Panther",
 		"description": "A Marvel Studios Fekete Párduc című új filmjének hőse T'Challa, aki apja halálát követően hazatér az elszigetelt, ám technológiailag fejlett afrikai országba, Wakanda királyságába, hogy elfoglalja az őt megillető helyet a trónon. Ám mikor egy nagy hatalmú ősi ellenség ismét feltűnik a színen, T'Challa királyként és a Fekete Párducként is próbára tétetik: a félelmetes összecsapás kimenetelén nem pusztán Wakanda, hanem az egész világ sorsa áll. Árulások és veszélyek közepette az ifjú uralkodónak maga mellé kell állítania szövetségeseit és felszínre kell engednie a Fekete Párduc minden erejét, hogy legyőzze ellenfeleit és biztonságban tudhassa népét.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "blackpanther.mp4"
 	},
 	{
@@ -249,7 +229,7 @@
 		"image": "thor3.jpg",
 		"title": "Thor: Ragnarök",
 		"description": "A Marvel Studios új filmjében Thort pörölyétől megfosztva bebörtönzik az univerzum túlsó felén. Az idővel versenyt futva próbál visszajutni Asgardba, és megállítani a Ragnarököt; egy háborút, ami otthonának pusztulásával és az asgardi civilizáció eltűnésével járhat, és amit egy mindenható új ellenség, a könyörtelen Hela idézett elő. Először azonban túl kell élnie egy halálos gladiátorviadalt, amelyben ellenfele korábbi szövetségese és szintén a Bosszúállók tagja: a hihetetlen Hulk!",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "thor3.mp4"
 	},
 	{
@@ -257,7 +237,7 @@
 		"image": "antman2.jpg",
 		"title": "Ant-Man and The Wasp",
 		"description": "A Marvel Studios új filmjében az Amerika Kapitány: Polgárháború eseményeit követően Scott Lang kénytelen viselni döntései következményeit szuperhősként és apaként egyaránt. Próbál egyensúlyozni a magánéletében és a Hangyaként reá nehezedő felelősséggel, ám mikor Hope van Dyne és Dr. Hank Pym felkeresi, újabb küldetésre indul. A Darázs személyében társat is kap, így csapatban derítenek fel súlyos titkokat a múltból.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "antman2.mp4"
 	},
 	{
@@ -265,7 +245,7 @@
 		"image": "blackwidow.jpg",
 		"title": "Black Widow",
 		"description": "A Marvel Studios akciódús kém-thrillerében, a FEKETE ÖZVEGY-ben Natasha Romanoff kénytelen lesz szembenézni múltja sötét epizódjaival, amikor egy veszedelmes összeesküvés hozzá is elér. Nyomában egy életére törő, kérlelhetetlen erővel, Natasha számot kell vessen kémes múltjával és családi kötelékeivel, amiket már jóval azelőtt felbontott, hogy Bosszúálló lett.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "blackwidow.mp4"
 	},
 	{
@@ -273,7 +253,7 @@
 		"image": "infinity.jpg",
 		"title": "Avengers: Infinity War",
 		"description": "A Marvel mozis univerzumának egészét felölelő, tíz év eseményeinek tetőpontját jelentő Bosszúállók: Végtelen háborúban minden idők legnagyobb és leghalálosabb leszámolására kerül sor. A Bosszúállóknak és szövetségeseiknek mindent kockára kell tenniük, hogy megfékezzék a nagy erejű Thanost, aki egy szemvillanás alatt elpusztíthatja a világot.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "infinity.mp4"
 	},
 	{
@@ -281,7 +261,7 @@
 		"image": "endgame.jpg",
 		"title": "Avengers: Endgame",
 		"description": "Thanos súlyos tette, amivel elpusztította az univerzum élőlényeinek felét és megtörte a Bosszúállókat, a megmaradt hősöket egy végső összecsapásra készteti a Marvel Studios huszonegy filmet megkoronázó, nagyszabású fináléjában, a Bosszúállók: Végjátékban.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "endgame.mp4"
 	},
 	{
@@ -289,7 +269,7 @@
 		"image": "shangchi.jpg",
 		"title": "Shang-Chi and the Legend of the Ten Rings",
 		"description": "Shang-Chi azt hitte, végleg lezárta a múltat, ám mikor a Tíz Gyűrű elnevezésű titokzatos szervezet hálójába kerül, kénytelen lesz újra szembenézni vele. A SHANG-CHI ÉS A TÍZ GYŰRŰ LEGENDÁJA címszerepét Simu Liu játssza, partnerei többek között Tony Leung, Awkwafina és Michelle Yeoh.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "shangchi.mp4"
 	},
 	{
@@ -297,7 +277,7 @@
 		"image": "farfromhome.jpg",
 		"title": "Spider-Man: Far From Home",
 		"description": "Pókember nem pihenhet. Az már kiderült, hogy az ifjú pók (Tom Holland) egyedül is képes megmenteni a világot, és csoportban is megállja a helyét, de közben ő úgy érzi, hogy neki is jár mindaz, ami bármelyik középiskolásnak: és a haverjaival európai utazásra indul. De éppen, amikor végre élvezhetné mindazt, amit a baráti lazulás kínálhat, újabb kihívás elé kell néznie. A rejtélyes Mysterio (Jake Gyllenhaal) miatt új kalandba indul, és könnyen lehet, hogy Pókember, aki nagy nehezen próbálja a hátizsákos utazást a hősi küzdelemmel összehangolni, kénytelen régi Bosszúálló társaitól segítséget kérni.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "farfromhome.mp4"
 	},
 	{
@@ -305,7 +285,7 @@
 		"image": "nowayhome.jpg",
 		"title": "Spider-Man: No Way Home",
 		"description": "Pókembernek sok és sokféle kalandja volt már, de ilyen még soha. Lekerült róla a maszk, a világ megtudta, kicsoda ő igazából, és most egy egészen új veszéllyel is számolnia kell: a nyilvánossággal. Többé nem tudja, kényelmesen kettéválasztani a magánéletét és a szuperhős-világot. Doktor Strange-hez fordul segítségért, de attól csak még jobban megkavarodik a helyzet.",
-		"category": "Marvel",
+		"category": "Marvel Cinematic Universe",
 		"filename": "nowayhome.mp4"
 	},
 	{
@@ -313,7 +293,7 @@
 		"image": "daredevil.jpg",
 		"title": "Marvel: Daredevil",
 		"description": "Matt Murdock gyermekkorában egy baleset következtében megvakul, de egy vegyszernek köszönhetően a többi érzékszerve emberfelettivé válik és kialakul egy radarérzék is amivel a környezetét \"látja\". Matt Murdock nappal mint ügyvéd, éjjel mint álarcos igazságosztó védi Hell's Kitchen környékét a bűnözőktől.",
-		"category": "Marvel",
+		"category": "Marvel Series",
 		"seasons": "3",
 		"filename": "daredevil",
 		"episodes": [
@@ -327,11 +307,296 @@
 		"image": "loki.jpg",
 		"title": "Marvel: Loki",
 		"description": "Miután Loki ellopta a Tesseractot, őrizetbe veszi egy szervezet, ami az időt felügyeli. Segítségével egy hosszú időutazásra indulnak, amely folyamán megváltoztatja az emberek történelmét, és emiatt hatalmas kalamajkába kerül.",
-		"category": "Marvel",
+		"category": "Marvel Series",
 		"seasons": "1",
 		"filename": "loki",
 		"episodes": [
 			6
 		]
+	},
+	{
+		"type": "series",
+		"image": "whatif.jpg",
+		"title": "Marvel: What If...?",
+		"description": "A sorozat bemutatja, hogy mi történne, ha a Marvel-moziuniverzum (MCU) filmjeiből származó főbb pillanatok másként történnének.",
+		"category": "Marvel Series",
+		"seasons": "1",
+		"filename": "whatif",
+		"episodes": [
+			9
+		]
+	},
+	{
+		"type": "movie",
+		"image": "pirates.jpg",
+		"title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+		"description": "A XVII. században a Karib-tenger a kalózok birodalma volt, akik megfélemlítették az angol királyi flottát is. Elizabeth Swannt (Keira Knightley), az angol kormányzó lányát elrabolja a rettegett kalóz, Barbossa kapitány (Geoffrey Rush). A lány gyerekkori barátja és szerelme, Will Turner (Orlando Bloom) Elizabeth megmentésére indul, és ebben szándéka ellenére is a kalózok segítségét kell kérnie. Jack Sparrow, a kalózok vezére (Johnny Depp) felfedi Barbossa és társai titkát. Will és Jack megkísérlik a lehetetlent: megszerezni a Fekete Gyöngyöt, megmenteni a lányt és mellesleg megszerezni a világ legdrágább kincsét.",
+		"category": "Pirates of the Caribbean",
+		"filename": "pirates.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "pirates2.jpg",
+		"title": "Pirates of the Caribbean: Dead Man's Chest",
+		"description": "Jack Sparrow kapitánynak (Johnny Depp) ezúttal is természetfeletti kalózokkal gyűlik meg a baja: kiderül ugyanis, hogy egy régi vérszerződés miatt még mindig adósa a legendás Davy Jonesnak, a Repülő Hollandi nevű szellemhajó kapitányának (Bill Nighy). Jacknek mihamarabb rendeznie kell a tartozását, különben örök átokra és szolgaságra ítéltetik. S ha mindez még nem lenne elég, a kapitány zűrjei miatt meghiúsul Will Turner (Orlando Bloom) és Elizabeth Swann (Keira Knightley) kisasszony esküvője. Ugyanis ők is kénytelenek elkísérni Sparrow-t a nagy kalandra, ami akár életük utolsó útja is lehet.",
+		"category": "Pirates of the Caribbean",
+		"filename": "pirates2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "pirates3.jpg",
+		"title": "Pirates of the Caribbean: At World's End",
+		"description": "Will Turner és Elizabeth Swann kénytelenek szövetségre lépni egykori ellenségükkel, Barbossa kapitánnyal, hogy kiszabadítsák Jack Sparrow kapitányt. Jacket az elátkozott Davy Jones tartja fogva, aki a Kelet-Indiai Társaság irányítása alatt áll, és félelmetes hajójával, a Bolygó Hollandival rettegésben tartja a tengereket. A különös felmentőcsapatnak egészen a világ végéig kell hajóznia, hogy elérje célját. Ezután megpróbálják egyetlen halálfejes lobogó alá tömöríteni a kalózvezéreket. Hiszen csak így vehetik fel a harcot a siker reményében az angol flotta és a szellemkalózok ellen.",
+		"category": "Pirates of the Caribbean",
+		"filename": "pirates3.mp4"
+	},
+	{
+		"type": "series",
+		"image": "peakyblinders.jpg",
+		"title": "Peaky Blinders [CC]",
+		"description": "A múlt század eleji Birminghamben játszódik ez a nagy ívű brit gengsztersorozat, amely egy bűnbanda félelmet nem ismerő vezére, Thomas Shelby (Cillian Murphy) ambícióinak köszönhető gyors feltöréséről szól. A bűnszervezet magára irányítja a Belfastból érkezett Chester Campbell főfelügyelő (Sam Neill) figyelmét, akit maga Winston Churchill nevezett ki a helyi rendőrség élére. Kettejük háborúja az egész várost vérbe borítja. Thomas Shelby, a világháborúból megtért veterán különös ismertetőjellel ellátott bandája élén illegális fogadásokból és seftelésből szerzi minimális betevőjét, aztán mikor véletlenül hozzákerül egy helyi gyárból ellopott fegyverszállítmány, akkor nem csupán a gyors felemelkedés lehetősége villan fel előtte, de Chester Campbell felügyelő figyelmét is magára vonja, akit maga Winston Churchill hozatott át Írországból, hogy szerezze vissza az ellopott fegyvereket. Thomas nagynénje, Polly azt tanácsolja a fiúnak, hogy szolgáltassa vissza a fegyvereket, de a kísértés túl nagy. A fiatal bandavezérnek a bátyjával, Arthurral is meggyűlik a baja, aki nem szívesen hagyná ki a lóversenypálya tulajdonosát, Billy Kimbert a helyei versenyek megbundázásából. Thomas húga, Ada szerelmes Freddie Thorne-ba, aki megmentette Thomas életét a háborúban, és jelenleg marxista elveket vallva arra buzdítja a munkásokat, hogy követeljenek maguknak magasabb béreket. Campbell szemében ő legalább akkora veszélyt jelent, mint Thomas és bandája.",
+		"category": "Uncategorized",
+		"seasons": "6",
+		"filename": "peakyblinders",
+		"episodes": [
+			6,
+			6,
+			6,
+			6,
+			6,
+			6
+		]
+	},
+	{
+		"type": "movie",
+		"image": "pirates4.jpg",
+		"title": "Pirates of the Caribbean: On Stranger Tides",
+		"description": "Johnny Depp ismét Jack Sparrow kapitány bőrébe bújik az akciódús történetben, mely igazságról, cselszövésekről, az ifjúságról és a halálról mesél. Amikor Jack múltjából felbukkan egy nő (Penelope Cruz), elbizonytalanodik, nem tudja, hogy ez igaz szerelem, vagy csak egy szívtelen szélhámos játszik a szívével, felhasználva őt a legendás ifjúság forrása megtalálásához. Angelica kényszeríti, hogy szálljon fel a Queen Anne's Revenge fedélzetére, mely a rettentő Feketeszakáll (Ian McShane) kalóz hajója, így Jack hirtelen egy olyan váratlan kalandba keveredik, ahol nem tudja kitől is kell jobban félnie: Feketeszakálltól vagy a nőtől a múltjából.",
+		"category": "Pirates of the Caribbean",
+		"filename": "pirates4.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "pirates5.jpg",
+		"title": "Pirates of the Caribbean: Dead Men Tell No Tales",
+		"description": "Az újabb elsöprő erejű kalandban a hányatott sorsú Jack Sparrow-t (Johnny Depp) erősen megcsapja a balszerencse szele, mikor a rettentő Salazar kapitány (Javier Bardem) vezette gyilkos szellemkalózok megszöknek az Ördög Háromszögéből. Egyszerű cél vezérli őket: végezni akarnak minden egyes kalózzal – és Jackre különös gondot fordítanának. Sparrow egyetlen reménye Poszeidón legendás szigonyában rejlik, ám erre csak úgy bukkanhat rá, ha kényszerű szövetségre lép Carinával, a ragyogó elméjű és szépségű csillagásszal és az ifjú Henryvel, a királyi flotta nyakas tengerészével.",
+		"category": "Pirates of the Caribbean",
+		"filename": "pirates5.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "kingsman.jpg",
+		"title": "Kingsman: The Secret Service",
+		"description": "Tökit kicsapták az iskolából, munka nélkül tengődik, az anyja lakásában lakik és zűrös életet él. Amikor autólopásért lecsukják, felhívja az apja halála után kapott érmén lévő telefonszámot. Ki is hozza őt a sittről a kifogástalan modorú, angolosan elegáns kém, Harry Hart, akinek annak idején a fiú apja mentette meg az életét. Harry megütközik a srác életmódján, ám lenyűgözi a fiú tehetsége és az intelligenciája, ezért felajánlja neki, hogy jelentkezhet a csapatába, ahol igazi James Bondot faragnak belőle.",
+		"category": "Kingsman",
+		"filename": "kingsman.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "kingsman2.jpg",
+		"title": "Kingsman: The Golden Circle",
+		"description": "Ha a világot valami rettenetes baj, világuralomra törő főgonosz vagy más efféle rémség fenyegeti, akkor sem kell félnünk: van szakember, aki megállítja a gonoszságot. A Kingsman közelharcra és rejtvényfejtésre egyaránt tökéletesen kiképzett, úriember ügynökei majdnem mindig tudják, mi a teendő. De néha a \"majdnem mindig\" is kevés.",
+		"category": "Kingsman",
+		"filename": "kingsman2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "kingsman3.jpg",
+		"title": "The King's Man",
+		"description": "Mikor a történelem legszörnyűbb zsarnokai és bűnöző lángelméi összegyűlnek, hogy háborút kirobbantva emberek milliót tüntessék el a föld színéről, egyetlen férfi képes rá, hogy versenyt kell futva az idővel megállítsa őket. Fedezd fel, miként született a legelső független hírszerző ügynökség a KING'S MAN",
+		"category": "Kingsman",
+		"filename": "kingsman3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "fuckyougoethe3.jpg",
+		"title": "Fák jú, Tanár úr! 3",
+		"description": "Új tanév - új problémák. Zeki Miller pedig megint egy stresszes év elé néz a Göthe középiskolában. A pályaválasztási tanácsadó finoman szólva sem kecsegteti fényes jövővel a káosz osztály egyetlen tagját sem, ezért Chantal, Danger, Burak és Zeynep teljesen letörnek. Mivel csalódottságukban még több bajt kevernek, Zekiből előtör az igazi tanár, és elhatározza, hogy gatyába rázza a srácokat, és átrugdossa őket az érettségin. Vajon Miller tanár úr most milyen újfajta módszereket vet be diákjai megzabolására?",
+		"category": "Fák jú, Tanár úr!",
+		"filename": "fuckyougoethe3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "venom.jpg",
+		"title": "Venom",
+		"description": "Az űrből jön, és csak akkor létezik, ha egy másik lényen élősködhet. Gazdateste Eddie Brock (Tom Hardy) újságíró, de ő maga hidegfejű szadista, aki a világ létét fenyegeti, ám néha mégis kiáll az ártatlanokért. Pókember egyik különleges erejű, veszélyes és kiismerhetetlen ellenfele maga sem tudja, hogy a fény vagy a sötétség oldalán áll-e: különleges betegsége (mely egyben az emberek fölé emeli) néha a jók, néha a gonoszak közé sodorja. Abban az egész Univerzumot megrázó csatában, amely most vár rá, a jóságára és a gonoszságára is szüksége van.",
+		"category": "Marvel",
+		"filename": "venom.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "venom2.jpg",
+		"title": "Venom: Let There Be Carnage",
+		"description": "„Ha egyszer kiszabadulok innen, lesz egy kis vérontás” – mondta egy titokzatos fegyenc a Venom végén Eddie Brock-nak (Tom Hardy). Annak a vakmerő, nagyszájú tényfeltáró újságírónak, aki egy laboratóriumi felderítése során súlyosan megfertőződött: és azóta szimbiótaként, a testében élősködő gonosz Venommal együtt kénytelen élni.",
+		"category": "Marvel",
+		"filename": "venom2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "deadpool.jpg",
+		"title": "Deadpool",
+		"description": "A különleges erők egykori kommandósa egy félresikerült orvosi kísérlet következtében gyors regenerálódó képességre tesz szert. Új adottságával és sötét humorérzékével felfegyverkezve elkezdi levadászni azt az embert, aki majdnem tönkretette az életét.",
+		"category": "Marvel",
+		"filename": "deadpool.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "deadpool2.jpg",
+		"title": "Deadpool 2",
+		"description": "A mocskos szájú mutáns zsoldos, Wade Wilson, azaz Deadpool összefog egy csapatnyi mutánst, hogy megvédjenek egy szuperképességekkel rendelkező kisfiút a brutális, jövőből érkező Kábeltől.",
+		"category": "Marvel",
+		"filename": "deadpool2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "aladdin.jpg",
+		"title": "Aladdin",
+		"description": "A Disney elkészítette a klasszikus animációs film izgalmas élőszereplős adaptációját. Lenyűgöző történet az elbűvölő utcagyerek, Aladdinról, a bátor Jázmin hercegnőről és a Dzsinnről, aki a jövőjük kulcsa lehet.",
+		"category": "Uncategorized",
+		"filename": "aladdin.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "tlotr.jpg",
+		"title": "The Lord of the Rings: The Fellowship of the Ring",
+		"description": "Frodó (Elijah Wood), az ifjú hobbit egy gyűrűt kap Bilbótól, amiről kiderül, hogy az Egy Gyűrű, mellyel a Sötétség Ura rabszolgasorba taszíthatja Középfölde népeit. Gandalf (Ian McKellen) Völgyzugolyba küldi Frodót, ahol a tündék legbölcsebb vezetője, Elrond dönt a gyűrű sorsáról. Nincs más lehetőség, a gyűrűt el kell pusztítani Mordorban, a Végzet-katlanban. A szabadnépek tanácsán megújul a Szövetség, és Gandalf vezetésével Frodó és társai, a dúnadán Aragorn (Viggo Mortensen), a tünde Legolas (Orlando Bloom), Gimli, a törp (John Rhys-Davies), és Boromir, az emberek képviseletében, nekivágnak a reménytelen küldetésnek. A jövő attól függ, hogyan alakul a szövetség sorsa.",
+		"category": "The Lord of the Rings",
+		"filename": "tlotr.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "tlotr2.jpg",
+		"title": "The Lord of the Rings: The Two Towers",
+		"description": "Hamarosan eldől Középfölde sorsa: a gonosz ereje egyre nő, mert szövetséget kötött a két torony: Barad-dúr, Szauron, a sötét úr vára és Orthanc, amely Szarumán, az áruló mágus erődje. Frodó, a Gyűrűhordozó és hű barátja, Samu Mordor földje felé tart, hogy a tűzbe hajítsa terhét: ám egy újabb veszéllyel kell szembenézniük - felbukkan Gollam, aki magának követeli a kincset. Eközben a szövetség még élő tagjai a Kósza vezetésével újabb harcokba keverednek. Rohan lovasai mellett küzdenek és különös szövetségesekre lelnek: az Entekre. Árnyék vetül a világra. A Sötét Úr hadseregei Gondor felé vonulnak. Kezdetét veszi a Gyűrűháború.",
+		"category": "The Lord of the Rings",
+		"filename": "tlotr2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "tlotr3.jpg",
+		"title": "The Lord of the Rings: The Return of the King",
+		"description": "Gandalf (Ian McKellen) Pipinnel (Billy Boyd) Gondorba vágtat, hogy Denethort (John Noble) felkészítse Szauron túlerejével szemben. Théoden király (Bernard Hill) összevonja seregeit Gondor segélyhívására. Aragorn (Viggo Mortensen) végül vállalja sorsát, és hű társaival harcba szólítja a hegyek közt élő holtakat. Középfölde sorsa azonban egészen máshol fog eldőlni. Frodó (Elijah Wood) és Samu (Sean Astin) a Hatalom gyűrűjével Mordor sötét útvesztőit járja. De minél közelebb kerülnek a Végzet hegyéhez, Frodót annál jobban húzza a Gyűrű szörnyű súlya. A világ sorsa egy apró hobbit kezében van, aki kétséges, hogy ellen tud állni a legnagyobbakat is legyőző kísértésnek.",
+		"category": "The Lord of the Rings",
+		"filename": "tlotr3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "spiderman.jpg",
+		"title": "Spider-Man",
+		"description": "Egy pókcsípés nem a világ. Peter Parker (Tobey Maguire), a kétballábas diákújságíró világa mégis fenekestül felfordul, amikor egy laboratóriumi osztálykirándulás során megcsípi egy mutáns pók. Ezt követően a srác egyre furább képességeket tapasztal magán: könnyedén sétál a plafonon, csuklójából ragadós pókszálat lő ki, a veszélyeket pedig jóval bekövetkezésük előtt megérzi. Ami kezdetben játéknak tűnik, hamarosan szörnyű és izgalmas kötelezettséggé válik. Peternek meg kell küzdenie az emberfeletti erővel rendelkező, gonosz Zöld Manóval (Willem Dafoe) és el kell nyernie a gyönyörű Mary Jane (Kirsten Dunst) szerelmét.",
+		"category": "Marvel",
+		"filename": "spiderman.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "spiderman2.jpg",
+		"title": "Spider-Man 2",
+		"description": "Két év telt el, amióta a csendes Peter Parker (Tobey Maguire) elhagyta nagy szerelmét, Mary Jane Watsont (Kirsten Dunst), és vállalta a szuperhősléttel járó felelősséget. Peternek számos új nehézséggel kell szembenéznie, miközben arra törekszik, hogy megteremtse az egyensúlyt két élete között - nappal szorgalmas egyetemista, éjjel pedig a szuperhős szerepét ölti magára.",
+		"category": "Marvel",
+		"filename": "spiderman2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "spiderman3.jpg",
+		"title": "Spider-Man 3",
+		"description": "Komoly bajba keveredik Pókember. Miközben két rendkívüli képességekkel bíró rosszakarója, Venom és Homokember összefog ellene, egy gyönyörű, szőke lánnyal is találkozik. Peter szeretne hű maradni régi szerelméhez, Mary Jane-hez, de úgy tűnik képtelen ellenállni a csábításnak. A mindenre képes szökött fegyenc, a Peter nyomában szaglászó paparazzo, a fekete anyag, amely egy kalandja során átitatja a Pókember ruháját, és átalakítja a testét, a város rendőrfőnökének gyönyörű lánya és a Zöld Manó régi ruhájában járó, még mindig bosszúállásra készülő egykori jóbarát - Pókember élete még sosem bővelkedett ennyire a kalandokban.",
+		"category": "Marvel",
+		"filename": "spiderman3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "harrypotter.jpg",
+		"title": "Harry Potter and the Philosopher's Stone",
+		"description": "Szülei halála után Harry Potter mostohaszülőknél nevelkedik. Sanyarú a sorsa: a lépcső alatti kuckóban lakik, és elviselhetetlen az unokatestvére. Ám hamarosan kiderül, hogy Harry nem közönséges kisfiú, hanem egy varázslóházaspár árvája, aki csak átmenetileg keveredett a lényegről mit sem sejtő muglik közé. Most viszont végigsétál az Abszol úton, hogy beiratkozzon a titokzatos Roxfort Boszorkány- és Varázslóképző Szakiskolába. Néhány jó barát, néhány nagy kaland és néhány ősi ellenség vár itt rá – de mi az egy elsőéves varázslótanoncnak?",
+		"category": "Harry Potter",
+		"filename": "harrypotter.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "harrypotter2.jpg",
+		"title": "Harry Potter and the Chamber of Secrets",
+		"description": "Harry Potter nyári vakációja nem a legjobban sikerült. Mindezt tetézi, hogy megjelenik nála Dobby, a házimanó, hogy figyelmeztesse: nagy veszély leselkedik rá a Roxfort Boszorkány- és Varázslóképző Szakiskola falai közt. Harry és Ron lekési a Roxfort Expresszt, ami visszavinné őket az iskolába, így egy repülő autóval indulnak útnak, nehogy elkéssenek az új tanév kezdetéről. Harry csakhamar megint az érdeklődés középpontjában találja magát, ugyanis az iskolában új rajongói akadnak, köztük a Feketemágia-ellenes Liga professzora, Gilderoy Lockhart. Lockhart különös módon egyre gyakrabban mutatkozik Harry társaságában...",
+		"category": "Harry Potter",
+		"filename": "harrypotter2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "harrypotter3.jpg",
+		"title": "Harry Potter and the Prisoner of Azkaban",
+		"description": "Harry ráveszi magát, hogy még egy nyarat rémes rokonainál töltsön. Minden igyekezetével megpróbál nyugton maradni, de csak addig bírja visszafogni magát, míg meg nem érkezik látogatóba Vernon bácsi erőszakos testvére, Marge néni. Az idős hölgy ezúttal még a korábbiaknál is jobban az idegeire megy, ezért a varázslópalánta „véletlenül” gigantikus lufivá változtatja. A varázstalan világban alkalmazott tiltott mágia miatt azonban hősünkre büntetés vár, ezért – bár nincs hová mennie – az éjszaka közepén elmenekül otthonról. Nem jut túl messzire: hamarosan érte jön a Kóbor Grimbusz, és a Foltozott Üst fogadóba repíti, egyenesen Cornelius Caramel mágiaügyi miniszter színe elé. A büntetés furcsamód elmarad, és kiderül, hogy Caramel azért nem csapta ki az iskolából, mert egy veszélyes és titokzatos varázsló, Sirius Black megszökött Azkaban börtönéből, és valószínűleg Harryt keresi. A fiú csak egyetlen helyen érezheti magát biztonságban: a Roxfortban.",
+		"category": "Harry Potter",
+		"filename": "harrypotter3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "harrypotter4.jpg",
+		"title": "Harry Potter and the Goblet of Fire",
+		"description": "Az új tanévben a tizennégy éves Harrynek nála idősebb, tapasztaltabb diákokkal együtt kell részt vennie a nemzetközi Trimágus Tusán, amelyre megmagyarázhatatlan módon egy ismeretlen nevezte be. Ám az iskolai verseny veszélyei elhalványulnak az immár bizonyossá váló tény mellett: Voldemort, a Sötét Nagyúr ismét színre lépett, és nemcsak hatalmát nyerte vissza, hanem emberi alakját is...",
+		"category": "Harry Potter",
+		"filename": "harrypotter4.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "harrypotter5.jpg",
+		"title": "Harry Potter and the Order of the Phoenix",
+		"description": "A kalandosra sikeredett nyári vakáció után Harry Potter visszatér Roxfortba. A Sötét Varázslatok Kivédése tárgyat új tanár tanítja, akinek legfőbb feladata Dumbledore professzor és a diákok szemmel tartása. Miközben a diákok a Rendes Bűbájos Fokozat vizsgára készülnek, az új oktatási rendeletek felbolygatják az iskola életét. Talán ezért éri őket váratlanul a sötét varázslat, amely ellenük fordul. Harry a barátai, Ron és Hermione sürgetésére maga veszi kezébe az ügyet: néhány diáktársukkal kiegészülve felkészülnek, hogy megvédjék otthonukat.",
+		"category": "Harry Potter",
+		"filename": "harrypotter5.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "harrypotter6.jpg",
+		"title": "Harry Potter and the Half-Blood Prince",
+		"description": "Roxfort körül egyre szaporodnak az árnyak. Pedig a hatodik osztályba lépő Harry Potter és barátai számára a Boszorkány- és Varázslóképző Szakiskola mindennapjai is bőven elég izgalmat jelentenek: Harry különleges titkokat hordozó bájitaltankönyve, Ron barátnője és Hermione szerelme is épp elég titokzatos és ijesztő. De Harrynek egyre több oka van a félelemre. A halálfalók már mindenütt ott vannak, a dementortámadások szaporodnak, és az iskola fölött megjelenik a Sötét Jegy. Dumbledore abban reménykedik, hogy védence megerősödhet, ha jobban megismeri a múltját. De van veszély, amire ő sem készülhet fel...",
+		"category": "Harry Potter",
+		"filename": "harrypotter6.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "harrypotter7.jpg",
+		"title": "Harry Potter and the Deathly Hallows: Part I",
+		"description": "Rossz idők járnak Harry Potterre és barátaira, elveszítették a legfőbb támaszukat, Dumbledore professzort. Így csak magukra számíthatnak a Voldemort elleni harcban. Voldemort a különös halálereklyék, a horcruxok után kutat. A legenda szerint a Bodzapálca, a Feltámadás Köve és a Láthatatlanná Tévő Köpeny birtokosa képes uralkodni a halál felett. Közben a legfőbb ellenségével, Harryvel is szeretne végezni. Ehhez első lépésként az uralma alá hajtja a Mágiaügyi Minisztériumot, majd a Varázslóképző Iskola ellen fordul.",
+		"category": "Harry Potter",
+		"filename": "harrypotter7.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "harrypotter8.jpg",
+		"title": "Harry Potter and the Deathly Hallows: Part II",
+		"description": "Nincs tovább: Harry, Ron és Hermione immár nem kerülheti el a végső összecsapást. Mindannyian tudják, hogy ez az utolsó felvonás. A három jó barát visszatér a Roxfortba, hogy felkutassa és elpusztítsa az utolsó horcruxot. Voldemort, aki egyre erősebb, uralma alá vonta a Mágiaügyi Minisztériumot és már Roxfort fölött is egyre nagyobb hatalma van, tudomást szerez a tervükről. A tét hatalmas, így nem is csoda, hogy mindent bevet a siker érdekében. Megkezdődik a Roxfort ostroma - és már soha többé, semmi nem lesz ugyanolyan, mint volt.",
+		"category": "Harry Potter",
+		"filename": "harrypotter8.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "fantasticbeasts.jpg",
+		"title": "Fantastic Beasts and Where to Find Them",
+		"description": "A J.K. Rowling Legendás állatok és megfigyelésük című könyve alapján készült film Göthe Salmander kalandjait követi nyomon a New York-i boszorkányok és varázslók titkos világában, hetven évvel azelőtt, hogy Harry Potter az iskolában elolvasná a könyvét.",
+		"category": "Harry Potter",
+		"filename": "fantasticbeasts.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "fantasticbeasts2.jpg",
+		"title": "Fantastic Beasts: The Crimes of Grindelwald",
+		"description": "Dumbledore megpróbálja meghiúsítani Grindelwald tervét, hogy tiszta vérű varázslókat neveljen, akik uralkodni fognak minden nem mágikus lény felett. Segítségül hívja extanítványát, Göthe Salmandert, aki még nem is sejti, milyen veszélyek leselkednek rá.",
+		"category": "Harry Potter",
+		"filename": "fantasticbeasts2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "rv.jpg",
+		"title": "RV - Rumlis Vakáció",
+		"description": "Bob Munro minden követ megmozgat, hogy a családi vakáció ne torkolljon komplett katasztrófába. A Munro família ugyanis már nagyban készül Hawaii-ra, amikor a családfő ultimátumot kap a főnökétől, miszerint meg kell jelennie egy coloradói megbeszélésen, különben búcsút mondhat a munkájának. A szorult helyzetben azonban Bob úgy dönt, hogy összeköti a kellemeset a hasznossal. Repülőút helyett az aszfaltturnét választja, és azzal nyugtatgatja vonakodó családját, hogy a közös út majd összehozza őket. De már az indulás pillanatában világossá válik, hogy ez az álom inkább egy rémálom…",
+		"category": "Uncategorized",
+		"filename": "rv.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "richierich.jpg",
+		"title": "Richie Rich",
+		"description": "Kertjében ott a hullámvasút – a ringlispíl még nem jutott eszébe. Ha megéhezik, betér saját McDonald’s-ébe harapni valamit. És van valami közös ügye Claudia Schifferrel. Ő Richie Rich (Macaulay Culkin), a gézengúz milliomoskölyök. Életéből csak egyvalami hiányzik: a barátokat még a legtökéletesebb komornyik sem pótolhatja. Egy elvetemült banditának közben pont a Richie vagyonra fáj a foga. Richie szüleit elrabolják, őt, az egyedüli örököst pedig bérgyilkosok üldözik. A srác élete fenekestül felfordul. De nem hagyja magát – s talán végül igaz barátokat is talál.",
+		"category": "Uncategorized",
+		"filename": "richierich.mp4"
 	}
 ]

@@ -14,7 +14,7 @@
   <div class="h-100 w-100 d-flex justify-content-center">
     <video preload="auto" id="vid" onclick="//videoClick()" onplay="playing()" ondblclick="goFullscreen()" onpause="videoPaused()" ontimeupdate="//progressBar()" class="h-100" controls>
       <source src="/media/<%= filename %>">
-      <track src="/assets/subtitles/<%= type === 'movie' ? filename.split('.')[0] : filename.split('/')[1].split('.')[0]%>.vtt" label="English" kind="subtitles">
+      <track src="/assets/subtitles/<%= type === 'movie' ? filename.split('.')[0] : filename.split('/')[1].split('.')[0]%>.vtt" label="Magyar" srclang="hu" kind="subtitles">
     </video>
     <div id="topLine" class="w-100 d-flex" style="z-index: 999;">
       <a href="/" id="backBtn" class="d-inline-block"></a>
