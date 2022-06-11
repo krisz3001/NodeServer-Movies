@@ -1,0 +1,9 @@
+[23:00:28] This session was started on 2022. 05. 15. 23:00:28
+[23:00:28] Listening to port 3001...
+[23:00:28] Listening to port 80...
+[23:01:14] 192.168.1.2 served. /home
+[23:01:30] 192.168.1.2 served. /home
+[23:01:32] 192.168.1.2 is watching "Captain America: The First Avenger" (captainamerica.mp4)
+[23:02:28] 192.168.1.2 is watching "Captain America: The First Avenger" (captainamerica.mp4)
+[23:02:49] 192.168.1.2 is watching "Captain America: The First Avenger" (captainamerica.mp4)
+[23:03:06] 192.168.1.2 served. /home

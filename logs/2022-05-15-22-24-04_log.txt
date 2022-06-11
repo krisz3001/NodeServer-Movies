@@ -1,0 +1,29 @@
+[22:24:04] This session was started on 2022. 05. 15. 22:24:04
+[22:24:04] Listening to port 3001...
+[22:24:04] Listening to port 80...
+[22:26:01] 192.168.1.2 served. /home
+[22:26:06] Unnecessary attempt of detecting new episodes from 192.168.1.2
+[22:26:16] 192.168.1.2 served. /home
+[22:26:27] Unnecessary attempt of detecting new episodes from 192.168.1.2
+[22:27:26] 192.168.1.2 served. /home
+[22:27:33] Unnecessary attempt of detecting new episodes from 192.168.1.2
+[22:28:41] 192.168.1.2 served. /home
+[22:28:47] Unnecessary attempt of detecting new episodes from 192.168.1.2
+[22:30:04] 192.168.1.2 served. /home
+[22:30:26] 192.168.1.2 served. /profile
+[22:30:27] Profile 1 set for 192.168.1.2
+[22:30:27] 192.168.1.2 served. /home
+[22:30:38] 192.168.1.2 served. /home
+[22:30:48] 192.168.1.2 served. /home
+[22:30:48] krisz.json file created.
+[22:30:53] 192.168.1.2 served. /profile
+[22:30:54] Profile 0 set for 192.168.1.2
+[22:30:54] 192.168.1.2 served. /profile
+[22:30:54] 192.168.1.2 served. /home
+[22:31:13] "The Mandalorian" refreshed by 192.168.1.2. (16 episodes)
+[22:31:38] 192.168.1.2 served. /home
+[22:31:38] krisz.json file created.
+[22:32:30] Szabolcs.json file created.
+[22:33:31] Unnecessary attempt of detecting new episodes from 192.168.1.2
+[22:33:42] Unnecessary attempt of detecting new episodes from 192.168.1.2
+[22:33:49] Unnecessary attempt of detecting new episodes from 192.168.1.2

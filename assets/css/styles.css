@@ -17,7 +17,7 @@
 }
 .item .img_show{
     aspect-ratio: 1200/675;
-    background-size: contain;
+    background-size: cover;
     background-repeat: repeat-y;
     background-position: center;
 }
@@ -118,4 +118,20 @@
 #todo li:hover{
     text-decoration: line-through;
     cursor: pointer;
+}
+#searchbar{
+    transition: max-width 1s ease;
+    max-width: 0;
+}
+.searchbarShown{
+    visibility: visible!important;
+    transition: max-width 1s ease;
+    max-width: 200px!important;
+}
+html{
+    scroll-padding-top: 6rem;
+}
+body{
+    min-height: 100%;
+    height: 100%;
 }

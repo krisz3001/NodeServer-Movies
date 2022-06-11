@@ -1,0 +1,7 @@
+[02:08:10] This session was started on 2022. 06. 09. 2:08:10
+[02:08:10] Listening to port 3001...
+[02:08:10] Listening to port 80...
+[02:08:10] Connected to the MySQL server.
+[02:08:15] 192.168.1.2 served. /home
+[02:08:26] 192.168.1.2 served. /admin
+[02:08:27] 192.168.1.2 asked for the log.

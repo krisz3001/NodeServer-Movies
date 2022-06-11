@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+	<title>Netflix Prime +</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/styles.css">
+	<link rel="icon" href="/favicon.ico">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-dark text-white" onload="getID('<%= id %>')">
+	<nav class="autohide navbar navbar-expand-md bg-black navbar-dark sticky fixed-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/">Netflix Prime +</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item m-2">
+						<div class="dropdown">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+								aria-expanded="false">Add</button>
+							<ul class="dropdown-menu">
+								<li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addModal"
+										onclick="refreshList(); refreshCategoryList()">Movie or series</a></li>
+								<li><a href="#" class="dropdown-item" data-bs-toggle="modal"
+										data-bs-target="#categoryModal" onclick="hideCategoryError()">Category</a></li>
+								<li><a href="#" class="dropdown-item" data-bs-toggle="modal"
+										data-bs-target="#categoryModal" onclick="hideCategoryError()">Category</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div class="row m-2 flex-row-reverse flex-md-row justify-content-end" style="flex-wrap: nowrap;">
+					<input type="text" class="p-1 my-0 invisible" oninput="search(false)" id="searchbar">
+					<div id="searchIcon" class="me-2 me-md-0 ms-md-2"
+						style="width: 36px; height: 36px; background-repeat: no-repeat; background-image: url('/assets/controllers/search.png'); background-size: contain; cursor: pointer;"
+						onclick="toggleSearch()"></div>
+				</div>
+				<p class="m-2">
+					<%= name %>
+				</p>
+				<a id="profile" class="d-flex rounded m-2 border border-secondary"
+					style="background-image: url('/assets/profile_pictures/<%= image %>');" href="/profile"></a>
+				<button class="d-flex btn btn-danger m-2" onclick="logout()">Log out</button>
+			</div>
+		</div>
+	</nav>
+	<div class="row mx-5" id="items">
+		<div class="col-6 col-md-4 col-lg-2 p-0 item movie"><img src="/assets/controllers/delete.png"
+				class="d-none delete-show img-fluid btn btn-danger position-absolute"
+				onclick="deleteShow('${filename}')" style="height: 30px; margin: 5px; right: 0;">
+			<div style="background-image: url('/assets/covers/placeholder.jpg'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark">
+				<a href="/movie/${n}" class="d-none d-lg-flex w-100 h-100 align-items-end">
+					<div class="bg-dark pbar w-100" id="fullbar1">
+						<div style="width: 50%; height: 5px; background: red;"></div>
+					</div>
+				</a>
+				<div class="bg-dark pbar w-100 d-lg-none" id="fullbar1">
+					<div style="width: 50%; height: 5px; background: red;"></div>
+				</div>
+			</div>
+			<div class="item-info bg-dark p-2 border border-secondary w-100 rounded-bottom">
+				<div class="row m-0 mb-1"><a class="col-2 play rounded-circle" href="/movie/${n}"></a>
+					<div class="col-8"></div><a class="col-2 details rounded-circle"
+						onclick="details(0, 'movie', 'placeholder.jpg', '${w}', '${current}', '${duration}', '/movie/${n}')"></a>
+				</div>
+				<p class="h5" id="cardTitle${n}">${title}</p>
+				<div class="d-flex align-items-center">
+					<div class="bg-secondary w-100" style="height: 5px;">
+						<div style="height: 5px; background-color: red; width: 50%"></div>
+					</div>
+					<div>
+						<p class="my-1 text-nowrap p-1" style="font-size: small;">${current}/${duration} ${duration > 1
+							? 'minutes' : 'minute'}</p>
+					</div>
+				</div>
+				<p class="mt-1 mb-0 desc" id="cardDescription${n}">${desc}</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		function newMovie(img, title, desc, n, w, current, duration, filename) {
+			return `<div class="col-6 col-md-4 col-lg-2 p-0 item movie"><img src="/assets/controllers/delete.png" class="d-none delete-show img-fluid btn btn-danger position-absolute" onclick="deleteShow('${filename}')" style="height: 30px; margin: 5px; right: 0;"><div style="background-image: url('/assets/covers/${img}'); display: flex; align-items: end;" class="border border-secondary img_show bg-dark"><a href="/movie/${n}" class="d-none d-lg-block w-100 h-100"></a><div class="bg-dark pbar" id="fullbar${n}"><div style="width: ${w}%; height: 5px; background: red;"></div></div></div><div class="item-info bg-dark p-2 border border-secondary w-100 rounded-bottom"><div class="row m-0 mb-1"><a class="col-2 play rounded-circle" href="/movie/${n}"></a><div class="col-8"></div><a class="col-2 details rounded-circle" onclick="details(${n}, 'movie', '${img}', '${w}', '${current}', '${duration}', '/movie/${n}')"></a></div><p class="h5" id="cardTitle${n}">${title}</p><div class="d-flex align-items-center"><div class="bg-secondary w-100" style="height: 5px;"><div style="height: 5px; background-color: red; width: ${w}%"></div></div><div><p class="my-1 text-nowrap p-1" style="font-size: small;">${current}/${duration} ${duration > 1 ? 'minutes' : 'minute'}</p></div></div><p class="mt-1 mb-0 desc" id="cardDescription${n}">${desc}</p></div></div>`
+		}
+	</script>
+	<script src="assets/js/script.js"></script>
+</body>
+
+</html>

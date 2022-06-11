@@ -9,7 +9,7 @@
 	<link rel="icon" href="/favicon.ico">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body class="bg-dark text-white" onload="getID('<%= id %>'); refresh(); refreshTodo()">
+<body class="bg-dark text-white" onload="getID('<%= id %>'); refresh(); refreshTodo(); refreshRequests()">
 	<nav class="autohide navbar navbar-expand-md bg-black navbar-dark sticky fixed-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="/">Netflix Prime +</a>
@@ -23,16 +23,19 @@
 							<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
 								aria-expanded="false">Add</button>
 							<ul class="dropdown-menu">
-								<li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addModal"
-										onclick="refreshList(); refreshCategoryList()">Movie or series</a></li>
-								<li><a href="#" class="dropdown-item" data-bs-toggle="modal"
-										data-bs-target="#categoryModal" onclick="hideCategoryError()">Category</a></li>
+								<li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addModal" onclick="refreshList(); refreshCategoryList()">Movie or series</button></li>
+								<li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#categoryModal" onclick="hideCategoryError()">Category</button></li>
+								<li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#showrequestModal">Movie or series request</button></li>
+								<li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#todoModal">Feature request</button></li>
 							</ul>
 						</div>
 					</li>
 					<li class="nav-item m-2">
-						<input type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#todoModal"
-							value="To-Do">
+						<div class="dropdown">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+								aria-expanded="false">Jump to...</button>
+							<ul class="dropdown-menu" id="c-jump"></ul>
+						</div>
 					</li>
 					<li class="nav-item m-2">
 			<button class="btn btn-success" onclick="consolidate()" style="max-height: 38px; overflow: hidden;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Display without categories">Consolidate</button>
@@ -41,9 +44,6 @@
 			<button class="btn btn-danger me-2 disabled" onclick="undo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Undo the very last change" style="background-image: url('/assets/controllers/undo.png'); height: 38px; width: 38px; background-size: contain; background-repeat: no-repeat; background-position: center;"></button>
 			<button class="btn btn-danger disabled" onclick="redo()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Redo that has been undone" style="background-image: url('/assets/controllers/redo.png'); height: 38px; width: 38px; background-size: contain; background-repeat: no-repeat; background-position: center;"></button>
 		  </li> -->
-					<li class="nav-item m-2">
-						<button class="btn btn-success" onclick="randomMovie()">Random movie</button>
-					</li>
 					<% 
 					if(rank == 1){ %>
 						<li class="nav-item m-2">
@@ -52,7 +52,11 @@
 					<% } %>
 					<li class="nav-item d-none m-2" id="bait_count"></li>
 				</ul>
-				<div class="m-2" style="width: 30px; height: 30px; background-repeat: no-repeat; background-image: url('/assets/controllers/search.png'); background-size: contain; cursor: pointer;" onclick="alert('Work in progress')"></div>
+				<div class="row m-2 flex-row-reverse flex-md-row justify-content-end" style="flex-wrap: nowrap;">
+					<input type="text" class="p-1 my-0 invisible" oninput="search(false)" id="searchbar">
+					<div id="searchIcon" class="me-2 me-md-0 ms-md-2" style="width: 36px; height: 36px; background-repeat: no-repeat; background-image: url('/assets/controllers/search.png'); background-size: contain; cursor: pointer;" onclick="toggleSearch()"></div>
+				</div>
+				
 				<p class="m-2">
 					<%= name %>
 				</p>
@@ -67,6 +71,7 @@
 		<button class="btn btn-primary ms-2">Order</button>
 	</div> -->
 	<div class="row mx-5" id="items"></div>
+	<div class="ms-5 mb-4 rounded-circle fixed-bottom" title="Random movie" style="width: 60px; height: 60px; background-color: rgba(255, 255, 255, 0.7); cursor: pointer; background-image: url('/assets/controllers/shuffle2.png'); background-size: contain; background-repeat: no-repeat; background-position: center;" onclick="randomMovie()"></div>
 	<div class="w-100 bg-black d-flex justify-content-center align-items-center d-none" id="footer" style="height: 100px;">
 		<p class="m-0 text-center text-secondary">Netflix Prime +<br>Version 3.8.Hudson</p>
 	</div>
@@ -95,7 +100,7 @@
 						<div class="form-group row my-sm-2">
 							<label for="desc" class="col-sm-2 col-form-label">Description</label>
 							<div class="col-sm-10">
-								<input type="text" id="desc" class="form-control" placeholder="Description">
+								<textarea type="text" id="desc" class="form-control" placeholder="Description" rows="5"></textarea>
 							</div>
 						</div>
 						<div class="form-group row my-sm-2">
@@ -126,7 +131,7 @@
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content bg-dark">
 				<div class="modal-header">
-					<h5 class="modal-title" id="todoModalLabel">To-Do List</h5>
+					<h5 class="modal-title" id="todoModalLabel">Ideas</h5>
 					<button class="btn btn-success mx-2" onclick="showCompleted()" id="completedBtn">Show
 						completed</button>
 					<button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
@@ -137,6 +142,27 @@
 					<input type="text" class="w-100" id="new-todo">
 					<div class="d-flex justify-content-center">
 						<button id="add-todo-btn" class="btn btn-success mt-2" onclick="addTodo()">Add</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="showrequestModal" tabindex="-1" aria-labelledby="showrequestModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content bg-dark">
+				<div class="modal-header">
+					<h5 class="modal-title" id="showrequestModalLabel">Movie or series request</h5>
+					<button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<ul id="showrequests"></ul>
+					<input type="text" class="w-100" id="new-request">
+					<div class="d-flex justify-content-center">
+						<button id="add-request-btn" class="btn btn-success mt-2" onclick="addRequest()">Add</button>
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -190,9 +216,14 @@
 					<a class="btn btn-success w-100 my-3" id="detailsPlay" href="">Play</a>
 					<p class="m-0" id="detailsDescription"></p>
 					<div id="detailsEpisodes" class="mt-3">
-						<div class="d-flex mb-2">
-							<h2 class="m-0 my-1 me-auto">Episodes</h2><select class="form-select my-1 w-auto"
-								id="seasonSelect"></select>
+						<div class="d-flex mb-2 justify-content-between">
+							<div>
+								<h2 class="m-0 my-1 me-auto">Episodes</h2>
+							</div>
+							<div class="d-flex align-items-center">
+								<button class="btn btn-primary me-1" id="detectBtn" title="Detect new episodes">Detect</button>
+								<select class="form-select my-1 w-auto" id="seasonSelect"></select>
+							</div>
 						</div>
 						<div id="episodeList"></div>
 					</div>

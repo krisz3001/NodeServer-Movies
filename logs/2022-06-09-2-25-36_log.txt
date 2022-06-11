@@ -1,0 +1,7 @@
+[02:25:36] This session was started on 2022. 06. 09. 2:25:36
+[02:25:36] Listening to port 3001...
+[02:25:36] Listening to port 80...
+[02:25:36] Database error: Access denied for user 'root'@'localhost' (using password: YES)
+[02:25:36] Database error: Access denied for user 'root'@'localhost' (using password: YES)
+[02:25:51] 192.168.1.2 served. /404 (/phpmyadmin/index.php?route=/server/privileges&viewing_mode=server)
+[02:27:20] 192.168.1.2 served. /admin

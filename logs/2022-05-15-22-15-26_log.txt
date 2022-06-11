@@ -1,0 +1,33 @@
+[22:15:26] This session was started on 2022. 05. 15. 22:15:26
+[22:15:26] Listening to port 3001...
+[22:15:26] Listening to port 80...
+[22:15:31] Unnecessary attempt of detecting new episodes from 192.168.1.2
+[22:15:52] 192.168.1.2 served. /home
+[22:16:11] 192.168.1.15 on login page. /
+[22:16:17] 192.168.1.2 served. /home
+[22:16:22] 192.168.1.15 logged in. (Szabolcs)
+[22:16:23] Profile 0 set for 192.168.1.15
+[22:16:23] 192.168.1.15 served. /home
+[22:16:23] 192.168.1.15 served. /home
+[22:16:23] Szabolcs.json file created.
+[22:16:42] 192.168.1.15 is watching "The Informant" S01 E01 (informant_1_1.mkv)
+[22:16:46] 192.168.1.15 is watching "The Informant" S01 E02 (informant_1_2.mkv)
+[22:16:48] 192.168.1.15 is watching "The Informant" S01 E03 (informant_1_3.mkv)
+[22:16:48] 192.168.1.15 is watching "The Informant" S01 E04 (informant_1_4.mkv)
+[22:16:49] 192.168.1.15 is watching "The Informant" S01 E05 (informant_1_5.mkv)
+[22:16:49] 192.168.1.15 is watching "The Informant" S01 E06 (informant_1_6.mkv)
+[22:16:50] 192.168.1.15 is watching "The Informant" S01 E07 (informant_1_7.mkv)
+[22:17:16] 192.168.1.2 served. /home
+[22:17:21] 192.168.1.15 served. /home
+[22:17:34] 192.168.1.15 is watching "The Informant" S01 E07 (informant_1_7.mkv)
+[22:18:25] 192.168.1.2 served. /home
+[22:19:22] 192.168.1.2 served. /home
+[22:19:40] 192.168.1.2 served. /home
+[22:19:56] 192.168.1.2 served. /home
+[22:20:00] 192.168.1.2 served. /home
+[22:20:38] 192.168.1.2 served. /home
+[22:20:38] krisz.json file created.
+[22:21:01] "The Mandalorian" refreshed by 192.168.1.2. (16 episodes)
+[22:21:28] Unnecessary attempt of detecting new episodes from 192.168.1.2
+[22:22:03] 192.168.1.2 served. /admin
+[22:22:07] 192.168.1.2 served. /home

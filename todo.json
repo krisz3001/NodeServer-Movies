@@ -145,7 +145,7 @@
 	},
 	{
 		"todo": "db és duration delete friendly párosítása",
-		"completed": false
+		"completed": true
 	},
 	{
 		"todo": "Új kategória felvétele",
@@ -165,10 +165,34 @@
 	},
 	{
 		"todo": "kereső",
-		"completed": false
+		"completed": true
 	},
 	{
 		"todo": "Új epizód hozzáadása esetén db frissítése okosba",
+		"completed": true
+	},
+	{
+		"todo": "delete csak adminként",
+		"completed": true
+	},
+	{
+		"todo": "műsor adatok szerkesztése admin panelen",
 		"completed": false
+	},
+	{
+		"todo": "műsor pre-start overlay egyszerűsítése",
+		"completed": false
+	},
+	{
+		"todo": "peaky blinders S3 E5 subtitle fix",
+		"completed": true
+	},
+	{
+		"todo": "piros csík helyrerakása",
+		"completed": true
+	},
+	{
+		"todo": "movie 0",
+		"completed": true
 	}
 ]

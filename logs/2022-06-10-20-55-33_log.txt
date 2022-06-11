@@ -1,0 +1,29 @@
+[20:55:33] This session was started on 2022. 06. 10. 20:55:33
+[20:55:33] Listening to port 3001...
+[20:55:33] Listening to port 80...
+[20:55:44] 192.168.1.2 on login page. /
+[20:55:45] 192.168.1.2 on login page. 
+[20:55:54] 192.168.1.2 logged in. (krisz)
+[20:55:55] Profile 0 set for 192.168.1.2
+[20:55:55] 192.168.1.2 served. /home
+[20:56:03] 192.168.1.2 served. /admin
+[20:56:09] Mass logout by 192.168.1.2
+[20:56:13] 192.168.1.2 served. /admin
+[20:56:14] 192.168.1.2 served. /admin
+[20:56:14] 192.168.1.2 served. /admin
+[20:56:14] 192.168.1.2 served. /admin
+[20:56:14] 192.168.1.2 served. /admin
+[20:56:15] 192.168.1.2 served. /admin
+[20:56:15] 192.168.1.2 served. /admin
+[20:56:35] 192.168.1.2 served. /home
+[20:57:39] 192.168.1.2 served. /admin
+[20:57:51] 192.168.1.2 served. /home
+[20:58:44] 154.209.125.55 on login page. /
+[21:18:36] 142.93.146.198 on login page. /commands.txt
+[21:19:50] 94.102.61.10 on login page. /
+[23:11:59] 3.144.16.168 on login page. /
+[23:12:00] 91.82.191.156 on login page. /
+[23:12:03] 3.144.16.168 on login page. 
+[23:17:52] 5.62.34.43 on login page. /.env
+[23:56:43] 128.14.141.34 on login page. /
+[01:18:18] 179.43.154.206 on login page. /.git/config

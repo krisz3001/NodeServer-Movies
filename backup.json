@@ -1,18 +1,5 @@
 [
 	{
-		"type": "series",
-		"image": "mandalorian.jpg",
-		"title": "The Mandalorian",
-		"description": "A The Mandalorian (A mandalori) az első élőszereplős Star Wars-sorozat, amely 2019 novemberében debütált a Disney+ nevű streaming-szolgáltatásában. A hivatalosan még magyar cím nélküli The Mandalorian sorozat főszereplője egy magányos mandalori fejvadász (Pedro Pascal), aki bonyolult küldetéseket vállalva jut egy hatalmas összeesküvés nyomára. A sorozatot Jon Favreau a Vasember 1-2, Az oroszlánkirály és A dzsungel könyve rendezője készítette el a Disney számára.",
-		"category": "Star Wars",
-		"seasons": "2",
-		"filename": "mandalorian",
-		"episodes": [
-			8,
-			8
-		]
-	},
-	{
 		"type": "movie",
 		"image": "ivosgyerek.gif",
 		"title": "Hello?",
@@ -37,7 +24,7 @@
 		"seasons": "1",
 		"filename": "informant",
 		"episodes": [
-			6
+			8
 		]
 	},
 	{
@@ -595,8 +582,476 @@
 		"type": "movie",
 		"image": "richierich.jpg",
 		"title": "Richie Rich",
-		"description": "Kertjében ott a hullámvasút – a ringlispíl még nem jutott eszébe. Ha megéhezik, betér saját McDonald’s-ébe harapni valamit. És van valami közös ügye Claudia Schifferrel. Ő Richie Rich (Macaulay Culkin), a gézengúz milliomoskölyök. Életéből csak egyvalami hiányzik: a barátokat még a legtökéletesebb komornyik sem pótolhatja. Egy elvetemült banditának közben pont a Richie vagyonra fáj a foga. Richie szüleit elrabolják, őt, az egyedüli örököst pedig bérgyilkosok üldözik. A srác élete fenekestül felfordul. De nem hagyja magát – s talán végül igaz barátokat is talál.",
+		"description": "Kertjében ott a hullámvasút - a ringlispíl még nem jutott eszébe. Ha megéhezik, betér saját McDonald’s-ébe harapni valamit. És van valami közös ügye Claudia Schifferrel. Ő Richie Rich (Macaulay Culkin), a gézengúz milliomoskölyök. Életéből csak egyvalami hiányzik: a barátokat még a legtökéletesebb komornyik sem pótolhatja. Egy elvetemült banditának közben pont a Richie vagyonra fáj a foga. Richie szüleit elrabolják, őt, az egyedüli örököst pedig bérgyilkosok üldözik. A srác élete fenekestül felfordul. De nem hagyja magát – s talán végül igaz barátokat is talál.",
 		"category": "Uncategorized",
 		"filename": "richierich.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "cars.jpg",
+		"title": "Cars",
+		"description": "A nagymenő versenyautó, Villám McQueen a 66-os út egy elfeledett kisvárosában reked. Ott találkozik egy csomó vicces figurával, akik segítenek neki felfedezni, hogy az élet többről szól, mint trófeákról és hírnévről.",
+		"category": "Animation",
+		"filename": "cars.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "cars2.jpg",
+		"title": "Cars 2",
+		"description": "Az autóversenyzés szupersztárja, Villám McQueen újra akcióba lendül, legjobb barátjával, Matukával. Egy új világba csöppennek, amely tele van intrikákkal, izgalmakkal és gyors tempójú vicces kalandokkal.",
+		"category": "Animation",
+		"filename": "cars2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "cars3.jpg",
+		"title": "Cars 3",
+		"description": "A legendás versenyautó, Villám McQueent megpróbálja felvenni a versenyt az autók új generációjával, miközben gyászolja elhunyt mentorát, Doc Hudsont, és összebarátkozik a lelkes versenytechnikus és feltörekvő versenyző Cruz Ramirezzel.",
+		"category": "Animation",
+		"filename": "cars3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "starwars.jpg",
+		"title": "Star Wars: Episode I - The Phantom Menace",
+		"description": "Nyugtalanság uralkodik a Galaktikus Köztársaságban. A távoli csillagrendszerekbe irányuló kereskedelmi utak megadóztatásának tervét heves viták övezik. A kapzsi Kereskedelmi Szövetség felfegyverzett csatahajóival blokád alá veszi a parányi Naboo bolygót. A Főkancellár titokban útnak indít két Jedi lovagot, a béke és az igazság szerzőit, hogy oldják meg a konfliktust és védjék meg Amidala királynőt. Hamarosan azonban kényszerleszállást kell végrehajtaniuk a Tatooine-on, ahol találkoznak az ifjú Anakinnal, akiben túlárad az erő.",
+		"category": "Star Wars",
+		"filename": "starwars.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "starwars2.jpg",
+		"title": "Star Wars: Episode II - Attack of the Clones",
+		"description": "A Galaktikus Köztársaság polgárháború küszöbén áll. A Padmé Amidala elleni merényletkísérlet után a tanács Anakin Skywalkert bízza meg a védelmével. A távoli bolygón olyan titkokra bukkannak, ami eldöntheti a polgárháború kimenetelét.",
+		"category": "Star Wars",
+		"filename": "starwars2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "starwars3.jpg",
+		"title": "Star Wars: Episode III - Revenge of the Sith",
+		"description": "A tanács Obi-Wan Kenobit (Ewan McGregor) bízza meg azzal, hogy felkutassa és a törvény színe elé hozza őket a klónháború felelőseit. Ezalatt Palpatine szenátor (Ian McDiarmid) egyre nagyobb hatalomra tesz szert, létrehozza a Galaktikus Birodalmat. A szenátor közvetlen társaságában Anakin (Hayden Christensen) egyre nehezebben tud ellenállni Palpatine befolyásának, aki mindent elkövet, hogy a fiatal jedit a sötét oldalra csábítsa.",
+		"category": "Star Wars",
+		"filename": "starwars3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "starwars4.jpg",
+		"title": "Star Wars: Episode IV - A New Hope",
+		"description": "Réges régen, egy távoli galaxisban kezdődött a nagy kaland, amikor Leia Organa hercegnő (Carrie Fisher) két fura robottal egy alig értékelhető hologramot küldött az egyetlen Jedi lovagnak, a remeteként élő Ben Kenobinak (Alec Guinness). Az idős jedi Luke Skywalker (Mark Hamill), Han Solo (Harrison Ford) és szőrős vukija, a hatalmas Chewbacca társaságában útra kel, hogy kiszabadítsa a hercegnőt Darth Vader fogságából, és győzelemre vigye az igaz ügyet az egész Galaxisban.",
+		"category": "Star Wars",
+		"filename": "starwars4.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "starwars5.jpg",
+		"title": "Star Wars: Episode V - The Empire Strikes Back",
+		"description": "A felkelők maréknyi csapata a hó borította Hoth bolygó földalatti támaszpontján rejtőzködik. A szondák azonban felfedik a rejtekhelyet, és hamarosan birodalmi lépegetők lepik el a bolygót. Han Solo, Chewbacca és Leia a megbízhatatlan Lando Calrissian segítségét kérik. Nem is sejtik, hogy a birodalom rettegett ura, Darth Vader már várja őket nem kis meglepetést tartogatva Han számára. Luke Skywalker a Dagobah rendszerben az utolsó és legnagyobb Jedit, Yodát keresi, hogy felkészülhessen a végső összecsapásra az Erő sötét oldalával.",
+		"category": "Star Wars",
+		"filename": "starwars5.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "starwars6.jpg",
+		"title": "Star Wars: Episode VI - Return of the Jedi",
+		"description": "Miután Luke megmentette barátját, Han Solót és a szépséges Leia hercegnőt a biztos haláltól, ismét csatlakozik Yodához, hiszen igazi Jedi Lovaggá kell válnia ahhoz, hogy szembeszállhasson Darth Vaderrel és az Erő sötét oldalával. Végre eljött a végső összecsapás ideje! A felkelők készen állnak arra, hogy megsemmisítő csapást mérjenek a Halálcsillagra. Arra azonban nem számítanak, hogy a bolygót elpusztíthatatlan energiapajzs védi és a Birodalom csapdába csalja őket.",
+		"category": "Star Wars",
+		"filename": "starwars6.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "starwars7.jpg",
+		"title": "Star Wars: Episode VII - The Force Awakens",
+		"description": "A Csillagok háborúja VI: A jedi visszatér cselekménye után 30 évvel járunk (YU 34), az Új Köztársaság idejében. Az Első Rend jelent meg és háborúzott a Galaktikus Birodalom maradványaival, melynek vezetője Supreme Leader Snoke és tanítványa, Kylo Ren, aki sajátos fénykardjával a Galaxis egy részét elfoglalta a (Hux tábornokkal) Starkiller bázisról vezetve seregét.",
+		"category": "Star Wars",
+		"filename": "starwars7.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "starwars8.jpg",
+		"title": "Star Wars: Episode VIII - The Last Jedi",
+		"description": "A Star Wars: Az utolsó Jedikben a Skywalker saga folytatódik. Az ébredő Erő hősei a galaxis legendás alakjaival indulnak nagyívű kalandra, s közben nem csak az Erővel kapcsolatos ősi rejtélyekre találnak választ, hanem megdöbbentő múltbéli titkokra is fényt derítenek.",
+		"category": "Star Wars",
+		"filename": "starwars8.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "starwars9.jpg",
+		"title": "Star Wars: Episode IX - The Rise of Skywalker",
+		"description": "A Lucasfilm és J.J. Abrams rendező újra egyesíti erejét, hogy elrepítse a közönséget egy messzi-messzi galaxisba a Star Wars: Skywalker korában. A Skywalker saga lenyűgöző befejezésében új legendák születnek, és megvívják a végső csatát a szabadságért.",
+		"category": "Star Wars",
+		"filename": "starwars9.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "charlieandthechocolatefactory.jpg",
+		"title": "Charlie and the Chocolate Factory",
+		"description": "A csokigyár, amelyről a szegény családban élő Charlie álmodik, borzasztóan titokzatos. Tizenöt éve senki nem látott egyetlen munkást se bemenni, se kijönni, nem látták a csokoládégyáros Willy Wonkát, csak az irtózatos mennyiségű csoki áramlik ki a gyárból. Azután fantasztikus hír röppen világgá: Willy Wonka bejelenti, hogy kinyitja gyára kapuit az öt szerencsés nyertes előtt, aki egy-egy aranyjegyet talál csokoládéja csomagolópapírjában. Charlie is a kevés kiválasztott közé kerül. Találkoznak a titokzatos férfival és arra is fény derül, mi a látogatás megszervezésének igazi célja.",
+		"category": "Uncategorized",
+		"filename": "charlieandthechocolatefactory.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "intouchables.jpg",
+		"title": "Intouchables",
+		"description": "Az ejtőernyős baleset után tolószékbe kerülő gazdag arisztokrata, Philippe felfogadja otthoni segítőnek a külvárosi gettóból jött Drisst. Azt az embert, aki most szabadult a börtönből, és talán a legkevésbé alkalmas a feladatra. Két világ találkozik és ismeri meg egymást, és az őrült, vicces és meghatározó közös élmények nyomán kapcsolatukból meglepetésszerűen barátság lesz, amely szinte érinthetetlenné teszi őket a külvilág számára.\r\nAz elmúlt évek egyik legnagyobb francia filmsikere megtörtént események alapján készült.",
+		"category": "Uncategorized",
+		"filename": "intouchables.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "nowyouseeme.jpg",
+		"title": "Now You See Me",
+		"description": "A világ legjobb illuzionistáinak egy csapata bankot rabol, de nem is akárhogyan: a mindenkit megtévesztő műsorszámuk végeztével a közönség sorai közé szórják a megszerzett pénzt. Az FBI értetlenül áll az agyafúrt attrakció előtt, nem is sejtve, hogy egy sokkal nagyobb dobásra készülnek a szemfényvesztők.",
+		"category": "Now You See Me",
+		"filename": "nowyouseeme.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "nowyouseeme2.jpg",
+		"title": "Now You See Me 2",
+		"description": "A Négy Lovas (Jesse Eisenberg, Woody Harrelson, Dave Franco, Lizzy Caplan), valamint az előző részben rendőrnyomozóként feltűnt, titokzatos és karizmatikus Dylan (Mark Ruffalo) ismét feladja a közönségnek a leckét, miközben tovább feszegetik a színpadi illúziókeltés határait, és bejárják az egész földtekét. Egy évvel azután, hogy lóvá tették az FBI-t, és elnyerték a tömegek csodálatát Robin Hoodot idéző nagyszabású mutatványaikkal, az illuzionisták új előadással rukkolnak elő, azt remélve, hogy felfedhetik egy számítógépes guru piszkos üzelmeit. Látványos eltűnésük mögött ugyanis nem más áll, mint Walter Mabry (Daniel Radcliffe), a zseniális informatikus, aki erőszakkal ráveszi a Lovasokat, hogy egy minden eddiginél veszélyesebb trükköt mutassanak be. Nincs más választásuk, mint végrehajtani egy utolsó, példátlanul nehéz mutatványt, hogy tisztára moshassák a nevüket, és leleplezhessék a háttérben álló géniuszt.",
+		"category": "Now You See Me",
+		"filename": "nowyouseeme2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "sherlockholmes.jpg",
+		"title": "Sherlock Holmes",
+		"description": "A legendás mesterdetektív, aki közelharcban legalább olyan verhetetlen, mint logikus gondolkodásban, élete legnagyobb problémájával kerül szembe. Sherlock Holmes (Robert Downey Jr.) és hű társa, Dr. Watson (Jude Law) Lord Blackwood (Mark Strong) nyomába vetik magukat. Ha nem leplezik le időben, az végzetes következményekkel járhat az egész birodalomra nézve.",
+		"category": "Sherlock Holmes",
+		"filename": "sherlockholmes.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "sherlockholmes2.jpg",
+		"title": "Sherlock Holmes: A Game of Shadows",
+		"description": "A világ különböző részein különös halálesetek történnek. Senki nem veszi észre az összefüggést az események között, egyedül csak a magándetektív Sherlock Holmest ejtik gondolkodóba a történtek. Hamarosan kiderül, hogy egy zseniális, ám gátlástalan gonosztevő, James Moriarty professzor áll az ügy háttérben. Miközben Watson doktor az esküvőjére készül, Holmest egyre váratlanabb helyzetbe sodorja nyomozása. Az ügybe nemcsak a doktort, de a saját bátyját, valamint a gyönyörű, de veszélyes jósnőt is magával rántja. Fél Európán keresztül üldözik Moriarty professzort, ám ő mindig egy lépéssel előrébb jár.",
+		"category": "Sherlock Holmes",
+		"filename": "sherlockholmes2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "theamazingspiderman.jpg",
+		"title": "The Amazing Spider-Man",
+		"description": "Peter Parker gyerekkorában veszítette el a szüleit, a nagyszülei nevelték fel. A magányos tini szeretné megtalálni önmagát, és szeretné elnyerni Gwen barátságát. Amikor Peter megtalálja apja régi aktatáskáját, különös titokra bukkan benne. Nyomozni kezd, és a szálak apja egykori üzlettársához vezetnek. A tudós különleges gyíkkivonattal kezeli magát, ám szörnyszülötté válik. Peter nem tehet mást, használni kezdi különleges képességeit, hogy Pókemberként legyőzze.",
+		"category": "Marvel",
+		"filename": "theamazingspiderman.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "theamazingspiderman2.jpg",
+		"title": "The Amazing Spider-Man 2",
+		"description": "Még a szuperhősök sem tartják be az összes ígéretüket. Peter Parker (Andrew Garfield), aki vörös-kék pókruhájában üldözi a gonoszt a nagyvárosi utcákon megígérte szerelme haldokló apjának, hogy kerülni fogja a lányt (Emma Stone) - és így gondoskodik a biztonságáról. Ám ez egyszer megszegi az ígéretét. Nem elég neki, hogy elkapjon minden bűnözőt, kevés a toronyházak fölötti, őrült tempójú száguldás és lendülés: Gwen nélkül már semmit sem ér az élete. Lehet, hogy meg fogja bánni: egy új szupergonosz ellenfél, Electro (Jamie Foxx) felbukkanása ugyanis minden eddiginél nagyobb veszélybe sodorja - és a múltjából is újabb, tisztázatlan emlékek kísértik.",
+		"category": "Marvel",
+		"filename": "theamazingspiderman2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "norbit.jpg",
+		"title": "Norbit",
+		"description": "Norbittal mindig is kicsellózott az élet. Kisbabaként egy kínai étterem-árvaház, az Arany Nudli küszöbére, a prérikutyák elé vetette a sors, no meg a szülők. Gyerekként állandóan szekálták, gúnyolták a többiek, mígnem egy testes pártfogóra talál: Rasputia, a nagyszájú leányzó veszi szárnyai alá, és el sem engedi, míg évekkel később össze nem házasodnak. Utána meg pláne. A szimpatikus lúzer megpróbál beilleszkedni új családjába, ahol zsarnok nejének három fivére kétes családi bizniszeket bonyolít. A reménytelen helyzetben váratlan fénysugár tűnik fel, amikor felbukkan Norbit gyermekkori szerelme, Kate.",
+		"category": "Uncategorized",
+		"filename": "norbit.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "babydriver.jpg",
+		"title": "Baby Driver",
+		"description": "Bébi szerény, mosolygós srác, aki mindent zenére csinál. Akkor is, amikor bankrablókat furikázik, és a zsaruk elől menekül akció után. Amikor megismerkedik egy álmodozó lánnyal. Bébi hátat fordítana a munkának, ám az nem olyan egyszerű.",
+		"category": "Uncategorized",
+		"filename": "babydriver.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "thedictator.jpg",
+		"title": "The Dictator",
+		"description": "Haffaz Aladdin tábornok hatéves kora óta vezeti az olajban gazdag, ám elszigetelt észak-afrikai Wadiya köztársaságot. Mindent megtesz azért, hogy a demokrácia be ne tehesse lábát országába, amelyet kizárólag ő hivatott sanyargatni és kiszipolyozni. Az elpusztíthatatlan szakállú Aladdin, akkor kerül a nemzetközi figyelem középpontjába, amikor felröppen a hír a titkos atomprogramjáról. Az ENSZ-be indul beszédet tartani, ám egy félresikerült merényletet követően egy fillér nélkül magára marad New York utcáin.",
+		"category": "Uncategorized",
+		"filename": "thedictator.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "thesimpsons.jpg",
+		"title": "The Simpsons Movie",
+		"description": "Springfieldben, az Örökzöld sétány 742. szám alatti házban élő Simpson család korántsem hétköznapi família. Nem elég, hogy sárgák, csúcsfejűek, gülüs szeműek, ráadásul imádják a fánkot. A kelekótya család bajba kerül, amikor a családfő, Homer véletlenül mérgező anyagot önt a városka folyójába. Arnold Schwarzenegger kormányzó emiatt katasztrófa sújtotta övezetnek nyilvánítja a várost, amely fölé üvegbúrát építenek, hogy elszigeteljék a külvilágtól. Homernek nincs más választása, a tettek mezejére kell lépnie, hogy megmentse a világot és a világukat a katasztrófától, amiért persze kizárólag ő felelős.",
+		"category": "Uncategorized",
+		"filename": "thesimpsons.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "journey.jpg",
+		"title": "Journey to the Center of the Earth",
+		"description": "Trevor Anderson professzor (Brendan Fraser) az unokaöccse, Sean (Josh Hutcherson) és a csinos izlandi idegenvezető, Hannah oldalán nekivág, hogy megtalálja a vulkánt, ami eltűnt testvére szerint a Föld kérge alatti rejtélyes világba vezet. Rá is bukkannak a különleges átjáróra, ahol kezdetét veszi életük legnagyobb kalandja. Föld alatti szörnyek, lávafolyamok és úszó szigetek között próbálják túlélni az utazást, melynek során az eltűnt fivér körüli titkokra is fény derül.",
+		"category": "Uncategorized",
+		"filename": "journey.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "journey2.jpg",
+		"title": "Journey 2: The Mysterious Island",
+		"description": "Az ifjú Sean Anderson (Josh Hutcherson) vészjelzéseket kap vállalkozó kedvű nagyapjától, Alexandertől (Michael Caine) egy titokzatos szigetről. Az egyetlen baj csak az, hogy a térkép szerint az a sziget nem létezik. Sean azonnal útnak indul mostohaapja, Hank (Dwayne Johnson) minden tiltakozása ellenére, aki végül kénytelen Seannal tartani. A hihetetlen kalandba belekeveredik a világ legrozogább gépével rendelkező pilóta, Gabato (Luis Guzmán) és szemrevaló lánya, Kailani (Vanessa Hudgens) is.",
+		"category": "Uncategorized",
+		"filename": "journey2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "despicableme.jpg",
+		"title": "Despicable Me",
+		"description": "A fekete ház a kiszáradt kertjével nem illik az idilli kertvárosi képbe. Hátha még a környéken lakók sejtenék, hogy titkos búvóhely lapul alatta! Itt él és dolgozik ugyanis a velejéig gonosz Gru, aki zsugor- és fagyasztósugara, valamint különféle légi és szárazföldi harceszközei segítségével mindenkit elsöpör, aki keresztezi az útját. Gru legújabb terve pedig az, hogy ellopja a Holdat. Úgy tűnik, nincs senki, aki képes lenne megakadályozni ebben. Senki, hacsak a három árva kislány nem. Margo, Edith és Agnes ugyanis talán még Gru szívét is meglágyítják.",
+		"category": "Animation",
+		"filename": "despicableme.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "despicableme2.jpg",
+		"title": "Despicable Me 2",
+		"description": "Amint Gru kezd beleszokni a kertvárosi családapa szerepébe Margo, Edith és Agnes apjaként, felbukkan egy szupertitkos szervezet, ami a gonosz elleni harcot tűzte zászlajára, globális szinten. Így most Grún, a minyonokon és Gru új társán, Lucyn a sor, hogy kiderítsék, ki áll az egyre inkább elharapódzó látványos bűntettek mögött. Végül is a világ legnagyobb exbűnözője kell ahhoz, hogy elkapja azt, aki a helyére pályázik...",
+		"category": "Animation",
+		"filename": "despicableme2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "despicableme3.jpg",
+		"title": "Despicable Me 3",
+		"description": "Amikor Gru és újdonsült felesége, Lucy képtelenek legyőzni az emberiséget fenyegető legújabb gonosztevőt - az egykori gyerek tévésztárt, aki a 80-as évek megszállottja, és Balthazar Brattnek hívják -, megalázó módon kirúgják őket az Anti Gonosz Ligából. A minyonok azt remélik, Gru megragadja az alkalmat, és visszatér a bűn útjára, de amikor Gru világossá teszi, hogy már visszavonult mindettől, akkor a minyonok felmondanak, és elindulnak a saját fejük után.",
+		"category": "Animation",
+		"filename": "despicableme3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "shazam.jpg",
+		"title": "Shazam!",
+		"description": "Mindannyiunkban ott bujkál a szuperhős – de van, akiből elő is tör. Billy Batson 14 éves, egy árvaházból kerül nevelőszülőkhöz, és nem a legnépszerűbb srác az iskolában – de Shazam, az ősöreg, különleges erejű varázsló mégis kiválasztja. Amikor a fiú hangosan kimondja a varázsló nevét, átalakul. Igazi szuperhős válik belőle, annak minden kellékével: testhezálló, köpönyeggel kiegészített ruha, különleges eszközök, rendkívüli erő és meghökkentő képességek. Billy fokozatosan fedezi fel, mi mindent tud, és közben elkövet néhány nagy baklövést. De aztán rá kell jönnie valamire: az új helyzet hatalmas buli, ám van benne valami nehéz – hogy nincs szuperhős főgonosz nélkül.",
+		"category": "DC Movies",
+		"filename": "shazam.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "hangover.jpg",
+		"title": "The Hangover",
+		"description": "Házasodni többször is lehet, de legénybúcsú csak egyszer van az ember életében. Phil (Bradley Cooper) a haverjai segítségével meg is szervezik a fergeteges bulit, ami túlságosan is jól sikerül. Másnap reggel megdöbbenve ébrednek, a leendő férj nyomtalanul eltűnt, a szálloda szobája pedig teljesen le van rombolva. Az előző napi dorbézolásról mindössze néhány nyom maradt: egy tigris a fürdőszobában, egy csecsemő a cipős fiókban és Mike Tyson a nappaliban.",
+		"category": "The Hangover",
+		"filename": "hangover.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "hangover2.jpg",
+		"title": "The Hangover Part II",
+		"description": "Mindenki tudja, hogy Alant (Zach Galifianakis) legénybúcsúba meghívni őrültség. Hiába Phil (Bradley Cooper) figyelmeztetése, a házasodni készülő Stu (Ed Helms) képtelen nemet mondani a könyörgésre. Szerinte ugyanis csekély az esélye annak, hogy megint minden balul sül el, különösen Thaiföldön. Csakhogy a menyasszony 16 éves zseni öccsét is a nyakukba varrják, akiben Alan halálos riválist lát, és ismét a tettek mezejére lép. Másnap reggel Bangkokban találják magukat az eltűnt tini levágott ujjával.",
+		"category": "The Hangover",
+		"filename": "hangover2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "hangover3.jpg",
+		"title": "The Hangover Part III",
+		"description": "Úgy hívják magukat: Farkasfalka. Nem mintha bármi közük volna a farkasokhoz. Nem vadak, nem veszélyesek, a prérin egy napig sem bírnák ki. Csak jó barátok, akik nagyon szeretnek bulizni, és nincs szerencséjük. Először egy Las Vegas-i, azután egy thaiföldi lagzi ürügyén ütötték ki magukat úgy, hogy teljesen elfelejtették mindazt az őrült, lehetetlen, felfoghatatlan és életveszélyes kalandot, amin egy éjszaka alatt keresztülmentek.\r\nMost nincs esküvő. Nincs legénybúcsú. Nem történhet semmi baj elvileg. Mert ha a Farkasfalka beindul, jó eséllyel követi őket a katasztrófa is.",
+		"category": "The Hangover",
+		"filename": "hangover3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "comingtoamerica.jpg",
+		"title": "Coming to America",
+		"description": "Akeem herceg (Eddie Murphy), a kis afrikai ország uralkodójelöltje dúsgazdag ember. Mindene megvan amit csak akarhat, ám úgy érzi üres az élete, mert nincs olyan nő, akibe bele tudna szeretni. A hercegnek pedig feleség kell, méghozzá olyan, aki sem nem a pénzéért, sem nem a hatalmáért megy hozzá. Ezért utazik hűséges barátjával, Semmivel Amerikába, ahol egy gyorsbüfében helyezkednek el takarítónak. A bajok akkor kezdődnek amikor kiderül, hogy a két férfi még soha életében nem látott felmosóvödröt és rongyot.",
+		"category": "Uncategorized",
+		"filename": "comingtoamerica.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "comingtoamerica2.jpg",
+		"title": "Coming 2 America",
+		"description": "Az 1988-as film folytatásában Akeem (Eddie Murphy) megtudja, hogy az elveszettnek hitt fia az Egyesült Államokban van, ezért vissza kell térnie Amerikába, hogy megkeresse Zamunda trónörökösét.",
+		"category": "Uncategorized",
+		"filename": "comingtoamerica2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "kungfupanda.jpg",
+		"title": "Kung Fu Panda",
+		"description": "A rendkívül lelkes, eléggé nagydarab és kissé esetlen Po a legnagyobb kungfurajongó, ami nem éppen előny, ha az ember (vagyis panda) a családi levesbüfében dolgozik naphosszat. Ám váratlanul őt választják ki arra, hogy teljesítsen egy ősi jövendölést, így Po álma valóra válik: bekerül a kungfu világába, és együtt gyakorolhat bálványaival, a legendás Őrjöngő Ötössel: Tigrissel, Daruval, Sáskával, Viperával és Majommal, gurujuk, Shifu mester vezetésével. Hőseink nem is sejtik, hogy a bosszúszomjas és alattomos hóleopárd, Tai Lung már úton van feléjük, és Pónak kell mindenkit megvédenie a közelgő veszélytől. Vajon valóra tudja váltani az álmát, és igazi kungfuhős lesz belőle? Po teljes szívével – és terjedelmével – a feladat megoldásán fáradozik, s végül rájön, hogy a leggyengébb pontjai lesznek a legnagyobb erényei.",
+		"category": "Animation",
+		"filename": "kungfupanda.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "kungfupanda2.jpg",
+		"title": "Kung Fu Panda 2",
+		"description": "Po pandának teljesült az álma, Sárkányharcos lett belőle. Így már az ő feladata a Béke Völgyének védelmezése, melyben barátai, az Őrjöngő Ötös néven ismert Tigris, Daru, Sáska, Vipera és Majom segítenek. Ám Po élete veszélybe kerül, amikor új, félelmetes gonosztevő bukkan fel a színen: Shen nagyúr, az albínó páva nemcsak gonosz, de képzett harcos is egyben, és a farkasai mellett egy különleges fegyverrel is rendelkezik, mellyel meg akarja hódítani egész Kínát. Miközben Po és barátai felveszik a harcot ellene, a panda arra is választ keres, ki az igazi apja.",
+		"category": "Animation",
+		"filename": "kungfupanda2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "kungfupanda3.jpg",
+		"title": "Kung Fu Panda 3",
+		"description": "Po találkozik az elveszettnek hitt apjával, és a pandaparadicsomba utaznak. A gonosz Kai Kína-szerte legyőzi a kung fu mestereket, és most Póék békés lakhelye felé közeleg. Po nekiáll, hogy a barátságos pandákat felkészítse a harcra.",
+		"category": "Animation",
+		"filename": "kungfupanda3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "warcraft.jpg",
+		"title": "Warcraft",
+		"description": "Azeroth eddig békés birodalma a háború szélére sodródik, civilizációjuk egy félelmetes megszálló fajjal néz szembe: ork harcosok menekülnek haldokló országukból, hogy új hazát foglaljanak maguknak. Amikor megnyílik egy átjáró a két világ között, az egyik seregre a pusztítás vár, a másikra a pusztulás. A szemben álló felek közül két hős összeütközése fogja eldönteni a családjuk, népük, hazájuk sorsát. Így kezdődik a látványos eposz a hatalomról és áldozatról, amelyben a háborúnak sok arca van, és mindenki harcol valamiért.",
+		"category": "Uncategorized",
+		"filename": "warcraft.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "whiplash.jpg",
+		"title": "Whiplash",
+		"description": "Andrew (Miles Teller) híres akar lenni. New York, tehát az Egyesült Államok, tehát az egész világ egyik leghíresebb zeneiskolájába, a Shaffer Konzervatóriumba jár, dobolni tanul, rengeteget gyakorol, és mindenre képes volna a siker érdekében. Legalább is, azt hiszi. De találkozik egy tanárral (J. K. Simmons), aki még nála is elszántabb. Ő abban hisz, hogy a tehetséget mindenáron fel kell szabadítani, és ami bujkál, azt ki kell préselni a tanulókból. Akkor is, ha kínlódnak, ha sírnak vagy belehalnak. A kezdő zenész és a sokat látott veterán egymásnak feszül. A tanár felveszi a kezdő dobost a zenekarába, de az első örömöt nagyon sok keserűség követi. És egyikük sem adja fel könnyen, amit elkezdett. Mindketten tartják a ritmust.",
+		"category": "Uncategorized",
+		"filename": "whiplash.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "grownups.jpg",
+		"title": "Grown Ups",
+		"description": "Harminc évvel a középiskola befejezése után újra találkozik egymással az öt egykori középiskolai jó barát. Szomorú aktualitása a dolognak, hogy meghalt a kosárlabdaedzőjük, akivel megnyerték a bajnokságot. Ha már a temetésére végre összejött a csapat, kihasználják az alkalmat, és együtt töltik a hétvégét a feleségeik és gyerekeik társaságában, méghozzá az edzőjük tóparti házában, ahol régen a győzelmüket is ünnepelték. A korosodó apákban felélednek a régi emlékek, beindul a bulizás, egymás ugratása.",
+		"category": "Uncategorized",
+		"filename": "grownups.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "grownups2.jpg",
+		"title": "Grown Ups 2",
+		"description": "Az öt általános iskolai haver, hosszú szünet után, az egykori kosárlabda-edzőjük temetésén találkozott újra, és egy emlékezetes hétvégét töltött egymással. Három esztendővel később Lenny a családjával együtt a nyüzsgő Los Angelesből visszaköltözött az Isten háta mögötti szülővárosába, a régi haverokhoz. A suliban éppen befejeződik a tanítás, az utolsó nap mindenki számára tartogat valami meglepetést. Nem kivétel ezalól Lenny, Eric, Kurt és Marcus sem, akik meglátogatják a régi bányát, ahol gyerekkorukban úsztak.",
+		"category": "Uncategorized",
+		"filename": "grownups2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "johnwick.jpg",
+		"title": "John Wick",
+		"description": "John Wick (Keanu Reeves) nyugodt életre vágyik. Magányosan akarja tölteni a napjait: kutyája, sportkocsija, üres, hideg lakása éppen elég neki - nincs szüksége többre. De egy nyugdíjas bérgyilkos nem pihenhet. És amikor bántják, ő sem marad tétlen. Előveszi rég elrejtett fegyvereit, és elindul véres bosszúhadjáratára. Egyetlen ember harcol gengszterek és bérgyilkosok egész hadserege ellen, New York pedig valódi csatatérré válik. És az őrült, véres ütközetben mégsem egyértelmű, ki fog győzni: a gyilkosok légiója vagy a magányos harcos. Hiszen ő John Wick.",
+		"category": "John Wick",
+		"filename": "johnwick.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "johnwick2.jpg",
+		"title": "John Wick: Chapter 2",
+		"description": "John Wick (Keanu Reeves), a visszavonult bérgyilkos sosem nyugszik. Miután a magányos harcos New Yorkot totális csatatérré változtatta, és bosszúhadjárata során egy sereg gyilkost iktatott ki, újra ringbe száll. Wick egykori társa, egy titokzatos nemzetközi bérgyilkos szervezet irányítását akarja megkaparintani magának, így ráveszi cimboráját, hogy ismét csatasorba álljon. Wicket kötelezi az eskü, így vonakodva, de Rómába utazik, ahol a világ legveszélyesebb gyilkosaival kell szembenéznie. És a legenda egy még durvább, még brutálisabb háborúban találja magát.",
+		"category": "John Wick",
+		"filename": "johnwick2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "johnwick3.jpg",
+		"title": "John Wick 3: Parabellum",
+		"description": "John Wick (Keanu Reeves), a rémkirály, a rettegett bérgyilkos még sosem volt ennyire szorult helyzetben. A világ összes gyilkosa őt akarja, méghozzá holtan. A befolyásos nemzetközi bérgyilkos szervezet, a Felső Kör ki akarja iktatni, mivel megszegte a legfőbb szabályt: a bűnözőknek menedéket nyújtó Continentál szálloda területén gyilkolt. És ha mindez nem lenne elég, a sebesült Wickre 14 millió dolláros vérdíjat is kitűztek.",
+		"category": "John Wick",
+		"filename": "johnwick3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "uncharted.jpg",
+		"title": "Uncharted",
+		"description": "Nathan Drake-et mindenki ismeri. És mindenki találkozott már vele, aki keresett kincset Amazónia esőerdeiben, vetődött partra néptelen karibi szigeten, vagy bunyózott tibeti műkincsrablókkal. A világ legvagányabb kalandor kincsvadásza (Tom Holland) a 21. század Indiana Jonesja – akinek a jövője legalább olyan bizonytalan, mint a múltja.",
+		"category": "Uncategorized",
+		"filename": "uncharted.mp4"
+	},
+	{
+		"type": "series",
+		"image": "obiwan.jpg",
+		"title": "Obi-Wan Kenobi",
+		"description": "A sorozat öt évvel a Sithek bosszúja után játszódik, a Tatuinon, és bemutatja, hogy Obi-Wan hogyan él és védi a kis Luke Skywalkert, miközben egy rejtélyes sötét alak bukkan fel a Tatuin világában.",
+		"category": "Star Wars Series",
+		"seasons": "1",
+		"filename": "obiwan",
+		"episodes": [
+			4
+		]
+	},
+	{
+		"type": "movie",
+		"image": "macskafogo.jpg",
+		"title": "Macskafogó",
+		"description": "Az egerek sorsa megpecsételődött. Az X bolygón a vérszomjas macskák semmibe veszik a jogot, és az egértársadalom felszámolására törekednek. De megcsillan egy reménysugár, hiszen az egerek főtudósa feltalálja a megoldást. A titkosszolgálat azonnal aktiválja legjobb ügynökét, Grabowskyt, hogy még időben célba jusson a tervrajz...",
+		"category": "Animation",
+		"filename": "macskafogo.mkv"
+	},
+	{
+		"type": "movie",
+		"image": "placeholder.jpg",
+		"title": "Indul a bakterház",
+		"description": "Regös Bendegúzt anyja elszegődteti a lókupechez, de a fiú megszökik tőle. A bakterhez keveredik, ahol elvállalja a tehénpásztorkodást. A bakter és anyja, a Banya igen sanyargatja a fiút, aki elhatározza, hogy megleckézteti öket. Bendegúz barátja, Koncz bácsi jó tanácsokat ad neki arra, hogy hogyan lehet a bakter feleségének szellemével riogatni a háziakat. A fiú megfogadja a tanácsot s végül összedől a bakterház, ö pedig továbbáll.",
+		"category": "Uncategorized",
+		"filename": "indulabakterhaz.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "placeholder.jpg",
+		"title": "A tanú",
+		"description": "Pelikán József hithű kommunista, aki végig harcolta elvbarátaival a vészterhes éveket. Most, győzelmük után, a személyi kultusz idején, gátőrként is elkötelezett munkát végez. Lecsap az orvhorgászra, akiről kiderül, régi barátja és harcostársa, Dániel Zoltán, aki jelenleg miniszter. Épp ez a kedves barát buktatja le akaratán kívül, amikor feketevágás miatt megjelenik a hatóság. Pelikán börtönbe kerül, ahonnan egyre magasabb beosztásba helyezik. Ő lesz a vidámpark, az uszoda, majd később egy narancstermelő gazdaság igazgatója. Természetesen mindez nem ajándék. Virág elvtárs minden alkalommal hangsúlyozza, hogy egyszer még kérnek Pelikántól valamit. És ez az egyszer el is érkezik, amikor Dániel Zoltánt koholt vádakkal letartóztatják…",
+		"category": "Uncategorized",
+		"filename": "tanu.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "batmanbegins.jpg",
+		"title": "Batman Begins",
+		"description": "Bruce Wayne (Christian Bale), az árva milliomos önszántából járja meg az erőszak poklát, amikor Henri Ducard (Liam Neeson), a keleti mester a harcosai közé veszi és tökéletesen kiképzi. Wayne azonban nem osztozik mestere elvakult nézeteiben és visszatér Gotham Citybe. Célja, hogy az igazságtalanság ellen harcoljon minden lehetséges eszközzel. A várost azonban megfertőzte a korrupció, csak a fiatal ügyésznő, Rachel (Katie Holmes) és James Gordon nyomozó (Gary Oldman) mernek szembeszállni Ra's Al Ghul embereivel.",
+		"category": "DC Movies",
+		"filename": "batmanbegins.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "thedarkknight.jpg",
+		"title": "The Dark Knight",
+		"description": "Batman (Christian Bale), Gordon felügyelő (Gary Oldman) és a megvesztegethetetlen ügyész, Harvey Dent (Aaron Eckhart) hatásos hadjáratot indítanak a bűnözők ellen. Önként vállalt feladatukat már-már siker koronázza, ám ekkor megjelenik Joker (Heath Ledger), aki a bűnözők között is rettegett, ravaszabb és veszélyesebb bárkinél. A városban újra a félelem az úr, kitör a káosz, és mindenkit megfertőz a romlottság.",
+		"category": "DC Movies",
+		"filename": "darkknight.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "thedarkknightrises.jpg",
+		"title": "The Dark Knight Rises",
+		"description": "Nyolc év telt el azóta, hogy egy szörnyű éjszakát követően Batman nyom nélkül eltűnt. Magára vállalta Harvey Dent államügyész minden vétkét, és a hősből üldözött bűnöző lett. Önfeláldozása azonban nem volt hiábavaló: a Dent-törvénynek köszönhetően Gotham békés várossá vált. Átmenetileg. A városban feltűnik egy macskajelmezes betörő, aki sötét titkokat rejteget; és megérkezik Bane is, a különös álarcot viselő, gátlástalan bűnöző. Bruce Wayne féltve őrzött magánya nem tarthat örökké, a városnak ismét szüksége van a Sötét Lovagra. Ám a köpönyeg és az álarc ellenére úgy tűnik, Bane legyőzhetetlen.",
+		"category": "DC Movies",
+		"filename": "darkknight2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "bigstan.jpg",
+		"title": "Big Stan",
+		"description": "Stan Mintont (Rob Schneider), a kisstílű szélhámost csalásért elítélik. Agyafúrt ügyvédje segítségével azonban Stannek sikerül némi időt nyernie, így van némi esélye túlélni a börtön kegyetlenségét. Stan úgy dönt, hogy kiképezteti magát. A titokzatos Mester (David Carradine) segítségét kéri, faragjon belőle rettenetes harcművészt, hogy képes legyen állni a sarat, mire eljön az idő. A hónapok során Stanből valóban kíméletlen harcos válik, s mikor bevonul a börtönbe, rá kell jönnie, hogy a dutyi egyáltalán nem olyan, mint amilyennek elképzelte.",
+		"category": "Uncategorized",
+		"filename": "kegyencfegyenc.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "shrek.jpg",
+		"title": "Shrek",
+		"description": "Hol volt, hol nem volt, egy messzi mocsárban, meghitt magányban élt egyszer egy morcos ogre, akit Shreknek hívtak. Ám a zöld szörny nyugalmát és életét egy napon fenekestül felbolygatta egy különös esemény: mesebeli lények lepték el a mocsarat – és lepték meg gyanútlan hősünket. A három vak egér futkározott a vacsoráján, a nagy, gonosz farkas feküdt az ágyában, a hét törpe Hófehérke koporsóját tette az asztalára, kunyhója előtt pedig ott nyüzsgött a három hajléktalan kismalac, és mindenféle más varázslatos figurák, akiket a gonosz Farquaad nagyúr űzött el otthonukból. Shrek tehát elment a nagyúrhoz, hogy visszakövetelje a mocsarát, de ehhez előbb meg kell mentenie a szörnyű tűzokádó sárkány karmaiból Fiona királylányt, hogy Farquaad feleségül vehesse, és így király lehessen. A nagy kalandban társa is akad az ogrének: a szószátyár Szamár, aki bármit megtenne Shrekért, egyvalamit kivéve: a világ minden kincséért sem hajlandó befogni a száját. Hamarosan kiderül, hogy a sárkánynál sokkal nagyobb problémát jelent Fiona különös titka...",
+		"category": "Animation",
+		"filename": "shrek.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "shrek2.jpg",
+		"title": "Shrek 2",
+		"description": "A tűzokádó sárkány és a gonosz Farquaad nagyúr legyőzése után Shrek, a zöld öklű öldöklő, mindenki kedvenc ogréja ezúttal élete legnehezebb feladatával szembesül: el kell fogadtatnia magát apósával és anyósával. A nászutat követően ugyanis Shreket és Fionát meghívás várja a lány szüleitől Túl az Óperencián birodalmába. Felkerekednek hát a levakarhatatlan Szamárral, hogy kilépjenek az ünneplő tömeg elé, csakhogy Túl az Óperencián még senki nem tudja, hogy a királylány a varázslat megtörtével kissé máshogy néz ki. Harold, a király bizony másképpen képzelte el lánya jövőjét – és a sajátját is. És itt jön a képbe a varázslatos hatalmú Jótündér, az elbűvölő (?) Szőke Herceg, no meg a legendás bérgyilkos, Csizmás Kandúr…",
+		"category": "Animation",
+		"filename": "shrek2.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "shrek3.jpg",
+		"title": "Shrek the Third",
+		"description": "Nem mindenki akar király lenni, és ez különösen igaz a behemót, mocsárbűzös ogrékra. Amikor Shrek feleségül vette Fionát, eszébe sem jutott, hogy egyszer Túl az Óperencián trónjára akarják majd ültetni. Ám apósa, az öreg Harold király váratlanul megbetegszik, és Shreket tekinti a trón várományosának. A birodalom húzódozó jövendő királya vagy talál maga helyett valaki mást a munkára, vagy élete hátralévő részét uralkodással kell töltenie. S ha ez még nem lenne elég, Fiona hercegnő is tartogat egy kis meglepetést Shrek számára. Shrek persze bepánikol az ország kormányzásával és az apasággal járó felelősségtől, és elhatározza, hogy felkutatja az egyetlen személyt, aki rajta kívül elfoglalhatja a trónt: nem mást, mint Fiona rég elveszett unokaöccsét, Artie-t, egy középkori iskolakerülőt. Amíg azonban az ogre távol van, esküdt ellensége, a Szőke Herceg visszatér Túl az Óperenciánra, hogy elégtételt vegyen az őt ért sérelmekért...",
+		"category": "Animation",
+		"filename": "shrek3.mp4"
+	},
+	{
+		"type": "movie",
+		"image": "theaccountant.jpg",
+		"title": "The Accountant",
+		"description": "Chris Wolff (Ben Affleck) a világ egyik legjobb könyvelője és kissé autista - kerüli az embereket, magányosan él és nem is vágyik másra.\r\nAmikor egy nagy, robotokat tervező gyár könyvelésében furcsa hibák tűnnek fel, természetesen hozzá fordulnak. Ő és a cég egyik munkatársa (Anna Kendrick) hamar új, megmagyarázhatatlan eltérésekre figyel fel, és ez valakinek nagyon nem tetszik.\r\nEgy különleges katonai egység leszerelt tisztje megbízást kap, hogy végezzen a párral. Chris és Dana kénytelen együtt bujkálni.\r\nDe Chris tartogat egy-két meglepetést. Néhány közülük halálos lehet...",
+		"category": "Uncategorized",
+		"filename": "theaccountant.mp4"
 	}
 ]

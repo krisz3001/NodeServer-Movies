@@ -1,0 +1,14 @@
+[19:10:21] This session was started on 2022. 05. 15. 19:10:21
+[19:10:21] Listening to port 3001...
+[19:10:21] Listening to port 80...
+[19:10:22] 192.168.1.2 served. /home
+[19:10:36] 192.168.1.2 served. /home
+[19:10:51] 192.168.1.2 served. /home
+[19:10:53] 192.168.1.2 served. /home
+[19:11:04] 192.168.1.2 served. /home
+[19:11:11] 192.168.1.2 served. /home
+[19:11:44] 192.168.1.2 served. /home
+[19:11:57] 192.168.1.2 is watching "Django Unchained" (django_unchained.mp4)
+[19:12:03] 192.168.1.2 served. /home
+[19:12:13] 192.168.1.2 served. /home
+[19:14:13] 192.168.1.2 served. /home

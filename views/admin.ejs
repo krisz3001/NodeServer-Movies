@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body class="bg-dark text-white" onload="refreshTodo()">
+<body class="bg-dark text-white" onload="refreshTodo(); refreshRequests()">
     <nav class="autohide navbar navbar-expand-md bg-black navbar-dark sticky fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Netflix Prime +</a>
@@ -25,13 +25,21 @@
                             <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Add</button>
                             <ul class="dropdown-menu">
-                                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addModal"
-                                        onclick="refreshList(); refreshCategoryList()">Movie or series</a></li>
-                                <li><a href="#" class="dropdown-item" data-bs-toggle="modal"
-                                        data-bs-target="#categoryModal" onclick="hideCategoryError()">Category</a></li>
+                                <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addModal" onclick="refreshList(); refreshCategoryList()">Movie or series</button></li>
+                                <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#categoryModal" onclick="hideCategoryError()">Category</button></li>
+                                <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#secretModal">Secret password</button></li>
+                                <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#showrequestModal">Movie or series request</button></li>
+								<li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#todoModal">Feature request</button></li>
                             </ul>
                         </div>
                     </li>
+                    <li class="nav-item m-2">
+						<div class="dropdown">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+								aria-expanded="false">Jump to...</button>
+							<ul class="dropdown-menu" id="c-jump"></ul>
+						</div>
+					</li>
                     <li class="nav-item m-2">
                         <button class="btn btn-danger" onclick="deleteMode()"
                             style="max-height: 38px; overflow: hidden;">Delete mode</button>
@@ -49,7 +57,7 @@
                     style="width: 30px; height: 30px; background-repeat: no-repeat; background-image: url('/assets/controllers/search.png'); background-size: contain; cursor: pointer;"
                     onclick="alert('Work in progress')"></div>
                 <p class="m-2">
-                    <%= name %>
+                    <%=name%>
                 </p>
                 <a id="profile" class="d-flex rounded m-2 border border-secondary"
                     style="background-image: url('/assets/profile_pictures/<%= image %>');" href="/profile"></a>
@@ -92,8 +100,20 @@
                     <td><%=bait_count%></td>
                 </tr>
                 <tr>
+                    <td>Jelenleg belépett IP-k száma</td>
+                    <td><%=users%></td>
+                </tr>
+                <tr>
+                    <td>Egyedi IP címek száma</td>
+                    <td><%=unique_ips%></td>
+                </tr>
+                <tr>
                     <td>Összes tartalom</td>
                     <td><%=duration_sum.split(' ')[0]%> óra <%=duration_sum.split(' ')[1]%> perc <%=duration_sum.split(' ')[2]%> másodperc</td>
+                </tr>
+                <tr>
+                    <td>Megnézett tartalom (2022. 05. 16. 00:03 óta)</td>
+                    <td><%=Math.floor(watched/60)%> óra <%=watched%60%> perc</td>
                 </tr>
             </tbody>
         </table>
@@ -104,7 +124,10 @@
                 <button class="btn btn-success mt-1" onclick="consolidate()">Consolidate</button>
                 <button class="btn btn-primary mt-1" onclick="log()">Log</button>
             </div>
-            <button class="btn btn-danger" onclick="shut()">Vészleállás</button>
+            <div>
+                <button class="btn btn-danger" onclick="masslogout()">Mindenki kiléptetése</button>
+                <button class="btn btn-danger" onclick="shut()">Vészleállás</button>
+            </div>
         </div>
     </div>
     <div class="row mx-5" id="items"></div>
@@ -137,7 +160,7 @@
                         <div class="form-group row my-sm-2">
                             <label for="desc" class="col-sm-2 col-form-label">Description</label>
                             <div class="col-sm-10">
-                                <input type="text" id="desc" class="form-control" placeholder="Description">
+                                <textarea type="text" id="desc" class="form-control" placeholder="Description" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="form-group row my-sm-2">
@@ -187,6 +210,27 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="showrequestModal" tabindex="-1" aria-labelledby="showrequestModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content bg-dark">
+				<div class="modal-header">
+					<h5 class="modal-title" id="showrequestModalLabel">Movie or series request</h5>
+					<button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<ul id="showrequests"></ul>
+					<input type="text" class="w-100" id="new-request">
+					<div class="d-flex justify-content-center">
+						<button id="add-request-btn" class="btn btn-success mt-2" onclick="addRequest()">Add</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
     <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark">
@@ -213,6 +257,31 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="secretModal" tabindex="-1" aria-labelledby="secretModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="secretModalLabel">Add new secret password</h5>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="new-pass" class="col-sm-2 col-form-label">Secret</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="new-pass" class="form-control"
+                                placeholder="New password">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <input id="addSecretBtn" type="button" class="btn btn-primary" value="Add"
+                        onclick="addSecret()">
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="sModal" tabindex="-1" aria-labelledby="sModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-dialog modal-lg">
             <div class="modal-content bg-dark">
@@ -232,12 +301,17 @@
                     <a class="btn btn-success w-100 my-3" id="detailsPlay" href="">Play</a>
                     <p class="m-0" id="detailsDescription"></p>
                     <div id="detailsEpisodes" class="mt-3">
-                        <div class="d-flex mb-2">
-                            <h2 class="m-0 my-1 me-auto">Episodes</h2><select class="form-select my-1 w-auto"
-                                id="seasonSelect"></select>
-                        </div>
-                        <div id="episodeList"></div>
-                    </div>
+						<div class="d-flex mb-2 justify-content-between">
+							<div>
+								<h2 class="m-0 my-1 me-auto">Episodes</h2>
+							</div>
+							<div class="d-flex align-items-center">
+								<button class="btn btn-primary me-1" id="detectBtn" title="Detect new episodes">Detect</button>
+								<select class="form-select my-1 w-auto" id="seasonSelect"></select>
+							</div>
+						</div>
+						<div id="episodeList"></div>
+					</div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -286,10 +360,24 @@
                     document.getElementById('l').innerText = r
                     let modal = new bootstrap.Modal(document.getElementById('lModal'))
                     modal.show()
-                    document.getElementById('pass').value = ''
                 }
             })
         }
+        function masslogout(){
+            if(confirm('Are you sure you want to reset users.json?')){
+                fetch('/masslogout', {method: "POST"})
+            }
+        }
+        function addSecret(){
+            let formData = new FormData()
+            formData.append("password", document.getElementById('new-pass').value)
+            fetch('/newsecret', {method: "POST", body : formData})
+            .then(res => res.text())
+            .then(r => document.getElementById('new-pass').value = '')
+        }
+        document.getElementById('new-pass').addEventListener("keydown", function(e){
+    if(e.keyCode === 13) document.getElementById('addSecretBtn').click()
+})
     </script>
 </body>
 

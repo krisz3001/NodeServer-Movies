@@ -11,7 +11,7 @@ function start(){
     vid.play()
 }
 function videoPaused(){
-    saveProgress();
+    saveProgress(false);
     clearInterval(autosaveTimer)
     clearTimeout(cursorTimer)
     afk()
@@ -39,7 +39,7 @@ function afk(){
     }
 }) */
 function startAutosave(){
-    autosaveTimer = setInterval(saveProgress, 60000)
+    autosaveTimer = setInterval(()=>{saveProgress(true)}, 60000)
 }
 function getProgress(type, filename){
     let formData = new FormData()
@@ -63,7 +63,7 @@ function getProgress(type, filename){
             })
     }
 }
-function saveProgress(){
+function saveProgress(auto){
     let vid = document.getElementById('vid')
     if(vid.duration > 0){
         let formData = new FormData()
@@ -72,6 +72,7 @@ function saveProgress(){
             formData.append("duration", vid.duration)
             formData.append("filename", file)
             formData.append("type", type)
+            formData.append("auto", auto)
             fetch('/setprogress', {method: "POST", body: formData})
                 .then(res => res.text)
                 .then(r => {})
@@ -82,6 +83,7 @@ function saveProgress(){
             formData.append("type", type)
             formData.append("directory", file.split('/')[0])
             formData.append("filename", file.split('/')[1])
+            formData.append("auto", auto)
             console.log(formData);
             fetch('/setprogress', {method: "POST", body: formData})
                 .then(res => res.text)
@@ -114,6 +116,9 @@ function hideCursor(){
         /* bottomLine.classList.remove('scrolled-up-bottom');
         bottomLine.classList.add('scrolled-down-bottom'); */
         document.getElementsByTagName('body')[0].style.cursor = 'none'
+        setTimeout(() => {
+            document.getElementById('randommovie').classList.add('d-none')
+        }, (1000/3));
     }
     else clearTimeout(cursorTimer)
     }, 2500);
@@ -124,6 +129,7 @@ function showCursor(){
     bottomLine.classList.add('scrolled-up-bottom'); */
     topLine.classList.remove('scrolled-down');
     topLine.classList.add('scrolled-up');
+    document.getElementById('randommovie').classList.remove('d-none')
     if(!vid.paused) hideCursor()
 }
 function videoClick(){

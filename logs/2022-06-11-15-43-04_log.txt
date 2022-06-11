@@ -1,0 +1,19 @@
+[15:43:04] This session was started on 2022. 06. 11. 15:43:04
+[15:43:04] Listening to port 3001...
+[15:43:04] Listening to port 80...
+[15:44:08] 192.168.1.2 served. /admin
+[15:44:27] 192.168.1.2 asked for the log.
+[15:44:33] 192.168.1.2 served. /home
+[15:46:03] 80.82.77.33 on login page. /
+[15:46:40] 34.78.6.216 on login page. /
+[16:28:35] 64.62.197.2 on login page. /
+[16:52:50] 2.57.122.35 on login page. /
+[17:17:42] 128.1.248.42 on login page. /
+[17:24:37] "The Game Plan" added by 192.168.1.2.
+[17:24:44] 192.168.1.2 is watching "The Game Plan" (thegameplan.mp4)
+[17:59:31] 81.213.157.39 on login page. /
+[18:27:06] 81.17.18.62 on login page. /
+[19:14:21] 192.168.1.2 served. /home
+[20:24:29] 36.72.157.198 on login page. /
+[21:11:30] 104.248.49.182 on login page. /
+[21:59:46] 46.176.213.193 on login page. /

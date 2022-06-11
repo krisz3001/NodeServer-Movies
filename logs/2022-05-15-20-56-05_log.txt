@@ -1,0 +1,7 @@
+[20:56:05] This session was started on 2022. 05. 15. 20:56:05
+[20:56:05] Listening to port 3001...
+[20:56:05] Listening to port 80...
+[20:56:17] 192.168.1.2 served. /home
+[20:57:57] 194.87.71.18 on login page. /
+[21:00:37] 192.168.1.2 served. /admin
+[21:00:47] "The Mandalorian" deleted by 192.168.1.2.

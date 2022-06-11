@@ -1,0 +1,23 @@
+[23:20:31] This session was started on 2022. 06. 09. 23:20:31
+[23:20:31] Listening to port 3001...
+[23:20:31] Listening to port 80...
+[23:20:37] 192.168.1.2 served. /home
+[23:20:57] 192.168.1.2 is watching "The Informant" S01 E01 (informant_1_1.mkv)
+[23:43:09] 2.57.122.35 on login page. /
+[00:03:21] 192.168.1.2 is watching "The Informant" S01 E02 (informant_1_2.mkv)
+[00:46:01] 192.168.1.2 served. /home
+[01:00:08] 178.79.142.81 on login page. /
+[01:00:08] 178.79.142.81 on login page. /
+[01:00:08] 178.79.142.81 on login page. /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+[01:00:08] 178.79.142.81 on login page. /?rest_route=/wp/v2/users/
+[01:00:08] 178.79.142.81 on login page. /.env
+[01:00:08] 178.79.142.81 on login page. /server-status
+[01:00:08] 178.79.142.81 on login page. /telescope/requests
+[01:00:08] 178.79.142.81 on login page. /info.php
+[01:00:08] 178.79.142.81 on login page. /s/39312e38322e3139312e313536/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties
+[01:00:08] 178.79.142.81 on login page. /.git/config
+[01:00:08] 178.79.142.81 on login page. /.DS_Store
+[01:00:08] 178.79.142.81 on login page. /login.action
+[01:00:08] 178.79.142.81 on login page. /config.json
+[01:48:04] 23.251.102.74 on login page. /
+[02:08:37] 195.250.94.46 on login page. /

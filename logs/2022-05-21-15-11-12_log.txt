@@ -1,0 +1,80 @@
+[15:11:12] This session was started on 2022. 05. 21. 15:11:12
+[15:11:12] Listening to port 3001...
+[15:11:12] Listening to port 80...
+[15:11:15] 192.168.1.2 served. /404 (/admin)
+[15:11:18] 192.168.1.2 served. /404 (/admin)
+[15:11:23] 192.168.1.2 served. /home
+[15:11:26] 192.168.1.2 served. /profile
+[15:11:28] Profile 0 set for 192.168.1.2
+[15:11:28] 192.168.1.2 served. /home
+[15:11:31] 192.168.1.2 removed.
+[15:11:31] 192.168.1.2 on login page. /
+[15:11:31] 192.168.1.2 on login page. /
+[15:11:31] 192.168.1.2 on login page. 
+[15:11:36] 192.168.1.2 logged in. (krisz)
+[15:11:39] Profile 0 set for 192.168.1.2
+[15:11:39] 192.168.1.2 served. /home
+[15:11:42] 192.168.1.2 served. /admin
+[15:16:36] 192.168.1.2 served. /home
+[15:21:13] 192.168.1.2 served. /home
+[15:23:30] 192.168.1.2 served. /home
+[15:24:54] 192.168.1.2 served. /home
+[15:25:05] 192.168.1.2 is watching "Captain America: The First Avenger" (captainamerica.mp4)
+[15:25:09] 192.168.1.2 served. /home
+[15:27:46] 192.168.1.2 served. /home
+[15:28:02] 192.168.1.2 is watching "Captain America: The First Avenger" (captainamerica.mp4)
+[15:28:06] 192.168.1.2 is watching "Captain America: The First Avenger" (captainamerica.mp4)
+[15:29:16] 192.168.1.2 served. /home
+[15:29:39] 192.168.1.17 served. /home
+[15:29:53] 192.168.1.17 is watching "Captain Marvel" (captainmarvel.mp4)
+[15:31:14] 192.168.1.17 served. /home
+[15:31:28] 192.168.1.17 served. /home
+[15:31:31] 192.168.1.2 served. /home
+[15:33:32] 192.168.1.2 is watching "Peaky Blinders [CC]" S05 E01 (peakyblinders_5_1.mkv)
+[15:33:37] 192.168.1.2 is watching "Peaky Blinders [CC]" S04 E06 (peakyblinders_4_6.mkv)
+[15:33:41] 192.168.1.2 is watching "Peaky Blinders [CC]" S04 E05 (peakyblinders_4_5.mkv)
+[15:33:42] 192.168.1.2 is watching "Peaky Blinders [CC]" S04 E04 (peakyblinders_4_4.mkv)
+[15:33:42] 192.168.1.2 is watching "Peaky Blinders [CC]" S04 E03 (peakyblinders_4_3.mkv)
+[15:33:43] 192.168.1.2 is watching "Peaky Blinders [CC]" S04 E02 (peakyblinders_4_2.mkv)
+[15:33:43] 192.168.1.2 is watching "Peaky Blinders [CC]" S04 E01 (peakyblinders_4_1.mkv)
+[15:33:44] 192.168.1.2 is watching "Peaky Blinders [CC]" S03 E06 (peakyblinders_3_6.mp4)
+[15:33:47] 192.168.1.2 is watching "Peaky Blinders [CC]" S03 E05 (peakyblinders_3_5.mp4)
+[15:34:06] krisz.json file created.
+[15:34:06] 192.168.1.2 served. /home
+[15:34:15] 192.168.1.2 is watching "Peaky Blinders [CC]" S03 E05 (peakyblinders_3_5.mp4)
+[15:34:20] 192.168.1.2 served. /home
+[15:34:50] 192.168.1.2 served. /home
+[15:35:15] 192.168.1.2 served. /home
+[15:35:18] 192.168.1.2 removed.
+[15:35:18] 192.168.1.2 on login page. /
+[15:35:18] 192.168.1.2 on login page. 
+[15:35:26] 192.168.1.2 logged in. (mcbulazs)
+[15:35:29] Profile 1 set for 192.168.1.2
+[15:35:29] 192.168.1.2 served. /home
+[15:35:46] 192.168.1.2 served. /profile
+[15:35:51] 192.168.1.2 served. /profile
+[15:35:57] 192.168.1.2 served. /home
+[15:36:01] 192.168.1.2 served. /profile
+[15:36:09] Profile 1 set for 192.168.1.2
+[15:36:09] 192.168.1.2 served. /home
+[15:36:11] 192.168.1.2 removed.
+[15:36:11] 192.168.1.2 on login page. /
+[15:36:11] 192.168.1.2 on login page. 
+[15:36:18] 192.168.1.2 logged in. (krisz)
+[15:36:19] Profile 0 set for 192.168.1.2
+[15:36:19] 192.168.1.2 served. /home
+[15:36:43] 192.168.1.2 is watching "The Mandalorian" (mandalorian)
+[15:37:23] 192.168.1.2 served. /home
+[15:37:29] 192.168.1.2 is watching "The Mandalorian" S01 E01 (mandalorian_1_1.mp4)
+[16:26:37] 154.89.5.71 on login page. /
+[16:40:20] 109.232.4.66 on login page. /
+[17:47:34] 192.168.1.2 served. /admin
+[17:49:57] 109.237.103.118 on login page. /.aws/credentials
+[18:21:28] 45.61.188.169 on login page. /config/getuser?index=0
+[18:42:35] 172.104.138.223 on login page. /fuN3
+[18:43:47] 181.129.164.106 on login page. /
+[18:52:27] 45.153.160.133 on login page. /
+[18:52:43] 185.220.101.32 on login page. 
+[19:17:33] 128.14.209.162 on login page. /
+[19:48:40] 45.83.66.43 on login page. /
+[19:48:40] 45.83.65.230 on login page. 
