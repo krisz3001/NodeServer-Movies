@@ -1,9 +1,0 @@
-[17:59:56] This session was started on 2022. 05. 15. 17:59:56
-[17:59:56] Listening to port 3001...
-[17:59:56] Listening to port 80...
-[17:59:57] ips.json file created.
-[17:59:57] 192.168.1.2 served. /admin
-[18:00:04] 192.168.1.2 served. /admin
-[18:00:04] 192.168.1.2 served. /admin
-[18:00:04] 192.168.1.2 served. /admin
-[18:00:07] 84.236.29.7 served. /home

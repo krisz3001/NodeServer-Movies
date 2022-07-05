@@ -1,6 +1,0 @@
-[13:05:34] This session was started on 2022. 05. 16. 13:05:34
-[13:05:34] Listening to port 3001...
-[13:05:34] Listening to port 80...
-[13:05:35] 192.168.1.2 served. /404 (/movie/84)
-[13:05:37] 192.168.1.2 served. /404 (/movie/83)
-[13:05:53] 192.168.1.2 served. /home

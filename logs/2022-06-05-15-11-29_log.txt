@@ -1,6 +1,0 @@
-[15:11:29] This session was started on 2022. 06. 05. 15:11:29
-[15:11:29] Listening to port 3001...
-[15:11:29] Listening to port 80...
-[16:25:10] 85.185.223.152 on login page. /
-[17:12:18] 64.227.75.69 on login page. /
-[17:47:51] 192.168.1.2 served. /home

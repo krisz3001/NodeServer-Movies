@@ -1,9 +1,0 @@
-[12:10:29] This session was started on 2022. 05. 16. 12:10:29
-[12:10:29] Listening to port 3001...
-[12:10:29] Listening to port 80...
-[12:10:31] 192.168.1.2 removed.
-[12:10:31] 192.168.1.2 on login page. /
-[12:10:31] 192.168.1.2 on login page. /
-[12:10:31] 192.168.1.2 on login page. 
-[12:10:35] 192.168.1.2 is trying to log in with username: "", password: "dfg fg".
-[12:10:41] 192.168.1.2 invokes emergency shutdown.

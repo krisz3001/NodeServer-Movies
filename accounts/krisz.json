@@ -927,8 +927,8 @@
 		},
 		{
 			"filename": "sherlockholmes.mp4",
-			"current": "0",
-			"duration": "7704.705038"
+			"current": "59.102592",
+			"duration": "7704.705"
 		},
 		{
 			"filename": "sherlockholmes2.mp4",
@@ -1013,7 +1013,7 @@
 		{
 			"filename": "comingtoamerica.mp4",
 			"current": "0",
-			"duration": "7008.919"
+			"duration": "7008.939"
 		},
 		{
 			"filename": "comingtoamerica2.mp4",
@@ -1076,7 +1076,7 @@
 			"duration": "6950.944"
 		},
 		{
-			"progress": "obiwan_1_4.mp4",
+			"progress": "obiwan_1_5.mp4",
 			"filename": "obiwan",
 			"episode_progress": [
 				{
@@ -1098,6 +1098,11 @@
 					"filename": "obiwan_1_4.mp4",
 					"current": "1969.362106",
 					"duration": "2180.395"
+				},
+				{
+					"filename": "obiwan_1_5.mp4",
+					"current": "2028.024731",
+					"duration": "2411.222"
 				}
 			]
 		},
@@ -2261,6 +2266,11 @@
 					"filename": "obiwan_1_4.mp4",
 					"current": "0",
 					"duration": "2180.333984"
+				},
+				{
+					"filename": "obiwan_1_5.mp4",
+					"current": "0",
+					"duration": "2411.166992"
 				}
 			]
 		},
@@ -3424,6 +3434,11 @@
 					"filename": "obiwan_1_4.mp4",
 					"current": "0",
 					"duration": "2180.333984"
+				},
+				{
+					"filename": "obiwan_1_5.mp4",
+					"current": "0",
+					"duration": "2411.166992"
 				}
 			]
 		},
@@ -4587,6 +4602,11 @@
 					"filename": "obiwan_1_4.mp4",
 					"current": "0",
 					"duration": "2180.333984"
+				},
+				{
+					"filename": "obiwan_1_5.mp4",
+					"current": "0",
+					"duration": "2411.166992"
 				}
 			]
 		},

@@ -1,8 +1,0 @@
-[23:27:21] This session was started on 2022. 05. 15. 23:27:21
-[23:27:21] Listening to port 3001...
-[23:27:21] Listening to port 80...
-[23:27:28] 192.168.1.2 served. /home
-[23:32:33] 192.168.1.15 is watching "Peaky Blinders [CC]" S01 E01 (peakyblinders_1_1.mp4)
-[23:32:35] 192.168.1.15 served. /home
-[23:33:05] 192.168.1.15 is watching "Peaky Blinders [CC]" S02 E01 (peakyblinders_2_1.mkv)
-[23:33:45] 192.168.1.15 is watching "Peaky Blinders [CC]" S02 E02 (peakyblinders_2_2.mkv)
