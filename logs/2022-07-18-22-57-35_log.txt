@@ -1,0 +1,6 @@
+[22:57:35] This session was started on 2022. 07. 18. 22:57:35
+[22:57:35] Log directory created.
+[22:57:35] Listening to port 3001...
+[22:57:35] Listening to port 80...
+[22:57:41] 192.168.1.2 served. /home
+[23:02:17] 192.168.1.2 served. /admin

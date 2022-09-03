@@ -1,0 +1,10 @@
+[01:23:58] This session was started on 2022. 09. 04. 1:23:58
+[01:23:58] Listening to port 3001...
+[01:23:58] Listening to port 80...
+[01:24:05] 192.168.1.2 served. /home
+[01:24:10] 192.168.1.2 served. /admin
+[01:24:11] 192.168.1.2 served. /home
+[01:24:22] Unnecessary attempt of detecting new episodes from 192.168.1.2 (Obi-Wan Kenobi)
+[01:24:44] 192.168.1.2 removed.
+[01:24:44] 192.168.1.2 on login page. /
+[01:24:44] 192.168.1.2 on login page. 
